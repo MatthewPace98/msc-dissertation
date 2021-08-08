@@ -1,3 +1,26 @@
+# Sample information
+- Single-end reads
+- Sanger/Illumina 1.9 encoding (ASCII+33 quality scores as Phred scores)
+- 51bp reads
+
+5 = Phenolic compound treated - 1 hr time point, 10 = Phenolic compound treated - 6 hr time point, 15 = Phenolic compound treated - 12 hr time point, 16 = Negative control untreated cells.
+
+| File name                                                             | Treatment         | Size (GB) |
+|-----------------------------------------------------------------------|-------------------|-----------|
+| C9LMRACXX_5_16s004919-1-1_Zammit-Mangion_lane216s004919_sequence.txt  | 1 hour treatment  | 1.93      |
+| C9LMRACXX_10_16s004924-1-1_Zammit-Mangion_lane316s004924_sequence.txt | 6 hour treatment  | 1.59      |
+| C9LMRACXX_15_16s004929-1-1_Zammit-Mangion_lane416s004929_sequence.txt | 12 hour treatment | 1.30      |
+| C9LMRACXX_16_16s004930-1-1_Zammit-Mangion_lane416s004930_sequence.txt | Negative control  | 1.48      |
+# Preprocessing
+
+## FastQC
+http://manpages.ubuntu.com/manpages/impish/man1/fastqc.1.html
+
+
+## Trim Galore!
+https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md
+
+```
 trim_galore \
 --phred33 \
 --fastqc \
@@ -5,58 +28,32 @@ trim_galore \
 -o /home/bioinf/Desktop/RNAseq/trim_galore_output \
 --fastqc_args "--outdir /home/bioinf/Desktop/RNAseq/FASTQC/trim_galore_output" \
 /home/bioinf/Desktop/RNAseq/FASTQ_files/C9LMRACXX*
+```
 
--q/--quality <INT>      Trim low-quality ends from reads in addition to adapter removal. For
-                        RRBS samples, quality trimming will be performed first, and adapter
-                        trimming is carried in a second round. Other files are quality and adapter
-                        trimmed in a single pass. The algorithm is the same as the one used by BWA
-                        (Subtract INT from all qualities; compute partial sums from all indices
-                        to the end of the sequence; cut sequence at the index at which the sum is
-                        minimal). Default Phred score: 20.
+## FastQ Screen
 
---phred33               Instructs Cutadapt to use ASCII+33 quality scores as Phred scores
-                        (Sanger/Illumina 1.9+ encoding) for quality trimming. Default: ON.
+https://github.com/StevenWingett/FastQ-Screen/blob/master/fastq_screen_documentation.md
+If BWA not installed: ```sudo apt install bwa```                   
 
---fastqc_args "<ARGS>"  Passes extra arguments to FastQC. If more than one argument is to be passed
-                        to FastQC they must be in the form "arg1 arg2 etc.". An example would be:
-                        --fastqc_args "--nogroup --outdir /home/". Passing extra arguments will
-                        automatically invoke FastQC, so --fastqc does not have to be specified
-                        separately.
-
-
--a/--adapter <STRING>   Adapter sequence to be trimmed. If not specified explicitly, Trim Galore will
-                        try to auto-detect whether the Illumina universal, Nextera transposase or Illumina
-                        small RNA adapter sequence was used. Also see '--illumina', '--nextera' and
-                        '--small_rna'. If no adapter can be detected within the first 1 million sequences
-                        of the first file specified or if there is a tie between several adapter sequences,
-                        Trim Galore defaults to '--illumina' (as long as the Illumina adapter was one ofthe
-                        options, else '--nextera' is the default). A single base
-                        may also be given as e.g. -a A{10}, to be expanded to -a AAAAAAAAAA.
-
--o/--output_dir <DIR>   If specified all output will be written to this directory instead of the current
-                        directory. If the directory doesn't exist it will be created for you.
-                        
-
---length <INT>          Discard reads that became shorter than length INT because of either
-                        quality or adapter trimming. A value of '0' effectively disables
-                        this behaviour. Default: 20 bp.
-
-                        For paired-end files, both reads of a read-pair need to be longer than
-                        <INT> bp to be printed out to validated paired-end files (see option --paired).
-                        If only one read became too short there is the possibility of keeping such                                                
-                        unpaired single-end reads (see --retain_unpaired). Default pair-cutoff: 20 bp.
-
-
-##########################################################
-###################### FASTQ SCREEN ######################
-##########################################################
-
-# If BWA not installed:
-sudo apt install bwa                        
-
-(in directory)                        
+(in directory)  
+```
 perl fastq_screen \
 --aligner bowtie2 \
 --outdir /home/bioinf/Desktop/RNAseq/FASTQC/fastq_screen_output \
 /home/bioinf/Desktop/RNAseq/FASTQ_files/C9LMRACXX_15_16s004929-1-1_Zammit-Mangion_lane416s004929_sequence.txt.gz
+```
 
+## PrinSeq++
+                          
+
+# Alignment - STAR
+
+Genome index generation
+```
+STAR
+```
+
+Alignment
+```
+STAR
+```
