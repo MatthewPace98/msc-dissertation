@@ -17,6 +17,8 @@
 http://manpages.ubuntu.com/manpages/impish/man1/fastqc.1.html
 
 
+Results were of typical RNA-seq data
+
 ## Trim Galore!
 https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md
 
