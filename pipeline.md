@@ -11,11 +11,15 @@
 | C9LMRACXX_10_16s004924-1-1_Zammit-Mangion_lane316s004924_sequence.txt | 6 hour treatment  | 1.59      |
 | C9LMRACXX_15_16s004929-1-1_Zammit-Mangion_lane416s004929_sequence.txt | 12 hour treatment | 1.30      |
 | C9LMRACXX_16_16s004930-1-1_Zammit-Mangion_lane416s004930_sequence.txt | Negative control  | 1.48      |
+
 # Preprocessing
 
 ## FastQC
 http://manpages.ubuntu.com/manpages/impish/man1/fastqc.1.html
 
+```fastqc -o [PATH] *.txt```
+
+FastQC can accept multiple file names as input, so we can use the ```*.txt``` wildcard
 
 Results were of typical RNA-seq data
 
