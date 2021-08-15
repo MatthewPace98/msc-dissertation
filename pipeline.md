@@ -2,6 +2,9 @@
 - Single-end reads
 - Sanger/Illumina 1.9 encoding (ASCII+33 quality scores as Phred scores)
 - 51bp reads
+- 30x depth
+- HiSeq 2000 Sequencing System (Illumina) used by EMBL in Heidelberg, Germany
+- Total RNA was extracted from the treated cells using the RNeasy Mini kit (Qiagen) procedure
 
 5 = Phenolic compound treated - 1 hr time point, 10 = Phenolic compound treated - 6 hr time point, 15 = Phenolic compound treated - 12 hr time point, 16 = Negative control untreated cells.
 
