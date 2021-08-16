@@ -6,25 +6,27 @@
 - HiSeq 2000 Sequencing System (Illumina) used by EMBL in Heidelberg, Germany
 - Total RNA was extracted from the treated cells using the RNeasy Mini kit (Qiagen) procedure
 
-5 = Phenolic compound treated - 1 hr time point, 10 = Phenolic compound treated - 6 hr time point, 15 = Phenolic compound treated - 12 hr time point, 16 = Negative control untreated cells.
-
-| File name                                                             | Treatment         | Size (GB) |
-|-----------------------------------------------------------------------|-------------------|-----------|
-| C9LMRACXX_5_16s004919-1-1_Zammit-Mangion_lane216s004919_sequence.txt  | 1 hour treatment  | 1.93      |
-| C9LMRACXX_10_16s004924-1-1_Zammit-Mangion_lane316s004924_sequence.txt | 6 hour treatment  | 1.59      |
-| C9LMRACXX_15_16s004929-1-1_Zammit-Mangion_lane416s004929_sequence.txt | 12 hour treatment | 1.30      |
-| C9LMRACXX_16_16s004930-1-1_Zammit-Mangion_lane416s004930_sequence.txt | Negative control  | 1.48      |
+| File name                                                             | Treatment         | Size (GB) | Sample name |
+|-----------------------------------------------------------------------|-------------------|-----------|-----------|
+| C9LMRACXX_5_16s004919-1-1_Zammit-Mangion_lane216s004919_sequence.txt  | 1 hour phenol  | 6.3      | A      |
+| C9LMRACXX_10_16s004924-1-1_Zammit-Mangion_lane316s004924_sequence.txt | 6 hour phenol  | 5.2      | B      |
+| C9LMRACXX_15_16s004929-1-1_Zammit-Mangion_lane416s004929_sequence.txt | 12 hour phenol | 4.4      | C      | 
+| C9LMRACXX_16_16s004930-1-1_Zammit-Mangion_lane416s004930_sequence.txt | Negative control  | 5.0      | D      |
 
 # Preprocessing
 
 ## FastQC
 http://manpages.ubuntu.com/manpages/impish/man1/fastqc.1.html
 
-```fastqc -o [PATH] *.txt```
+```fastqc -o ./FastQC_out *txt```
 
 FastQC can accept multiple file names as input, so we can use the ```*.txt``` wildcard
 
 Results were of typical RNA-seq data
+FastQC was detecting TruSeq adapters 
+Adapter info: 
+http://tucf-genomics.tufts.edu/documents/protocols/TUCF_Understanding_Illumina_TruSeq_Adapters.pdf
+https://dnatech.genomecenter.ucdavis.edu/wp-content/uploads/2013/06/illumina-adapter-sequences_1000000002694-00.pdf
 
 ## Trim Galore!
 https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md
