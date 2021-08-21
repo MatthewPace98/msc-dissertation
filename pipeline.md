@@ -29,7 +29,11 @@ trim_galore \
 ## FastQ Screen
 
 https://github.com/StevenWingett/FastQ-Screen/blob/master/fastq_screen_documentation.md
-If BWA not installed: ```sudo apt install bwa```                   
+
+Dependencies:
+- perl
+- BWA
+
 
 (in directory)  
 ```
@@ -41,6 +45,15 @@ perl fastq_screen \
 
 ## PrinSeq++
                           
+
+## MultiQC
+Dependencies:
+- Python version 2.7+, 3.4+ or 3.5+
+
+https://multiqc.info/docs/
+In directory:
+```multiqc .```
+
 
 # Alignment - STAR
 
