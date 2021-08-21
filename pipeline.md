@@ -3,7 +3,11 @@
 ## FastQC
 http://manpages.ubuntu.com/manpages/impish/man1/fastqc.1.html
 
-```fastqc -o ./FastQC_out *txt```
+```fastqc \
+-o ./FastQC_out \
+-t 6 \
+*txt
+```
 
 FastQC can accept multiple file names as input, so we can use the ```*.txt``` wildcard
 
