@@ -34,6 +34,8 @@ trim_galore \
 
 https://github.com/StevenWingett/FastQ-Screen/blob/master/fastq_screen_documentation.md
 
+If referene genomes absent: ```fastq_screen --get_genomes```
+
 Dependencies:
 - perl
 - BWA
