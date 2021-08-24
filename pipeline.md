@@ -35,10 +35,13 @@ trim_galore \
 https://github.com/StevenWingett/FastQ-Screen/blob/master/fastq_screen_documentation.md
 
 If referene genomes absent: ```fastq_screen --get_genomes```
+Config file was adjusted
+Tested on recommended test dataset
+
 
 Dependencies:
 - perl
-- BWA
+- Bowtie2
 
 
 (in directory)  
