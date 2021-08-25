@@ -6,7 +6,7 @@ http://manpages.ubuntu.com/manpages/impish/man1/fastqc.1.html
 ```fastqc \
 -o ./FastQC_out \
 -t 6 \
-*txt
+*.gz
 ```
 
 FastQC can accept multiple file names as input, so we can use the ```*.txt``` wildcard
@@ -25,9 +25,10 @@ trim_galore \
 --phred33 \
 --fastqc \
 -a "GATCGGAAGAGCACACGTCTGAACTCCAGTCAC" \
--o /home/bioinf/Desktop/RNAseq/trim_galore_output \
---fastqc_args "--outdir /home/bioinf/Desktop/RNAseq/FASTQC/trim_galore_output" \
-/home/bioinf/Desktop/RNAseq/FASTQ_files/C9LMRACXX*
+--length 45 \
+-o $a/trim_galore_output \
+--fastqc_args "--outdir /home/bioinf/Desktop/RNAseq/trim_galore_output" \
+$a/Raw/*.fq.gz
 ```
 
 ## FastQ Screen
@@ -43,13 +44,11 @@ Dependencies:
 - perl
 - Bowtie2
 
-
-(in directory)  
 ```
-perl fastq_screen \
+fastq_screen \
 --aligner bowtie2 \
---outdir /home/bioinf/Desktop/RNAseq/FASTQC/fastq_screen_output \
-/home/bioinf/Desktop/RNAseq/FASTQ_files/C9LMRACXX_15_16s004929-1-1_Zammit-Mangion_lane416s004929_sequence.txt.gz
+--outdir /home/bioinf/Desktop/RNAseq/fastq_screen_output \
+/home/bioinf/Desktop/RNAseq/Raw/*fq.gz
 ```
 
 ## PrinSeq++
