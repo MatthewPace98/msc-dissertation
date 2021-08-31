@@ -1,5 +1,0 @@
-Sample	FastQC_mqc-generalstats-fastqc-percent_duplicates	FastQC_mqc-generalstats-fastqc-percent_gc	FastQC_mqc-generalstats-fastqc-avg_sequence_length	FastQC_mqc-generalstats-fastqc-percent_fails	FastQC_mqc-generalstats-fastqc-total_sequences
-C9LMRACXX_10_16s004924-1-1_Zammit-Mangion_lane316s004924_sequence	57.52895151302116	49.0	51.0	18.181818181818183	34082093.0
-C9LMRACXX_15_16s004929-1-1_Zammit-Mangion_lane416s004929_sequence	57.74507997723701	49.0	51.0	18.181818181818183	28777472.0
-C9LMRACXX_16_16s004930-1-1_Zammit-Mangion_lane416s004930_sequence	57.57611753342061	49.0	51.0	18.181818181818183	32616300.0
-C9LMRACXX_5_16s004919-1-1_Zammit-Mangion_lane216s004919_sequence	58.866850953065395	48.0	51.0	27.27272727272727	41304683.0
