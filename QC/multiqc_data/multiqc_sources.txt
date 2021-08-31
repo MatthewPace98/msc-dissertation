@@ -1,0 +1,21 @@
+Module	Section	Sample Name	Source
+Cutadapt	all_sections	12hour	/home/mpace21/data/trim_galore_output/12hour.fq_trimming_report.txt
+Cutadapt	all_sections	1hour	/home/mpace21/data/trim_galore_output/1hour.fq_trimming_report.txt
+Cutadapt	all_sections	6hour	/home/mpace21/data/trim_galore_output/6hour.fq_trimming_report.txt
+Cutadapt	all_sections	control	/home/mpace21/data/trim_galore_output/control.fq_trimming_report.txt
+FastQ Screen	all_sections	12hour_filtered	/home/mpace21/data/FastQ_Screen_out/filtered/12hour_filtered.fq_good_out_screen.txt
+FastQ Screen	all_sections	1hour_filtered	/home/mpace21/data/FastQ_Screen_out/filtered/1hour_filtered.fq_good_out_screen.txt
+FastQ Screen	all_sections	6hour_filtered	/home/mpace21/data/FastQ_Screen_out/filtered/6hour_filtered.fq_good_out_screen.txt
+FastQ Screen	all_sections	control_filtered_good_out_screen	/home/mpace21/data/FastQ_Screen_out/filtered/control_filtered_good_out_screen.txt
+FastQ Screen	all_sections	12hour_screen	/home/mpace21/data/FastQ_Screen_out/raw/12hour_screen.txt
+FastQ Screen	all_sections	1hour_screen	/home/mpace21/data/FastQ_Screen_out/raw/1hour_screen.txt
+FastQ Screen	all_sections	6hour_screen	/home/mpace21/data/FastQ_Screen_out/raw/6hour_screen.txt
+FastQ Screen	all_sections	control_screen	/home/mpace21/data/FastQ_Screen_out/raw/control_screen.txt
+FastQC	all_sections	12hour	/home/mpace21/data/fastqc/FastQC_out/12hour_fastqc.zip
+FastQC	all_sections	1hour	/home/mpace21/data/fastqc/FastQC_out/1hour_fastqc.zip
+FastQC	all_sections	6hour	/home/mpace21/data/fastqc/FastQC_out/6hour_fastqc.zip
+FastQC	all_sections	control	/home/mpace21/data/fastqc/FastQC_out/control_fastqc.zip
+FastQC	all_sections	12hour_filtered	/home/mpace21/data/fastqc/FastQC_filt_out/12hour_filtered.fq_good_out_fastqc.zip
+FastQC	all_sections	1hour_filtered	/home/mpace21/data/fastqc/FastQC_filt_out/1hour_filtered.fq_good_out_fastqc.zip
+FastQC	all_sections	6hour_filtered	/home/mpace21/data/fastqc/FastQC_filt_out/6hour_filtered.fq_good_out_fastqc.zip
+FastQC	all_sections	control_filtered_good_out	/home/mpace21/data/fastqc/FastQC_filt_out/control_filtered_good_out_fastqc.zip
