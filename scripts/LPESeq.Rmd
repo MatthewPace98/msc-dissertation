@@ -1,0 +1,18 @@
+---
+title: "test"
+output: html_document
+---
+
+http://statgen.snu.ac.kr/software/LPEseq/LPEseq_tutorial.pdf
+
+```{r}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("LPE")
+```
+```{r}
+library("LPE")
+LPEseq.test()
+```
+

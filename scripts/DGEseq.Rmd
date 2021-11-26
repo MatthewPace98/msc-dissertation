@@ -1,0 +1,73 @@
+---
+title: "DGEseq"
+output: html_document
+---
+
+Tutorial: https://www.bioconductor.org/packages/devel/bioc/vignettes/DEGseq/inst/doc/DEGseq.pdf
+
+```{r}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("DEGseq")
+```
+
+```{r}
+library("DEGseq")
+geneExpMatrix2 <- readGeneExp(file=control.genes, geneCol=1, valCol=c(6))
+write.table(geneExpMatrix1[30:31,],row.names=FALSE)
+
+```
+## 5.1 Example for DEGexp
+
+If users already have the gene expression values (or the number of reads mapped to each
+gene), this method can be used to identify differentially expressed genes between two samples with or without multiple technical replicates directly. In the package, there are test
+data for this method. The file GeneExpExample5000.txt includes the first 5000 lines in
+SupplementaryTable2.txt which is a supplementary file for Marioni and et al. (2008). In
+this file, each line includes the count of reads mapped to a gene for 14 lanes respectively
+(7 lanes for kidney and 7 lanes for liver). In the following examples, we only use the data
+sequenced at a concentration of 3 pM (five lanes for each sample).
+
+
+To identify differentially expressed genes between the two samples (kidney and liver), we
+first used the method MARS: MA-plot-based method with Random Sampling model. Five
+report graphs for the two samples will be shown following the example commands
+```{r}
+library(DEGseq)
+geneExpFile <- system.file("extdata", "GeneExpExample5000.txt", package="DEGseq")
+geneExpMatrix1 <- readGeneExp(file=geneExpFile, geneCol=1, valCol=c(7,9,12,15,18))
+geneExpMatrix2 <- readGeneExp(file=geneExpFile, geneCol=1, valCol=c(8,10,11,13,16))
+#write.table(geneExpMatrix1[30:31,],row.names=FALSE)
+
+# layout(matrix(c(1,2,3,4,5,6), 3, 2, byrow=TRUE))
+#par(mar=c(2, 2, 2, 2))
+DEGexp(geneExpMatrix1=geneExpMatrix1, geneCol1=1, expCol1=c(2,3,4,5,6), groupLabel1="kidney", geneExpMatrix2=geneExpMatrix2, geneCol2=1, expCol2=c(2,3,4,5,6), groupLabel2="liver", method="MARS")
+```
+
+
+
+## DEGseq example
+
+```{r}
+kidneyR1L1 <- system.file("extdata", "kidneyChr21.bed.txt", package="DEGseq")
+liverR1L2 <- system.file("extdata", "liverChr21.bed.txt", package="DEGseq")
+refFlat <- system.file("extdata", "refFlatChr21.txt", package="DEGseq")
+mapResultBatch1 <- c(kidneyR1L1) ## only use the data from kidneyR1L1 and liverR1L2
+mapResultBatch2 <- c(liverR1L2)
+outputDir <- file.path(tempdir(), "DEGseqExample")
+DEGseq(mapResultBatch1, mapResultBatch2, fileFormat="bed", refFlat=refFlat, outputDir=outputDir, method="LRT")
+
+```
+## Example for getGeneExp
+This method is used to count the number of reads mapped to each gene for one sample.
+The sample can have multiple technical replicates. The input of this method is the uniquely
+mapped reads with a gene annotation. And the output is a text file containing gene expression values for the sampl
+```{r}
+kidneyR1L1 <- system.file("extdata", "kidneyChr21.bed.txt", package="DEGseq")
+refFlat <- system.file("extdata", "refFlatChr21.txt", package="DEGseq")
+mapResultBatch <- c(kidneyR1L1)
+output <- file.path(tempdir(), "kidneyChr21.bed.exp")
+exp <- getGeneExp(mapResultBatch, refFlat=refFlat, output=output)
+write.table(exp[30:32,], row.names=FALSE)
+```
+
