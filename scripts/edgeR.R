@@ -43,9 +43,9 @@ design <- model.matrix(~group)
 
 # Produces a plot in which distances between samples
 # correspond to leading biological coefficient of variation (BCV) between those samples
-png(file="/home/bioinf/Desktop/RNAseq/edgeR/MDS.png")
-plotMDS(y)
-dev.off()
+#png(file="/home/bioinf/Desktop/RNAseq/edgeR/MDS.png")
+#plotMDS(y)
+#dev.off()
 
 # Dispersion cannot be calculated so we take the BCV as 0.1 since we have no replicates
 bcv <- 0.1
@@ -69,9 +69,9 @@ lrt <- glmLRT(fit,coef=4)
 lrt_toptags <- topTags(lrt, n=20, adjust.method="BH", sort.by="logFC")$table
 
 # Plot log-fold change against log-counts per million, with DE genes highlighted
-png(file="/home/bioinf/Desktop/RNAseq/edgeR/MD_4.png")
-plotMD(et)
-dev.off()
+#png(file="/home/bioinf/Desktop/RNAseq/edgeR/MD_4.png")
+#plotMD(et)
+#dev.off()
 
 
 # A commonly used approach is to conduct DE tests, apply a fold-change cut-off 
@@ -83,10 +83,9 @@ dev.off()
 #tr_toptags <- topTags(tr)$table
 
 
-
-
 # KEGG and GO
 geneid <-et$genes$Symbol
+
 head(geneid)
 go <- goana(et, species="Hs", geneid=geneid)
 topGO(go, sort="up")
@@ -94,9 +93,22 @@ keg <- kegga(et, species="Hs", geneid=geneid)
 topKEGG(keg, sort="up")
 
 library(pathview)
-
-
-
+# https://pathview.r-forge.r-project.org/pathview.pdf
+# This package can be divided into four functional modules: the Downloader, 
+# Parser, Mapper and Viewer
+# gene.data can hold one sample or multiple sampleswith gene IDs as row names
+# pathway.id the KEGG pathway ID usually 5 digits
+# species is either the kegg code or name of target species. 'ko' is used for KEGG ortholog pathway
+# kegg.native whether to render as png (TRUE) or graphiz layout (FASLE)
+?pathview
+data(gse16873.d)
+data(demo.paths)
+i <- 1
+genedata <- as.matrix(et$table[, 1])
+rownames(genedata) <- et$genes[, 1]
+head(genedata)
+pv.out <- pathview(gene.data = genedata, pathway.id = demo.paths$sel.paths[i],
+                    species = "human", out.suffix = "gse16873_mine", kegg.native = TRUE)
 
 
 # Heatmap
