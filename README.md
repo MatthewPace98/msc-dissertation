@@ -9,9 +9,9 @@ Acute myeloid leukaemia (AML) is an aggressive cancer of the hematopoietic syste
 - HiSeq 2000 Sequencing System (Illumina) used by EMBL in Heidelberg, Germany
 - Total RNA was extracted from the treated cells using the RNeasy Mini kit (Qiagen) procedure
 
-| File name                                                             | Treatment         | Size (GB) | Sample name |
-|-----------------------------------------------------------------------|-------------------|-----------|-----------|
-| C9LMRACXX_5_16s004919-1-1_Zammit-Mangion_lane216s004919_sequence.txt  | 1 hour phenol  | 6.3      | A      |
-| C9LMRACXX_10_16s004924-1-1_Zammit-Mangion_lane316s004924_sequence.txt | 6 hour phenol  | 5.2      | B      |
-| C9LMRACXX_15_16s004929-1-1_Zammit-Mangion_lane416s004929_sequence.txt | 12 hour phenol | 4.4      | C      | 
-| C9LMRACXX_16_16s004930-1-1_Zammit-Mangion_lane416s004930_sequence.txt | Negative control  | 5.0      | D      |
+| File name                                                             | Treatment         | Size (GB) | 
+|-----------------------------------------------------------------------|-------------------|-----------|
+| C9LMRACXX_5_16s004919-1-1_Zammit-Mangion_lane216s004919_sequence.fastq  | 1 hour phenol  | 6.3      |
+| C9LMRACXX_10_16s004924-1-1_Zammit-Mangion_lane316s004924_sequence.fastq | 6 hour phenol  | 5.2      |
+| C9LMRACXX_15_16s004929-1-1_Zammit-Mangion_lane416s004929_sequence.fastq | 12 hour phenol | 4.4      |
+| C9LMRACXX_16_16s004930-1-1_Zammit-Mangion_lane416s004930_sequence.fastq | Negative control  | 5.0      |
