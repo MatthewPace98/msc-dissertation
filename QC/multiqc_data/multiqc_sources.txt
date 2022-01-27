@@ -1,21 +1,33 @@
 Module	Section	Sample Name	Source
+Rsem	all_sections	1hour	/home/mpace21/data/RSEM/expression/1hour.stat/1hour.cnt
+Rsem	all_sections	12hour	/home/mpace21/data/RSEM/expression/12hour.stat/12hour.cnt
+Rsem	all_sections	control	/home/mpace21/data/RSEM/expression/control.stat/control.cnt
+Rsem	all_sections	6hour	/home/mpace21/data/RSEM/expression/6hour.stat/6hour.cnt
+STAR	SummaryLog	12hour	/home/mpace21/data/STAR/out/12hourLog.final.out
+STAR	SummaryLog	6hour	/home/mpace21/data/STAR/out/6hourLog.final.out
+STAR	SummaryLog	control	/home/mpace21/data/STAR/out/controlLog.final.out
+STAR	SummaryLog	1hour	/home/mpace21/data/STAR/out/1hourLog.final.out
+STAR	ReadsPerGene	12hour	/home/mpace21/data/STAR/out/12hourReadsPerGene.out.tab
+STAR	ReadsPerGene	6hour	/home/mpace21/data/STAR/out/6hourReadsPerGene.out.tab
+STAR	ReadsPerGene	control	/home/mpace21/data/STAR/out/controlReadsPerGene.out.tab
+STAR	ReadsPerGene	1hour	/home/mpace21/data/STAR/out/1hourReadsPerGene.out.tab
 Cutadapt	all_sections	12hour	/home/mpace21/data/trim_galore_output/12hour.fq_trimming_report.txt
 Cutadapt	all_sections	1hour	/home/mpace21/data/trim_galore_output/1hour.fq_trimming_report.txt
 Cutadapt	all_sections	6hour	/home/mpace21/data/trim_galore_output/6hour.fq_trimming_report.txt
 Cutadapt	all_sections	control	/home/mpace21/data/trim_galore_output/control.fq_trimming_report.txt
 FastQ Screen	all_sections	12hour_filtered	/home/mpace21/data/FastQ_Screen_out/filtered/12hour_filtered.fq_good_out_screen.txt
-FastQ Screen	all_sections	1hour_filtered	/home/mpace21/data/FastQ_Screen_out/filtered/1hour_filtered.fq_good_out_screen.txt
-FastQ Screen	all_sections	6hour_filtered	/home/mpace21/data/FastQ_Screen_out/filtered/6hour_filtered.fq_good_out_screen.txt
 FastQ Screen	all_sections	control_filtered_good_out_screen	/home/mpace21/data/FastQ_Screen_out/filtered/control_filtered_good_out_screen.txt
-FastQ Screen	all_sections	12hour_screen	/home/mpace21/data/FastQ_Screen_out/raw/12hour_screen.txt
-FastQ Screen	all_sections	1hour_screen	/home/mpace21/data/FastQ_Screen_out/raw/1hour_screen.txt
+FastQ Screen	all_sections	6hour_filtered	/home/mpace21/data/FastQ_Screen_out/filtered/6hour_filtered.fq_good_out_screen.txt
+FastQ Screen	all_sections	1hour_filtered	/home/mpace21/data/FastQ_Screen_out/filtered/1hour_filtered.fq_good_out_screen.txt
 FastQ Screen	all_sections	6hour_screen	/home/mpace21/data/FastQ_Screen_out/raw/6hour_screen.txt
+FastQ Screen	all_sections	1hour_screen	/home/mpace21/data/FastQ_Screen_out/raw/1hour_screen.txt
+FastQ Screen	all_sections	12hour_screen	/home/mpace21/data/FastQ_Screen_out/raw/12hour_screen.txt
 FastQ Screen	all_sections	control_screen	/home/mpace21/data/FastQ_Screen_out/raw/control_screen.txt
-FastQC	all_sections	12hour	/home/mpace21/data/fastqc/FastQC_out/12hour_fastqc.zip
 FastQC	all_sections	1hour	/home/mpace21/data/fastqc/FastQC_out/1hour_fastqc.zip
 FastQC	all_sections	6hour	/home/mpace21/data/fastqc/FastQC_out/6hour_fastqc.zip
+FastQC	all_sections	12hour	/home/mpace21/data/fastqc/FastQC_out/12hour_fastqc.zip
 FastQC	all_sections	control	/home/mpace21/data/fastqc/FastQC_out/control_fastqc.zip
-FastQC	all_sections	12hour_filtered	/home/mpace21/data/fastqc/FastQC_filt_out/12hour_filtered.fq_good_out_fastqc.zip
 FastQC	all_sections	1hour_filtered	/home/mpace21/data/fastqc/FastQC_filt_out/1hour_filtered.fq_good_out_fastqc.zip
 FastQC	all_sections	6hour_filtered	/home/mpace21/data/fastqc/FastQC_filt_out/6hour_filtered.fq_good_out_fastqc.zip
 FastQC	all_sections	control_filtered_good_out	/home/mpace21/data/fastqc/FastQC_filt_out/control_filtered_good_out_fastqc.zip
+FastQC	all_sections	12hour_filtered	/home/mpace21/data/fastqc/FastQC_filt_out/12hour_filtered.fq_good_out_fastqc.zip
