@@ -7,8 +7,8 @@ library(AnnotationDbi)
 
 # Files need to contain two columns, one for the counts and one for a gene identifier.
 
-files <- list("1hour.genes.results", "12hour.genes.results", "6hour.genes.results", "control.genes.results")
-path <- "/home/bioinf/Desktop/RNAseq/RSEM_out/genes/"
+# files <- list("1hour.genes.results", "12hour.genes.results", "6hour.genes.results", "control.genes.results")
+# path <- "/home/bioinf/Desktop/RNAseq/RSEM_out/genes/"
 
 # Creating a DGEList which can be manipulated like any other list in R
 # Takes normalised (TPM) counts as input
@@ -21,6 +21,12 @@ group <- factor(labels)
 y <- readDGE(files, path=path, columns=c(1,6), group=group, labels=labels)
 
 
+# Filters genes with low counts 
+# Threshold of 5-10 is normally taken
+keep <- filterByExpr(y, group=group)
+table(keep)
+y <- y[keep,,keep.lib.sizes=FALSE]
+
 # https://www.youtube.com/watch?v=8qvGNTVz3Ik
 # input 'keys' i.e. genes.
 # Specify the 'keytype', so ifthey are Entrez IDS, Ensembl etc
@@ -31,14 +37,9 @@ y$genes <- data.frame(Symbol=Symbol)
 head(y$genes)
 
 
-# Filters genes with low counts 
-# Threshold of 5-10 is normally taken
-keep <- filterByExpr(y, group=group)
-table(keep)
-y <- y[keep,,keep.lib.sizes=FALSE]
 
 # Normalisation by TMM
-# y <- calcNormFactors(y)
+y <- calcNormFactors(y)
 design <- model.matrix(~group)
 
 # Produces a plot in which distances between samples
@@ -49,14 +50,15 @@ design <- model.matrix(~group)
 
 # Dispersion cannot be calculated so we take the BCV as 0.1 since we have no replicates
 bcv <- 0.1
-et <- exactTest(y, dispersion=bcv^2)
+et <- exactTest(y, pair=c(1, 2), dispersion=bcv^2)
 
 #Display top differentially expressed tags
 # logFC, the log-abundance ratio, i.e. fold change, for each tag in the two groups being compared
 # logCPM, the log-average concentration/abundance for each tag in the two groups being compared
 # PValue, exact p-value for differential expression using the NB model
 # FDR, the p-value adjusted for multiple testing as found using p.adjust using the method specified
-classic_toptags <- topTags(et, n=20, adjust.method="BH", sort.by="logFC")$table
+# Note: This may mess up annotations
+et_toptags <- topTags(et, n=700, adjust.method="BH", sort.by="PValue")$table
 
 # To perform quasi-likelihood F-tests:
 #QLfit <- glmQLFit(y,design, dispersion=bcv^2)
@@ -64,9 +66,9 @@ classic_toptags <- topTags(et, n=20, adjust.method="BH", sort.by="logFC")$table
 #qlf_toptags <- topTags(qlf, n=20, adjust.method="BH", sort.by="logFC")$table
 
 # To perform likelihood ratio tests:
-fit <- glmFit(y,design, dispersion=bcv^2)
-lrt <- glmLRT(fit,coef=4)
-lrt_toptags <- topTags(lrt, n=20, adjust.method="BH", sort.by="logFC")$table
+#fit <- glmFit(y,design, dispersion=bcv^2)
+#lrt <- glmLRT(fit,coef=4)
+#lrt_toptags <- topTags(lrt, n=1000, adjust.method="BH", sort.by="PValue")$table
 
 # Plot log-fold change against log-counts per million, with DE genes highlighted
 #png(file="/home/bioinf/Desktop/RNAseq/edgeR/MD_4.png")
@@ -78,7 +80,7 @@ lrt_toptags <- topTags(lrt, n=20, adjust.method="BH", sort.by="logFC")$table
 # and then rank all the genes above that fold-change threshold by p-value
 # The following is a rigorous statistical test for thresholded hypotheses.
 # it tests whether the log2-fold-change is greater than lfc in absolute value.
-#fit <- glmQLFit(y, design)
+#fit <- glmQLFit(y, design, dispersion=bcv)
 #tr <- glmTreat(fit, coef=ncol(fit), lfc=2)
 #tr_toptags <- topTags(tr)$table
 
@@ -88,9 +90,17 @@ geneid <-et$genes$Symbol
 
 head(geneid)
 go <- goana(et, species="Hs", geneid=geneid)
-topGO(go, sort="up")
+#go_top <- topGO(go, sort="up", n=300)
 keg <- kegga(et, species="Hs", geneid=geneid)
-topKEGG(keg, sort="up")
+#kegg_top <- topKEGG(keg, sort="up", n=300)
+
+
+# write.csv(y$counts,"/home/bioinf/Desktop/RNAseq/Top DE genes/filtered_counts.csv", row.names = TRUE)
+# write.csv(lrt_toptags,"/home/bioinf/Desktop/RNAseq/Top DE genes/lrttop.csv", row.names = TRUE)
+write.csv(et_toptags,"/home/bioinf/Desktop/RNAseq/Top DE genes/ettop6hr.csv", row.names = TRUE)
+write.csv(go,"/home/bioinf/Desktop/RNAseq/Top DE genes/go.csv", row.names = TRUE)
+write.csv(keg,"/home/bioinf/Desktop/RNAseq/Top DE genes/kegg.csv", row.names = TRUE)
+
 
 library(pathview)
 # https://pathview.r-forge.r-project.org/pathview.pdf
@@ -98,55 +108,34 @@ library(pathview)
 # Parser, Mapper and Viewer
 # gene.data can hold one sample or multiple sampleswith gene IDs as row names
 # pathway.id the KEGG pathway ID usually 5 digits
-# species is either the kegg code or name of target species. 'ko' is used for KEGG ortholog pathway
-# kegg.native whether to render as png (TRUE) or graphiz layout (FASLE)
+# species is either the kegg code or name of target species. 'ko' is used for 
+# KEGG ortholog pathway kegg.native whether to render as png (TRUE) or graphiz 
+# layout (FASLE)
+# https://www.genome.jp/kegg/pathway.html
+
+# check code backup to see wtf is going on
 ?pathview
-data(gse16873.d)
-data(demo.paths)
-i <- 1
+
 genedata <- as.matrix(et$table[, 1])
 rownames(genedata) <- et$genes[, 1]
 head(genedata)
-pv.out <- pathview(gene.data = genedata, pathway.id = demo.paths$sel.paths[i],
-                    species = "human", out.suffix = "gse16873_mine", kegg.native = TRUE)
+'
+https://www.genome.jp/kegg/pathway.html#metabolism
+05221 Acute myeloid leukemia
+05200 Pathways in cancer
+05202 Transcriptional misregulation in cancer
+04210 Apoptosis
+04110 Cell cycle
+04640 Hematopoietic cell lineage
+'
+dir="/home/bioinf/Desktop/RNAseq/pathview/"
+pv.out <- pathview(gene.data = genedata, pathway.id = "04640",
+                   species = "human", out.suffix = "hematopoitic_cells_04640", kegg.dir=dir,
+                   kegg.native = F)
+
+# Example
+data(gse16873.d)
+pv.out <- pathview(gene.data = gse16873.d[, 1], pathway.id = "05221",
+                     species = "hsa", out.suffix = "gse16873")
 
 
-# Heatmap
-library(gplots)
-
-# The gene names in the first column.
-gene = row.names(y$counts)
-
-# Load the data from the first column on.
-vals = as.matrix(y$counts[, 1 : ncol(y$counts)])
-
-# Adds a little noise to each element to avoid the
-# clustering function fail on zero variance datalines.
-vals = jitter(vals, factor = 1, amount = 0.00001)
-
-# Each row is normalized to a z-score
-zscore = NULL
-for (i in 1 : nrow(vals)) {
-  row = vals[i,]
-  zrow = (row - mean(row)) / sd(row)
-  zscore = rbind(zscore, zrow)
-}
-
-# Add back gene names as row names.
-row.names(zscore) = gene
-
-# Turn it into a matrix for heatmap2.
-zscore = as.matrix(zscore)
-
-# Open the drawing device.
-pdf(file="/home/bioinf/Desktop/RNAseq/edgeR/heatmap.pdf")
-
-# Set the color scheme.
-colors = colorRampPalette(c("green", "black", "red"), space = "rgb")(256)
-
-# Draw the heatmap.
-# I think red is upregulated and green is down but need to check
-heatmap.2(zscore, col = colors, density.info = "none", trace = "none", margins = c(7, 7), lhei = c(1, 5))
-
-# Turn off the device.
-dev.off()
