@@ -3,13 +3,14 @@
 ## FastQC
 http://manpages.ubuntu.com/manpages/impish/man1/fastqc.1.html
 
-```fastqc \
+```
+fastqc \
 -o ./FastQC_out \
 -t 6 \
-*.gz
+*.fq.gz
 ```
 
-FastQC can accept multiple file names as input, so we can use the ```*.txt``` wildcard
+FastQC can accept multiple file names as input, so we can use the ```.fq.gz``` wildcard
 
 Results were of typical RNA-seq data
 FastQC was detecting TruSeq adapters 
@@ -35,7 +36,7 @@ $a/Raw/*.fq.gz
 
 https://github.com/StevenWingett/FastQ-Screen/blob/master/fastq_screen_documentation.md
 
-If referene genomes absent: ```fastq_screen --get_genomes```
+If reference genomes absent: ```fastq_screen --get_genomes```
 Config file was adjusted
 Tested on recommended test dataset
 
@@ -52,7 +53,17 @@ fastq_screen \
 ```
 
 ## PrinSeq++
-                          
+https://github.com/Adrian-Cantu/PRINSEQ-plus-plus
+
+```
+prinseq++ \
+-fastq $a/trim_galore_output/${f}_trimmed.fq \
+-out_name $a/prinseq_out/${f}_filtered.fq \
+-out_bad $a/prinseq_out/${f}_bad.fq \
+-ns_max_n 7 \
+-lc_dust=0.1 > $a/prinseq_out/control_prinseq_report.txt
+```
+
 
 ## MultiQC
 Dependencies:
@@ -63,14 +74,36 @@ In directory:
 ```multiqc .```
 
 
-# Alignment - STAR
+# Alignment and Quantification - STAR and RSEM
+The trimmed FASTQ files were aligned to the GRCh38.p13 reference genome.
 
-Genome index generation
+##Reference generation
 ```
-STAR
+rsem-prepare-reference --gtf mm9.gtf \
+                       --star \
+                       --star-sjdboverhang 50 \
+                       --num-threads 8 \
+                       --gtf $h2/Homo_sapiens.GRCh38.104.gtf \
+                       ./Homo_sapiens.GRCh38.dna.primary_assembly.fa \
+                       ./RSEM/reference/GRCh38
 ```
 
-Alignment
+##Alignment
 ```
-STAR
+samples=(control, 1hour, 6hour, 12hour)
+input=./prinseq_out/
+
+for sample in ${samples[@]};
+do
+        rsem-calculate-expression \
+        --num-threads 16 \
+        --star \
+        --sort-bam-by-coordinate \
+        --fragment-length-mean 50 \
+        --fragment-length-sd 1 \
+        $input/${sample}*good_out.fq \
+        ./reference/GRCh38 \
+        ./expression/${sample}
+
+done
 ```
