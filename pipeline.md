@@ -77,7 +77,14 @@ In directory:
 # Alignment and Quantification - STAR and RSEM
 The trimmed FASTQ files were aligned to the GRCh38.p13 reference genome.
 
-##Reference generation
+RSEM dependencies:
+- Linux/Mac OS
+- C++
+- Perl 
+- R 
+- Bowtie, Bowtie 2 or STAR
+
+## Reference generation
 ```
 rsem-prepare-reference --gtf mm9.gtf \
                        --star \
@@ -88,7 +95,7 @@ rsem-prepare-reference --gtf mm9.gtf \
                        ./RSEM/reference/GRCh38
 ```
 
-##Alignment
+## Alignment
 ```
 samples=(control, 1hour, 6hour, 12hour)
 input=./prinseq_out/
