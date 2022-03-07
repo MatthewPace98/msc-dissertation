@@ -21,6 +21,10 @@ https://dnatech.genomecenter.ucdavis.edu/wp-content/uploads/2013/06/illumina-ada
 ## Trim Galore!
 https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md
 
+Dependencies:
+- Cutadapt 
+- FastQC
+
 ```
 trim_galore \
 --phred33 \
@@ -76,6 +80,8 @@ In directory:
 
 # Alignment and Quantification - STAR and RSEM
 The trimmed FASTQ files were aligned to the GRCh38.p13 reference genome.
+STAR dependencies:
+- 64 bit Linux or Mac OS X
 
 RSEM dependencies:
 - Linux/Mac OS
