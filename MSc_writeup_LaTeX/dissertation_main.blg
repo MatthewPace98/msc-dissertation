@@ -1,0 +1,206 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: dissertation_main.aux
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+The style file: um-plainnat.bst
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+Reallocating 'name_of_file' (item size: 1) to 46 items.
+Reallocating 'name_of_file' (item size: 1) to 36 items.
+Reallocating 'name_of_file' (item size: 1) to 38 items.
+Reallocating 'name_of_file' (item size: 1) to 29 items.
+Reallocating 'name_of_file' (item size: 1) to 30 items.
+Database file #1: intro/introduction_biblio.bib
+Warning--entry type for "acsamlsubtypes" isn't style-file defined
+--line 158 of file intro/introduction_biblio.bib
+Warning--entry type for "trimgalore" isn't style-file defined
+--line 333 of file intro/introduction_biblio.bib
+Warning--entry type for "ref" isn't style-file defined
+--line 391 of file intro/introduction_biblio.bib
+Repeated entry---line 430 of file intro/introduction_biblio.bib
+ : @phdthesis{Gatt2016
+ :                    ,
+I'm skipping whatever remains of this entry
+Database file #2: lit_review/background_and_lit_overview_biblio.bib
+Repeated entry---line 20 of file lit_review/background_and_lit_overview_biblio.bib
+ : @article{Robak2009
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 51 of file lit_review/background_and_lit_overview_biblio.bib
+ : @book{whoclassification
+ :                        ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "ACS2018" isn't style-file defined
+--line 70 of file lit_review/background_and_lit_overview_biblio.bib
+Repeated entry---line 79 of file lit_review/background_and_lit_overview_biblio.bib
+ : @article{Kouchkovsky2016
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 97 of file lit_review/background_and_lit_overview_biblio.bib
+ : @article{Khwaja2016
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 267 of file lit_review/background_and_lit_overview_biblio.bib
+ : @phdthesis{Gatt2016
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 492 of file lit_review/background_and_lit_overview_biblio.bib
+ : @article{lindsley2015acute
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 503 of file lit_review/background_and_lit_overview_biblio.bib
+ : @article{cock2010sanger
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 924 of file lit_review/background_and_lit_overview_biblio.bib
+ : @article{zhao2014comparison
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 957 of file lit_review/background_and_lit_overview_biblio.bib
+ : @article{zhong2011high
+ :                       ,
+I'm skipping whatever remains of this entry
+Database file #3: method/materials_and_methods_biblio.bib
+Repeated entry---line 1 of file method/materials_and_methods_biblio.bib
+ : @phdthesis{Gatt2016
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7 of file method/materials_and_methods_biblio.bib
+ : @article{Dobin2013
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 28 of file method/materials_and_methods_biblio.bib
+ : @article{martin2011cutadapt
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 60 of file method/materials_and_methods_biblio.bib
+ : @article{wingett2018fastq
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 69 of file method/materials_and_methods_biblio.bib
+ : @manual{R
+ :          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 117 of file method/materials_and_methods_biblio.bib
+ : @article{multiqc
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 166 of file method/materials_and_methods_biblio.bib
+ : @electronic{ref
+ :                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 175 of file method/materials_and_methods_biblio.bib
+ : @unpublished{prinseq++
+ :                       ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "virtualbox" isn't style-file defined
+--line 224 of file method/materials_and_methods_biblio.bib
+Repeated entry---line 235 of file method/materials_and_methods_biblio.bib
+ : @article{edger
+ :               ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "org.Hs.eg.db" isn't style-file defined
+--line 252 of file method/materials_and_methods_biblio.bib
+Repeated entry---line 290 of file method/materials_and_methods_biblio.bib
+ : @article{cock2010sanger
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 301 of file method/materials_and_methods_biblio.bib
+ : @article{ewing1998base
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 312 of file method/materials_and_methods_biblio.bib
+ : @tool{trimgalore
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 320 of file method/materials_and_methods_biblio.bib
+ : @article{chomczynski1987single
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 331 of file method/materials_and_methods_biblio.bib
+ : @book{matson2009microarray
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 345 of file method/materials_and_methods_biblio.bib
+ : @article{wang2011low
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 356 of file method/materials_and_methods_biblio.bib
+ : @article{zhong2011high
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 367 of file method/materials_and_methods_biblio.bib
+ : @article{pease2012rapid
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 378 of file method/materials_and_methods_biblio.bib
+ : @misc{andrews2010fastqc
+ :                        ,
+I'm skipping whatever remains of this entry
+Database file #4: results/results_and_discussion_biblio.bib
+Repeated entry---line 154 of file results/results_and_discussion_biblio.bib
+ : @inproceedings{MacManes2014
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 216 of file results/results_and_discussion_biblio.bib
+ : @article{Zhang2017
+ :                   ,
+I'm skipping whatever remains of this entry
+Database file #5: evaluation/evaluation_biblio.bib
+Database file #6: conclusion/conclusions_biblio.bib
+Warning--I didn't find a database entry for "gallagher1979characterization"
+Warning--I didn't find a database entry for "dalton1988hl"
+Warning--I didn't find a database entry for "jacob"
+Warning--I didn't find a database entry for "morgulis2006fast"
+Warning--to sort, need author or key in acsamlsubtypes
+Warning--empty year in acsamlsubtypes
+Warning--empty note in prinseq++
+Warning--empty journal in carroll1991t
+Warning--empty journal in chomienne1990all
+Warning--empty journal in davis2019
+Warning--empty journal in deutsch1996gzip
+Warning--empty school in Gatt2016
+Warning--empty institution in illumina2010
+Warning--can't use both volume and number fields in liu2004new
+Warning--empty booktitle in MacManes2014
+You've used 107 entries,
+            2771 wiz_defined-function locations,
+            1207 strings with 27865 characters,
+and the built_in function-call counts, 58225 in all, are:
+= -- 4973
+> -- 4571
+< -- 48
++ -- 1544
+- -- 1437
+* -- 5379
+:= -- 9319
+add.period$ -- 326
+call.type$ -- 107
+change.case$ -- 781
+chr.to.int$ -- 107
+cite$ -- 226
+duplicate$ -- 2059
+empty$ -- 3874
+format.name$ -- 1585
+if$ -- 11704
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 96
+newline$ -- 547
+num.names$ -- 425
+pop$ -- 1390
+preamble$ -- 1
+purify$ -- 680
+quote$ -- 0
+skip$ -- 1817
+stack$ -- 0
+substring$ -- 2089
+swap$ -- 127
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1157
+warning$ -- 11
+while$ -- 462
+width$ -- 0
+write$ -- 1378
+(There were 30 error messages)

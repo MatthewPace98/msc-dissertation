@@ -1,0 +1,154 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																	%%
+%%  						Main file for my MSc Bioinformatics Dissertation										%%
+%%																																	%%
+%% 		Bioinformatics Analysis of a Phenol-Treated Acute Myeloid Leukaemia Cell Line 	%%
+%% 																																	%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Template used - https://github.com/jp-um/university_of_malta_LaTeX_dissertation_template
+
+\RequirePackage[l2tabu, orthodox]{nag} % tells you of any bad LaTeX usage, must be first thing in class
+
+%% There is one option you should define; oneside or twoside
+%% Use twoside for your viva docs (examiners hate long docs they need to carry around)
+%% and oneside for the final thing you submit to the library.  Note that margins will
+%% change accordingly
+
+\documentclass[twoside]{um}  % custom University of Malta project/dissertation/thesis 
+
+%% **************** Packages start ******************
+
+% \listfiles % uncomment this to know which packages you are using
+              % the list of packages will be in the bottom of the .log file
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{array}
+\usepackage{changepage}
+\usepackage{caption}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Sets list line spacing
+\usepackage{enumitem}
+\setlist[enumerate]{itemsep=0mm}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+		language=bash,
+		backgroundcolor=\color{backcolour}, 
+		commentstyle=\color{codegreen},
+		keywordstyle=\color{magenta},
+		stringstyle=\color{codepurple},
+		numberstyle=\tiny\color{codegray},
+		basicstyle=\ttfamily\footnotesize,
+		captionpos=b,                    
+		keepspaces=true,                 
+		numbers=left,                    
+		numbersep=5pt,                  
+		showspaces=false,                
+		showstringspaces=false,
+		showtabs=false,                  
+		tabsize=1
+}
+
+\lstset{style=mystyle}
+
+\newcommand{\mkbibnodate}{n\adddot d\adddot}
+
+
+%% Note that packges may already be loaded from the um (and memoir) classes.
+%% Do not add your packages to the template, but rather add them here.
+
+%% ***************** Packages end *******************
+
+%% **************** (Your) Data (Start) ******************
+
+\title{RNA-seq Analysis of an \\ Acute Myeloid Leukaemia \\ Cell Line Treated with \\ Phenolic Compounds}  % use \\ here otherwise you get a justified title
+                                     % note capitalization of the title (only common words in lower case)
+%\tagline{Do I need this here?}
+\author{Matthew Pace} 
+\authorID{372098M}
+\supervisor{Dr Lucienne Vassallo Gatt}
+\cosupervisor{Dr Jean-Paul Ebejer\\and Dr Marion Zammit Mangion }           
+\department{Centre for Molecular Medicine & Biobanking}   
+\faculty{Faculty of Health Sciences}       
+\degreeName{M.Sc.\ in Bioinformatics}       % note the \ after the dot, so not to consider it a fullstop
+\doctype{dissertation}
+\degreeDate{\monthyeardate\today}    % when did you submit (officially after your corrections)
+%\subjectcode{MMB5010}                % currently not used
+
+%% ***************** (Your) Data (End) *******************
+
+
+%% ******** (Your) Document Settings (Start) *************
+
+% You should have an images directory in every chapX subdir
+% NOTE:  Trailing / for subdirs is required.
+\graphicspath{{./images/}{./intro/images/}{./lit_review/images/}{./method/images/}{./conclusion/images/}{./evaluation/images/}{./results/images/}}   
+% Paths where to look for images, if defined "images" must always be there as it holds the images in-use by the template.
+
+\makeindex
+
+%% ********* (Your) Document Settings (End) **************
+
+% DOCTOR'S (JP) ORDERS: MAKE SURE TO READ MY TWO BLOG ENTRIES WITH
+% CONTENT AND LaTeX TIPS FOR YOUR WRITE-UP.  THESE ARE BASED ON  
+% EXAMINER'S FEEDBACK
+%
+% URLS:
+% https://bitsilla.com/blog/2019/03/content-tips-for-your-dissertation-or-project-write-up/
+% https://bitsilla.com/blog/2019/01/latex-tips-for-your-dissertation-or-project-write-up/
+
+% end the preamble and start the document
+
+\begin{document}
+\frontmatter 
+    % \maketitle
+    % \input{frontmatter/copyright}       
+    % \input{frontmatter/originality}    
+    % \input{frontmatter/dedication}        % include a dedication.tex file
+    % \input{frontmatter/acknowledgements}   % include an acknowledgements.tex file
+     % \input{frontmatter/abstract}\if@openright\cleardoublepage\else\clearpage\fi
+    \tableofcontents*\if@openright\cleardoublepage\else\clearpage\fi
+    \listoffigures*\if@openright\cleardoublepage\else\clearpage\fi
+    %\listoftables*\if@openright\cleardoublepage\else\clearpage\fi
+    \input{frontmatter/abbreviations}\if@openright\cleardoublepage\else\clearpage\fi
+    %\lstlistoflistings
+
+%% Note: always use \input as you cannot nest \includes (amongst other things)
+\pagestyle{umpage}
+\floatpagestyle{umpage}
+\mainmatter 
+    %\input{intro/introduction_main} 
+    \input{lit_review/background_and_lit_overview_main}
+    \input{method/materials_and_methods_main}
+    %\input{results/results_and_discussion_main}
+    %\input{conclusion/conclusions_main}
+    %\appendix
+    %     \input{appA/appendix_a_main}     
+    %     \input{appB/appendix_b_main}
+
+
+\pagestyle{umpageback}
+{\backmatter
+    % Bibliography
+    \if@openright\cleardoublepage\else\clearpage\fi
+
+    \bibliographystyle{um-plainnat} %% specific plainnat does not show url for articles
+    % Use something like https://flamingtempura.github.io/bibtex-tidy/ to clean all your bibtex entries
+    { 	\scriptsize\bibliography{intro/introduction_biblio,lit_review/background_and_lit_overview_biblio, method/materials_and_methods_biblio, results/results_and_discussion_biblio, evaluation/evaluation_biblio, conclusion/conclusions_biblio}}
+	\printindex
+}
+
+\end{document}
+% This needs to be 32k words in length
+
+%%% The End %%%
