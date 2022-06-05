@@ -21,34 +21,37 @@
 \contentsline {subsection}{\numberline {1.4.1}Quality Control}{17}{subsection.1.4.1}%
 \contentsline {subsubsection}{\numberline {1.4.1.1}FastQC}{18}{subsubsection.1.4.1.1}%
 \contentsline {subsubsection}{\numberline {1.4.1.2}FastQScreen}{19}{subsubsection.1.4.1.2}%
+\contentsline {subsubsection}{\numberline {1.4.1.3}MultiQC}{20}{subsubsection.1.4.1.3}%
 \contentsline {subsection}{\numberline {1.4.2}Preprocessing}{20}{subsection.1.4.2}%
 \contentsline {subsubsection}{\numberline {1.4.2.1}Cutadapt: Short reads and Adapter sequences}{20}{subsubsection.1.4.2.1}%
-\contentsline {subsubsection}{\numberline {1.4.2.2}Prinseq++: Low complexity and No Basecalls}{20}{subsubsection.1.4.2.2}%
+\contentsline {subsubsection}{\numberline {1.4.2.2}Prinseq++: Low complexity and No Basecalls}{21}{subsubsection.1.4.2.2}%
 \contentsline {subsection}{\numberline {1.4.3}Alignment}{21}{subsection.1.4.3}%
-\contentsline {subsubsection}{\numberline {1.4.3.1}STAR}{21}{subsubsection.1.4.3.1}%
-\contentsline {subsection}{\numberline {1.4.4}Read Quantification}{21}{subsection.1.4.4}%
-\contentsline {subsubsection}{\numberline {1.4.4.1}RSEM}{22}{subsubsection.1.4.4.1}%
-\contentsline {subsection}{\numberline {1.4.5}Read Normalisation}{22}{subsection.1.4.5}%
-\contentsline {subsection}{\numberline {1.4.6}Differential Expression Analysis}{22}{subsection.1.4.6}%
-\contentsline {subsection}{\numberline {1.4.7}Downstream Analysis}{22}{subsection.1.4.7}%
-\contentsline {section}{\numberline {1.5}Evaluation Criteria}{22}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Related Work}{22}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Summary}{24}{section.1.7}%
-\contentsline {chapter}{\chapternumberline {2}Materials \& Methods}{25}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Preliminary Study}{25}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Phenolic extraction}{25}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Cell Culturing and RNA extraction}{26}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Determination of RNA Quality and Sequencing}{26}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}RNA-seq Pipeline}{27}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Quality Control}{29}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Preprocessing}{30}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Read alignment and Quantification}{31}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Reassessing the Quality}{32}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Normalisation and Differential Gene Expression}{32}{subsection.2.2.5}%
-\contentsline {subsubsection}{\numberline {2.2.5.1}Filtering Low Count Genes}{33}{subsubsection.2.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.2.5.2}Gene Annotation}{33}{subsubsection.2.2.5.2}%
-\contentsline {subsubsection}{\numberline {2.2.5.3}Normalisation}{34}{subsubsection.2.2.5.3}%
-\contentsline {subsubsection}{\numberline {2.2.5.4}Adjusting p-values and Cut-offs}{35}{subsubsection.2.2.5.4}%
-\contentsline {subsection}{\numberline {2.2.6}Functional analysis}{35}{subsection.2.2.6}%
-\contentsline {section}{\numberline {2.3}Summary}{35}{section.2.3}%
-\contentsline {chapter}{References}{37}{chapter*.33}%
+\contentsline {subsubsection}{\numberline {1.4.3.1}STAR}{24}{subsubsection.1.4.3.1}%
+\contentsline {subsection}{\numberline {1.4.4}Read Quantification}{25}{subsection.1.4.4}%
+\contentsline {subsubsection}{\numberline {1.4.4.1}RSEM}{26}{subsubsection.1.4.4.1}%
+\contentsline {subsection}{\numberline {1.4.5}Read Normalisation}{26}{subsection.1.4.5}%
+\contentsline {subsubsection}{\numberline {1.4.5.1}TMM}{26}{subsubsection.1.4.5.1}%
+\contentsline {subsection}{\numberline {1.4.6}Differential Expression Analysis}{26}{subsection.1.4.6}%
+\contentsline {subsubsection}{\numberline {1.4.6.1}EdgeR}{26}{subsubsection.1.4.6.1}%
+\contentsline {subsection}{\numberline {1.4.7}Downstream Analysis}{26}{subsection.1.4.7}%
+\contentsline {section}{\numberline {1.5}Evaluation Criteria}{26}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Related Work}{26}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Summary}{28}{section.1.7}%
+\contentsline {chapter}{\chapternumberline {2}Materials \& Methods}{29}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Preliminary Study}{29}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Phenolic extraction}{29}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Cell Culturing and RNA extraction}{30}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Determination of RNA Quality and Sequencing}{30}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}RNA-seq Pipeline}{31}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Quality Control}{33}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Preprocessing}{34}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Read alignment and Quantification}{35}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Reassessing the Quality}{36}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Normalisation and Differential Gene Expression}{36}{subsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.5.1}Filtering Low Count Genes}{37}{subsubsection.2.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.2.5.2}Gene Annotation}{37}{subsubsection.2.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.2.5.3}Normalisation}{38}{subsubsection.2.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.2.5.4}Adjusting p-values and Cut-offs}{38}{subsubsection.2.2.5.4}%
+\contentsline {subsection}{\numberline {2.2.6}Functional analysis}{39}{subsection.2.2.6}%
+\contentsline {section}{\numberline {2.3}Summary}{39}{section.2.3}%
+\contentsline {chapter}{References}{41}{chapter*.35}%

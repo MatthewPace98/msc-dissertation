@@ -20,6 +20,8 @@ DNA is just the general starting point in a series of information transfers desc
 
 \section{Acute Myeloid Leukaemia}
 
+%good resource: https://btep.ccr.cancer.gov/wp-content/uploads/RNA-seq_BETP_2019rev.pdf
+
 \ac{AML} is an aggressive form of cancer which is characterised by its rapid proliferation of myeloblasts. This occurs when undifferentiated myeloid cells acquire mutations which hinder further differentiation but allows for their clonal proliferation \citep{Khwaja2016}. This comes at the expense of the production of their healthy, differentiated counterparts: erythrocytes, platelets and granulocytes \citep{Khwaja2016}. It is an exception to cancers in that it does not form a tumour, which is usually analysed to determine the severity. Instead \ac{AML} is staged according to its subtype and other variables \citep{ACS2018}. It is the most common form of acute leukaemia, with an incidence rate of 4.3 per 100,000 in the United States \citep{Kouchkovsky2016}. One of the main risk factors is age, with a median age of diagnosis of 70 years, and with a slight male predominance \citep{juliusson2009age, Khwaja2016}. Acute myeloid leukaemia is synonymous with acute myelogenous leukemia, acute myelocytic leukemia, or acute nonlymphocytic leukemia.
 
 %Summary of leukaemia: https://www.cancer.net/cancer-types/leukemia-acute-myeloid-aml/introduction
@@ -177,9 +179,8 @@ As mentioned in Section \ref{Treatment Methods}, \ac{ATRA} has been a success st
 %Read Lucienne's papers and their references
 %\section{Phenols in Maltese Extra Virgin Olive Oil}
 
-%In vivo
 
-
+%\section{Experimental Design}
 \section{RNA-seq: \textit{in vitro}}
 RNA sequencing (RNA-seq) is the application of a \ac{NGS} technique to measure the quantity of RNA sequences in a biological sample, in a given moment \citep{zhong2009}. While this dissertation deals with the data analysis part of RNA-seq, some background on the origins of said data is essential. RNA-seq has gradually been replacing microarrays as the standard technology in molecular biology to analyse \ac{DGE}. Its main advantage is that it allows for the sequencing of the entire transcriptome, while microarrays only allow for predefined regions to be sequenced \citep{rao2019comparison}. 
 
@@ -267,6 +268,7 @@ Multiple samples may be sequenced simultaneously during a single run, where they
 
 
 \section{RNA-seq: \textit{in silico}}
+\label{RNA-seq: in silico}
 
 Once the FASTQ files emerge from the sequencing machines, we may move into the dry lab and feed the data into an RNA-seq data analysis pipeline. While the specific tools which make up the pipeline will vary according to the type of data and goals of the researcher, all RNA-seq pipelines share a common skeleton. The following subsections will first provide a general overview of the respective step in the pipeline, and then delve into the specific tools used in this project.
 
@@ -288,7 +290,7 @@ A common convention is to write the value of the Phred score after the letter \t
 
 \subsubsection{FastQC}
 % Useful: https://rtsf.natsci.msu.edu/genomics/tech-notes/fastqc-tutorial-and-faq/#:~:text=FastQC%2C%20written%20by%20Simon%20Andrews,on%20a%20sequence%20data%20set.
-In the rapidly changing field of nucleotide sequencing, FastQC \citep{andrews2010fastqc} has been one of the few constants. It has become a staple quality control tool for high throughput sequencing data, accepting BAM \citep{BAM}, SAM or FASTQ files as input, from which it produces an HTML-based report using a number of modules measuring various quality metrics. The software rates each of these modules using a green check-mark signifying that it 'passed' QC, a yellow exclamation mark 'warning', or a red cross 'failed'. However these flags are set to DNA sequencing standards, and have limited applicability with other types of sequencing, such as RNA-seq, where a number are expected to fail. These modules are thoroughly described in its documentation\footnote{\url{https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3\%20Analysis\%20Modules/}} and summarised below. Care should be taken as the X-axis is non-uniform for a number of the produced graphs.
+In the rapidly changing field of nucleotide sequencing, FastQC \citep{andrews2010fastqc} has been one of the few constants. It has become a staple quality control tool for high throughput sequencing data, accepting BAM \citep{BAM}, SAM \citep{li2009sequence} or FASTQ files as input, from which it produces an HTML-based report using a number of modules measuring various quality metrics. The software rates each of these modules using a green check-mark signifying that it 'passed' QC, a yellow exclamation mark 'warning', or a red cross 'failed'. However these flags are set to DNA sequencing standards, and have limited applicability with other types of sequencing, such as RNA-seq, where a number are expected to fail. These modules are thoroughly described in its documentation\footnote{\url{https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3\%20Analysis\%20Modules/}} and summarised below. Care should be taken as the X-axis is non-uniform for a number of the produced graphs.
 
 %Maybe add expected moduels to fail
 \textbf{Modules used in FastQC:}
@@ -318,6 +320,9 @@ FastQScreen maps the sample reads against the genomes of common contaminants and
 \end{figure}
 \clearpage
 
+\subsubsection{MultiQC}
+MultiQC \footnote{\url{https://multiqc.info/docs/}} \citep{multiqc} provides a convenient way of collating multiple QC reports across multiple samples into a single interactive HTML report. It supports the input of 114 tools as of version 1.11, including the reports from tools found further downstream, in the preprocessing, alignment or quantification parts of the pipeline. 
+
 \subsection{Preprocessing}
 If poor quality data is identified, it should be cleaned to avoid negative effects in the downstream analysis. Quality trimming which is too aggressive may similarly negatively impact downstream analysis, thus care must be taken to select appropriate quality thresholds \citep{davis2019}.
 
@@ -327,7 +332,7 @@ One of the primary functions of Cutadapt \footnote{\url{https://cutadapt.readthe
 
 Trim Galore!\footnote{\url{https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/}} \citep{trimgalore} is a wrapper script that may be used to instantly redirect the trimmed reads from Cutadapt back to FastQC to reassess the data quality. It accepts the same arguments as Cutadapt, with an additional \texttt{--fastqc\textunderscore args} which accepts additional arguments to be passed on to FastQC as a string. This combines both Cutadapt and FastQC parameters into a single command. 
 
-\textbf{By default Cutadapt:}
+\textbf{Cutadapt's default options:}
 \begin{itemize}\itemsep0em
 \item Outputs the trimmed FASTQ file and simultaneously generates its FastQC report.
 \item Assumes Sanger/Illumina 1.9 quality encoding (ASCII code +33 = Phred score)
@@ -348,7 +353,7 @@ Regions of low-complexity (also called compositionally biased regions) are a nat
 
 The ambiguous base \textit{N} represents no basecall, and a threshold for the maximum number of \textit{N}'s in a sequence may be set using \texttt{-ns\textunderscore max\textunderscore n}.
     
-\textbf{By default Prinseq++:}
+\textbf{Prinseq++'s default options:}
 \begin{itemize}\itemsep0em
 \item Outputs the filtered FASTQ, and the filtered reads as separate files.
 \item Removes sequences with a DUST score < 0.5
@@ -358,30 +363,60 @@ The ambiguous base \textit{N} represents no basecall, and a threshold for the ma
 
 \subsection{Alignment}
 
-There are some semantics associated with this particular step which should be clarified before proceeding. \textit{Alignment} and \textit{mapping} are sometimes used interchangeably, but there are subtle differences. According to the BioStar Handbook \citep{albert2020biostar} and a presentation by Heng Li, \textit{alignment} is the optimal placement of a read against a genome, while \textit{mapping} suggests less certainty, and that the optimal placement is not always possible. Which term to use is dependent on the study, although modern tools often combine the two approaches, which continues to blur the line separating the terms. 
+Quick and computationally efficient pairwise comparison and alignment of two sequences consisting of billions of reads is a classic problem in bioinformatics. We have amassed large volumes of literature describing potential strategies to tackle the problem, occupying different niches.
 
-Read aligners are tools designed to perform a pairwise comparison between two sequences, and find regions of high similarity. Aligners may take one of two approached: global alignment or local alignment. Global alignment algorithms, such as \cite{needleman1970general}, aligns both sequences from their first amino acid residue through to their last and is more suitable for sequences of approximately equal lengths. By contrast, local alignment algorithms, such as \cite{smith1981identification} and BLAST, are more suited for sequences that are suspected to overlap only partially.
+Aligners may take one of two approaches: global alignment or local alignment. Global alignment algorithms, such as \cite{needleman1970general}, aligns both sequences from their first amino acid residue through to their last and is more suitable for sequences of approximately equal lengths. By contrast, local alignment algorithms, such as \cite{smith1981identification} and BLAST, are more suited for sequences that are suspected to overlap only partially. 
 
-Alignment algorithm efficiency is at least semi-dependent on read length, with each having ideal range of lengths, although this is rarely stated in the documentation \citep{albert2020biostar}.
+There are some semantics associated with this particular step which should be clarified before proceeding further. \textit{Alignment} and \textit{mapping} are often used interchangeably, but there are subtle differences. According to the BioStar Handbook \citep{albert2020biostar} and a presentation by Heng Li, \textit{alignment} is the optimal placement of a read against a genome, while \textit{mapping} suggests less certainty, and that the optimal placement is not always possible. Which term to use is dependent on the data and goals of the study, although modern tools often combine the two approaches, which continues to blur the line separating the terms.
 
+In RNA-seq, the reference sequence one aligns against may be either a genome or a transcriptome. Since reads from our FASTQ file originate from processed mRNA, the reads may span across multiple exons. This cannot be simply mapped onto a reference genome because of the presence of intronic and non-coding regions \citep{rnadataanalysis2020}. To map transcript-derived reads which against a genome, a splice-aware aligner must be used (\autoref{fig:alignment}).
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=13cm]{transcriptome_vs_genome_alignment}
+    \caption[Alignment against a reference genome or a reference transcriptome]{Alignment against a reference genome or a reference transcriptome. Created using \href{https://biorender.com/}{BioRender.com}. } 
+    \label{fig:alignment}
+\end{figure}
+\clearpage
 
-% Pseudo aligners vs quasi-aligners
-% Reference genomes
-% aligning to a genome vs a transcriptome
-%Multimapping:https://www.sciencedirect.com/science/article/pii/S2001037020303032
+Alignment algorithm efficiency is at least semi-dependent on read length, with each having ideal range of lengths, although this is rarely stated in the documentation \citep{albert2020biostar}. A distinction is often made between short-read and long-read mappers, although this distinction is arbitrary. Many conventional short-read mappers are not suitable for reads under 30bp, necessary for the study of microRNAs \citep{albert2020biostar, ziemann2016evaluation}.
+
+Quasi-mappers and pseudo-aligners (most notably Salmon \citep{patro2017salmon} and Kallisto \citep{bray2016near} respectively) differ from classical alignment. They utilise \textit{k}-mer matching to match reads and corresponding transcripts \citep{rnadataanalysis2020}. They require less runtime than other existing alignment tools \citep{Zhang2017}, while their accuracy is disputed, with \cite{srivastava2020alignment} finding that they are less accurate and \cite{Zhang2017, Schaarschmidt2020} argue that their accuracy is comparable to conventional aligners.
+
+Some implementation of the mapping quality (MAPQ) value is used by all conventional aligners and it is a standard field in the SAM/BAM file formats. It is analogous to the Phred score in a FASTQ file, and allows for easy filtering of bad quality reads. Unlike the Phred score, there is no single standardised definition or formula, with slight variations existing across various sources \citep{andrews2016mapq}.
+
+%\subsubsection{The Reference Genome}
 
 \subsubsection{STAR}
-Dobin2013
-% reference genome vs transcriptome
+
+\ac{STAR}\footnote{\url{https://physiology.med.cornell.edu/faculty/skrabanek/lab/angsd/lecture_notes/STARmanual.pdf}} \citep{Dobin2013} is an open-source software package that performs local, splice-aware alignment in two major steps: (1) seed search and (2) clustering, stitching and scoring. It was coded in C++ for the specific purpose of mapping RNAseq reads to a genome.
+%It requires a considerable amount of RAM to run efficiently \citep{•}, and requires more runtime than Quasi-mappers and pseudo-aligners
+% Suffix arrays
+
+The algorithm first searches for the Maximum Mappable Prefix (MMP) which acts a seed from which to extend its alignment. This must be an exact identical match with the reference genome. These MMPs are clustered according to proximity to identify a set of \textit{anchor} seeds. \ac{STAR} stitches together the seeds identified in the first step, and if alignment within one window does not cover the entire read, it will try to find multiple windows to cover the read, resulting in a chimeric alignment. This means that different parts of the same read may map to distant genomic loci, possibly to different strands or chromosomes, which is especially useful when dealing with cancer-derived transcriptomes given the frequency of structural variants. A local alignment scoring system guides the stitching, with matches, mismatches, indels and splice junction gaps translating to different scores.
+%Perhaps a diagram here
+
+An index must be generated prior to alignment, which is generated from a reference genome and its respective annotation file in the GTF format. This hastens the algorithm in a way similar to how one might use the index in a book, which points to the specific locations of certain headers \citep{trapnell2009map}.
+
+\ac{STAR} provides the user with great flexibility, with many parameters, such as  the scoring system weighting and the size of search windows, being user-defined. \cite{dobin2015mapping} provide excellent descriptions of nine different datatype- and output-dependent strategies that one may take when mapping RNAseq reads with STAR. 
+
 % perfect paper: https://currentprotocols.onlinelibrary.wiley.com/doi/abs/10.1002/0471250953.bi1114s51 
 % sci hub for it: https://sci-hub.hkvisa.net/10.1002/0471250953.bi1114s51
 
-\cite{dobin2015mapping} provide an excellent overview of potential mapping strategies for using the STAR software package on various RNA-seq data types
-It is both a mapping and an alignment tool, since the two terms are used interchangeably in \cite{dobin2015mapping}
+
+\textbf{STAR's default options:}
+\begin{itemize}\itemsep0em
+\item Generates a genome index using a reference file and its respective annotation (GTF) file.
+\item Aligns an experimental transcriptome using the genome index and outputs an alignment file (SAM, unsorted BAM or BAM sorted by coordinates) and various log files.
+\item Uses a mapping quality metric MAPQ, calculated as $10*log_{10}(1-\frac{1}{N_{map})}$, where ${N_{map}}$ is the number of places the read maps to. A value of 255 is given to uniquely mapped reads.
+\item Passes on \texttt{NH HI AS nM} as SAM attributes as defined in the SAM format specifications \footnote{\url{https://samtools.github.io/hts-specs/SAMv1.pdf}}.
+\end{itemize}
+
+
+
+%Multimapping:https://www.sciencedirect.com/science/article/pii/S2001037020303032
 
 \subsection{Read Quantification}
-
 
 \begin{table}[h]
 \centering
@@ -399,10 +434,17 @@ ARST5 & 5300    & 1900    & 3250    & ...  \\
 
 \subsubsection{RSEM}
 li2011rsem
+RSEM has built-in support for Bowtie2/STAR/HISAT2 alignment programs, which 
+enables alignment and gene-level abundance estimation to be performed in a 
+single step.
+
 
 \subsection{Read Normalisation}
 % TPM TMM FPKM RPKM
 % https://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-3-r25#Sec2
+
+\subsubsection{TMM}
+\citep{edger}
 
 \subsection{Differential Expression Analysis}
 % EdgeR and DESeq2
@@ -489,6 +531,8 @@ luo2013pathview
 Note that this section may be sectioned based on the different aspects of your dissertation.
 
 Talk about papers that used RNA-seq for the treatment of cancers
+Despite STAR needing a lot of RAM, this was not a limiting factor due to our access to \ac{HPC} and small number of samples
+
 %file:///C:/Users/matth/OneDrive/Desktop/Msc%20Bioinformatics/!MMB5010%20DISSERTATION-DESKTOP-A2009SI/Literature/Oncology%20of%20AML/LUCIENNE%20Phenolic%20compounds.pdf
 
 %Maybe alter template to include more cells like the template in wikipedia :https://en.wikipedia.org/wiki/Myeloid_tissue#/media/File:Hematopoiesis_(human)_diagram_en.svg

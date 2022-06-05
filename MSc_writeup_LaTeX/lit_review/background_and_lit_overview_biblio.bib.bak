@@ -1048,17 +1048,6 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   year   = {2019},
 }
 
-@Article{dobin2015mapping,
-  author    = {Dobin, Alexander and Gingeras, Thomas R},
-  journal   = {Current protocols in bioinformatics},
-  title     = {Mapping RNA-seq reads with STAR},
-  year      = {2015},
-  number    = {1},
-  pages     = {11--14},
-  volume    = {51},
-  publisher = {Wiley Online Library},
-}
-
 @Article{deschamps2020handling,
   author    = {Deschamps-Francoeur, Gabrielle and Simoneau, Jo{\"e}l and Scott, Michelle S},
   journal   = {Computational and Structural Biotechnology Journal},
@@ -1122,6 +1111,100 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   title   = {The Biostar Handbook},
   year    = {2020},
   edition = {2},
+}
+
+@Article{needleman1970general,
+  author    = {Needleman, Saul B and Wunsch, Christian D},
+  journal   = {Journal of molecular biology},
+  title     = {A general method applicable to the search for similarities in the amino acid sequence of two proteins},
+  year      = {1970},
+  number    = {3},
+  pages     = {443--453},
+  volume    = {48},
+  publisher = {Elsevier},
+}
+
+@Article{smith1981identification,
+  author    = {Smith, Temple F and Waterman, Michael S and others},
+  journal   = {Journal of molecular biology},
+  title     = {Identification of common molecular subsequences},
+  year      = {1981},
+  number    = {1},
+  pages     = {195--197},
+  volume    = {147},
+  publisher = {Elsevier Science},
+}
+
+@Article{patro2017salmon,
+  author    = {Patro, Rob and Duggal, Geet and Love, Michael I and Irizarry, Rafael A and Kingsford, Carl},
+  journal   = {Nature methods},
+  title     = {Salmon provides fast and bias-aware quantification of transcript expression},
+  year      = {2017},
+  number    = {4},
+  pages     = {417--419},
+  volume    = {14},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{bray2016near,
+  author    = {Bray, Nicolas L and Pimentel, Harold and Melsted, P{\'a}ll and Pachter, Lior},
+  journal   = {Nature biotechnology},
+  title     = {Near-optimal probabilistic RNA-seq quantification},
+  year      = {2016},
+  number    = {5},
+  pages     = {525--527},
+  volume    = {34},
+  publisher = {Nature Publishing Group},
+}
+
+@Electronic{rnadataanalysis2020,
+  author    = {Anton Nekrutenko},
+  title     = {Reference-based RNAseq data analysis (long)},
+  url       = {https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rb-rnaseq/tutorial.html#read-mapping},
+  date      = {2020},
+  timestamp = {2022-06-01},
+}
+
+@Article{,
+}
+
+@Article{dobin2015mapping,
+  author    = {Dobin, Alexander and Gingeras, Thomas R},
+  journal   = {Current protocols in bioinformatics},
+  title     = {Mapping RNA-seq reads with STAR},
+  year      = {2015},
+  number    = {1},
+  pages     = {11--14},
+  volume    = {51},
+  publisher = {Wiley Online Library},
+}
+
+@Article{ziemann2016evaluation,
+  author    = {Ziemann, Mark and Kaspi, Antony and El-Osta, Assam},
+  journal   = {Rna},
+  title     = {Evaluation of microRNA alignment techniques},
+  year      = {2016},
+  number    = {8},
+  pages     = {1120--1138},
+  volume    = {22},
+  publisher = {Cold Spring Harbor Lab},
+}
+
+@Article{,
+}
+
+@Article{,
+}
+
+@Article{trapnell2009map,
+  author    = {Trapnell, Cole and Salzberg, Steven L},
+  journal   = {Nature biotechnology},
+  title     = {How to map billions of short reads onto genomes},
+  year      = {2009},
+  number    = {5},
+  pages     = {455--457},
+  volume    = {27},
+  publisher = {Nature Publishing Group},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

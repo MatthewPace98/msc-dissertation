@@ -59,6 +59,8 @@ Repeated entry---line 957 of file lit_review/background_and_lit_overview_biblio.
  : @article{zhong2011high
  :                       ,
 I'm skipping whatever remains of this entry
+Warning--entry type for "rnadataanalysis2020" isn't style-file defined
+--line 1160 of file lit_review/background_and_lit_overview_biblio.bib
 Database file #3: method/materials_and_methods_biblio.bib
 Repeated entry---line 1 of file method/materials_and_methods_biblio.bib
  : @phdthesis{Gatt2016
@@ -151,8 +153,10 @@ Warning--I didn't find a database entry for "gallagher1979characterization"
 Warning--I didn't find a database entry for "dalton1988hl"
 Warning--I didn't find a database entry for "jacob"
 Warning--I didn't find a database entry for "morgulis2006fast"
+Warning--I didn't find a database entry for "andrews2016mapq"
 Warning--to sort, need author or key in acsamlsubtypes
 Warning--empty year in acsamlsubtypes
+Warning--empty publisher in albert2020biostar
 Warning--empty note in prinseq++
 Warning--empty journal in carroll1991t
 Warning--empty journal in chomienne1990all
@@ -162,45 +166,46 @@ Warning--empty school in Gatt2016
 Warning--empty institution in illumina2010
 Warning--can't use both volume and number fields in liu2004new
 Warning--empty booktitle in MacManes2014
-You've used 107 entries,
+Warning--empty year in rnadataanalysis2020
+You've used 116 entries,
             2771 wiz_defined-function locations,
-            1207 strings with 27865 characters,
-and the built_in function-call counts, 58225 in all, are:
-= -- 4973
-> -- 4571
-< -- 48
-+ -- 1544
-- -- 1437
-* -- 5379
-:= -- 9319
-add.period$ -- 326
-call.type$ -- 107
-change.case$ -- 781
-chr.to.int$ -- 107
-cite$ -- 226
-duplicate$ -- 2059
-empty$ -- 3874
-format.name$ -- 1585
-if$ -- 11704
+            1252 strings with 29289 characters,
+and the built_in function-call counts, 62698 in all, are:
+= -- 5369
+> -- 4863
+< -- 52
++ -- 1643
+- -- 1527
+* -- 5783
+:= -- 10017
+add.period$ -- 353
+call.type$ -- 116
+change.case$ -- 837
+chr.to.int$ -- 116
+cite$ -- 246
+duplicate$ -- 2232
+empty$ -- 4213
+format.name$ -- 1688
+if$ -- 12614
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 96
-newline$ -- 547
-num.names$ -- 425
-pop$ -- 1390
+missing$ -- 105
+newline$ -- 592
+num.names$ -- 461
+pop$ -- 1490
 preamble$ -- 1
-purify$ -- 680
+purify$ -- 727
 quote$ -- 0
-skip$ -- 1817
+skip$ -- 1959
 stack$ -- 0
-substring$ -- 2089
-swap$ -- 127
+substring$ -- 2294
+swap$ -- 136
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1157
-warning$ -- 11
-while$ -- 462
+type$ -- 1251
+warning$ -- 13
+while$ -- 503
 width$ -- 0
-write$ -- 1378
+write$ -- 1492
 (There were 30 error messages)

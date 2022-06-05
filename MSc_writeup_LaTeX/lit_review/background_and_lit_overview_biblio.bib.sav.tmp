@@ -955,4 +955,240 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
 }
 
 @Article{zhong2011high,
-  author    = {Zhong, Silin and 
+  author    = {Zhong, Silin and Joung, Je-Gun and Zheng, Yi and Chen, Yun-ru and Liu, Bao and Shao, Ying and Xiang, Jenny Z and Fei, Zhangjun and Giovannoni, James J},
+  journal   = {Cold spring harbor protocols},
+  title     = {High-throughput illumina strand-specific RNA sequencing library preparation},
+  year      = {2011},
+  number    = {8},
+  pages     = {pdb--prot5652},
+  volume    = {2011},
+  publisher = {Cold Spring Harbor Laboratory Press},
+}
+
+@Article{wang2011low,
+  author    = {Wang, Lin and Si, Yaqing and Dedow, Lauren K and Shao, Ying and Liu, Peng and Brutnell, Thomas P},
+  journal   = {PloS one},
+  title     = {A low-cost library construction protocol and data analysis pipeline for Illumina-based strand-specific multiplex RNA-seq},
+  year      = {2011},
+  number    = {10},
+  pages     = {e26426},
+  volume    = {6},
+  publisher = {Public Library of Science San Francisco, USA},
+}
+
+@Article{pease2012rapid,
+  author    = {Pease, Jim and Sooknanan, Roy},
+  journal   = {Nature methods},
+  title     = {A rapid, directional RNA-seq library preparation workflow for Illumina{\textregistered} sequencing},
+  year      = {2012},
+  number    = {3},
+  pages     = {i--ii},
+  volume    = {9},
+  publisher = {Nature Publishing Group},
+}
+
+@TechReport{illumina2010,
+  author = {{Illumina}},
+  title  = {Illumina Sequencing Technology},
+  year   = {2010},
+}
+
+@Article{mir2013short,
+  author    = {Mir, Katharina and Neuhaus, Klaus and Bossert, Martin and Schober, Steffen},
+  journal   = {PloS one},
+  title     = {Short barcodes for next generation sequencing},
+  year      = {2013},
+  number    = {12},
+  pages     = {e82933},
+  volume    = {8},
+  publisher = {Public Library of Science San Francisco, USA},
+}
+
+@Article{seward1996bzip2,
+  author  = {Seward, Julian},
+  journal = {avaliable at http://www. bzip. org},
+  title   = {bzip2 and libbzip2},
+  year    = {1996},
+}
+
+@Article{deutsch1996gzip,
+  author    = {Deutsch, Peter and others},
+  title     = {GZIP file format specification version 4.3},
+  year      = {1996},
+  publisher = {RFC 1952, May},
+}
+
+@Misc{andrews2010fastqc,
+  author    = {Andrews, Simon and others},
+  title     = {FastQC: a quality control tool for high throughput sequence data},
+  year      = {2010},
+  publisher = {Babraham Bioinformatics, Babraham Institute, Cambridge, United Kingdom},
+}
+
+@Article{williams2006amplification,
+  author    = {Williams, Richard and Peisajovich, Sergio G and Miller, Oliver J and Magdassi, Shlomo and Tawfik, Dan S and Griffiths, Andrew D},
+  journal   = {Nature methods},
+  title     = {Amplification of complex gene libraries by emulsion PCR},
+  year      = {2006},
+  number    = {7},
+  pages     = {545--550},
+  volume    = {3},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{,
+  author = {Stuart Davis},
+  title  = {Trimming for RNA-Seq data},
+  year   = {2019},
+}
+
+@Article{davis2019,
+  author = {Stuart Davis},
+  title  = {Trimming for RNA-Seq data},
+  year   = {2019},
+}
+
+@Article{deschamps2020handling,
+  author    = {Deschamps-Francoeur, Gabrielle and Simoneau, Jo{\"e}l and Scott, Michelle S},
+  journal   = {Computational and Structural Biotechnology Journal},
+  title     = {Handling multi-mapped reads in RNA-seq},
+  year      = {2020},
+  pages     = {1569--1576},
+  volume    = {18},
+  publisher = {Elsevier},
+}
+
+@Article{ntountoumi2019low,
+  author    = {Ntountoumi, Chrysa and Vlastaridis, Panayotis and Mossialos, Dimitris and Stathopoulos, Constantinos and Iliopoulos, Ioannis and Promponas, Vasilios and Oliver, Stephen G and Amoutzias, Grigoris D},
+  journal   = {Nucleic acids research},
+  title     = {Low complexity regions in the proteins of prokaryotes perform important functional roles and are highly conserved},
+  year      = {2019},
+  number    = {19},
+  pages     = {9998--10009},
+  volume    = {47},
+  publisher = {Oxford University Press},
+}
+
+@Article{frugier2010low,
+  author    = {Frugier, Magali and Bour, Tania and Ayach, Maya and Santos, Manuel AS and Rudinger-Thirion, Jo{\"e}lle and Th{\'e}obald-Dietrich, Anne and Pizzi, Elizabetta},
+  journal   = {FEBS letters},
+  title     = {Low complexity regions behave as tRNA sponges to help co-translational folding of plasmodial proteins},
+  year      = {2010},
+  number    = {2},
+  pages     = {448--454},
+  volume    = {584},
+  publisher = {Elsevier},
+}
+
+@Article{altschul1997gapped,
+  author    = {Altschul, Stephen F and Madden, Thomas L and Sch{\"a}ffer, Alejandro A and Zhang, Jinghui and Zhang, Zheng and Miller, Webb and Lipman, David J},
+  journal   = {Nucleic acids research},
+  title     = {Gapped BLAST and PSI-BLAST: a new generation of protein database search programs},
+  year      = {1997},
+  number    = {17},
+  pages     = {3389--3402},
+  volume    = {25},
+  publisher = {Oxford University Press},
+}
+
+@Article{DUST,
+  author = {(R. Tatusov and D.J. Lipman},
+}
+
+@Article{schmieder2011quality,
+  author    = {Schmieder, Robert and Edwards, Robert},
+  journal   = {Bioinformatics},
+  title     = {Quality control and preprocessing of metagenomic datasets},
+  year      = {2011},
+  number    = {6},
+  pages     = {863--864},
+  volume    = {27},
+  publisher = {Oxford University Press},
+}
+
+@Book{albert2020biostar,
+  author  = {Albert, I},
+  title   = {The Biostar Handbook},
+  year    = {2020},
+  edition = {2},
+}
+
+@Article{needleman1970general,
+  author    = {Needleman, Saul B and Wunsch, Christian D},
+  journal   = {Journal of molecular biology},
+  title     = {A general method applicable to the search for similarities in the amino acid sequence of two proteins},
+  year      = {1970},
+  number    = {3},
+  pages     = {443--453},
+  volume    = {48},
+  publisher = {Elsevier},
+}
+
+@Article{smith1981identification,
+  author    = {Smith, Temple F and Waterman, Michael S and others},
+  journal   = {Journal of molecular biology},
+  title     = {Identification of common molecular subsequences},
+  year      = {1981},
+  number    = {1},
+  pages     = {195--197},
+  volume    = {147},
+  publisher = {Elsevier Science},
+}
+
+@Article{patro2017salmon,
+  author    = {Patro, Rob and Duggal, Geet and Love, Michael I and Irizarry, Rafael A and Kingsford, Carl},
+  journal   = {Nature methods},
+  title     = {Salmon provides fast and bias-aware quantification of transcript expression},
+  year      = {2017},
+  number    = {4},
+  pages     = {417--419},
+  volume    = {14},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{bray2016near,
+  author    = {Bray, Nicolas L and Pimentel, Harold and Melsted, P{\'a}ll and Pachter, Lior},
+  journal   = {Nature biotechnology},
+  title     = {Near-optimal probabilistic RNA-seq quantification},
+  year      = {2016},
+  number    = {5},
+  pages     = {525--527},
+  volume    = {34},
+  publisher = {Nature Publishing Group},
+}
+
+@Electronic{rnadataanalysis2020,
+  author    = {Anton Nekrutenko},
+  title     = {Reference-based RNAseq data analysis (long)},
+  url       = {https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rb-rnaseq/tutorial.html#read-mapping},
+  date      = {2020},
+  timestamp = {2022-06-01},
+}
+
+@Article{li2009sequence,
+  author    = {Li, Heng and Handsaker, Bob and Wysoker, Alec and Fennell, Tim and Ruan, Jue and Homer, Nils and Marth, Gabor and Abecasis, Goncalo and Durbin, Richard},
+  journal   = {Bioinformatics},
+  title     = {The sequence alignment/map format and SAMtools},
+  year      = {2009},
+  number    = {16},
+  pages     = {2078--2079},
+  volume    = {25},
+  publisher = {Oxford University Press},
+}
+
+@Article{dobin2015mapping,
+  author    = {Dobin, Alexander and Gingeras, Thomas R},
+  journal   = {Current protocols in bioinformatics},
+  title     = {Mapping RNA-seq reads with STAR},
+  year      = {2015},
+  number    = {1},
+  pages     = {11--14},
+  volume    = {51},
+  publisher = {Wiley Online Library},
+}
+
+@Article{ziemann2016evaluation,
+  author    = {Ziemann, Mark and Kaspi, Antony and El-Osta, Assam},
+  journal   = {Rna},
+  title     = {Evaluation of microRNA alignment techniques},
+  

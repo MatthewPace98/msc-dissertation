@@ -1,4 +1,4 @@
-\begin{thebibliography}{107}
+\begin{thebibliography}{116}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -9,6 +9,11 @@
 Acute myeloid leukemia (aml) subtypes and prognostic factors.
 \newblock URL
   \url{https://www.cancer.org/cancer/acute-myeloid-leukemia/detection-diagnosis-staging/how-classified.html}.
+
+\bibitem[Albert(2020)]{albert2020biostar}
+Albert, I.
+\newblock \emph{The Biostar Handbook}.
+\newblock 2 edition, 2020.
 
 \bibitem[Altschul et~al.(1997)Altschul, Madden, Sch{\"a}ffer, Zhang, Zhang,
   Miller, and Lipman]{altschul1997gapped}
@@ -47,6 +52,12 @@ Bernstein, J., Dastugue, N., Haas, O., Harbott, J., Heere, N., Huret, J.,
   leukaemia of infants/children and a review of 39 cases: report from at (1;
   22) study group.
 \newblock \emph{Leukemia}, 14\penalty0 (1):\penalty0 216--218, 2000.
+
+\bibitem[Bray et~al.(2016)Bray, Pimentel, Melsted, and Pachter]{bray2016near}
+Bray, N.~L., Pimentel, H., Melsted, P., and Pachter, L.
+\newblock Near-optimal probabilistic rna-seq quantification.
+\newblock \emph{Nature biotechnology}, 34\penalty0 (5):\penalty0 525--527,
+  2016.
 
 \bibitem[Breems et~al.(2008)Breems, Van~Putten, De~Greef, Van Zelderen-Bhola,
   Gerssen-Schoorl, Mellink, Nieuwint, Jotterand, Hagemeijer, Beverloo,
@@ -371,6 +382,13 @@ Li, H. and Durbin, R.
   transform.
 \newblock \emph{bioinformatics}, 25\penalty0 (14):\penalty0 1754--1760, 2009.
 
+\bibitem[Li et~al.(2009)Li, Handsaker, Wysoker, Fennell, Ruan, Homer, Marth,
+  Abecasis, and Durbin]{li2009sequence}
+Li, H., Handsaker, B., Wysoker, A., Fennell, T., Ruan, J., Homer, N., Marth,
+  G., Abecasis, G., and Durbin, R.
+\newblock The sequence alignment/map format and samtools.
+\newblock \emph{Bioinformatics}, 25\penalty0 (16):\penalty0 2078--2079, 2009.
+
 \bibitem[Liang et~al.(1999)Liang, Ning, Wang, Padilla-Nash, Schr{\"o}ck,
   Soenksen, Nagarajan, and Ried]{liang1999spectral}
 Liang, J.~C., Ning, Y., Wang, R.-y., Padilla-Nash, H.~M., Schr{\"o}ck, E.,
@@ -469,6 +487,19 @@ NCBI.
 \newblock Grch38.p13, February 2019.
 \newblock URL \url{https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.39/}.
 
+\bibitem[Needleman and Wunsch(1970)]{needleman1970general}
+Needleman, S.~B. and Wunsch, C.~D.
+\newblock A general method applicable to the search for similarities in the
+  amino acid sequence of two proteins.
+\newblock \emph{Journal of molecular biology}, 48\penalty0 (3):\penalty0
+  443--453, 1970.
+
+\bibitem[Nekrutenko()]{rnadataanalysis2020}
+Nekrutenko, A.
+\newblock Reference-based rnaseq data analysis (long).
+\newblock URL
+  \url{https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rb-rnaseq/tutorial.html#read-mapping}.
+
 \bibitem[Nowak et~al.(2009)Nowak, Stewart, and
   Koeffler]{nowak2009differentiation}
 Nowak, D., Stewart, D., and Koeffler, H.~P.
@@ -496,6 +527,13 @@ O'Neil, D., Glowatz, H., and Schlumpberger, M.
 Oracle.
 \newblock Virtualbox, 2010.
 \newblock URL \url{https://www.virtualbox.org/}.
+
+\bibitem[Patro et~al.(2017)Patro, Duggal, Love, Irizarry, and
+  Kingsford]{patro2017salmon}
+Patro, R., Duggal, G., Love, M.~I., Irizarry, R.~A., and Kingsford, C.
+\newblock Salmon provides fast and bias-aware quantification of transcript
+  expression.
+\newblock \emph{Nature methods}, 14\penalty0 (4):\penalty0 417--419, 2017.
 
 \bibitem[Peano et~al.(2013)Peano, Pietrelli, Consolandi, Rossi, Petiti,
   Tagliabue, De~Bellis, and Landini]{peano2013efficient}
@@ -628,6 +666,12 @@ Sitges, M., Boluda, B., Garrido, A., Morgades, M., Granada, I., Barragan, E.,
 \newblock \emph{European Journal of Haematology}, 105\penalty0 (2):\penalty0
   138--147, 2020.
 
+\bibitem[Smith et~al.(1981)Smith, Waterman, et~al.]{smith1981identification}
+Smith, T.~F., Waterman, M.~S., et~al.
+\newblock Identification of common molecular subsequences.
+\newblock \emph{Journal of molecular biology}, 147\penalty0 (1):\penalty0
+  195--197, 1981.
+
 \bibitem[Srivastava et~al.(2020)Srivastava, Malik, Sarkar, Zakeri, Almodaresi,
   Soneson, Love, Kingsford, and Patro]{srivastava2020alignment}
 Srivastava, A., Malik, L., Sarkar, H., Zakeri, M., Almodaresi, F., Soneson, C.,
@@ -674,6 +718,12 @@ Teng, M., Love, M.~I., Davis, C.~A., Djebali, S., Dobin, A., Graveley, B.~R.,
 \newblock Acute myeloid leukemia (aml) subtypes and prognostic factors, 2018.
 \newblock URL
   \url{https://www.cancer.org/cancer/acute-myeloid-leukemia/detection-diagnosis-staging/how-classified.html}.
+
+\bibitem[Trapnell and Salzberg(2009)]{trapnell2009map}
+Trapnell, C. and Salzberg, S.~L.
+\newblock How to map billions of short reads onto genomes.
+\newblock \emph{Nature biotechnology}, 27\penalty0 (5):\penalty0 455--457,
+  2009.
 
 \bibitem[Von~Hoff et~al.(1990)Von~Hoff, Forseth, Clare, Hansen, VanDevanter,
   et~al.]{von1990double}
@@ -744,5 +794,11 @@ Zhong, S., Joung, J.-G., Zheng, Y., Chen, Y.-r., Liu, B., Shao, Y., Xiang,
   preparation.
 \newblock \emph{Cold spring harbor protocols}, 2011\penalty0 (8):\penalty0
   pdb--prot5652, 2011.
+
+\bibitem[Ziemann et~al.(2016)Ziemann, Kaspi, and
+  El-Osta]{ziemann2016evaluation}
+Ziemann, M., Kaspi, A., and El-Osta, A.
+\newblock Evaluation of microrna alignment techniques.
+\newblock \emph{Rna}, 22\penalty0 (8):\penalty0 1120--1138, 2016.
 
 \end{thebibliography}
