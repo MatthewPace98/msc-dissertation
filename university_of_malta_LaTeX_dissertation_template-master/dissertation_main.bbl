@@ -1,0 +1,51 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arrighi(2003)]{Arrighi2003}
+Arrighi, P.
+\newblock Quantum computation explained to my mother.
+\newblock \emph{arXiv preprint quant-ph/0305045}, 2003.
+
+\bibitem[Ebejer et~al.(2012)Ebejer, Morris, and Deane]{Ebejer2012}
+Ebejer, J.-P., Morris, G.~M., and Deane, C.~M.
+\newblock Freely available conformer generation methods: How good are they?
+\newblock \emph{J. Chem. Inf. Model.}, 52\penalty0 (5):\penalty0 1146--1158,
+  2012.
+
+\bibitem[Ebejer et~al.(2016)Ebejer, Charlton, and Finn]{Ebejer2016}
+Ebejer, J.-P., Charlton, M.~H., and Finn, P.~W.
+\newblock Are the physicochemical properties of antibacterial compounds really
+  different from other drugs?
+\newblock \emph{Journal of Cheminformatics}, 8\penalty0 (1), 2016.
+
+\bibitem[Harvard Ref.\ Guide()]{HarvRefStyle}
+Harvard Ref.\ Guide.
+\newblock {H}arvard {R}eferences {S}tyle.
+\newblock
+  \url{https://www.um.edu.mt/__data/assets/pdf_file/0007/353662/Harvard_Guide.pdf}.
+\newblock Last Accessed: March 18th, 2022.
+
+\bibitem[IEEE Ref.\ Guide()]{IEEERefStyle}
+IEEE Ref.\ Guide.
+\newblock {IEEE} {R}eferences {S}tyle.
+\newblock
+  \url{https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf}.
+\newblock Last Accessed: March 17th, 2022.
+
+\bibitem[Withers-Martinez et~al.(2012)Withers-Martinez, Suarez, Fulle, Kher,
+  Penzo, Ebejer, Koussis, Hackett, Jirgensons, Finn, and
+  Blackman]{WithersMartinez2012}
+Withers-Martinez, C., Suarez, C., Fulle, S., Kher, S., Penzo, M., Ebejer,
+  J.-P., Koussis, K., Hackett, F., Jirgensons, A., Finn, P., and Blackman,
+  M.~J.
+\newblock {Plasmodium subtilisin-like protease 1 (SUB1): Insights into the
+  active-site structure, specificity and function of a pan-malaria drug
+  target}.
+\newblock \emph{International Journal for Parasitology}, 42\penalty0
+  (6):\penalty0 597--612, 2012.
+
+\end{thebibliography}
