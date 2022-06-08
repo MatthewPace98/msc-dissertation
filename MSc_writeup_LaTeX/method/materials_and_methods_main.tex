@@ -131,7 +131,7 @@ rsem-prepare-reference --gtf mm9.gtf \
 
 The \texttt{--star-sjdboverhang} is an argument passed to \ac{STAR} which sets the maximum possible overhang for the reads. It should be equal to the read length minus one. In our case, the read length is 51, thus a value of 50 is used. The final variable is a prefix to the output files. This may be used as the output path for the generated reference files.
 
-To calculate expression values, the \texttt{rsem-calculate-expression} command is used. As before, the final argument is a prefix to the output files, and the argument before that is the path to the reference files created in the previous command. RSEM first uses \ac{STAR} to align the filtered sample reads to the generated reference reads, creating a BAM file sorted by its coordinates. It outputs two quantification files per sample, with differing suffices: one ending in '.genes.results' and another '.isoform.results'. These are both tab-delimited text files with similar headers, with the former dedicating a row for each gene and the latter dedicating a row for each transcript. The isoform-centric file thus contains more data, which are unnecessary for our objectives. Of the columns in the gene-centric file, two will be used in the subsequent step: 'gene\textunderscore id' which holds the Ensembl gene ID, and 'TPM' which holds the normalised read count for the respective gene.
+To calculate expression values, the \texttt{rsem-calculate-expression} command is used. As before, the final argument is a prefix to the output files, and the argument before that is the path to the reference files created in the previous command. RSEM first uses \ac{STAR} to align the filtered sample reads to the generated reference reads, creating a BAM file sorted by its coordinates. It outputs two quantification files per sample, with differing suffices: one ending in '.genes.results' and another '.isoform.results'. These are both tab-delimited text files with similar headers, with the former dedicating a row for each gene and the latter dedicating a row for each transcript. The isoform-centric file thus contains more data, which are unnecessary for our objectives. Of the columns in the gene-centric file, two will be used in the subsequent step: 'gene\textunderscore id' which holds the Ensembl gene ID, and 'expected\textunderscore count' which holds the read count for the respective gene. % CHECK WHAT EXPECTED_COUNT IS EXACTLY
 
 \begin{lstlisting}[caption=RSEM expression command, label={lst:RSEM_exp}]
 mkdir RSEM/expression
@@ -208,7 +208,7 @@ head(y$genes)
 
 \subsubsection{Normalisation}
 
-The read counts are then normalised by the \texttt{calcNormFactors} function which uses the \ac{TMM} method. This is recommended by the edgeR vignette and is explained in detail in \cite{robinson2010scaling}. The aim of normalisation is to mitigate any technical bias on the data.
+The read counts are then normalised by the \texttt{calcNormFactors} function which uses the \ac{TMM} method. This is recommended by the edgeR vignette and is explained in detail in \cite{robinson2010scaling}. The aim of normalisation is to mitigate any biologically irrelevant, technical bias in the data.
 % Maybe write more here
 
 \begin{lstlisting}[language=R, caption=TMM normalisation]
@@ -227,8 +227,6 @@ et_12 <- exactTest(y, pair=c(1, 2), dispersion=bcv^2)
 et_1 <- exactTest(y, pair=c(1, 3), dispersion=bcv^2)
 et_6 <- exactTest(y, pair=c(1, 4), dispersion=bcv^2)
 \end{lstlisting}
-
-% EdgeR has three ways of judging differential expression but exactTest was deemed as the best fit
 
 \subsubsection{Adjusting p-values and Cut-offs}
 

@@ -12,46 +12,47 @@
 \contentsline {subsection}{\numberline {1.2.3}Transcriptomic abnormalities}{8}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4} Treatment Methods}{8}{subsection.1.2.4}%
 \contentsline {subsection}{\numberline {1.2.5}The Model Cell Line: HL-60 }{9}{subsection.1.2.5}%
-\contentsline {section}{\numberline {1.3}RNA-seq: \textit {in vitro}}{10}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}RNA extraction}{11}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Library Preparation}{12}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Clonal amplification}{14}{subsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.3.4}Sequencing and Nucleobase Detection}{15}{subsection.1.3.4}%
-\contentsline {section}{\numberline {1.4}RNA-seq: \textit {in silico}}{17}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Quality Control}{17}{subsection.1.4.1}%
-\contentsline {subsubsection}{\numberline {1.4.1.1}FastQC}{18}{subsubsection.1.4.1.1}%
-\contentsline {subsubsection}{\numberline {1.4.1.2}FastQScreen}{19}{subsubsection.1.4.1.2}%
-\contentsline {subsubsection}{\numberline {1.4.1.3}MultiQC}{20}{subsubsection.1.4.1.3}%
-\contentsline {subsection}{\numberline {1.4.2}Preprocessing}{20}{subsection.1.4.2}%
-\contentsline {subsubsection}{\numberline {1.4.2.1}Cutadapt: Short reads and Adapter sequences}{20}{subsubsection.1.4.2.1}%
-\contentsline {subsubsection}{\numberline {1.4.2.2}Prinseq++: Low complexity and No Basecalls}{21}{subsubsection.1.4.2.2}%
-\contentsline {subsection}{\numberline {1.4.3}Alignment}{21}{subsection.1.4.3}%
-\contentsline {subsubsection}{\numberline {1.4.3.1}STAR}{24}{subsubsection.1.4.3.1}%
-\contentsline {subsection}{\numberline {1.4.4}Read Quantification}{25}{subsection.1.4.4}%
-\contentsline {subsubsection}{\numberline {1.4.4.1}RSEM}{26}{subsubsection.1.4.4.1}%
-\contentsline {subsection}{\numberline {1.4.5}Read Normalisation}{26}{subsection.1.4.5}%
-\contentsline {subsubsection}{\numberline {1.4.5.1}TMM}{26}{subsubsection.1.4.5.1}%
-\contentsline {subsection}{\numberline {1.4.6}Differential Expression Analysis}{26}{subsection.1.4.6}%
-\contentsline {subsubsection}{\numberline {1.4.6.1}EdgeR}{26}{subsubsection.1.4.6.1}%
-\contentsline {subsection}{\numberline {1.4.7}Downstream Analysis}{26}{subsection.1.4.7}%
-\contentsline {section}{\numberline {1.5}Evaluation Criteria}{26}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Related Work}{26}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Summary}{28}{section.1.7}%
-\contentsline {chapter}{\chapternumberline {2}Materials \& Methods}{29}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Preliminary Study}{29}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Phenolic extraction}{29}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Cell Culturing and RNA extraction}{30}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Determination of RNA Quality and Sequencing}{30}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}RNA-seq Pipeline}{31}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Quality Control}{33}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Preprocessing}{34}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Read alignment and Quantification}{35}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Reassessing the Quality}{36}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Normalisation and Differential Gene Expression}{36}{subsection.2.2.5}%
-\contentsline {subsubsection}{\numberline {2.2.5.1}Filtering Low Count Genes}{37}{subsubsection.2.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.2.5.2}Gene Annotation}{37}{subsubsection.2.2.5.2}%
-\contentsline {subsubsection}{\numberline {2.2.5.3}Normalisation}{38}{subsubsection.2.2.5.3}%
-\contentsline {subsubsection}{\numberline {2.2.5.4}Adjusting p-values and Cut-offs}{38}{subsubsection.2.2.5.4}%
-\contentsline {subsection}{\numberline {2.2.6}Functional analysis}{39}{subsection.2.2.6}%
-\contentsline {section}{\numberline {2.3}Summary}{39}{section.2.3}%
-\contentsline {chapter}{References}{41}{chapter*.35}%
+\contentsline {section}{\numberline {1.3}Experimental Design}{10}{section.1.3}%
+\contentsline {section}{\numberline {1.4}RNA-seq: \textit {in vitro}}{10}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}RNA extraction}{11}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Library Preparation}{12}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Clonal amplification}{14}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Sequencing and Nucleobase Detection}{15}{subsection.1.4.4}%
+\contentsline {section}{\numberline {1.5}RNA-seq: \textit {in silico}}{17}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Quality Control}{17}{subsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.1.1}FastQC}{18}{subsubsection.1.5.1.1}%
+\contentsline {subsubsection}{\numberline {1.5.1.2}FastQScreen}{19}{subsubsection.1.5.1.2}%
+\contentsline {subsubsection}{\numberline {1.5.1.3}MultiQC}{20}{subsubsection.1.5.1.3}%
+\contentsline {subsection}{\numberline {1.5.2}Preprocessing}{20}{subsection.1.5.2}%
+\contentsline {subsubsection}{\numberline {1.5.2.1}Cutadapt: Short reads and Adapter sequences}{20}{subsubsection.1.5.2.1}%
+\contentsline {subsubsection}{\numberline {1.5.2.2}Prinseq++: Low complexity and No Basecalls}{21}{subsubsection.1.5.2.2}%
+\contentsline {subsection}{\numberline {1.5.3}Alignment}{22}{subsection.1.5.3}%
+\contentsline {subsubsection}{\numberline {1.5.3.1}STAR}{24}{subsubsection.1.5.3.1}%
+\contentsline {subsection}{\numberline {1.5.4}Quantification}{25}{subsection.1.5.4}%
+\contentsline {subsubsection}{\numberline {1.5.4.1}RSEM}{26}{subsubsection.1.5.4.1}%
+\contentsline {subsection}{\numberline {1.5.5}Normalisation}{27}{subsection.1.5.5}%
+\contentsline {subsubsection}{\numberline {1.5.5.1}Trimmed Mean of \textit {M}-values (TMM)}{28}{subsubsection.1.5.5.1}%
+\contentsline {subsection}{\numberline {1.5.6}Differential Gene Expression (DGE) Analysis}{29}{subsection.1.5.6}%
+\contentsline {subsubsection}{\numberline {1.5.6.1}EdgeR}{29}{subsubsection.1.5.6.1}%
+\contentsline {subsection}{\numberline {1.5.7}Downstream Analysis}{30}{subsection.1.5.7}%
+\contentsline {section}{\numberline {1.6}Evaluation Criteria}{30}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Related Work}{30}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Summary}{32}{section.1.8}%
+\contentsline {chapter}{\chapternumberline {2}Materials \& Methods}{33}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Preliminary Study}{33}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Phenolic extraction}{33}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Cell Culturing and RNA extraction}{34}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Determination of RNA Quality and Sequencing}{34}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}RNA-seq Pipeline}{35}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Quality Control}{37}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Preprocessing}{38}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Read alignment and Quantification}{39}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Reassessing the Quality}{40}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Normalisation and Differential Gene Expression}{40}{subsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.5.1}Filtering Low Count Genes}{41}{subsubsection.2.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.2.5.2}Gene Annotation}{41}{subsubsection.2.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.2.5.3}Normalisation}{42}{subsubsection.2.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.2.5.4}Adjusting p-values and Cut-offs}{43}{subsubsection.2.2.5.4}%
+\contentsline {subsection}{\numberline {2.2.6}Functional analysis}{43}{subsection.2.2.6}%
+\contentsline {section}{\numberline {2.3}Summary}{43}{section.2.3}%
+\contentsline {chapter}{References}{45}{chapter*.37}%

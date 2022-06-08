@@ -1,4 +1,4 @@
-\begin{thebibliography}{116}
+\begin{thebibliography}{125}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -23,6 +23,11 @@ Altschul, S.~F., Madden, T.~L., Sch{\"a}ffer, A.~A., Zhang, J., Zhang, Z.,
   search programs.
 \newblock \emph{Nucleic acids research}, 25\penalty0 (17):\penalty0 3389--3402,
   1997.
+
+\bibitem[Andrews(2016)]{andrews2016mapq}
+Andrews, S.
+\newblock Mapq values are really useful but their implementation is a mess.
+\newblock 2016.
 
 \bibitem[Andrews et~al.(2010)]{andrews2010fastqc}
 Andrews, S. et~al.
@@ -69,6 +74,18 @@ Breems, D.~A., Van~Putten, W.~L., De~Greef, G.~E., Van Zelderen-Bhola, S.~L.,
   poor prognosis than a complex karyotype.
 \newblock \emph{Journal of Clinical Oncology}, 26\penalty0 (29):\penalty0
   4791--4797, 2008.
+
+\bibitem[Brownlee(2019)]{brownlee2019gentle}
+Brownlee, J.
+\newblock A gentle introduction to expectation-maximization (em algorithm).
+\newblock \emph{Machine Learning Mastery, Oct}, 31, 2019.
+
+\bibitem[Bullard et~al.(2010)Bullard, Purdom, Hansen, and
+  Dudoit]{bullard2010evaluation}
+Bullard, J.~H., Purdom, E., Hansen, K.~D., and Dudoit, S.
+\newblock Evaluation of statistical methods for normalization and differential
+  expression in mrna-seq experiments.
+\newblock \emph{BMC bioinformatics}, 11\penalty0 (1):\penalty0 1--13, 2010.
 
 \bibitem[Cantu et~al.(2019)Cantu, Sadural, and Edwards]{prinseq++}
 Cantu, V.~A., Sadural, J., and Edwards, R.
@@ -165,6 +182,16 @@ Deutsch, P. et~al.
 \newblock Gzip file format specification version 4.3.
 \newblock 1996.
 
+\bibitem[Dillies et~al.(2013)Dillies, Rau, Aubert, Hennequet-Antier,
+  Jeanmougin, Servant, Keime, Marot, Castel, Estelle,
+  et~al.]{dillies2013comprehensive}
+Dillies, M.-A., Rau, A., Aubert, J., Hennequet-Antier, C., Jeanmougin, M.,
+  Servant, N., Keime, C., Marot, G., Castel, D., Estelle, J., et~al.
+\newblock A comprehensive evaluation of normalization methods for illumina
+  high-throughput rna sequencing data analysis.
+\newblock \emph{Briefings in bioinformatics}, 14\penalty0 (6):\penalty0
+  671--683, 2013.
+
 \bibitem[DiNardo and Cortes(2016)]{dinardo2016mutations}
 DiNardo, C.~D. and Cortes, J.~E.
 \newblock Mutations in aml: prognostic and therapeutic implications.
@@ -183,6 +210,12 @@ Dobin, A., Davis, C.~A., Schlesinger, F., Drenkow, J., Zaleski, C., Jha, S.,
   Batut, P., Chaisson, M., and Gingeras, T.~R.
 \newblock {STAR:} ultrafast universal rna-seq aligner.
 \newblock \emph{Bioinform.}, 29\penalty0 (1):\penalty0 15--21, 2013.
+
+\bibitem[D{\"u}ndar et~al.(2015)D{\"u}ndar, Skrabanek, and
+  Zumbo]{dundar2015introduction}
+D{\"u}ndar, F., Skrabanek, L., and Zumbo, P.
+\newblock Introduction to differential gene expression analysis using rna-seq.
+\newblock \emph{Appl. Bioinformatics}, pages 1--67, 2015.
 
 \bibitem[Everaert et~al.(2017)Everaert, Luypaert, Maag, Cheng, Dinger,
   Hellemans, and Mestdagh]{everaert2017benchmarking}
@@ -371,6 +404,11 @@ Li, B. and Dewey, C.~N.
   without a reference genome.
 \newblock \emph{BMC bioinformatics}, 12\penalty0 (1):\penalty0 1--16, 2011.
 
+\bibitem[Li et~al.(2010)Li, Ruotti, Stewart, Thomson, and Dewey]{li2010rna}
+Li, B., Ruotti, V., Stewart, R.~M., Thomson, J.~A., and Dewey, C.~N.
+\newblock Rna-seq gene expression estimation with read mapping uncertainty.
+\newblock \emph{Bioinformatics}, 26\penalty0 (4):\penalty0 493--500, 2010.
+
 \bibitem[Li(2009)]{BAM}
 Li, H.
 \newblock The sequence alignment/map format and samtools.
@@ -528,6 +566,16 @@ Oracle.
 \newblock Virtualbox, 2010.
 \newblock URL \url{https://www.virtualbox.org/}.
 
+\bibitem[Oshlack and Wakefield(2009)]{oshlack2009transcript}
+Oshlack, A. and Wakefield, M.~J.
+\newblock Transcript length bias in rna-seq data confounds systems biology.
+\newblock \emph{Biology direct}, 4\penalty0 (1):\penalty0 1--10, 2009.
+
+\bibitem[Pachter(2011)]{pachter2011models}
+Pachter, L.
+\newblock Models for transcript quantification from rna-seq.
+\newblock \emph{arXiv preprint arXiv:1104.3889}, 2011.
+
 \bibitem[Patro et~al.(2017)Patro, Duggal, Love, Irizarry, and
   Kingsford]{patro2017salmon}
 Patro, R., Duggal, G., Love, M.~I., Irizarry, R.~A., and Kingsford, C.
@@ -593,6 +641,11 @@ Rhoads, A. and Au, K.~F.
 \newblock Pacbio sequencing and its applications.
 \newblock \emph{Genomics, proteomics \& bioinformatics}, 13\penalty0
   (5):\penalty0 278--289, 2015.
+
+\bibitem[Risso et~al.(2011)Risso, Schwartz, Sherlock, and Dudoit]{risso2011gc}
+Risso, D., Schwartz, K., Sherlock, G., and Dudoit, S.
+\newblock Gc-content normalization for rna-seq data.
+\newblock \emph{BMC bioinformatics}, 12\penalty0 (1):\penalty0 1--17, 2011.
 
 \bibitem[Robak and Wierzbowska(2009)]{Robak2009}
 Robak, T. and Wierzbowska, A.

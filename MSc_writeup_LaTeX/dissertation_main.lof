@@ -6,5 +6,7 @@
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Sequencing by synthesis}}{16}{figure.caption.21}%
 \contentsline {figure}{\numberline {1.5}{\ignorespaces FastQScreen plot example}}{19}{figure.caption.22}%
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Alignment against a reference genome or a reference transcriptome}}{23}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Differences in library composition between samples}}{27}{figure.caption.25}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Summary of the options provided by edgeR for DGE identification}}{29}{figure.caption.27}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces General overview of the RNA-seq pipeline.}}{32}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces General overview of the RNA-seq pipeline.}}{36}{figure.caption.32}%

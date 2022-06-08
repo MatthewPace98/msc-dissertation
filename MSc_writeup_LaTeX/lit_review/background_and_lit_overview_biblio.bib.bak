@@ -489,17 +489,6 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   publisher = {American Society of Hematology Washington, DC},
 }
 
-@Article{lindsley2015acute,
-  author    = {Lindsley, R Coleman and Mar, Brenton G and Mazzola, Emanuele and Grauman, Peter V and Shareef, Sarah and Allen, Steven L and Pigneux, Arnaud and Wetzler, Meir and Stuart, Robert K and Erba, Harry P and others},
-  journal   = {Blood, The Journal of the American Society of Hematology},
-  title     = {Acute myeloid leukemia ontogeny is defined by distinct somatic mutations},
-  year      = {2015},
-  number    = {9},
-  pages     = {1367--1376},
-  volume    = {125},
-  publisher = {American Society of Hematology Washington, DC},
-}
-
 @Article{cock2010sanger,
   author    = {Cock, Peter JA and Fields, Christopher J and Goto, Naohisa and Heuer, Michael L and Rice, Peter M},
   journal   = {Nucleic acids research},
@@ -1036,12 +1025,6 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   publisher = {Nature Publishing Group},
 }
 
-@Article{,
-  author = {Stuart Davis},
-  title  = {Trimming for RNA-Seq data},
-  year   = {2019},
-}
-
 @Article{davis2019,
   author = {Stuart Davis},
   title  = {Trimming for RNA-Seq data},
@@ -1165,7 +1148,15 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   timestamp = {2022-06-01},
 }
 
-@Article{,
+@Article{li2009sequence,
+  author    = {Li, Heng and Handsaker, Bob and Wysoker, Alec and Fennell, Tim and Ruan, Jue and Homer, Nils and Marth, Gabor and Abecasis, Goncalo and Durbin, Richard},
+  journal   = {Bioinformatics},
+  title     = {The sequence alignment/map format and SAMtools},
+  year      = {2009},
+  number    = {16},
+  pages     = {2078--2079},
+  volume    = {25},
+  publisher = {Oxford University Press},
 }
 
 @Article{dobin2015mapping,
@@ -1190,12 +1181,6 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   publisher = {Cold Spring Harbor Lab},
 }
 
-@Article{,
-}
-
-@Article{,
-}
-
 @Article{trapnell2009map,
   author    = {Trapnell, Cole and Salzberg, Steven L},
   journal   = {Nature biotechnology},
@@ -1205,6 +1190,132 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   pages     = {455--457},
   volume    = {27},
   publisher = {Nature Publishing Group},
+}
+
+@Article{andrews2016mapq,
+  author    = {Simon Andrews},
+  title     = {MAPQ values are really useful but their implementation is a mess},
+  year      = {2016},
+  timestamp = {2022-06-06},
+  url       = {https://sequencing.qcfail.com/articles/mapq-values-are-really-useful-but-their-implementation-is-a-mess/},
+}
+
+@Article{li2010rna,
+  author    = {Li, Bo and Ruotti, Victor and Stewart, Ron M and Thomson, James A and Dewey, Colin N},
+  journal   = {Bioinformatics},
+  title     = {RNA-Seq gene expression estimation with read mapping uncertainty},
+  year      = {2010},
+  number    = {4},
+  pages     = {493--500},
+  volume    = {26},
+  publisher = {Oxford University Press},
+}
+
+@Article{pachter2011models,
+  author  = {Pachter, Lior},
+  journal = {arXiv preprint arXiv:1104.3889},
+  title   = {Models for transcript quantification from RNA-Seq},
+  year    = {2011},
+}
+
+@Article{brownlee2019gentle,
+  author  = {Brownlee, J},
+  journal = {Machine Learning Mastery, Oct},
+  title   = {A gentle introduction to expectation-maximization (EM Algorithm)},
+  year    = {2019},
+  volume  = {31},
+}
+
+@Article{oshlack2009transcript,
+  author    = {Oshlack, Alicia and Wakefield, Matthew J},
+  journal   = {Biology direct},
+  title     = {Transcript length bias in RNA-seq data confounds systems biology},
+  year      = {2009},
+  number    = {1},
+  pages     = {1--10},
+  volume    = {4},
+  publisher = {Springer},
+}
+
+@Article{robinson2010scaling,
+  author    = {Robinson, Mark D and Oshlack, Alicia},
+  journal   = {Genome biology},
+  title     = {A scaling normalization method for differential expression analysis of RNA-seq data},
+  year      = {2010},
+  number    = {3},
+  pages     = {1--9},
+  volume    = {11},
+  publisher = {BioMed Central},
+}
+
+@Article{risso2011gc,
+  author    = {Risso, Davide and Schwartz, Katja and Sherlock, Gavin and Dudoit, Sandrine},
+  journal   = {BMC bioinformatics},
+  title     = {GC-content normalization for RNA-Seq data},
+  year      = {2011},
+  number    = {1},
+  pages     = {1--17},
+  volume    = {12},
+  publisher = {Springer},
+}
+
+@Article{dillies2013comprehensive,
+  author    = {Dillies, Marie-Agn{\`e}s and Rau, Andrea and Aubert, Julie and Hennequet-Antier, Christelle and Jeanmougin, Marine and Servant, Nicolas and Keime, C{\'e}line and Marot, Guillemette and Castel, David and Estelle, Jordi and others},
+  journal   = {Briefings in bioinformatics},
+  title     = {A comprehensive evaluation of normalization methods for Illumina high-throughput RNA sequencing data analysis},
+  year      = {2013},
+  number    = {6},
+  pages     = {671--683},
+  volume    = {14},
+  publisher = {Oxford University Press},
+}
+
+@Article{bullard2010evaluation,
+  author    = {Bullard, James H and Purdom, Elizabeth and Hansen, Kasper D and Dudoit, Sandrine},
+  journal   = {BMC bioinformatics},
+  title     = {Evaluation of statistical methods for normalization and differential expression in mRNA-Seq experiments},
+  year      = {2010},
+  number    = {1},
+  pages     = {1--13},
+  volume    = {11},
+  publisher = {BioMed Central},
+}
+
+@Article{dundar2015introduction,
+  author  = {D{\"u}ndar, Friederike and Skrabanek, Luce and Zumbo, Paul},
+  journal = {Appl. Bioinformatics},
+  title   = {Introduction to differential gene expression analysis using RNA-seq},
+  year    = {2015},
+  pages   = {1--67},
+}
+
+@Article{trapnell2010transcript,
+  author    = {Trapnell, Cole and Williams, Brian A and Pertea, Geo and Mortazavi, Ali and Kwan, Gordon and Van Baren, Marijke J and Salzberg, Steven L and Wold, Barbara J and Pachter, Lior},
+  journal   = {Nature biotechnology},
+  title     = {Transcript assembly and quantification by RNA-Seq reveals unannotated transcripts and isoform switching during cell differentiation},
+  year      = {2010},
+  number    = {5},
+  pages     = {511--515},
+  volume    = {28},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{mortazavi2008mapping,
+  author    = {Mortazavi, Ali and Williams, Brian A and McCue, Kenneth and Schaeffer, Lorian and Wold, Barbara},
+  journal   = {Nature methods},
+  title     = {Mapping and quantifying mammalian transcriptomes by RNA-Seq},
+  year      = {2008},
+  number    = {7},
+  pages     = {621--628},
+  volume    = {5},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{schurch2015evaluation,
+  author  = {Schurch, Nicholas J and Schofield, Pieta and Gierli{\'n}ski, Marek and Cole, Christian and Sherstnev, Alexander and Singh, Vijender and Wrobel, Nicola and Gharbi, Karim and Simpson, Gordon G and Owen-Hughes, Tom and others},
+  journal = {arXiv preprint arXiv:1505.02017},
+  title   = {Evaluation of tools for differential gene expression analysis by RNA-seq on a 48 biological replicate experiment},
+  year    = {2015},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

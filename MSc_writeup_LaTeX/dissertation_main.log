@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.20)  6 JUN 2022 00:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.20)  8 JUN 2022 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1013,7 +1013,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1
 
 ]
-<./intro/images//cell_differentiation.png, id=322, 722.7pt x 505.89pt>
+<./intro/images//cell_differentiation.png, id=331, 722.7pt x 505.89pt>
 File: ./intro/images//cell_differentiation.png Graphic file (type png)
 <use ./intro/images//cell_differentiation.png>
 Package pdftex.def Info: ./intro/images//cell_differentiation.png  used on inpu
@@ -1130,170 +1130,232 @@ Overfull \hbox (9.16838pt too wide) in paragraph at lines 172--173
  []
 
 [9]
-LaTeX Font Info:    Font shape `T1/lato-TLF/b/it' will be
-(Font)              scaled to size 17.28pt on input line 184.
-Package acronym Info: Label `acro:NGS' newly defined as it shall be overridden
-although it is yet undefined on input line 185.
-Package acronym Info: Label `acro:DGE' newly defined as it shall be overridden
-although it is yet undefined on input line 185.
-LaTeX Font Info:    Font shape `T1/lato-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 190.
- [10]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 2
-01.
+Overfull \hbox (25.06502pt too wide) in paragraph at lines 184--189
+\T1/ppl/m/n/10.95 long-read) Read depth https://genomebiology.biomedcentral.com
+/articles/10.1186/s13059-
+ []
 
-(C:\Users\matth\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ppl.fd
+LaTeX Font Info:    Font shape `T1/lato-TLF/b/it' will be
+(Font)              scaled to size 17.28pt on input line 189.
+Package acronym Info: Label `acro:NGS' newly defined as it shall be overridden
+although it is yet undefined on input line 190.
+Package acronym Info: Label `acro:DGE' newly defined as it shall be overridden
+although it is yet undefined on input line 190.
+[10]
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 2
+06.
+ (C:\Users\matth\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 Package acronym Info: Label `acro:LLE' newly defined as it shall be overridden
-although it is yet undefined on input line 201.
-Package acronym Info: Label `acro:RIN' newly defined as it shall be overridden
-although it is yet undefined on input line 205.
+although it is yet undefined on input line 206.
+LaTeX Font Info:    Font shape `T1/lato-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 209.
 
 [11]
-Overfull \hbox (7.75815pt too wide) in paragraph at lines 212--213
+Package acronym Info: Label `acro:RIN' newly defined as it shall be overridden
+although it is yet undefined on input line 210.
+
+Overfull \hbox (7.75815pt too wide) in paragraph at lines 217--218
 []\T1/ppl/m/n/10.95 The next two steps are frag-men-ta-tion and con-ver-sion to
  com-pli-men-tary DNA (cDNA),
  []
 
-<./lit_review/images//ngs_lib_prep.png, id=654, 654.94687pt x 944.02687pt>
+<./lit_review/images//ngs_lib_prep.png, id=662, 654.94687pt x 944.02687pt>
 File: ./lit_review/images//ngs_lib_prep.png Graphic file (type png)
 <use ./lit_review/images//ngs_lib_prep.png>
 Package pdftex.def Info: ./lit_review/images//ngs_lib_prep.png  used on input l
-ine 224.
+ine 229.
 (pdftex.def)             Requested size: 227.62204pt x 328.0808pt.
 [12] [13 <./lit_review/images//ngs_lib_prep.png>]
 Package acronym Info: Label `acro:PCR' newly defined as it shall be overridden
-although it is yet undefined on input line 231.
-<./lit_review/images//ngs_clonal_amp.png, id=684, 1132.23pt x 1053.9375pt>
+although it is yet undefined on input line 236.
+<./lit_review/images//ngs_clonal_amp.png, id=693, 1132.23pt x 1053.9375pt>
 File: ./lit_review/images//ngs_clonal_amp.png Graphic file (type png)
 <use ./lit_review/images//ngs_clonal_amp.png>
 Package pdftex.def Info: ./lit_review/images//ngs_clonal_amp.png  used on input
- line 237.
+ line 242.
 (pdftex.def)             Requested size: 227.62204pt x 211.87732pt.
  [14
 
  <./lit_review/images//ngs_clonal_amp.png>]
-<./lit_review/images//ngs_sequencing.png, id=703, 590.205pt x 1053.9375pt>
+<./lit_review/images//ngs_sequencing.png, id=712, 590.205pt x 1053.9375pt>
 File: ./lit_review/images//ngs_sequencing.png Graphic file (type png)
 <use ./lit_review/images//ngs_sequencing.png>
 Package pdftex.def Info: ./lit_review/images//ngs_sequencing.png  used on input
- line 251.
+ line 255.
 (pdftex.def)             Requested size: 227.62204pt x 406.46675pt.
  [15
 
 ] [16 <./lit_review/images//ngs_sequencing.png>]
 
 Package nag Warning: $$...$$ is obsolete.
-(nag)                Use \[...\] et al. instead on input line 280.
+(nag)                Use \[...\] et al. instead on input line 283.
 
 
 Package nag Warning: $$...$$ is obsolete.
-(nag)                Use \[...\] et al. instead on input line 281.
+(nag)                Use \[...\] et al. instead on input line 284.
 
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 289.
+(Font)              scaled to size 9.37807pt on input line 292.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 289.
+(Font)              scaled to size 7.29405pt on input line 292.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 289.
+(Font)              scaled to size 5.21004pt on input line 292.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 289.
+(Font)              scaled to size 9.37807pt on input line 292.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 289.
+(Font)              scaled to size 7.29405pt on input line 292.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 289.
+(Font)              scaled to size 5.21004pt on input line 292.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-89.
+92.
 (C:\Users\matth\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Underfull \hbox (badness 2096) in paragraph at lines 289--289
+Underfull \hbox (badness 2096) in paragraph at lines 292--292
 [][] [][][]\T1/ppl/m/n/9 The com-plete Q-score en-cod-ing ta-ble: []$\T1/cmtt/m
 /n/9 https : / / support . illumina . com / help / BaseSpace _ OLH _
  []
 
 
-Package natbib Warning: Citation `li2009sequence' on page 17 undefined on input
- line 293.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 293--293
-[][] [][][][]$\T1/cmtt/m/n/9 https : / / www . bioinformatics . babraham . ac .
- uk / projects / fastqc / Help / 3 % 20Analysis %
+Overfull \hbox (18.21793pt too wide) in paragraph at lines 297--298
+[]\T1/ppl/b/n/10.95 Documentation\T1/ppl/m/n/10.95 : []$\T1/cmtt/m/n/10.95 http
+s : / / www . bioinformatics . babraham . ac . uk / projects / fastqc /
  []
 
 [17
 
 ] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 311--311
-[][] [][][][]$\T1/cmtt/m/n/9 https : / / www . bioinformatics . babraham . ac .
- uk / projects / fastq _ screen / _build / html / index .
+Overfull \hbox (12.55956pt too wide) in paragraph at lines 321--322
+[]\T1/ppl/b/n/10.95 Documentation\T1/ppl/m/n/10.95 : []$\T1/cmtt/m/n/10.95 http
+s : / / www . bioinformatics . babraham . ac . uk / projects / fastq _
  []
 
-<./lit_review/images//fastqscreen_example.png, id=761, 997.47656pt x 261.97874p
+<./lit_review/images//fastqscreen_example.png, id=771, 997.47656pt x 261.97874p
 t>
 File: ./lit_review/images//fastqscreen_example.png Graphic file (type png)
 <use ./lit_review/images//fastqscreen_example.png>
 Package pdftex.def Info: ./lit_review/images//fastqscreen_example.png  used on 
-input line 317.
+input line 331.
 (pdftex.def)             Requested size: 421.0pt x 110.56998pt.
-[19 <./lit_review/images//fastqscreen_example.png>] [20
+[19 <./lit_review/images//fastqscreen_example.png>]
+Overfull \hbox (0.95885pt too wide) in paragraph at lines 362--363
+[]\T1/ppl/m/n/10.95 One of the pri-mary func-tions of Cu-tadapt (as in-di-cated
+ by its name) is to trim adapter
+ []
+
+[20
 
 ]
 
 Package natbib Warning: Citation `morgulis2006fast' on page 21 undefined on inp
-ut line 352.
+ut line 387.
 
 [21]
-<./lit_review/images//transcriptome_vs_genome_alignment.png, id=840, 722.7pt x 
+<./lit_review/images//transcriptome_vs_genome_alignment.png, id=843, 722.7pt x 
 505.89pt>
 File: ./lit_review/images//transcriptome_vs_genome_alignment.png Graphic file (
 type png)
 <use ./lit_review/images//transcriptome_vs_genome_alignment.png>
 Package pdftex.def Info: ./lit_review/images//transcriptome_vs_genome_alignment
-.png  used on input line 376.
+.png  used on input line 411.
 (pdftex.def)             Requested size: 369.88582pt x 258.91907pt.
  [22] [23 <./lit_review/images//transcriptome_vs_genome_alignment.png>]
-
-Package natbib Warning: Citation `andrews2016mapq' on page 24 undefined on inpu
-t line 386.
-
-Package acronym Info: Label `acro:STAR' newly defined as it shall be overridden
-
-although it is yet undefined on input line 392.
-
-Underfull \hbox (badness 10000) in paragraph at lines 392--392
-[][] [][][][]$\T1/cmtt/m/n/9 https : / / physiology . med . cornell . edu / fac
-ulty / skrabanek / lab / angsd / lecture _ notes /
+Overfull \hbox (12.55956pt too wide) in paragraph at lines 429--430
+[]\T1/ppl/b/n/10.95 Documentation\T1/ppl/m/n/10.95 : []$\T1/cmtt/m/n/10.95 http
+s : / / physiology . med . cornell . edu / faculty / skrabanek / lab /
  []
 
 [24
 
 ]
-Overfull \hbox (6.90955pt too wide) in paragraph at lines 401--402
+Overfull \hbox (6.90955pt too wide) in paragraph at lines 442--443
 \T1/ppl/m/n/10.95 and Gin-geras[] ([]2015[]) pro-vide ex-cel-lent de-scrip-tion
 s of nine dif-fer-ent datatype- and output-
  []
 
-[25] [26]
-Overfull \hbox (27.00278pt too wide) in paragraph at lines 487--527
+[25]
+Overfull \hbox (39.74352pt too wide) in paragraph at lines 488--489
+\T1/ppl/m/n/10.95 The genome in-dex to be used by the aligner may be gen-er-ate
+d through \T1/cmtt/m/n/10.95 rsem-prepare-reference
+ []
+
+
+Overfull \hbox (21.97197pt too wide) in paragraph at lines 493--494
+[]\T1/ppl/m/n/10.95 Outputs a gene-centric file, with the fol-low-ing columns: 
+\T1/cmtt/m/n/10.95 gene_id, transcript_id(s),
+ []
+
+
+Package natbib Warning: Citation `trapnell2010transcript' on page 26 undefined 
+on input line 499.
+
+
+Package natbib Warning: Citation `mortazavi2008mapping' on page 26 undefined on
+ input line 499.
+
+[26]
+<./lit_review/images//library_differences.png, id=951, 469.755pt x 469.755pt>
+File: ./lit_review/images//library_differences.png Graphic file (type png)
+<use ./lit_review/images//library_differences.png>
+Package pdftex.def Info: ./lit_review/images//library_differences.png  used on 
+input line 503.
+(pdftex.def)             Requested size: 256.0748pt x 256.07233pt.
+ [27 <./lit_review/images//library_differences.png>]
+LaTeX Font Info:    Font shape `T1/lato-TLF/m/it' will be
+(Font)              scaled to size 12.0pt on input line 509.
+Package acronym Info: Label `acro:TMM' newly defined as it shall be overridden
+although it is yet undefined on input line 511.
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--511
+[][] [][][][]$\T1/cmtt/m/n/9 https : / / www . bioconductor . org / packages / 
+release / bioc / vignettes / edgeR / inst / doc /
+ []
+
+
+Overfull \hbox (8.68948pt too wide) in paragraph at lines 513--514
+[][][] \T1/ppl/m/n/10.95 per-forms bet-ter for between-samples com-par-isons, a
+s op-posed to within-sample
+ []
+
+
+Package nag Warning: $$...$$ is obsolete.
+(nag)                Use \[...\] et al. instead on input line 517.
+
+
+Package nag Warning: $$...$$ is obsolete.
+(nag)                Use \[...\] et al. instead on input line 521.
+
+[28
+
+]
+<./lit_review/images//edger_dge_options.png, id=1000, 722.7pt x 505.89pt>
+File: ./lit_review/images//edger_dge_options.png Graphic file (type png)
+<use ./lit_review/images//edger_dge_options.png>
+Package pdftex.def Info: ./lit_review/images//edger_dge_options.png  used on in
+put line 552.
+(pdftex.def)             Requested size: 369.88582pt x 258.91907pt.
+ [29 <./lit_review/images//edger_dge_options.png>] [30
+
+]
+Overfull \hbox (27.00278pt too wide) in paragraph at lines 587--627
 [][] 
  []
 
-[27
+[31
 
 ]
 Package acronym Info: Label `acro:HPC' newly defined as it shall be overridden
-although it is yet undefined on input line 534.
+although it is yet undefined on input line 634.
 
 
-Package acronym Warning: Acronym `HPC' is not defined on input line 534.
+Package acronym Warning: Acronym `HPC' is not defined on input line 634.
 
 
-Package acronym Warning: Acronym `HPC' is not defined on input line 534.
+Package acronym Warning: Acronym `HPC' is not defined on input line 634.
 
-) (method/materials_and_methods_main.tex [28
+) (method/materials_and_methods_main.tex [32
 
 ]
 Package acronym Info: Label `acro:HPLC' newly defined as it shall be overridden
@@ -1308,7 +1370,7 @@ Overfull \hbox (1.5881pt too wide) in paragraph at lines 19--20
 
 Underfull \vbox (badness 3219) has occurred while \output is active []
 
- [29
+ [33
 
 ]
 Overfull \hbox (1.58725pt too wide) in paragraph at lines 26--27
@@ -1319,33 +1381,43 @@ Overfull \hbox (1.58725pt too wide) in paragraph at lines 26--27
 Package acronym Info: Label `acro:EMBL' newly defined as it shall be overridden
 
 although it is yet undefined on input line 31.
-[30]
+[34]
 
-LaTeX Warning: Reference `???' on page 31 undefined on input line 38.
+LaTeX Warning: Reference `???' on page 35 undefined on input line 38.
 
-<./method/images//Dissertation_pipeline.png, id=1003, 438.63875pt x 459.7175pt>
+<./method/images//Dissertation_pipeline.png, id=1093, 438.63875pt x 459.7175pt>
 
 File: ./method/images//Dissertation_pipeline.png Graphic file (type png)
 <use ./method/images//Dissertation_pipeline.png>
 Package pdftex.def Info: ./method/images//Dissertation_pipeline.png  used on in
 put line 44.
 (pdftex.def)             Requested size: 421.0pt x 441.23961pt.
-[31] [32 <./method/images//Dissertation_pipeline.png>]
+[35] [36 <./method/images//Dissertation_pipeline.png>]
 
 LaTeX Warning: Reference `Assessing the Quality of the Raw FASTQ files' on page
- 33 undefined on input line 57.
+ 37 undefined on input line 57.
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 59.
-[33
+[37
 
 ]
+Package acronym Info: Label `acro:STAR' newly defined as it shall be overridden
+
+although it is yet undefined on input line 113.
+
 Overfull \hbox (0.90906pt too wide) in paragraph at lines 113--114
 \T1/ppl/m/n/10.95 The trimmed and fil-tered FASTQ files were aligned to the GRC
 h38.p13 ref-er-ence genome
  []
 
-[34] [35]
+
+Overfull \hbox (4.9939pt too wide) in paragraph at lines 113--114
+\T1/ppl/m/n/10.95 ([]NCBI[], []2019[]) us-ing the [][][]Spliced Tran-scripts Al
+ign-ment to a Ref-er-ence ([])[] 2.7.9a aligner
+ []
+
+[38] [39]
 Underfull \hbox (badness 10000) in paragraph at lines 168--168
 [][] [][][][]$\T1/cmtt/m/n/9 https : / / www . bioconductor . org / packages / 
 release / bioc / vignettes / edgeR / inst / doc /
@@ -1360,18 +1432,16 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 (C:\Users\matth\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
-[36]
+[40]
 Overfull \hbox (17.11641pt too wide) in paragraph at lines 194--195
 []\T1/ppl/m/n/10.95 2015[]) which is de-pen-dent on the org.Hs.eg.db v3.10.0 ([
 ]M[], []2019[]) hu-man an-no-ta-tion database.
  []
 
-Package acronym Info: Label `acro:TMM' newly defined as it shall be overridden
-although it is yet undefined on input line 211.
-[37]
+[41]
 
 LaTeX Warning: Reference `Adapting Differential Gene Expression Analysis to a L
-ack of Replicates' on page 38 undefined on input line 219.
+ack of Replicates' on page 42 undefined on input line 219.
 
 Package acronym Info: Label `acro:BCV' newly defined as it shall be overridden
 although it is yet undefined on input line 221.
@@ -1385,7 +1455,7 @@ Overfull \hbox (8.51924pt too wide) in paragraph at lines 235--236
 te ([])[] with the Benjamini-Hochberg
  []
 
-[38]) [39] [40
+[42]) [43] [44
 
 ] (dissertation_main.bbl
 Underfull \hbox (badness 4543) in paragraph at lines 9--12
@@ -1393,20 +1463,20 @@ Underfull \hbox (badness 4543) in paragraph at lines 9--12
 s.  URL []$\T1/cmtt/m/n/8 https : / / www . cancer . org / cancer /
  []
 
-
-Underfull \vbox (badness 1270) has occurred while \output is active []
-
- [41
+[45
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
+ [46]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
-Underfull \hbox (badness 1400) in paragraph at lines 491--495
+ [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+Underfull \hbox (badness 1400) in paragraph at lines 536--540
 []\T1/ppl/m/n/8 Nekrutenko, A.  Reference-based rnaseq data anal-y-sis (long). 
  URL []$\T1/cmtt/m/n/8 https : / / training . galaxyproject . org /
  []
@@ -1414,18 +1484,18 @@ Underfull \hbox (badness 1400) in paragraph at lines 491--495
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44]
+ [49]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45])
+ [50])
 No file dissertation_main.ind.
 
 Package natbib Warning: There were undefined citations.
 
 
-Package nag Warning: 6 complaints in total.
+Package nag Warning: 8 complaints in total.
 
-[46]
+[51]
 \tf@toc=\write6
 \openout6 = `dissertation_main.toc'.
 
@@ -1440,20 +1510,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `dissertation_main.out' has not changed.
-(rerunfilecheck)             Checksum: 0BD64C0088228CFB2223C760AC8A8E77;6515.
+(rerunfilecheck)             Checksum: 40087C108CD5A09196E9E9F7B1F1A933;6679.
  ) 
 Here is how much of TeX's memory you used:
- 22647 strings out of 478659
- 359680 string characters out of 2845919
- 902506 words of memory out of 3000000
- 39959 multiletter control sequences out of 15000+600000
- 686808 words of font info for 131 fonts, out of 8000000 for 9000
+ 22725 strings out of 478659
+ 361785 string characters out of 2845919
+ 907185 words of memory out of 3000000
+ 40022 multiletter control sequences out of 15000+600000
+ 709686 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,13n,120p,1381b,2676s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\matth\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
-0800.pk> <C:\Users\matth\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ectt1095.pk>{C:/Users/matth/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/bas
-e/8r.enc} <C:\Users\matth\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
+0800.pk>{C:/Users/matth/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.e
+nc} <C:\Users\matth\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ect
+t1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
 00\ectt0900.pk>{C:/Users/matth/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/la
 to/a_cl4kdn.enc}<C:/Users/matth/AppData/Local/Programs/MiKTeX/fonts/type1/typol
 and/lato/Lato-Bold.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX/fonts/type
@@ -1469,9 +1539,9 @@ o/uplbi8a.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX/fonts/type1/urw/pal
 atino/uplr8a.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
 palatino/uplr8a.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on dissertation_main.pdf (52 pages, 1725727 bytes).
+Output written on dissertation_main.pdf (57 pages, 2053138 bytes).
 PDF statistics:
- 1580 PDF objects out of 1728 (max. 8388607)
- 407 named destinations out of 1000 (max. 500000)
- 340 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1692 PDF objects out of 1728 (max. 8388607)
+ 421 named destinations out of 1000 (max. 500000)
+ 358 words of extra memory for PDF output out of 10000 (max. 10000000)
 

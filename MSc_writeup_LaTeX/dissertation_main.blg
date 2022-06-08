@@ -44,23 +44,19 @@ Repeated entry---line 267 of file lit_review/background_and_lit_overview_biblio.
  :                    ,
 I'm skipping whatever remains of this entry
 Repeated entry---line 492 of file lit_review/background_and_lit_overview_biblio.bib
- : @article{lindsley2015acute
- :                           ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 503 of file lit_review/background_and_lit_overview_biblio.bib
  : @article{cock2010sanger
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 924 of file lit_review/background_and_lit_overview_biblio.bib
+Repeated entry---line 913 of file lit_review/background_and_lit_overview_biblio.bib
  : @article{zhao2014comparison
  :                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 957 of file lit_review/background_and_lit_overview_biblio.bib
+Repeated entry---line 946 of file lit_review/background_and_lit_overview_biblio.bib
  : @article{zhong2011high
  :                       ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "rnadataanalysis2020" isn't style-file defined
---line 1160 of file lit_review/background_and_lit_overview_biblio.bib
+--line 1143 of file lit_review/background_and_lit_overview_biblio.bib
 Database file #3: method/materials_and_methods_biblio.bib
 Repeated entry---line 1 of file method/materials_and_methods_biblio.bib
  : @phdthesis{Gatt2016
@@ -102,6 +98,10 @@ Repeated entry---line 235 of file method/materials_and_methods_biblio.bib
 I'm skipping whatever remains of this entry
 Warning--entry type for "org.Hs.eg.db" isn't style-file defined
 --line 252 of file method/materials_and_methods_biblio.bib
+Repeated entry---line 279 of file method/materials_and_methods_biblio.bib
+ : @article{robinson2010scaling
+ :                             ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 290 of file method/materials_and_methods_biblio.bib
  : @article{cock2010sanger
  :                        ,
@@ -153,10 +153,12 @@ Warning--I didn't find a database entry for "gallagher1979characterization"
 Warning--I didn't find a database entry for "dalton1988hl"
 Warning--I didn't find a database entry for "jacob"
 Warning--I didn't find a database entry for "morgulis2006fast"
-Warning--I didn't find a database entry for "andrews2016mapq"
+Warning--I didn't find a database entry for "trapnell2010transcript"
+Warning--I didn't find a database entry for "mortazavi2008mapping"
 Warning--to sort, need author or key in acsamlsubtypes
 Warning--empty year in acsamlsubtypes
 Warning--empty publisher in albert2020biostar
+Warning--empty journal in andrews2016mapq
 Warning--empty note in prinseq++
 Warning--empty journal in carroll1991t
 Warning--empty journal in chomienne1990all
@@ -167,45 +169,45 @@ Warning--empty institution in illumina2010
 Warning--can't use both volume and number fields in liu2004new
 Warning--empty booktitle in MacManes2014
 Warning--empty year in rnadataanalysis2020
-You've used 116 entries,
+You've used 125 entries,
             2771 wiz_defined-function locations,
-            1252 strings with 29289 characters,
-and the built_in function-call counts, 62698 in all, are:
-= -- 5369
-> -- 4863
-< -- 52
-+ -- 1643
-- -- 1527
-* -- 5783
-:= -- 10017
-add.period$ -- 353
-call.type$ -- 116
-change.case$ -- 837
-chr.to.int$ -- 116
-cite$ -- 246
-duplicate$ -- 2232
-empty$ -- 4213
-format.name$ -- 1688
-if$ -- 12614
+            1290 strings with 30928 characters,
+and the built_in function-call counts, 67060 in all, are:
+= -- 5750
+> -- 5171
+< -- 57
++ -- 1748
+- -- 1623
+* -- 6161
+:= -- 10717
+add.period$ -- 380
+call.type$ -- 125
+change.case$ -- 895
+chr.to.int$ -- 125
+cite$ -- 265
+duplicate$ -- 2410
+empty$ -- 4521
+format.name$ -- 1795
+if$ -- 13497
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 105
-newline$ -- 592
-num.names$ -- 461
-pop$ -- 1490
+missing$ -- 114
+newline$ -- 637
+num.names$ -- 497
+pop$ -- 1590
 preamble$ -- 1
-purify$ -- 727
+purify$ -- 776
 quote$ -- 0
-skip$ -- 1959
+skip$ -- 2108
 stack$ -- 0
-substring$ -- 2294
-swap$ -- 136
-text.length$ -- 3
+substring$ -- 2429
+swap$ -- 149
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1251
-warning$ -- 13
-while$ -- 503
+type$ -- 1350
+warning$ -- 14
+while$ -- 543
 width$ -- 0
-write$ -- 1492
+write$ -- 1606
 (There were 30 error messages)

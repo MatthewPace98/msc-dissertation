@@ -180,7 +180,12 @@ As mentioned in Section \ref{Treatment Methods}, \ac{ATRA} has been a success st
 %\section{Phenols in Maltese Extra Virgin Olive Oil}
 
 
-%\section{Experimental Design}
+\section{Experimental Design}
+Single end vs paired end
+Replicates (biological vs technical)
+Read length (short-read vs long-read)
+Read depth
+https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0697-y
 \section{RNA-seq: \textit{in vitro}}
 RNA sequencing (RNA-seq) is the application of a \ac{NGS} technique to measure the quantity of RNA sequences in a biological sample, in a given moment \citep{zhong2009}. While this dissertation deals with the data analysis part of RNA-seq, some background on the origins of said data is essential. RNA-seq has gradually been replacing microarrays as the standard technology in molecular biology to analyse \ac{DGE}. Its main advantage is that it allows for the sequencing of the entire transcriptome, while microarrays only allow for predefined regions to be sequenced \citep{rao2019comparison}. 
 
@@ -245,7 +250,6 @@ Sequencing by Synthesis \citep{illumina2010} makes use of fluorescently-labelled
 
 Multiple samples may be sequenced simultaneously during a single run, where they are multiplexed by the machine, meaning they are pooled into a single data stream. Unique identifiers called barcode sequences (added to the cDNA fragments during library preparation) allow for the recognition of the different samples, and demultiplexing of the BCL files into text-based FASTQ files \citep{cock2010sanger}. These are immediately compressed to reduce costs associated with data storage and data transfer. While the \textit{de facto} data compression format used is gzip \citep{deutsch1996gzip}, and bzip is used on occasion \citep{seward1996bzip2}, the underlying compression algorithms used are unspecialised and inefficient for genomic data.
 
-
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=8cm]{ngs_sequencing}
@@ -253,7 +257,6 @@ Multiple samples may be sequenced simultaneously during a single run, where they
     \label{fig:ngs_sequencing}
 \end{figure}
 \clearpage
-
 
 %illumina sequencing steps: https://www.illumina.com/documents/products/techspotlights/techspotlight_sequencing.pdf
 % Potential sequencing errors
@@ -276,7 +279,7 @@ Once the FASTQ files emerge from the sequencing machines, we may move into the d
 
 \subsection{Quality Control}
 
-The first part of any pipeline should be to analyse the quality of the data received from the sequencing machine. If poor quality sequencing information is identified, it is truncated to mitigate inaccuracies in the downstream pipeline. Some imperfections and uncertainties in sequencing are unavoidable, thus the reading of each base call by the sequencer is assigned a Phred quality score. These are numerical scores generally ranging from 10 to 60, logarithmically related to the probability of an erroneous base-call, represented as a single ASCII character \citep{ewing1998base}. They are calculated as follows:
+The first part of any sequencing pipeline should be to analyse the quality of the data received from the sequencing machine. If poor quality sequencing information is identified, it is truncated to mitigate inaccuracies in the downstream pipeline. Some imperfections and uncertainties in sequencing are unavoidable, thus the reading of each base call by the sequencer is assigned a Phred quality score. These are numerical scores generally ranging from 10 to 60, logarithmically related to the probability of an erroneous base-call, represented as a single ASCII character \citep{ewing1998base}. They are calculated as follows:
 $$ Q = -10 log_{10}P $$
  $$P = 10^{\frac{-Q}{10}}$$
  
@@ -289,12 +292,17 @@ where:
 A common convention is to write the value of the Phred score after the letter \textit{Q}, so we may say that a base call with quality of Q30 has a 0.1\% chance of being erroneous. The FASTQ files used for this project are Sanger/Illumina 1.9 encoded, meaning that the assigned character to the score is equal to its value as an ASCII code + 33. So Q30 would correspond to the ASCII character with an ASCII code\footnote{The complete Q-score encoding table: \url{https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/QualityScoreEncoding_swBS.htm}} of 53, which is the question mark character \textit{?} \citep{ewing1998base}. The lack of a base call is represented as an \textit{N} in place of the nucleotide.
 
 \subsubsection{FastQC}
+\begin{itemize}\itemsep-0.5em
+\item[] \textbf{Citation}: 				\cite{andrews2010fastqc}
+\item[] \textbf{Documentation}: 	\url{https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3\%20Analysis\%20Modules/l}
+\item[] \textbf{Dependencies}: Java, Picard BAM/SAM Libraries (included in download)
+\end{itemize}
 % Useful: https://rtsf.natsci.msu.edu/genomics/tech-notes/fastqc-tutorial-and-faq/#:~:text=FastQC%2C%20written%20by%20Simon%20Andrews,on%20a%20sequence%20data%20set.
-In the rapidly changing field of nucleotide sequencing, FastQC \citep{andrews2010fastqc} has been one of the few constants. It has become a staple quality control tool for high throughput sequencing data, accepting BAM \citep{BAM}, SAM \citep{li2009sequence} or FASTQ files as input, from which it produces an HTML-based report using a number of modules measuring various quality metrics. The software rates each of these modules using a green check-mark signifying that it 'passed' QC, a yellow exclamation mark 'warning', or a red cross 'failed'. However these flags are set to DNA sequencing standards, and have limited applicability with other types of sequencing, such as RNA-seq, where a number are expected to fail. These modules are thoroughly described in its documentation\footnote{\url{https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3\%20Analysis\%20Modules/}} and summarised below. Care should be taken as the X-axis is non-uniform for a number of the produced graphs.
+In the rapidly changing field of nucleotide sequencing, FastQC has been one of the few constants. It has become a staple quality control tool for high throughput sequencing data, accepting BAM \citep{BAM}, SAM \citep{li2009sequence} or FASTQ files as input, from which it produces an HTML-based report using a number of modules measuring various quality metrics. The software rates each of these modules using a green check-mark signifying that it 'passed' QC, a yellow exclamation mark 'warning', or a red cross 'failed'. However these flags are set to DNA sequencing standards, and have limited applicability with other types of sequencing, such as RNA-seq, where a number are expected to fail. These modules are thoroughly described in its documentation and summarised below. Care should be taken as the X-axis is non-uniform for a number of the produced graphs.
 
 %Maybe add expected moduels to fail
-\textbf{Modules used in FastQC:}
 \begin{itemize} \itemsep0em
+\item[] \textbf{Modules used in FastQC:}
 \item \textbf{Basic Statistics} - Some basic information on the file: its name, type of quality score, total read count, read length and GC content.
 \item \textbf{Per Base Sequence Quality} - The aggregated Q-scores at each position of the reads, represented by a box-plot.
 \item \textbf{Per Sequence Quality Scores} - The number of reads on the y-axis and the average Q-score on the x-axis.
@@ -308,7 +316,13 @@ In the rapidly changing field of nucleotide sequencing, FastQC \citep{andrews201
 \end{itemize}
 
 \subsubsection{FastQScreen}
-While FastQC is certainly a useful and well-maintained tool, it is not exhaustive of the possible QC metrics for FASTQ files. For this reason, other tools such as FastQScreen\footnote{\url{https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/_build/html/index.html}} \citep{wingett2018fastq} may be used to supplement the results.
+\begin{itemize}\itemsep-0.5em
+\item[] \textbf{Citation}: 				\cite{wingett2018fastq}
+\item[] \textbf{Documentation}: 	\url{https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/_build/html/index.html}
+\item[] \textbf{Dependencies}: Linux-based OS, Bowtie/Bowtie2/BWA
+\end{itemize}
+
+While FastQC is certainly a useful and well-maintained tool, it is not exhaustive of the possible QC metrics for FASTQ files. For this reason, other tools such as FastQScreen may be used to supplement the results.
 
 FastQScreen maps the sample reads against the genomes of common contaminants and against that of a human for comparison using a third party alignment tool such as Bowtie \citep{bowtie}, Bowtie2 \citep{bowtie2} or BWA \citep{bwa}. A bar chart (\autoref{fig:fastqscreen_example}) and its respective data table are produced which show the percentage reads mapped for each genome, and what percentage did not map at all. With human samples, one should expect some multi-mapping to the mouse and rat genomes, given their genetic similarities.
 
@@ -321,19 +335,36 @@ FastQScreen maps the sample reads against the genomes of common contaminants and
 \clearpage
 
 \subsubsection{MultiQC}
-MultiQC \footnote{\url{https://multiqc.info/docs/}} \citep{multiqc} provides a convenient way of collating multiple QC reports across multiple samples into a single interactive HTML report. It supports the input of 114 tools as of version 1.11, including the reports from tools found further downstream, in the preprocessing, alignment or quantification parts of the pipeline. 
+
+\begin{itemize}\itemsep-0.5em
+\item[] \textbf{Citation}: 				\cite{multiqc}
+\item[] \textbf{Documentation}: 	\url{https://multiqc.info/docs/}
+\item[] \textbf{Dependencies}:  Python 3
+\end{itemize}
+
+MultiQC provides a convenient way of collating multiple QC reports across multiple samples into a single interactive HTML report. It supports the input of 114 tools as of version 1.11, including the reports from tools found further downstream, in the preprocessing, alignment or quantification parts of the pipeline. 
 
 \subsection{Preprocessing}
 If poor quality data is identified, it should be cleaned to avoid negative effects in the downstream analysis. Quality trimming which is too aggressive may similarly negatively impact downstream analysis, thus care must be taken to select appropriate quality thresholds \citep{davis2019}.
 
 \subsubsection{Cutadapt: Short reads and Adapter sequences}
 \label{cutadapt}
-One of the primary functions of Cutadapt \footnote{\url{https://cutadapt.readthedocs.io/en/v4.0/guide.html}} \citep{martin2011cutadapt} (as indicated by its name) is to trim adapter sequences, which may be given as a string following the \texttt{-a} parameter. Additionally, Cutadapt may be given a read length threshold (\texttt{--length}) to remove short reads which are susceptible to multimapping and ambiguity during alignment \citep{deschamps2020handling}. 
+\begin{itemize}\itemsep-0.5em
+\item[]\textbf{Cutadapt citation}: 				\cite{martin2011cutadapt}
+\item[]\textbf{Cutadapt documentation}: 	\url{https://cutadapt.readthedocs.io/en/v4.0/guide.html}
+\item[]\textbf{Cutadapt dependencies}: Python 3.7 or newer
+\item[]\textbf{Trim Galore! citation}: 				\cite{trimgalore}
+\item[]\textbf{Trim Galore! documentation}: 	\url{https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/}
+\item[]\textbf{Trim Galore! dependencies}: cutadapt, FastQC
+\end{itemize}
 
-Trim Galore!\footnote{\url{https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/}} \citep{trimgalore} is a wrapper script that may be used to instantly redirect the trimmed reads from Cutadapt back to FastQC to reassess the data quality. It accepts the same arguments as Cutadapt, with an additional \texttt{--fastqc\textunderscore args} which accepts additional arguments to be passed on to FastQC as a string. This combines both Cutadapt and FastQC parameters into a single command. 
 
-\textbf{Cutadapt's default options:}
+One of the primary functions of Cutadapt (as indicated by its name) is to trim adapter sequences, which may be given as a string following the \texttt{-a} parameter. Additionally, Cutadapt may be given a read length threshold (\texttt{--length}) to remove short reads which are susceptible to multimapping and ambiguity during alignment \citep{deschamps2020handling}. 
+
+Trim Galore! is a wrapper script that may be used to instantly redirect the trimmed reads from Cutadapt back to FastQC to reassess the data quality. It accepts the same arguments as Cutadapt, with an additional \texttt{--fastqc\textunderscore args} which accepts additional arguments to be passed on to FastQC as a string. This combines both Cutadapt and FastQC parameters into a single command. 
+
 \begin{itemize}\itemsep0em
+\item[] \textbf{Cutadapt's default options:}
 \item Outputs the trimmed FASTQ file and simultaneously generates its FastQC report.
 \item Assumes Sanger/Illumina 1.9 quality encoding (ASCII code +33 = Phred score)
 \item Trims adapter and up- or downstream sequence
@@ -344,17 +375,21 @@ Trim Galore!\footnote{\url{https://www.bioinformatics.babraham.ac.uk/projects/tr
 
 
 \subsubsection{Prinseq++: Low complexity and No Basecalls}
-
-% PReprocessing and INformation of SEQuence data.
+\begin{itemize}\itemsep-0.5em
+\item[] \textbf{Short for}: 				PReprocessing and INformation of SEQuence data
+\item[] \textbf{Citation}: 				\cite{prinseq++}
+\item[] \textbf{Documentation}: 	\url{https://github.com/Adrian-Cantu/PRINSEQ-plus-plus}
+\item[] \textbf{Dependencies}: C++
+\end{itemize}
 % Useful http://prinseq.sourceforge.net/manual.html
-Ambiguity in reads may manifest itself in the form of low complexity regions, and reads with a high number of \textit{N}'s, in addition to those discussed in Section \ref{cutadapt}. The data should be filtered to some degree based on these metrics, which is facilitated by ready-made tools such as Prinseq++ \footnote{\url{https://github.com/Adrian-Cantu/PRINSEQ-plus-plus}} \citep{prinseq++}. Prinseq++ is a C++ multi-threaded implementation of the perl-coded Prinseq-lite software \citep{schmieder2011quality}. 
+Ambiguity in reads may manifest itself in the form of low complexity regions, and reads with a high number of \textit{N}'s, in addition to those discussed in Section \ref{cutadapt}. The data should be filtered to some degree based on these metrics, which is facilitated by ready-made tools such as Prinseq++. Prinseq++ is a C++ multi-threaded implementation of the perl-coded Prinseq-lite software \citep{schmieder2011quality}. 
 
 Regions of low-complexity (also called compositionally biased regions) are a natural part of biological sequences, playing an important role in protein translation \citep{frugier2010low}, and have a functional role in some proteins \citep{ntountoumi2019low}. Nevertheless, due to their repetitive nature, they tend to result in multimapping and low alignment confidence scores, especially when exacerbated with short read lengths. To quantify low-complexity regions, Prinseq++ present the DUST (Tatusov and Lipman, unpublished) and Entropy approaches. Both are different algorithms which employ a scoring function based on nucleotide frequencies which ultimately generate a score between 0 and 1 as a measure for sequence complexity  \citep{morgulis2006fast}. The DUST module is incorporated in BLAST \citep{altschul1997gapped} for the same purpose, to mask low-complexity regions. Prinseq++ filters reads which exceed the stipulated DUST score (\texttt{-lc\textunderscore dust}) or Entropy (\texttt{-lc\textunderscore entropy}) thresholds.
 
 The ambiguous base \textit{N} represents no basecall, and a threshold for the maximum number of \textit{N}'s in a sequence may be set using \texttt{-ns\textunderscore max\textunderscore n}.
     
-\textbf{Prinseq++'s default options:}
 \begin{itemize}\itemsep0em
+\item[]\textbf{Prinseq++'s default options:}
 \item Outputs the filtered FASTQ, and the filtered reads as separate files.
 \item Removes sequences with a DUST score < 0.5
 \item Removes sequences with an Entropy score < 0.5 
@@ -388,39 +423,47 @@ Some implementation of the mapping quality (MAPQ) value is used by all conventio
 %\subsubsection{The Reference Genome}
 
 \subsubsection{STAR}
+\begin{itemize}\itemsep-0.5em
+\item[] \textbf{Short for}: 				Spliced Transcripts Alignment to a Reference
+\item[] \textbf{Citation}: 				\cite{Dobin2013}
+\item[] \textbf{Documentation}: 	\url{https://physiology.med.cornell.edu/faculty/skrabanek/lab/angsd/lecture_notes/STARmanual.pdf}
+\item[] \textbf{Dependencies}: 64 bit Linux or Mac OS X
+\end{itemize}
 
-\ac{STAR}\footnote{\url{https://physiology.med.cornell.edu/faculty/skrabanek/lab/angsd/lecture_notes/STARmanual.pdf}} \citep{Dobin2013} is an open-source software package that performs local, splice-aware alignment in two major steps: (1) seed search and (2) clustering, stitching and scoring. It was coded in C++ for the specific purpose of mapping RNAseq reads to a genome.
+STAR is an open-source software package that performs local, splice-aware alignment in two major steps: (1) seed search and (2) clustering, stitching and scoring. It was coded in C++ for the specific purpose of mapping RNAseq reads to a genome.
 %It requires a considerable amount of RAM to run efficiently \citep{•}, and requires more runtime than Quasi-mappers and pseudo-aligners
 % Suffix arrays
 
-The algorithm first searches for the Maximum Mappable Prefix (MMP) which acts a seed from which to extend its alignment. This must be an exact identical match with the reference genome. These MMPs are clustered according to proximity to identify a set of \textit{anchor} seeds. \ac{STAR} stitches together the seeds identified in the first step, and if alignment within one window does not cover the entire read, it will try to find multiple windows to cover the read, resulting in a chimeric alignment. This means that different parts of the same read may map to distant genomic loci, possibly to different strands or chromosomes, which is especially useful when dealing with cancer-derived transcriptomes given the frequency of structural variants. A local alignment scoring system guides the stitching, with matches, mismatches, indels and splice junction gaps translating to different scores.
+The algorithm first searches for the Maximum Mappable Prefix (MMP) which acts a seed from which to extend its alignment. This must be an exact identical match with the reference genome. These MMPs are clustered according to proximity to identify a set of \textit{anchor} seeds. STAR stitches together the seeds identified in the first step, and if alignment within one window does not cover the entire read, it will try to find multiple windows to cover the read, resulting in a chimeric alignment. This means that different parts of the same read may map to distant genomic loci, possibly to different strands or chromosomes, which is especially useful when dealing with cancer-derived transcriptomes given the frequency of structural variants. A local alignment scoring system guides the stitching, with matches, mismatches, indels and splice junction gaps translating to different scores.
 %Perhaps a diagram here
 
 An index must be generated prior to alignment, which is generated from a reference genome and its respective annotation file in the GTF format. This hastens the algorithm in a way similar to how one might use the index in a book, which points to the specific locations of certain headers \citep{trapnell2009map}.
 
-\ac{STAR} provides the user with great flexibility, with many parameters, such as  the scoring system weighting and the size of search windows, being user-defined. \cite{dobin2015mapping} provide excellent descriptions of nine different datatype- and output-dependent strategies that one may take when mapping RNAseq reads with STAR. 
+STAR provides the user with great flexibility, with many parameters, such as  the scoring system weighting and the size of search windows, being user-defined. \cite{dobin2015mapping} provide excellent descriptions of nine different datatype- and output-dependent strategies that one may take when mapping RNAseq reads with STAR. 
 
 % perfect paper: https://currentprotocols.onlinelibrary.wiley.com/doi/abs/10.1002/0471250953.bi1114s51 
 % sci hub for it: https://sci-hub.hkvisa.net/10.1002/0471250953.bi1114s51
 
-
-\textbf{STAR's default options:}
 \begin{itemize}\itemsep0em
+\item[] \textbf{STAR's default options:}
 \item Generates a genome index using a reference file and its respective annotation (GTF) file.
 \item Aligns an experimental transcriptome using the genome index and outputs an alignment file (SAM, unsorted BAM or BAM sorted by coordinates) and various log files.
-\item Uses a mapping quality metric MAPQ, calculated as $10*log_{10}(1-\frac{1}{N_{map})}$, where ${N_{map}}$ is the number of places the read maps to. A value of 255 is given to uniquely mapped reads.
+\item Uses a mapping quality metric MAPQ, calculated as $10*log_{10}(1-\frac{1}{N_{map}})$, where ${N_{map}}$ is the number of places the read maps to. A value of 255 is given to uniquely mapped reads.
 \item Passes on \texttt{NH HI AS nM} as SAM attributes as defined in the SAM format specifications \footnote{\url{https://samtools.github.io/hts-specs/SAMv1.pdf}}.
 \end{itemize}
 
-
-
 %Multimapping:https://www.sciencedirect.com/science/article/pii/S2001037020303032
 
-\subsection{Read Quantification}
+\subsection{Quantification}
+\label{quantification}
+% Detailed paper: https://arxiv.org/pdf/1104.3889v2.pdf
+The following step associates the aligned reads with the respective genes or transcripts found at their locus. The counts of the mapped reads are proportional to the cell's expression of that particular gene/transcript. Quantifying at the transcript-level is more detailed than the gene-level, but not all research questions require this level of detail. The final output of the combined samples should be a table resembling \autoref{tab:read_count}.
+
+\cite{pachter2011models} provides a detailed (albeit slightly outdated) review of the mathematical models behind transcript quantification, such as the Expectation–Maximization (EM) algorithm, and how they affect downstream analyses. EM estimates the maximum likelihood of proper alignment in the presence of latent variables \citep{brownlee2019gentle, pachter2011models}.
 
 \begin{table}[h]
 \centering
-\caption{An example of a read count table. Each sample represents the pooled RNA of a large number of cells, often of different cell types.}
+\caption{An example of a read count table. In bulk RNAseq, each sample represents the pooled RNA of a large number of cells, most likely of different cell types.}
 \label{tab:read_count}
 \begin{tabular}{lllll}
 \textbf{Genes} & \textbf{Sample$_{1}$} & \textbf{Sample$_{2}$} & \textbf{Sample$_{3}$} & ...  \\
@@ -433,27 +476,108 @@ ARST5 & 5300    & 1900    & 3250    & ...  \\
 \end{table}
 
 \subsubsection{RSEM}
-li2011rsem
-RSEM has built-in support for Bowtie2/STAR/HISAT2 alignment programs, which 
-enables alignment and gene-level abundance estimation to be performed in a 
-single step.
+\begin{itemize}\itemsep-0.5em
+\item[] \textbf{Short for}: RNA-Seq by Expectation Maximization
+\item[] \textbf{Citation}: 				\cite{li2011rsem}
+\item[] \textbf{Documentation}: 	\url{http://deweylab.github.io/RSEM/README.html}
+\item[] \textbf{Dependencies}: 64 bit Linux/Mac OS, C++, Perl, R, STAR/HISAT2/Bowtie2
+\end{itemize}
+
+RSEM uses a statistical model based on \cite{li2010rna}, an implementation of the EM algorithm to address the issue of ambiguous read mapping, and assign reads to their appropriate gene or transcript. RSEM gives the user the option to produce both, and normalises the counts in the process. For each sample, RSEM produces two tab-delimited text files: one quantified at the gene-level and another at the transcript-level. Each row of these file represents the respective gene or transcript (the transcript file is larger due to alternative splicing), with the columns including the IDs, expected counts and normalised counts (TPM and FPKM)
+
+An aligner (STAR, Bowtie2 or HISAT2) may be called directly through RSEM, to combine alignment and quantification (and potentially normalisation) into a single step. The genome index to be used by the aligner may be generated through \texttt{rsem-prepare-reference} and alignment + quantification may be performed with \texttt{rsem-calculate-expression}.
+
+\begin{itemize}\itemsep0em
+\item[] \textbf{RSEM's default options:}
+\item Accepts FASTQ files as input for alignment.
+\item Outputs a gene-centric file, with the following columns: \texttt{gene\textunderscore id, transcript\textunderscore id(s), length, effective\textunderscore length, expected\textunderscore count, TPM and FPKM}
+\item Outputs a transcript-centric file, with the following columns: \texttt{transcript\textunderscore id, gene\textunderscore id, length, effective\textunderscore length, expected\textunderscore count, TPM, FPKM, IsoPct}
+\end{itemize}
+
+\subsection{Normalisation}
+
+To adjust for confounding variables which are not biologically relevant, the read counts must first be normalised. The main factors to account for are sequencing depth \citep{robinson2010scaling}, gene length \citep{oshlack2009transcript} and GC content \citep{risso2011gc}. Effective gene expression analysis should calculate the abundance of the transcripts as a fraction of the entire RNA repertoire for that particular sample. A number of methods have evolved over the years to tackle these issues. \cite{dillies2013comprehensive} and \cite{bullard2010evaluation} extensively explore the different approaches one may take. Despite their use in published studies, within-sample comparison methods (FPKM \citep{trapnell2010transcript}, RPKM \citep{mortazavi2008mapping}, Total Counts \citep{dillies2013comprehensive}) should be avoided in \ac{DGE} analysis as they only account for differences within the same sample, and not between samples \citep{dundar2015introduction}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=9cm]{library_differences}
+    \caption[Differences in library composition between samples]{Potential differences between samples in library composition. Condition A has more reads aligned to Gene 1 than Condition B, but it is considered more highly expressed in Condition B since the \textit{proportion} of the reads is higher. After accounting for library differences, Gene 2 is more highly expressed in Condition A, and Gene 3 is more highly expressed in Condition B. Created using \href{https://biorender.com/}{BioRender.com}. } 
+    \label{fig:lib_diff}
+\end{figure}
+\clearpage
+
+\subsubsection{Trimmed Mean of \textit{M}-values (TMM)}
+\label{TMM}
+
+The \ac{TMM} is implemented in edgeR \citep{edger} through the  \texttt{calcNormFactors} function. It is recommend by the edgeR vignette\footnote{\url{https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf}} if one wishes to continue performing \ac{DGE} analysis using that library. It was first introduced in \cite{robinson2010scaling}, who explain the underlying mathematics in detail. \ac{TMM} assumes that the majority of genes, in both samples, are not differentially expressed, although the model is robust against deviations to this assumption \citep{robinson2010scaling}. 
+
+\ac{TMM} performs better for between-samples comparisons, as opposed to within-sample comparisons \citep{dundar2015introduction}. \cite{robinson2010scaling} recognise that it makes intuitive sense that differences in library size should be normalised (i.e. depth or coverage, as seen in \autoref{fig:lib_diff}), but they consider this scaling too simplistic for many biological applications. 
+
+The observed counts for gene \textit{g} in library \textit{k}, calculated from the read quantification step (\autoref{quantification}), are represented as $Y_{gk}$. The total reads in library \textit{k} are represented as $N_k$. The  \textit{M}-value for gene \textit{g} and libraries \textit{k} and \textit{k'} may be calculated as:
+
+$$ M_g = log_2 \frac{Y_{gk}/N_k}{Y_{gk'}/N_{k'}}$$
+
+The absolute expression level, \textit{A}, for gene \textit{g} is calculated as:
+
+$$A_g = \frac{log_2(Y_{gk}/N_k)*Y_{gk'}/N_{k'}}{2}$$
+
+The next step is to trim the means of the \textit{M}-values and \textit{A}-values. A mean is trimmed when a percentage of the data is truncated at the upper and lower ends. By default this is 30\% for the \textit{M}-values and 5\% for the \textit{A}-values, but these settings may be changed \citep{robinson2010scaling}. 
+
+The final step is the calculation of the normalisation factor and weighted mean of the trimmed $M_g$ using precision (inverse of the variance) weights. The calculations used in this step are too complex for the scope of this project (see \cite{robinson2010scaling} for further details). 
 
 
-\subsection{Read Normalisation}
-% TPM TMM FPKM RPKM
-% https://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-3-r25#Sec2
+\subsection{Differential Gene Expression (DGE) Analysis}
+The crux of the RNA-seq pipeline is to decide through statistical testing whether a given gene's expression varies significantly between samples, and if this variation can be explained by the difference in the cells' biology. All \ac{DGE} tools aim to estimate two metrics  based on normalised read counts from replicated samples: 
 
-\subsubsection{TMM}
-\citep{edger}
+\begin{enumerate}\itemsep-0.5em
+\item The \textit{magnitude} of the differential expression, represented as the log$_2$ fold change (logFC).
+\item The \textit{significance} of the difference, represented as a \textit{p}-value adjusted for multiple testing.
+\end{enumerate} 
 
-\subsection{Differential Expression Analysis}
+The three most commonly used tools for \ac{DGE} judging by citation counts at the time of writing are DESeq2 \citep{love2014moderated}, edgeR \citep{edger} and limma \citep{ritchie2015limma}, which all take the same basic approach. Regression-based models are used to estimate the difference in normalised read counts for each gene or transcript of interest, which are tested for a significant difference \citep{dundar2015introduction}.
+
 % EdgeR and DESeq2
-feng2012gfold, gim2016lpeseq, \citep{edger}
-%
+feng2012gfold, gim2016lpeseq
 %Very low read counts cannot be reliably distinguished from background noise so these need to be filtered: https://pubmed.ncbi.nlm.nih.gov/21645359/
 \subsubsection{EdgeR}
 
-statistical models used by edger uwekk
+EdgeR and DESeq2 are quite similar in that they both make use of a negative binomial distribution to model read counts, and estimate dispersion based on the approximate conditional inference proposed by \cite{cox1987parameter}. EdgeR is recommended for experiments with fewer than 12 replicates \citep{schurch2015evaluation}, and unlike DESeq2, allows for the analysis of data with no replicates, although highly discouraged by the vignette. The biggest challenge to work with data without replicates is the estimation of dispersion, which is mathematically impossible given a single sample. In cases when there is no other alternative, the vignette suggests giving a nominal value based on previous experiments as the dispersion. While essentially an educated guess, this is a better alternative to assuming no variance.
+
+EdgeR provides three options to determine differential gene expression (\autoref{fig:edger_options}). 
+
+\texttt{exactTest} produces pseudo-counts
+are computed for a specific purpose, and their computation depends on the experimental
+design as well as the library sizes, so users are advised not to interpret the psuedo-counts as general-purpose normalized counts
+Note that some other software packages use the term pseudo-count to
+mean something analogous to prior counts in edgeR
+
+
+\textit{estimateCommonDisp}
+calcNormFactors
+
+EdgeR has multiple methods to determine which genes are differentially expressed, but the classic \texttt{exactTest} was deemed as most appropriate. This is a pairwise test which compares the means between two groups of counts with a negative-binomial distribution. The calculation of the dispersion of our data is required prior to its use, however this is not mathematically possible due to our lack of replicates. In such cases the edgeR vignette suggests that estimating the dispersion based on the experimental conditions is more scientifically sound than assuming no variation. It should be emphasised that this technique is inaccurate, but was deemed as the best possible option for statistical analysis without replicates (further detail in Section \ref{Adapting Differential Gene Expression Analysis to a Lack of Replicates}).
+The \ac{BCV} is equal to the square root of the dispersion, and the vignette suggests a few estimates for the \ac{BCV}, such as '0.1 for data on genetically identical model organisms'. While this is human data, not a model organism, the data originate from the same genetically identical cell line, and this value was deemed appropriate. Thus the dispersion used for \texttt{exactTest} is equal to the BCV\textsuperscript{2}, or 0.01. 
+The test was performed a total of three times, where each treated sample was compared with the control. This returns a \texttt{DGEExact} object for each comparison, containing the $log_{2}$ fold change (logFC), $log_{2}$ Counts Per Million (logCPM), p-values and annotations for each gene. 
+
+
+
+EdgeR makes use of \ac{TMM} its own normalisation technique (see \autoref{TMM} for details) 
+
+
+
+
+Uses its own normalisation technique(TMM)
+
+Estimate dispersion by moderated towards the mean
+Assumes a Neg. binomial distribution
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=13cm]{edger_dge_options}
+    \caption[Summary of the options provided by edgeR for DGE identification]{Summary of the three options provided by edgeR for \ac{DGE} identification, based on its vignette. } 
+    \label{fig:edger_options}
+\end{figure}
+\clearpage
 
 \subsection{Downstream Analysis}
 % Potential downstream analysis routes
@@ -474,6 +598,8 @@ luo2013pathview
 
 \section{Related Work}
 \textbf{In this section you need to explain similar work in literature}.  Make sure to give a systematic overview of studies with related/similar work and highlight similarities/differences to your work (perhaps in the form of a table)
+
+% rlly good for DGE file:///C:/Users/matth/OneDrive/Desktop/Msc%20Bioinformatics/!MMB5010%20DISSERTATION-DESKTOP-A2009SI/Literature/Tutorials/Introduction%20to%20differential%20gene%20expression%20analysis%20using%20RNA-seq.pdf 
 
 \begin{landscape}
 	\pagestyle{empty}
@@ -531,7 +657,7 @@ luo2013pathview
 Note that this section may be sectioned based on the different aspects of your dissertation.
 
 Talk about papers that used RNA-seq for the treatment of cancers
-Despite STAR needing a lot of RAM, this was not a limiting factor due to our access to \ac{HPC} and small number of samples
+Despite STAR needing a lot of RAM, this was not a limiting factor due to our access to a High Performance Computer (HPC) and small number of samples
 
 %file:///C:/Users/matth/OneDrive/Desktop/Msc%20Bioinformatics/!MMB5010%20DISSERTATION-DESKTOP-A2009SI/Literature/Oncology%20of%20AML/LUCIENNE%20Phenolic%20compounds.pdf
 

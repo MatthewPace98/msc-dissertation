@@ -489,17 +489,6 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   publisher = {American Society of Hematology Washington, DC},
 }
 
-@Article{lindsley2015acute,
-  author    = {Lindsley, R Coleman and Mar, Brenton G and Mazzola, Emanuele and Grauman, Peter V and Shareef, Sarah and Allen, Steven L and Pigneux, Arnaud and Wetzler, Meir and Stuart, Robert K and Erba, Harry P and others},
-  journal   = {Blood, The Journal of the American Society of Hematology},
-  title     = {Acute myeloid leukemia ontogeny is defined by distinct somatic mutations},
-  year      = {2015},
-  number    = {9},
-  pages     = {1367--1376},
-  volume    = {125},
-  publisher = {American Society of Hematology Washington, DC},
-}
-
 @Article{cock2010sanger,
   author    = {Cock, Peter JA and Fields, Christopher J and Goto, Naohisa and Heuer, Michael L and Rice, Peter M},
   journal   = {Nucleic acids research},
@@ -1036,12 +1025,6 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   publisher = {Nature Publishing Group},
 }
 
-@Article{,
-  author = {Stuart Davis},
-  title  = {Trimming for RNA-Seq data},
-  year   = {2019},
-}
-
 @Article{davis2019,
   author = {Stuart Davis},
   title  = {Trimming for RNA-Seq data},
@@ -1191,4 +1174,27 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   author    = {Ziemann, Mark and Kaspi, Antony and El-Osta, Assam},
   journal   = {Rna},
   title     = {Evaluation of microRNA alignment techniques},
-  
+  year      = {2016},
+  number    = {8},
+  pages     = {1120--1138},
+  volume    = {22},
+  publisher = {Cold Spring Harbor Lab},
+}
+
+@Article{trapnell2009map,
+  author    = {Trapnell, Cole and Salzberg, Steven L},
+  journal   = {Nature biotechnology},
+  title     = {How to map billions of short reads onto genomes},
+  year      = {2009},
+  number    = {5},
+  pages     = {455--457},
+  volume    = {27},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{andrews2016mapq,
+  author    = {Simon Andrews},
+  title     = {MAPQ values are really useful but their implementation is a mess},
+  year      = {2016},
+  timestamp = {2022-06-06},
+  url       = {https://sequencing.
