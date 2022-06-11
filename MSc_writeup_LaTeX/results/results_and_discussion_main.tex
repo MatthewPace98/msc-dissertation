@@ -79,43 +79,10 @@ Unfiltered                                                         & 32.62M     
 
 
 \subsection{Preprocessing}
-Some \citep{liao2020read} doubt the necessity of trimming in the first place.
+
 
 %Explain that RSEM had the option to perform the alignment via another aligner (eg STAR), but sacrificed flexibility so it was decided that keeping the alignment and quantification as seperate steps was better
 
-
-\subsection{Alignment}
-
-
-
-\subsection{Adapting Differential Gene Expression Analysis to a Lack of Replicates}
-\label{Adapting Differential Gene Expression Analysis to a Lack of Replicates}
-The accuracy of any statistical analysis is highly dependent on the number of experimental (?) replicates. Large numbers of replicates
-
-This is a prevalent limitation in RNA-seq experiments due to their costly nature, where researchers are limited by their budget to a small number of replicates. To make the most of such datasets, several tools have been developed especially for this situation, or provide advice on how to adjust the analysis according to the data (REF!). Notably, the most cited tool for \ac{DGE} analysis, DESeq2 (REF!), had revoked its support for such datasets in version (VERSION?).
-
-...Many methods have been compared
-
-[Table with methods and pros and cons]
-
-% We have no replicates and thus no statistical power
-% the technical variance of RNA-seq is negligible (Bullard et al. 2010) (AND WE HAVE LITTLE TO NO BIOLOGICAL VARIANCE ACCORDING TO CELL LINE)
-
-LPEseq
-•	https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159182
-•	local-pooled-error (LPE)
- outperformed the others for non-replicated datasets, and showed a similar performance with replicated samples
-able to accurately test differential expression with a limited number of samples, in particular non-replicated samples (own paper)
-
-
-GFold
-•	https://zhanglab.tongji.edu.cn/softwares/GFOLD/index.html
-•	https://pubmed.ncbi.nlm.nih.gov/22923299/
-•	especially useful when no replicate is available
-•	assigns reliable statistics for expression changes based on the posterior distribution of log fold change.
-
-edgeR had many ways to perform DGE:
-Likelihood Ratio Test which compared values against their mean. This was not applicable for our dataset because we needed to compare the treated values against the untreated values
 
 
 % Sorting BAM by read name vs by coordinate (I chose coordinate)

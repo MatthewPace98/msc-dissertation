@@ -1,4 +1,4 @@
-\begin{thebibliography}{125}
+\begin{thebibliography}{166}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,6 +14,14 @@ Acute myeloid leukemia (aml) subtypes and prognostic factors.
 Albert, I.
 \newblock \emph{The Biostar Handbook}.
 \newblock 2 edition, 2020.
+
+\bibitem[Alhamdoosh et~al.(2017)Alhamdoosh, Ng, Wilson, Sheridan, Huynh,
+  Wilson, and Ritchie]{alhamdoosh2017combining}
+Alhamdoosh, M., Ng, M., Wilson, N.~J., Sheridan, J.~M., Huynh, H., Wilson,
+  M.~J., and Ritchie, M.~E.
+\newblock Combining multiple tools outperforms individual methods in gene set
+  enrichment analyses.
+\newblock \emph{Bioinformatics}, 33\penalty0 (3):\penalty0 414--424, 2017.
 
 \bibitem[Altschul et~al.(1997)Altschul, Madden, Sch{\"a}ffer, Zhang, Zhang,
   Miller, and Lipman]{altschul1997gapped}
@@ -34,11 +42,24 @@ Andrews, S. et~al.
 \newblock Fastqc: a quality control tool for high throughput sequence data,
   2010.
 
+\bibitem[Barry et~al.(2005)Barry, Nobel, and Wright]{barry2005significance}
+Barry, W.~T., Nobel, A.~B., and Wright, F.~A.
+\newblock Significance analysis of functional categories in gene expression
+  studies: a structured permutation approach.
+\newblock \emph{Bioinformatics}, 21\penalty0 (9):\penalty0 1943--1949, 2005.
+
 \bibitem[Behjati and Tarpey(2013)]{behjati2013next}
 Behjati, S. and Tarpey, P.~S.
 \newblock What is next generation sequencing?
 \newblock \emph{Archives of Disease in Childhood-Education and Practice},
   98\penalty0 (6):\penalty0 236--238, 2013.
+
+\bibitem[Benjamini and Hochberg(1995)]{benjamini1995controlling}
+Benjamini, Y. and Hochberg, Y.
+\newblock Controlling the false discovery rate: a practical and powerful
+  approach to multiple testing.
+\newblock \emph{Journal of the Royal statistical society: series B
+  (Methodological)}, 57\penalty0 (1):\penalty0 289--300, 1995.
 
 \bibitem[Bennett et~al.(1976)Bennett, Catovsky, Daniel, Flandrin, Galton,
   Gralnick, and Sultan]{bennett1976proposals}
@@ -146,6 +167,14 @@ Chomienne, C., Ballerini, P., Balitrand, N., Daniel, M.~T., Fenaux, P.,
   vitro studies: structure-function relationship.
 \newblock 1990.
 
+\bibitem[Chung et~al.(2021)Chung, Bruno, Rasko, Cuomo, Mu{\~n}oz, Livny,
+  Shetty, Mahurkar, and Hotopp]{chung2021best}
+Chung, M., Bruno, V.~M., Rasko, D.~A., Cuomo, C.~A., Mu{\~n}oz, J.~F., Livny,
+  J., Shetty, A.~C., Mahurkar, A., and Hotopp, J. C.~D.
+\newblock Best practices on the differential expression analysis of
+  multi-species rna-seq.
+\newblock \emph{Genome biology}, 22\penalty0 (1):\penalty0 1--23, 2021.
+
 \bibitem[Cobb(2017)]{cobb201760}
 Cobb, M.
 \newblock 60 years ago, francis crick changed the logic of biology.
@@ -157,6 +186,20 @@ Cock, P.~J., Fields, C.~J., Goto, N., Heuer, M.~L., and Rice, P.~M.
   the solexa/illumina fastq variants.
 \newblock \emph{Nucleic acids research}, 38\penalty0 (6):\penalty0 1767--1771,
   2010.
+
+\bibitem[Conesa et~al.(2016)Conesa, Madrigal, Tarazona, Gomez-Cabrero, Cervera,
+  McPherson, Szcze{\'s}niak, Gaffney, Elo, Zhang, et~al.]{conesa2016survey}
+Conesa, A., Madrigal, P., Tarazona, S., Gomez-Cabrero, D., Cervera, A.,
+  McPherson, A., Szcze{\'s}niak, M.~W., Gaffney, D.~J., Elo, L.~L., Zhang, X.,
+  et~al.
+\newblock A survey of best practices for rna-seq data analysis.
+\newblock \emph{Genome biology}, 17\penalty0 (1):\penalty0 1--19, 2016.
+
+\bibitem[Cox and Reid(1987)]{cox1987parameter}
+Cox, D.~R. and Reid, N.
+\newblock Parameter orthogonality and approximate conditional inference.
+\newblock \emph{Journal of the Royal Statistical Society: Series B
+  (Methodological)}, 49\penalty0 (1):\penalty0 1--18, 1987.
 
 \bibitem[Davis(2019)]{davis2019}
 Davis, S.
@@ -211,11 +254,35 @@ Dobin, A., Davis, C.~A., Schlesinger, F., Drenkow, J., Zaleski, C., Jha, S.,
 \newblock {STAR:} ultrafast universal rna-seq aligner.
 \newblock \emph{Bioinform.}, 29\penalty0 (1):\penalty0 15--21, 2013.
 
+\bibitem[Dong et~al.(2022)Dong, Vegesna, Brouwer, and Luo]{dong2022sbgnview}
+Dong, X., Vegesna, K., Brouwer, C., and Luo, W.
+\newblock Sbgnview: towards data analysis, integration and visualization on all
+  pathways.
+\newblock \emph{Bioinformatics}, 38\penalty0 (5):\penalty0 1473--1476, 2022.
+
 \bibitem[D{\"u}ndar et~al.(2015)D{\"u}ndar, Skrabanek, and
   Zumbo]{dundar2015introduction}
 D{\"u}ndar, F., Skrabanek, L., and Zumbo, P.
 \newblock Introduction to differential gene expression analysis using rna-seq.
 \newblock \emph{Appl. Bioinformatics}, pages 1--67, 2015.
+
+\bibitem[Dunn(1961)]{dunn1961multiple}
+Dunn, O.~J.
+\newblock Multiple comparisons among means.
+\newblock \emph{Journal of the American statistical association}, 56\penalty0
+  (293):\penalty0 52--64, 1961.
+
+\bibitem[Dunn et~al.(2018)Dunn, Smyth, et~al.]{dunn2018generalized}
+Dunn, P.~K., Smyth, G.~K., et~al.
+\newblock \emph{Generalized linear models with examples in R}.
+\newblock Springer, 2018.
+
+\bibitem[Ellson et~al.(2001)Ellson, Gansner, Koutsofios, North, and
+  Woodhull]{ellson2001graphviz}
+Ellson, J., Gansner, E., Koutsofios, L., North, S.~C., and Woodhull, G.
+\newblock Graphviz—open source graph drawing tools.
+\newblock In \emph{International Symposium on Graph Drawing}, pages 483--484.
+  Springer, 2001.
 
 \bibitem[Everaert et~al.(2017)Everaert, Luypaert, Maag, Cheng, Dinger,
   Hellemans, and Mestdagh]{everaert2017benchmarking}
@@ -236,6 +303,12 @@ Ewing, B., Hillier, L., Wendl, M.~C., and Green, P.
 \newblock Base-calling of automated sequencer traces usingphred. i. accuracy
   assessment.
 \newblock \emph{Genome research}, 8\penalty0 (3):\penalty0 175--185, 1998.
+
+\bibitem[Feise(2002)]{feise2002multiple}
+Feise, R.~J.
+\newblock Do multiple outcome measures require p-value adjustment?
+\newblock \emph{BMC medical research methodology}, 2\penalty0 (1):\penalty0
+  1--4, 2002.
 
 \bibitem[Frenkel et~al.(1981)Frenkel, Ligler, Graham, Hernandez, Kettman~Jr,
   and Smith]{frenkel1981acute}
@@ -269,11 +342,27 @@ Gatt, L.~V.
   differentiating activity}.
 \newblock PhD thesis, 2016.
 
+\bibitem[Gentleman et~al.(2004)Gentleman, Carey, Bates, Bolstad, Dettling,
+  Dudoit, Ellis, Gautier, Ge, Gentry, et~al.]{gentleman2004bioconductor}
+Gentleman, R.~C., Carey, V.~J., Bates, D.~M., Bolstad, B., Dettling, M.,
+  Dudoit, S., Ellis, B., Gautier, L., Ge, Y., Gentry, J., et~al.
+\newblock Bioconductor: open software development for computational biology and
+  bioinformatics.
+\newblock \emph{Genome biology}, 5\penalty0 (10):\penalty0 1--16, 2004.
+
 \bibitem[Green and Sambrook(2019)]{green2019win}
 Green, M.~R. and Sambrook, J.
 \newblock How to win the battle with rnase.
 \newblock \emph{Cold Spring Harbor Protocols}, 2019\penalty0 (2):\penalty0
   pdb--top101857, 2019.
+
+\bibitem[Greer et~al.(2010)Greer, Honeywell, Geletu, Arulanandam, and
+  Raptis]{greer2010housekeeping}
+Greer, S., Honeywell, R., Geletu, M., Arulanandam, R., and Raptis, L.
+\newblock Housekeeping genes; expression levels may change with density of
+  cultured cells.
+\newblock \emph{Journal of immunological methods}, 355\penalty0 (1-2):\penalty0
+  76--79, 2010.
 
 \bibitem[Griffith et~al.(2015)Griffith, Walker, Spies, Ainscough, and
   Griffith]{griffith2015informatics}
@@ -283,6 +372,14 @@ Griffith, M., Walker, J.~R., Spies, N.~C., Ainscough, B.~J., and Griffith,
   cloud.
 \newblock \emph{PLoS computational biology}, 11\penalty0 (8):\penalty0
   e1004393, 2015.
+
+\bibitem[Hamosh et~al.(2005)Hamosh, Scott, Amberger, Bocchini, and
+  McKusick]{hamosh2005online}
+Hamosh, A., Scott, A.~F., Amberger, J.~S., Bocchini, C.~A., and McKusick, V.~A.
+\newblock Online mendelian inheritance in man (omim), a knowledgebase of human
+  genes and genetic disorders.
+\newblock \emph{Nucleic acids research}, 33\penalty0 (suppl\_1):\penalty0
+  D514--D517, 2005.
 
 \bibitem[Han et~al.(2015)Han, Vickers, Samuels, and Guo]{han2015alternative}
 Han, L., Vickers, K.~C., Samuels, D.~C., and Guo, Y.
@@ -297,6 +394,30 @@ He, B., Zhu, R., Yang, H., Lu, Q., Wang, W., Song, L., Sun, X., Zhang, G., Li,
 \newblock Assessing the impact of data preprocessing on analyzing next
   generation sequencing data.
 \newblock \emph{Frontiers in bioengineering and biotechnology}, page 817, 2020.
+
+\bibitem[Hochberg and Tamhane(1987)]{hochberg1987multiple}
+Hochberg, Y. and Tamhane, A.~C.
+\newblock \emph{Multiple comparison procedures}.
+\newblock John Wiley \& Sons, Inc., 1987.
+
+\bibitem[Holm(1979)]{holm1979simple}
+Holm, S.
+\newblock A simple sequentially rejective multiple test procedure.
+\newblock \emph{Scandinavian journal of statistics}, pages 65--70, 1979.
+
+\bibitem[Hounkpe et~al.(2021)Hounkpe, Chenou, de~Lima, and
+  De~Paula]{hounkpe2021hrt}
+Hounkpe, B.~W., Chenou, F., de~Lima, F., and De~Paula, E.~V.
+\newblock Hrt atlas v1. 0 database: redefining human and mouse housekeeping
+  genes and candidate reference transcripts by mining massive rna-seq datasets.
+\newblock \emph{Nucleic acids research}, 49\penalty0 (D1):\penalty0 D947--D955,
+  2021.
+
+\bibitem[Ihnatova et~al.(2018)Ihnatova, Popovici, and
+  Budinska]{ihnatova2018critical}
+Ihnatova, I., Popovici, V., and Budinska, E.
+\newblock A critical comparison of topology-based pathway analysis methods.
+\newblock \emph{PloS one}, 13\penalty0 (1):\penalty0 e0191154, 2018.
 
 \bibitem[Illumina(2010)]{HiSeq2000}
 Illumina.
@@ -330,6 +451,13 @@ Juliusson, G., Antunovic, P., Derolf, {\AA}., Lehmann, S., M{\"o}llg{\aa}rd,
 \newblock \emph{Blood, The Journal of the American Society of Hematology},
   113\penalty0 (18):\penalty0 4179--4187, 2009.
 
+\bibitem[Kanehisa et~al.(2017)Kanehisa, Furumichi, Tanabe, Sato, and
+  Morishima]{kanehisa2017kegg}
+Kanehisa, M., Furumichi, M., Tanabe, M., Sato, Y., and Morishima, K.
+\newblock Kegg: new perspectives on genomes, pathways, diseases and drugs.
+\newblock \emph{Nucleic acids research}, 45\penalty0 (D1):\penalty0 D353--D361,
+  2017.
+
 \bibitem[Kaur et~al.(2016)Kaur, Nibhoria, Tiwana, Bajaj, and
   Chhabra]{kaur2016rapid}
 Kaur, M., Nibhoria, S., Tiwana, K., Bajaj, A., and Chhabra, S.
@@ -337,6 +465,13 @@ Kaur, M., Nibhoria, S., Tiwana, K., Bajaj, A., and Chhabra, S.
   lymphoblastic leukemia: A rare case report.
 \newblock \emph{Journal of Basic and Clinical Pharmacy}, 7\penalty0
   (2):\penalty0 60, 2016.
+
+\bibitem[Khatri et~al.(2012)Khatri, Sirota, and Butte]{khatri2012ten}
+Khatri, P., Sirota, M., and Butte, A.~J.
+\newblock Ten years of pathway analysis: current approaches and outstanding
+  challenges.
+\newblock \emph{PLoS computational biology}, 8\penalty0 (2):\penalty0 e1002375,
+  2012.
 
 \bibitem[Khwaja et~al.(2016)Khwaja, Bjorkholm, Gale, Levine, Jordan, Ehninger,
   Bloomfield, Estey, Burnett, Cornelissen, Scheinberg, Bouscary, and
@@ -379,6 +514,12 @@ Kukurba, K.~R. and Montgomery, S.~B.
 \newblock Rna sequencing and analysis.
 \newblock \emph{Cold Spring Harbor Protocols}, 2015\penalty0 (11):\penalty0
   pdb--top084970, 2015.
+
+\bibitem[Lancet(2018)]{lancet2018overall}
+Lancet, J.~E.
+\newblock Is the overall survival for older adults with aml finally improving?
+\newblock \emph{Best Practice \& Research Clinical Haematology}, 31\penalty0
+  (4):\penalty0 387--390, 2018.
 
 \bibitem[Langmead and Salzberg(2012)]{bowtie2}
 Langmead, B. and Salzberg, S.~L.
@@ -460,15 +601,60 @@ Liu, R., Hsieh, C.-Y., and Lam, K.~S.
 \newblock In \emph{Seminars in cancer biology}, volume~14, pages 13--21.
   Elsevier, 2004.
 
+\bibitem[Love et~al.(2014)Love, Huber, and Anders]{love2014moderated}
+Love, M.~I., Huber, W., and Anders, S.
+\newblock Moderated estimation of fold change and dispersion for rna-seq data
+  with deseq2.
+\newblock \emph{Genome biology}, 15\penalty0 (12):\penalty0 1--21, 2014.
+
+\bibitem[Lun et~al.(2016)Lun, Chen, and Smyth]{lun2016s}
+Lun, A.~T., Chen, Y., and Smyth, G.~K.
+\newblock It’s de-licious: a recipe for differential expression analyses of
+  rna-seq experiments using quasi-likelihood methods in edger.
+\newblock In \emph{Statistical genomics}, pages 391--416. Springer, 2016.
+
+\bibitem[Lund et~al.(2012)Lund, Nettleton, McCarthy, and
+  Smyth]{lund2012detecting}
+Lund, S.~P., Nettleton, D., McCarthy, D.~J., and Smyth, G.~K.
+\newblock Detecting differential expression in rna-sequence data using
+  quasi-likelihood with shrunken dispersion estimates.
+\newblock \emph{Statistical applications in genetics and molecular biology},
+  11\penalty0 (5), 2012.
+
+\bibitem[Luo and Brouwer(2013)]{luo2013pathview}
+Luo, W. and Brouwer, C.
+\newblock Pathview: an r/bioconductor package for pathway-based data
+  integration and visualization.
+\newblock \emph{Bioinformatics}, 29\penalty0 (14):\penalty0 1830--1831, 2013.
+
+\bibitem[Luo et~al.(2009)Luo, Friedman, Shedden, Hankenson, and
+  Woolf]{luo2009gage}
+Luo, W., Friedman, M.~S., Shedden, K., Hankenson, K.~D., and Woolf, P.~J.
+\newblock Gage: generally applicable gene set enrichment for pathway analysis.
+\newblock \emph{BMC bioinformatics}, 10\penalty0 (1):\penalty0 1--17, 2009.
+
 \bibitem[M(2019)]{org.Hs.eg.db}
 M, C.
 \newblock org.hs.eg.db: Genome wide annotation for human, 2019.
 \newblock R package version 3.8.2.
 
+\bibitem[Ma et~al.(2019)Ma, Shojaie, and Michailidis]{ma2019comparative}
+Ma, J., Shojaie, A., and Michailidis, G.
+\newblock A comparative study of topology-based pathway enrichment analysis
+  methods.
+\newblock \emph{BMC bioinformatics}, 20\penalty0 (1):\penalty0 1--14, 2019.
+
 \bibitem[MacManes(2014)]{MacManes2014}
 MacManes, M.~D.
 \newblock On the optimal trimming of high-throughput mrna sequence data.
 \newblock 2014.
+
+\bibitem[Maglott et~al.(2005)Maglott, Ostell, Pruitt, and
+  Tatusova]{maglott2005entrez}
+Maglott, D., Ostell, J., Pruitt, K.~D., and Tatusova, T.
+\newblock Entrez gene: gene-centered information at ncbi.
+\newblock \emph{Nucleic acids research}, 33\penalty0 (suppl\_1):\penalty0
+  D54--D58, 2005.
 
 \bibitem[Malard and Mohty(2020)]{malard2020acute}
 Malard, F. and Mohty, M.
@@ -496,6 +682,21 @@ Mazzola, P.~G., Lopes, A.~M., Hasmann, F.~A., Jozala, A.~F., Penna, T.~C.,
   Research in Process, Environmental \& Clean Technology}, 83\penalty0
   (2):\penalty0 143--157, 2008.
 
+\bibitem[McCarthy et~al.(2012)McCarthy, Chen, and
+  Smyth]{mccarthy2012differential}
+McCarthy, D.~J., Chen, Y., and Smyth, G.~K.
+\newblock Differential expression analysis of multifactor rna-seq experiments
+  with respect to biological variation.
+\newblock \emph{Nucleic acids research}, 40\penalty0 (10):\penalty0 4288--4297,
+  2012.
+
+\bibitem[McIntyre et~al.(2011)McIntyre, Lopiano, Morse, Amin, Oberg, Young, and
+  Nuzhdin]{mcintyre2011rna}
+McIntyre, L.~M., Lopiano, K.~K., Morse, A.~M., Amin, V., Oberg, A.~L., Young,
+  L.~J., and Nuzhdin, S.~V.
+\newblock Rna-seq: technical variability and sampling.
+\newblock \emph{BMC genomics}, 12\penalty0 (1):\penalty0 1--13, 2011.
+
 \bibitem[Metzler et~al.(2004)Metzler, Strissel, Strick, Niemeyer, Roettgers,
   Borkhardt, Harbott, Ludwig, Stanulla, Schrappe, et~al.]{metzler2004emergence}
 Metzler, M., Strissel, P.~L., Strick, R., Niemeyer, C., Roettgers, S.,
@@ -511,6 +712,12 @@ Meyer, S.~C. and Levine, R.~L.
   leukaemia.
 \newblock \emph{The Lancet Oncology}, 15\penalty0 (9):\penalty0 e382--e394,
   2014.
+
+\bibitem[Mortazavi et~al.(2008)Mortazavi, Williams, McCue, Schaeffer, and
+  Wold]{mortazavi2008mapping}
+Mortazavi, A., Williams, B.~A., McCue, K., Schaeffer, L., and Wold, B.
+\newblock Mapping and quantifying mammalian transcriptomes by rna-seq.
+\newblock \emph{Nature methods}, 5\penalty0 (7):\penalty0 621--628, 2008.
 
 \bibitem[Mr{\'o}zek et~al.(2000)Mr{\'o}zek, Heinonen, and
   Bloomfield]{mrozek2000prognostic}
@@ -647,6 +854,15 @@ Risso, D., Schwartz, K., Sherlock, G., and Dudoit, S.
 \newblock Gc-content normalization for rna-seq data.
 \newblock \emph{BMC bioinformatics}, 12\penalty0 (1):\penalty0 1--17, 2011.
 
+\bibitem[Ritchie et~al.(2015)Ritchie, Phipson, Wu, Hu, Law, Shi, and
+  Smyth]{ritchie2015limma}
+Ritchie, M.~E., Phipson, B., Wu, D., Hu, Y., Law, C.~W., Shi, W., and Smyth,
+  G.~K.
+\newblock limma powers differential expression analyses for rna-sequencing and
+  microarray studies.
+\newblock \emph{Nucleic acids research}, 43\penalty0 (7):\penalty0 e47--e47,
+  2015.
+
 \bibitem[Robak and Wierzbowska(2009)]{Robak2009}
 Robak, T. and Wierzbowska, A.
 \newblock Current and emerging therapies for acute myeloid leukemia.
@@ -659,11 +875,32 @@ Robinson, M.~D. and Oshlack, A.
   of rna-seq data.
 \newblock \emph{Genome biology}, 11\penalty0 (3):\penalty0 1--9, 2010.
 
+\bibitem[Robinson and Smyth(2007)]{robinson2007moderated}
+Robinson, M.~D. and Smyth, G.~K.
+\newblock Moderated statistical tests for assessing differences in tag
+  abundance.
+\newblock \emph{Bioinformatics}, 23\penalty0 (21):\penalty0 2881--2887, 2007.
+
+\bibitem[Robinson and Smyth(2008)]{robinson2008small}
+Robinson, M.~D. and Smyth, G.~K.
+\newblock Small-sample estimation of negative binomial dispersion, with
+  applications to sage data.
+\newblock \emph{Biostatistics}, 9\penalty0 (2):\penalty0 321--332, 2008.
+
 \bibitem[Robinson et~al.(2010)Robinson, McCarthy, and Smyth]{edger}
 Robinson, M.~D., McCarthy, D.~J., and Smyth, G.~K.
 \newblock edger: a bioconductor package for differential expression analysis of
   digital gene expression data.
 \newblock \emph{Bioinformatics}, 26\penalty0 (1):\penalty0 139--140, 2010.
+
+\bibitem[Sasaki et~al.(2021)Sasaki, Ravandi, Kadia, DiNardo, Short, Borthakur,
+  Jabbour, and Kantarjian]{sasaki2021novo}
+Sasaki, K., Ravandi, F., Kadia, T.~M., DiNardo, C.~D., Short, N.~J., Borthakur,
+  G., Jabbour, E., and Kantarjian, H.~M.
+\newblock De novo acute myeloid leukemia: A population-based study of outcome
+  in the united states based on the surveillance, epidemiology, and end results
+  (seer) database, 1980 to 2017.
+\newblock \emph{Cancer}, 127\penalty0 (12):\penalty0 2049--2061, 2021.
 
 \bibitem[Schaarschmidt et~al.(2020)Schaarschmidt, Fischer, Zuther, and
   Hincha]{Schaarschmidt2020}
@@ -687,6 +924,15 @@ Schroeder, A., Mueller, O., Stocker, S., Salowsky, R., Leiber, M., Gassmann,
   rna measurements.
 \newblock \emph{BMC molecular biology}, 7\penalty0 (1):\penalty0 1--14, 2006.
 
+\bibitem[Schurch et~al.(2015)Schurch, Schofield, Gierli{\'n}ski, Cole,
+  Sherstnev, Singh, Wrobel, Gharbi, Simpson, Owen-Hughes,
+  et~al.]{schurch2015evaluation}
+Schurch, N.~J., Schofield, P., Gierli{\'n}ski, M., Cole, C., Sherstnev, A.,
+  Singh, V., Wrobel, N., Gharbi, K., Simpson, G.~G., Owen-Hughes, T., et~al.
+\newblock Evaluation of tools for differential gene expression analysis by
+  rna-seq on a 48 biological replicate experiment.
+\newblock \emph{arXiv preprint arXiv:1505.02017}, 2015.
+
 \bibitem[Scientific(2013)]{scientific2013t042}
 Scientific, T.
 \newblock T042--technical bulletin nanodrop spectrophotometers assessment of
@@ -697,6 +943,12 @@ Scientific, T.
 Seward, J.
 \newblock bzip2 and libbzip2.
 \newblock \emph{avaliable at http://www. bzip. org}, 1996.
+
+\bibitem[Shendure and Ji(2008)]{shendure2008next}
+Shendure, J. and Ji, H.
+\newblock Next-generation dna sequencing.
+\newblock \emph{Nature biotechnology}, 26\penalty0 (10):\penalty0 1135--1145,
+  2008.
 
 \bibitem[Shigesada et~al.(2004)Shigesada, van~de Sluis, and
   Liu]{shigesada2004mechanism}
@@ -732,6 +984,21 @@ Srivastava, A., Malik, L., Sarkar, H., Zakeri, M., Almodaresi, F., Soneson, C.,
 \newblock Alignment and mapping methodology influence transcript abundance
   estimation.
 \newblock \emph{Genome biology}, 21\penalty0 (1):\penalty0 1--29, 2020.
+
+\bibitem[Stelzer et~al.(2016)Stelzer, Rosen, Plaschkes, Zimmerman, Twik,
+  Fishilevich, Stein, Nudel, Lieder, Mazor, et~al.]{stelzer2016genecards}
+Stelzer, G., Rosen, N., Plaschkes, I., Zimmerman, S., Twik, M., Fishilevich,
+  S., Stein, T.~I., Nudel, R., Lieder, I., Mazor, Y., et~al.
+\newblock The genecards suite: from gene data mining to disease genome sequence
+  analyses.
+\newblock \emph{Current protocols in bioinformatics}, 54\penalty0 (1):\penalty0
+  1--30, 2016.
+
+\bibitem[Stoler and Nekrutenko(2021)]{stoler2021sequencing}
+Stoler, N. and Nekrutenko, A.
+\newblock Sequencing error profiles of illumina sequencing instruments.
+\newblock \emph{NAR genomics and bioinformatics}, 3\penalty0 (1):\penalty0
+  lqab019, 2021.
 
 \bibitem[St{\"o}lzel et~al.(2016)St{\"o}lzel, Mohr, Kramer, Oelschl{\"a}gel,
   Bochtler, Berdel, Kaufmann, Baldus, Sch{\"a}fer-Eckart, Stuhlmann,
@@ -777,6 +1044,15 @@ Trapnell, C. and Salzberg, S.~L.
 \newblock How to map billions of short reads onto genomes.
 \newblock \emph{Nature biotechnology}, 27\penalty0 (5):\penalty0 455--457,
   2009.
+
+\bibitem[Trapnell et~al.(2010)Trapnell, Williams, Pertea, Mortazavi, Kwan,
+  Van~Baren, Salzberg, Wold, and Pachter]{trapnell2010transcript}
+Trapnell, C., Williams, B.~A., Pertea, G., Mortazavi, A., Kwan, G., Van~Baren,
+  M.~J., Salzberg, S.~L., Wold, B.~J., and Pachter, L.
+\newblock Transcript assembly and quantification by rna-seq reveals unannotated
+  transcripts and isoform switching during cell differentiation.
+\newblock \emph{Nature biotechnology}, 28\penalty0 (5):\penalty0 511--515,
+  2010.
 
 \bibitem[Von~Hoff et~al.(1990)Von~Hoff, Forseth, Clare, Hansen, VanDevanter,
   et~al.]{von1990double}
@@ -838,6 +1114,12 @@ Zhao, S., Fung-Leung, W.-P., Bittner, A., Ngo, K., and Liu, X.
 \newblock Comparison of rna-seq and microarray in transcriptome profiling of
   activated t cells.
 \newblock \emph{PloS one}, 9\penalty0 (1):\penalty0 e78644, 2014.
+
+\bibitem[Zhao et~al.(2020)Zhao, Ye, and Stanton]{zhao2020misuse}
+Zhao, S., Ye, Z., and Stanton, R.
+\newblock Misuse of rpkm or tpm normalization when comparing across samples and
+  sequencing protocols.
+\newblock \emph{Rna}, 26\penalty0 (8):\penalty0 903--909, 2020.
 
 \bibitem[Zhong et~al.(2011)Zhong, Joung, Zheng, Chen, Liu, Shao, Xiang, Fei,
   and Giovannoni]{zhong2011high}

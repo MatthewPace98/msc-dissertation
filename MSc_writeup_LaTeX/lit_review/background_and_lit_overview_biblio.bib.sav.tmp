@@ -1197,4 +1197,454 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   title     = {MAPQ values are really useful but their implementation is a mess},
   year      = {2016},
   timestamp = {2022-06-06},
-  url       = {https://sequencing.
+  url       = {https://sequencing.qcfail.com/articles/mapq-values-are-really-useful-but-their-implementation-is-a-mess/},
+}
+
+@Article{li2010rna,
+  author    = {Li, Bo and Ruotti, Victor and Stewart, Ron M and Thomson, James A and Dewey, Colin N},
+  journal   = {Bioinformatics},
+  title     = {RNA-Seq gene expression estimation with read mapping uncertainty},
+  year      = {2010},
+  number    = {4},
+  pages     = {493--500},
+  volume    = {26},
+  publisher = {Oxford University Press},
+}
+
+@Article{pachter2011models,
+  author  = {Pachter, Lior},
+  journal = {arXiv preprint arXiv:1104.3889},
+  title   = {Models for transcript quantification from RNA-Seq},
+  year    = {2011},
+}
+
+@Article{brownlee2019gentle,
+  author  = {Brownlee, J},
+  journal = {Machine Learning Mastery, Oct},
+  title   = {A gentle introduction to expectation-maximization (EM Algorithm)},
+  year    = {2019},
+  volume  = {31},
+}
+
+@Article{oshlack2009transcript,
+  author    = {Oshlack, Alicia and Wakefield, Matthew J},
+  journal   = {Biology direct},
+  title     = {Transcript length bias in RNA-seq data confounds systems biology},
+  year      = {2009},
+  number    = {1},
+  pages     = {1--10},
+  volume    = {4},
+  publisher = {Springer},
+}
+
+@Article{robinson2010scaling,
+  author    = {Robinson, Mark D and Oshlack, Alicia},
+  journal   = {Genome biology},
+  title     = {A scaling normalization method for differential expression analysis of RNA-seq data},
+  year      = {2010},
+  number    = {3},
+  pages     = {1--9},
+  volume    = {11},
+  publisher = {BioMed Central},
+}
+
+@Article{risso2011gc,
+  author    = {Risso, Davide and Schwartz, Katja and Sherlock, Gavin and Dudoit, Sandrine},
+  journal   = {BMC bioinformatics},
+  title     = {GC-content normalization for RNA-Seq data},
+  year      = {2011},
+  number    = {1},
+  pages     = {1--17},
+  volume    = {12},
+  publisher = {Springer},
+}
+
+@Article{dillies2013comprehensive,
+  author    = {Dillies, Marie-Agn{\`e}s and Rau, Andrea and Aubert, Julie and Hennequet-Antier, Christelle and Jeanmougin, Marine and Servant, Nicolas and Keime, C{\'e}line and Marot, Guillemette and Castel, David and Estelle, Jordi and others},
+  journal   = {Briefings in bioinformatics},
+  title     = {A comprehensive evaluation of normalization methods for Illumina high-throughput RNA sequencing data analysis},
+  year      = {2013},
+  number    = {6},
+  pages     = {671--683},
+  volume    = {14},
+  publisher = {Oxford University Press},
+}
+
+@Article{bullard2010evaluation,
+  author    = {Bullard, James H and Purdom, Elizabeth and Hansen, Kasper D and Dudoit, Sandrine},
+  journal   = {BMC bioinformatics},
+  title     = {Evaluation of statistical methods for normalization and differential expression in mRNA-Seq experiments},
+  year      = {2010},
+  number    = {1},
+  pages     = {1--13},
+  volume    = {11},
+  publisher = {BioMed Central},
+}
+
+@Article{dundar2015introduction,
+  author  = {D{\"u}ndar, Friederike and Skrabanek, Luce and Zumbo, Paul},
+  journal = {Appl. Bioinformatics},
+  title   = {Introduction to differential gene expression analysis using RNA-seq},
+  year    = {2015},
+  pages   = {1--67},
+}
+
+@Article{trapnell2010transcript,
+  author    = {Trapnell, Cole and Williams, Brian A and Pertea, Geo and Mortazavi, Ali and Kwan, Gordon and Van Baren, Marijke J and Salzberg, Steven L and Wold, Barbara J and Pachter, Lior},
+  journal   = {Nature biotechnology},
+  title     = {Transcript assembly and quantification by RNA-Seq reveals unannotated transcripts and isoform switching during cell differentiation},
+  year      = {2010},
+  number    = {5},
+  pages     = {511--515},
+  volume    = {28},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{mortazavi2008mapping,
+  author    = {Mortazavi, Ali and Williams, Brian A and McCue, Kenneth and Schaeffer, Lorian and Wold, Barbara},
+  journal   = {Nature methods},
+  title     = {Mapping and quantifying mammalian transcriptomes by RNA-Seq},
+  year      = {2008},
+  number    = {7},
+  pages     = {621--628},
+  volume    = {5},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{schurch2015evaluation,
+  author  = {Schurch, Nicholas J and Schofield, Pieta and Gierli{\'n}ski, Marek and Cole, Christian and Sherstnev, Alexander and Singh, Vijender and Wrobel, Nicola and Gharbi, Karim and Simpson, Gordon G and Owen-Hughes, Tom and others},
+  journal = {arXiv preprint arXiv:1505.02017},
+  title   = {Evaluation of tools for differential gene expression analysis by RNA-seq on a 48 biological replicate experiment},
+  year    = {2015},
+}
+
+@Article{dundar2015introduction,
+  author  = {D{\"u}ndar, Friederike and Skrabanek, Luce and Zumbo, Paul},
+  journal = {Appl. Bioinformatics},
+  title   = {Introduction to differential gene expression analysis using RNA-seq},
+  year    = {2015},
+  pages   = {1--67},
+}
+
+@Article{ritchie2015limma,
+  author    = {Ritchie, Matthew E and Phipson, Belinda and Wu, DI and Hu, Yifang and Law, Charity W and Shi, Wei and Smyth, Gordon K},
+  journal   = {Nucleic acids research},
+  title     = {limma powers differential expression analyses for RNA-sequencing and microarray studies},
+  year      = {2015},
+  number    = {7},
+  pages     = {e47--e47},
+  volume    = {43},
+  publisher = {Oxford Academic},
+}
+
+@Article{love2014moderated,
+  author    = {Love, Michael I and Huber, Wolfgang and Anders, Simon},
+  journal   = {Genome biology},
+  title     = {Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2},
+  year      = {2014},
+  number    = {12},
+  pages     = {1--21},
+  volume    = {15},
+  publisher = {BioMed Central},
+}
+
+@Article{cox1987parameter,
+  author    = {Cox, David Roxbee and Reid, Nancy},
+  journal   = {Journal of the Royal Statistical Society: Series B (Methodological)},
+  title     = {Parameter orthogonality and approximate conditional inference},
+  year      = {1987},
+  number    = {1},
+  pages     = {1--18},
+  volume    = {49},
+  publisher = {Wiley Online Library},
+}
+
+@Article{robinson2008small,
+  author    = {Robinson, Mark D and Smyth, Gordon K},
+  journal   = {Biostatistics},
+  title     = {Small-sample estimation of negative binomial dispersion, with applications to SAGE data},
+  year      = {2008},
+  number    = {2},
+  pages     = {321--332},
+  volume    = {9},
+  publisher = {Oxford University Press},
+}
+
+@Article{robinson2007moderated,
+  author    = {Robinson, Mark D and Smyth, Gordon K},
+  journal   = {Bioinformatics},
+  title     = {Moderated statistical tests for assessing differences in tag abundance},
+  year      = {2007},
+  number    = {21},
+  pages     = {2881--2887},
+  volume    = {23},
+  publisher = {Oxford University Press},
+}
+
+@Article{mccarthy2012differential,
+  author    = {McCarthy, Davis J and Chen, Yunshun and Smyth, Gordon K},
+  journal   = {Nucleic acids research},
+  title     = {Differential expression analysis of multifactor RNA-Seq experiments with respect to biological variation},
+  year      = {2012},
+  number    = {10},
+  pages     = {4288--4297},
+  volume    = {40},
+  publisher = {Oxford University Press},
+}
+
+@Article{lund2012detecting,
+  author    = {Lund, Steven P and Nettleton, Dan and McCarthy, Davis J and Smyth, Gordon K},
+  journal   = {Statistical applications in genetics and molecular biology},
+  title     = {Detecting differential expression in RNA-sequence data using quasi-likelihood with shrunken dispersion estimates},
+  year      = {2012},
+  number    = {5},
+  volume    = {11},
+  publisher = {De Gruyter},
+}
+
+@InCollection{lun2016s,
+  author    = {Lun, Aaron TL and Chen, Yunshun and Smyth, Gordon K},
+  booktitle = {Statistical genomics},
+  publisher = {Springer},
+  title     = {It’s DE-licious: a recipe for differential expression analyses of RNA-seq experiments using quasi-likelihood methods in edgeR},
+  year      = {2016},
+  pages     = {391--416},
+}
+
+@Article{marioni2008rna,
+  author    = {Marioni, John C and Mason, Christopher E and Mane, Shrikant M and Stephens, Matthew and Gilad, Yoav},
+  journal   = {Genome research},
+  title     = {RNA-seq: an assessment of technical reproducibility and comparison with gene expression arrays},
+  year      = {2008},
+  number    = {9},
+  pages     = {1509--1517},
+  volume    = {18},
+  publisher = {Cold Spring Harbor Lab},
+}
+
+@Book{dunn2018generalized,
+  author    = {Dunn, Peter K and Smyth, Gordon K and others},
+  publisher = {Springer},
+  title     = {Generalized linear models with examples in R},
+  year      = {2018},
+}
+
+@Article{benjamini1995controlling,
+  author    = {Benjamini, Yoav and Hochberg, Yosef},
+  journal   = {Journal of the Royal statistical society: series B (Methodological)},
+  title     = {Controlling the false discovery rate: a practical and powerful approach to multiple testing},
+  year      = {1995},
+  number    = {1},
+  pages     = {289--300},
+  volume    = {57},
+  publisher = {Wiley Online Library},
+}
+
+@Article{holm1979simple,
+  author    = {Holm, Sture},
+  journal   = {Scandinavian journal of statistics},
+  title     = {A simple sequentially rejective multiple test procedure},
+  year      = {1979},
+  pages     = {65--70},
+  publisher = {JSTOR},
+}
+
+@Book{hochberg1987multiple,
+  author    = {Hochberg, Yosef and Tamhane, Ajit C},
+  publisher = {John Wiley \& Sons, Inc.},
+  title     = {Multiple comparison procedures},
+  year      = {1987},
+}
+
+@Article{feise2002multiple,
+  author    = {Feise, Ronald J},
+  journal   = {BMC medical research methodology},
+  title     = {Do multiple outcome measures require p-value adjustment?},
+  year      = {2002},
+  number    = {1},
+  pages     = {1--4},
+  volume    = {2},
+  publisher = {Springer},
+}
+
+@Article{dunn1961multiple,
+  author    = {Dunn, Olive Jean},
+  journal   = {Journal of the American statistical association},
+  title     = {Multiple comparisons among means},
+  year      = {1961},
+  number    = {293},
+  pages     = {52--64},
+  volume    = {56},
+  publisher = {Taylor \& Francis},
+}
+
+@Article{mcintyre2011rna,
+  author    = {McIntyre, Lauren M and Lopiano, Kenneth K and Morse, Alison M and Amin, Victor and Oberg, Ann L and Young, Linda J and Nuzhdin, Sergey V},
+  journal   = {BMC genomics},
+  title     = {RNA-seq: technical variability and sampling},
+  year      = {2011},
+  number    = {1},
+  pages     = {1--13},
+  volume    = {12},
+  publisher = {Springer},
+}
+
+@Article{greer2010housekeeping,
+  author    = {Greer, Samantha and Honeywell, Rice and Geletu, Mulu and Arulanandam, Rozanne and Raptis, Leda},
+  journal   = {Journal of immunological methods},
+  title     = {Housekeeping genes; expression levels may change with density of cultured cells},
+  year      = {2010},
+  number    = {1-2},
+  pages     = {76--79},
+  volume    = {355},
+  publisher = {Elsevier},
+}
+
+@Article{hounkpe2021hrt,
+  author    = {Hounkpe, Bidossessi Wilfried and Chenou, Francine and de Lima, Franciele and De Paula, Erich Vinicius},
+  journal   = {Nucleic acids research},
+  title     = {HRT Atlas v1. 0 database: redefining human and mouse housekeeping genes and candidate reference transcripts by mining massive RNA-seq datasets},
+  year      = {2021},
+  number    = {D1},
+  pages     = {D947--D955},
+  volume    = {49},
+  publisher = {Oxford University Press},
+}
+
+@Article{stelzer2016genecards,
+  author    = {Stelzer, Gil and Rosen, Naomi and Plaschkes, Inbar and Zimmerman, Shahar and Twik, Michal and Fishilevich, Simon and Stein, Tsippi Iny and Nudel, Ron and Lieder, Iris and Mazor, Yaron and others},
+  journal   = {Current protocols in bioinformatics},
+  title     = {The GeneCards suite: from gene data mining to disease genome sequence analyses},
+  year      = {2016},
+  number    = {1},
+  pages     = {1--30},
+  volume    = {54},
+  publisher = {Wiley Online Library},
+}
+
+@Article{hamosh2005online,
+  author    = {Hamosh, Ada and Scott, Alan F and Amberger, Joanna S and Bocchini, Carol A and McKusick, Victor A},
+  journal   = {Nucleic acids research},
+  title     = {Online Mendelian Inheritance in Man (OMIM), a knowledgebase of human genes and genetic disorders},
+  year      = {2005},
+  number    = {suppl\_1},
+  pages     = {D514--D517},
+  volume    = {33},
+  publisher = {Oxford University Press},
+}
+
+@Article{shendure2008next,
+  author    = {Shendure, Jay and Ji, Hanlee},
+  journal   = {Nature biotechnology},
+  title     = {Next-generation DNA sequencing},
+  year      = {2008},
+  number    = {10},
+  pages     = {1135--1145},
+  volume    = {26},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{zhao2020misuse,
+  author    = {Zhao, Shanrong and Ye, Zhan and Stanton, Robert},
+  journal   = {Rna},
+  title     = {Misuse of RPKM or TPM normalization when comparing across samples and sequencing protocols},
+  year      = {2020},
+  number    = {8},
+  pages     = {903--909},
+  volume    = {26},
+  publisher = {Cold Spring Harbor Lab},
+}
+
+@Article{li2011rsem,
+  author    = {Li, Bo and Dewey, Colin N},
+  journal   = {BMC bioinformatics},
+  title     = {RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome},
+  year      = {2011},
+  number    = {1},
+  pages     = {1--16},
+  volume    = {12},
+  publisher = {Springer},
+}
+
+@Article{kanehisa2017kegg,
+  author    = {Kanehisa, Minoru and Furumichi, Miho and Tanabe, Mao and Sato, Yoko and Morishima, Kanae},
+  journal   = {Nucleic acids research},
+  title     = {KEGG: new perspectives on genomes, pathways, diseases and drugs},
+  year      = {2017},
+  number    = {D1},
+  pages     = {D353--D361},
+  volume    = {45},
+  publisher = {Oxford University Press},
+}
+
+@Article{maglott2005entrez,
+  author    = {Maglott, Donna and Ostell, Jim and Pruitt, Kim D and Tatusova, Tatiana},
+  journal   = {Nucleic acids research},
+  title     = {Entrez Gene: gene-centered information at NCBI},
+  year      = {2005},
+  number    = {suppl\_1},
+  pages     = {D54--D58},
+  volume    = {33},
+  publisher = {Oxford University Press},
+}
+
+@InProceedings{ellson2001graphviz,
+  author       = {Ellson, John and Gansner, Emden and Koutsofios, Lefteris and North, Stephen C and Woodhull, Gordon},
+  booktitle    = {International Symposium on Graph Drawing},
+  title        = {Graphviz—open source graph drawing tools},
+  year         = {2001},
+  organization = {Springer},
+  pages        = {483--484},
+}
+
+@Article{,
+}
+
+@Article{alhamdoosh2017combining,
+  author    = {Alhamdoosh, Monther and Ng, Milica and Wilson, Nicholas J and Sheridan, Julie M and Huynh, Huy and Wilson, Michael J and Ritchie, Matthew E},
+  journal   = {Bioinformatics},
+  title     = {Combining multiple tools outperforms individual methods in gene set enrichment analyses},
+  year      = {2017},
+  number    = {3},
+  pages     = {414--424},
+  volume    = {33},
+  publisher = {Oxford University Press},
+}
+
+@Article{khatri2012ten,
+  author    = {Khatri, Purvesh and Sirota, Marina and Butte, Atul J},
+  journal   = {PLoS computational biology},
+  title     = {Ten years of pathway analysis: current approaches and outstanding challenges},
+  year      = {2012},
+  number    = {2},
+  pages     = {e1002375},
+  volume    = {8},
+  publisher = {Public Library of Science San Francisco, USA},
+}
+
+@Article{barry2005significance,
+  author    = {Barry, William T and Nobel, Andrew B and Wright, Fred A},
+  journal   = {Bioinformatics},
+  title     = {Significance analysis of functional categories in gene expression studies: a structured permutation approach},
+  year      = {2005},
+  number    = {9},
+  pages     = {1943--1949},
+  volume    = {21},
+  publisher = {Oxford University Press},
+}
+
+@Article{ihnatova2018critical,
+  author    = {Ihnatova, Ivana and Popovici, Vlad and Budinska, Eva},
+  journal   = {PloS one},
+  title     = {A critical comparison of topology-based pathway analysis methods},
+  year      = {2018},
+  number    = {1},
+  pages     = {e0191154},
+  volume    = {13},
+  publisher = {Public Library of Science San Francisco, CA USA},
+}
+
+@Article{ma2019comparative,
+  author    = {Ma, Jing and Shojaie, Ali and Michailidis, George},
+  journal   = {BMC bioinformatics},
+  title     = {A comparative study o

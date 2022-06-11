@@ -3,7 +3,7 @@
 
 The typical multicellular organism stores its genetic code as deoxyribonucleic acid (DNA), found identically in all its somatic cells (unless \textit{de novo} mutations occur). DNA is a biological polymer, consisting of a double-stranded polynucleotide chain. Each nucleotide monomer consists of a phosphate group, deoxyribose (a five-carbon sugar), and one of four nucleobases: adenine (A), cytosine (C), guanine (G), or thymine (T). These two strands are held together with a series of hydrogen bonds between the nucleobases, forming Watson-Crick base pairs. %On opposite strands, adenine and thymine form double hydrogen bonds, while guanine and cytosine form a stronger triple hydrogen bond.
 
-DNA is just the general starting point in a series of information transfers described by the \textit{Central Dogma of Molecular Biology}, which the cell uses to ultimately produce its molecular products \citep{cobb201760}. Through the process of \textit{transcription}, the code from one strand of DNA is transferred onto a primary ribonucleic acid (RNA) transcript. RNA is similar to DNA except that it is single-stranded, has ribose as its five-carbon sugar and uses the nucleobase \textit{uracil} instead of \textit{thymine}. This primary transcript is modified into ribosomal RNA (rRNA), transfer RNA (tRNA) or messenger RNA (mRNA). All three are involved in \textit{protein synthesis}, although mRNA is especially relevant to this dissertation since the protein sequence can be deduced from the mRNA sequence. These molecular products shape the cell's appearance, define how it interacts with external or internal stimuli, and allows it to perform its intended functions. They give each cell type a characteristic RNA profile which can be measured through RNA-seq (Described in Section ???).
+DNA is just the general starting point in a series of information transfers described by the \textit{Central Dogma of Molecular Biology}, which the cell uses to ultimately produce its molecular products \citep{cobb201760}. Through the process of \textit{transcription}, the code from one strand of DNA is transferred onto a primary ribonucleic acid (RNA) transcript. RNA is similar to DNA except that it is single-stranded, has ribose as its five-carbon sugar and uses the nucleobase \textit{uracil} instead of \textit{thymine}. This primary transcript is modified into ribosomal RNA (rRNA), transfer RNA (tRNA) or messenger RNA (mRNA). All three are involved in \textit{protein synthesis}, although mRNA is especially relevant to this project since the protein sequence can be deduced from the mRNA sequence. These molecular products shape the cell's appearance, define how it interacts with external or internal stimuli, and allows it to perform its intended functions. They give each cell type a characteristic RNA profile which can be measured through RNA-seq. Using this technology, we can detect the presence or absence of certain transcriptomic hallmarks of cancer.
 
 % the intro for this is pretty good: https://www.nature.com/articles/s41368-021-00146-0#:~:text=Bulk%20RNAseq%20studies%20average%20global,next%20generation%20of%20RNA%20sequencing.
 
@@ -158,10 +158,10 @@ Pathways
 Surgery, chemotherapy, radiotherapy, immunotherapy and hormone therapy are common treatments used to kill cancer cells. While the specifics are partly dependent on the particular \ac{AML} subtype and the patient's condition, some variation of chemotherapy is standard practice. Treatment is typically split into four phases spread over a period of 2-3 years \citep{malard2020acute}:  
 
 \begin{enumerate}
-\item \textbf{Induction} - Uses chemotherapeutic drugs with the intention of achieving complete remission (no symptoms or signs of cancer) and restore normal cellular activity. Cytarabine (AraC) is one of the most commonly used chemotherapeutic drugs for \ac{AML}, often used in conjunction with others such as daunorubicin \citep{Robak2009}.
-\item \textbf{Consolidation} - Consists of several short sequential courses of chemotherapy every two weeks, usually using stronger doses.
-\item \textbf{Intensification} - Also called reinduction therapy, includes drugs similar to those used during the induction phase.
-\item \textbf{Long-term maintenance} - Chemotherapy is performed for 2-3 years after complete remission to prevent, or slow down, the growth of any cancer remnants. At times, a bone marrow or stem cell transplant is sometimes necessary to replenish the supply of healthy hematopoietic cells
+\item \textbf{Induction}\hspace{0.2cm}Uses chemotherapeutic drugs with the intention of achieving complete remission (no symptoms or signs of cancer) and restore normal cellular activity. Cytarabine (AraC) is one of the most commonly used chemotherapeutic drugs for \ac{AML}, often used in conjunction with others such as daunorubicin \citep{Robak2009}.
+\item \textbf{Consolidation}\hspace{0.2cm}Consists of several short sequential courses of chemotherapy every two weeks, usually using stronger doses.
+\item \textbf{Intensification}\hspace{0.2cm}Also called reinduction therapy, includes drugs similar to those used during the induction phase.
+\item \textbf{Long-term maintenance}\hspace{0.2cm}Chemotherapy is performed for 2-3 years after complete remission to prevent, or slow down, the growth of any cancer remnants. At times, a bone marrow or stem cell transplant is sometimes necessary to replenish the supply of healthy hematopoietic cells
 \end{enumerate}
 
 In recent decades, advances in our knowledge of cancer biology and the development of more efficient high-throughput sequencing techniques, have lead to the identification of novel treatments which specifically target cancer cells, such as differentiation therapy. A key characteristic of cancer cells is remaining in a stem-cell like state, which allows for their rapid proliferation. Differentiation therapy is a relatively modern approach which attempts to induce the process of differentiation, where the malignant cells mature and lose their ability to proliferate, rendering them virtually harmless. The first successful differentiation agent was \ac{ATRA}, also known as tretinoin, used to treat acute promyelocytic leukaemia (APL) \citep{chomienne1990all}. This revolutionary drug managed to achieve a 90\% survival rate in APL patients, without the severe cytotoxic side-effects of traditional non-targeted chemotherapy \citep{kim2015selection}. There have been many attempts to emulate this with other compounds, with mixed results \citep{nowak2009differentiation}.
@@ -273,7 +273,16 @@ Multiple samples may be sequenced simultaneously during a single run, where they
 \section{RNA-seq: \textit{in silico}}
 \label{RNA-seq: in silico}
 
-Once the FASTQ files emerge from the sequencing machines, we may move into the dry lab and feed the data into an RNA-seq data analysis pipeline. While the specific tools which make up the pipeline will vary according to the type of data and goals of the researcher, all RNA-seq pipelines share a common skeleton. The following subsections will first provide a general overview of the respective step in the pipeline, and then delve into the specific tools used in this project.
+Once the FASTQ files emerge from the sequencing machines, we may move into the dry lab and feed the data into an RNA-seq data analysis pipeline. While the specific tools which make up the pipeline will vary according to the type of data and goals of the researcher, all RNA-seq pipelines share a common skeleton. The following subsections will first provide a general overview of the respective step in the pipeline, and then delve into the specific tools used in this project. They were inspired by a multitude of online tutorials and resources:
+
+\begin{itemize}\itemsep-0.5em
+\item \url{https://chagall.med.cornell.edu/RNASEQcourse/}
+\item \url{https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rb-rnaseq/tutorial.html}
+\item \url{https://btep.ccr.cancer.gov/wp-content/uploads/RNA-seq_BETP_2019rev.pdf}
+\item \url{https://www.bioconductor.org/packages/devel/bioc/vignettes/DEGreport/inst/doc/DEGreport.html}
+\item \url{https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html}
+\item \url{https://chagall.med.cornell.edu/RNASEQcourse/Intro2RNAseq.pdf}
+\end{itemize}
 
 %Introns are spliced out of the pre-mRNA to form a mature mRNA transcript
 
@@ -303,16 +312,16 @@ In the rapidly changing field of nucleotide sequencing, FastQC has been one of t
 %Maybe add expected moduels to fail
 \begin{itemize} \itemsep0em
 \item[] \textbf{Modules used in FastQC:}
-\item \textbf{Basic Statistics} - Some basic information on the file: its name, type of quality score, total read count, read length and GC content.
-\item \textbf{Per Base Sequence Quality} - The aggregated Q-scores at each position of the reads, represented by a box-plot.
-\item \textbf{Per Sequence Quality Scores} - The number of reads on the y-axis and the average Q-score on the x-axis.
-\item \textbf{Per Base Sequence Content} - A relative abundance line graph showing the percentage abundance of each of the four nucleotides across all the reads. 
-\item \textbf{Per sequence GC content} - The percentage abundance of each of the four nucleotides across all the reads, overlaid on the expected distribution. 
-\item \textbf{Per base \textit{N} content} - Percentage of bases at each position of the sequence with no base call, represented as an \textit{N}.
-\item \textbf{Sequence Length Distribution} - Shows the distribution of sequence lengths, measured in number of base-pairs (bp). The module will raise a warning if all sequences are not the same length and an error if any of the sequences have zero length.
-\item \textbf{Sequence Duplication Levels} - Percentage of reads in the library which come from sequences with duplication. Two lines indicate the percentages of the raw and the deduplicated libraries.
-\item \textbf{Overrepresented Sequences} - A list of sequences which account for $\geq$0.1\% of the total reads. These are compared to common contaminants to try identify them.
-\item \textbf{Adapter Content} - A cumulative line graph where a sequence library adapter sequence is identified at that base position.
+\item \textbf{Basic Statistics} \hspace{0.2cm} Some basic information on the file: its name, type of quality score, total read count, read length and GC content.
+\item \textbf{Per Base Sequence Quality} \hspace{0.2cm} The aggregated Q-scores at each position of the reads, represented by a box-plot.
+\item \textbf{Per Sequence Quality Scores} \hspace{0.2cm} The number of reads on the y-axis and the average Q-score on the x-axis.
+\item \textbf{Per Base Sequence Content} \hspace{0.2cm} A relative abundance line graph showing the percentage abundance of each of the four nucleotides across all the reads. 
+\item \textbf{Per sequence GC content} \hspace{0.2cm} The percentage abundance of each of the four nucleotides across all the reads, overlaid on the expected distribution. 
+\item \textbf{Per base \textit{N} content} \hspace{0.2cm} Percentage of bases at each position of the sequence with no base call, represented as an \textit{N}.
+\item \textbf{Sequence Length Distribution}\hspace{0.2cm} Shows the distribution of sequence lengths, measured in number of base-pairs (bp). The module will raise a warning if all sequences are not the same length and an error if any of the sequences have zero length.
+\item \textbf{Sequence Duplication Levels} \hspace{0.2cm} Percentage of reads in the library which come from sequences with duplication. Two lines indicate the percentages of the raw and the deduplicated libraries.
+\item \textbf{Overrepresented Sequences} \hspace{0.2cm} A list of sequences which account for $\geq$0.1\% of the total reads. These are compared to common contaminants to try identify them.
+\item \textbf{Adapter Content} \hspace{0.2cm} A cumulative line graph where a sequence library adapter sequence is identified at that base position.
 \end{itemize}
 
 \subsubsection{FastQScreen}
@@ -345,7 +354,7 @@ FastQScreen maps the sample reads against the genomes of common contaminants and
 MultiQC provides a convenient way of collating multiple QC reports across multiple samples into a single interactive HTML report. It supports the input of 114 tools as of version 1.11, including the reports from tools found further downstream, in the preprocessing, alignment or quantification parts of the pipeline. 
 
 \subsection{Preprocessing}
-If poor quality data is identified, it should be cleaned to avoid negative effects in the downstream analysis. Quality trimming which is too aggressive may similarly negatively impact downstream analysis, thus care must be taken to select appropriate quality thresholds \citep{davis2019}.
+If poor quality data is identified, it should be cleaned to avoid negative effects in the downstream analysis. Quality trimming which is too aggressive may similarly negatively impact downstream analysis, thus care must be taken to select appropriate quality thresholds \citep{davis2019}. Some \citep{liao2020read} doubt the necessity of trimming at all.
 
 \subsubsection{Cutadapt: Short reads and Adapter sequences}
 \label{cutadapt}
@@ -496,7 +505,7 @@ An aligner (STAR, Bowtie2 or HISAT2) may be called directly through RSEM, to com
 
 \subsection{Normalisation}
 
-To adjust for confounding variables which are not biologically relevant, the read counts must first be normalised. The main factors to account for are sequencing depth \citep{robinson2010scaling}, gene length \citep{oshlack2009transcript} and GC content \citep{risso2011gc}. Effective gene expression analysis should calculate the abundance of the transcripts as a fraction of the entire RNA repertoire for that particular sample. A number of methods have evolved over the years to tackle these issues. \cite{dillies2013comprehensive} and \cite{bullard2010evaluation} extensively explore the different approaches one may take. Despite their use in published studies, within-sample comparison methods (FPKM \citep{trapnell2010transcript}, RPKM \citep{mortazavi2008mapping}, Total Counts \citep{dillies2013comprehensive}) should be avoided in \ac{DGE} analysis as they only account for differences within the same sample, and not between samples \citep{dundar2015introduction}.
+To adjust for confounding variables which are not biologically relevant, the read counts must first be normalised. The main factors to account for are sequencing depth \citep{robinson2010scaling}, gene length \citep{oshlack2009transcript} and GC content \citep{risso2011gc}. Effective gene expression analysis should calculate the abundance of the transcripts as a fraction of the entire RNA repertoire for that particular sample. A number of methods have evolved over the years to tackle these issues. \cite{dillies2013comprehensive} and \cite{bullard2010evaluation} extensively explore the different approaches one may take. Despite their frequent misuse in published studies, within-sample comparison methods (FPKM \citep{trapnell2010transcript}, RPKM \citep{mortazavi2008mapping}, TPM \citep{li2011rsem}, Total Counts \citep{dillies2013comprehensive}) should be avoided in \ac{DGE} analysis as they only account for differences within the same sample, and not between samples \citep{dundar2015introduction, zhao2020misuse}.
 
 \begin{figure}[!ht]
     \centering
@@ -509,7 +518,7 @@ To adjust for confounding variables which are not biologically relevant, the rea
 \subsubsection{Trimmed Mean of \textit{M}-values (TMM)}
 \label{TMM}
 
-The \ac{TMM} is implemented in edgeR \citep{edger} through the  \texttt{calcNormFactors} function. It is recommend by the edgeR vignette\footnote{\url{https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf}} if one wishes to continue performing \ac{DGE} analysis using that library. It was first introduced in \cite{robinson2010scaling}, who explain the underlying mathematics in detail. \ac{TMM} assumes that the majority of genes, in both samples, are not differentially expressed, although the model is robust against deviations to this assumption \citep{robinson2010scaling}. 
+The \ac{TMM} is implemented in edgeR \citep{edger} through the \texttt{calcNormFactors} function. It is recommend by the edgeR vignette\footnote{\url{https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf}} if one wishes to continue performing \ac{DGE} analysis using that library. It was first introduced in \cite{robinson2010scaling}, who explain the underlying mathematics in detail. \ac{TMM} assumes that the majority of genes, in both samples, are not differentially expressed, although the model is robust against deviations to this assumption \citep{robinson2010scaling}. 
 
 \ac{TMM} performs better for between-samples comparisons, as opposed to within-sample comparisons \citep{dundar2015introduction}. \cite{robinson2010scaling} recognise that it makes intuitive sense that differences in library size should be normalised (i.e. depth or coverage, as seen in \autoref{fig:lib_diff}), but they consider this scaling too simplistic for many biological applications. 
 
@@ -526,8 +535,8 @@ The next step is to trim the means of the \textit{M}-values and \textit{A}-value
 The final step is the calculation of the normalisation factor and weighted mean of the trimmed $M_g$ using precision (inverse of the variance) weights. The calculations used in this step are too complex for the scope of this project (see \cite{robinson2010scaling} for further details). 
 
 
-\subsection{Differential Gene Expression (DGE) Analysis}
-The crux of the RNA-seq pipeline is to decide through statistical testing whether a given gene's expression varies significantly between samples, and if this variation can be explained by the difference in the cells' biology. All \ac{DGE} tools aim to estimate two metrics  based on normalised read counts from replicated samples: 
+\subsection{Differential Expression Analysis}
+The crux of the RNA-seq pipeline is to decide through statistical testing whether a given gene's expression varies significantly between samples, and if this variation can be explained by the difference in the cells' biology. Genes with very low read counts cannot be reliably represented across all samples, and are indistinguishable from background noise \citep{mcintyre2011rna}. These lowly expressed genes should be filtered before differential expression analysis as they are more likely to be incorrectly identified as \ac{DEG}s. All tools which measure gene expression aim to estimate two metrics  based on normalised read counts from replicated samples: 
 
 \begin{enumerate}\itemsep-0.5em
 \item The \textit{magnitude} of the differential expression, represented as the log$_2$ fold change (logFC).
@@ -536,48 +545,33 @@ The crux of the RNA-seq pipeline is to decide through statistical testing whethe
 
 The three most commonly used tools for \ac{DGE} judging by citation counts at the time of writing are DESeq2 \citep{love2014moderated}, edgeR \citep{edger} and limma \citep{ritchie2015limma}, which all take the same basic approach. Regression-based models are used to estimate the difference in normalised read counts for each gene or transcript of interest, which are tested for a significant difference \citep{dundar2015introduction}.
 
-% EdgeR and DESeq2
-feng2012gfold, gim2016lpeseq
+In differential expression analysis we are testing whether each gene in our list is significantly up- or down-regulated when compared to the reference sample. This test is performed for thousands of genes, which is where we run into the multiple testing problem. These large numbers of comparisons suddenly make small Type I error rates relevant, running the risk of falsely identifying certain genes as differentially expressed. To account for this risk, \textit{p}-values are adjusted based on how many tests are to be considered \citep{feise2002multiple}. The Bonferroni correction \citep{dunn1961multiple} is one such method, although considered by some \citep{feise2002multiple} to be too conservative, potentially tipping the scale to the other end and inducing Type II errors (declaring a result not statistically significant when it is). Other, less conservative solutions have been proposed, such as the Bonferroni-Holm \citep{holm1979simple} or Hochberg \citep{hochberg1987multiple} techniques.
+
 %Very low read counts cannot be reliably distinguished from background noise so these need to be filtered: https://pubmed.ncbi.nlm.nih.gov/21645359/
 \subsubsection{EdgeR}
 
-EdgeR and DESeq2 are quite similar in that they both make use of a negative binomial distribution to model read counts, and estimate dispersion based on the approximate conditional inference proposed by \cite{cox1987parameter}. EdgeR is recommended for experiments with fewer than 12 replicates \citep{schurch2015evaluation}, and unlike DESeq2, allows for the analysis of data with no replicates, although highly discouraged by the vignette. The biggest challenge to work with data without replicates is the estimation of dispersion, which is mathematically impossible given a single sample. In cases when there is no other alternative, the vignette suggests giving a nominal value based on previous experiments as the dispersion. While essentially an educated guess, this is a better alternative to assuming no variance.
+The Bioconductor package edgeR allows the implementation of a wide array of statistical methods applicable to \ac{DGE} analysis. EdgeR accepts a matrix of reads normalised by \ac{TMM} as input (see \autoref{TMM} for details). Prior to differential expression analysis, this matrix is filtered according to read counts using the function texttt{filterByExpr} which removes genes with <10 read counts. Two primary routes may be taken using \autoref{fig:edger_options}, the classic route which involves exact tests \citep{robinson2007moderated, robinson2008small}, or the Generalized Linear Model (GLM) route, although certain features of the two may be combined. The GLM tests for \ac{DGE} are likelihood ratio tests (LRTs) \citep{mccarthy2012differential} and quasi-likelihood F-tests (QLFs) \citep{lun2016s, lund2012detecting}.
 
-EdgeR provides three options to determine differential gene expression (\autoref{fig:edger_options}). 
+The \texttt{exactTest} function is based on quantile-adjusted conditional maximum likelihood (qCML) method. It produces a matrix of pseudo-counts\footnote{Note that the meaning of the term \textit{pseudo-counts} may change according to the context, and may be used by other studies to refer to something different.} which are designed to speed up computational analysis and not to be interpreted as regular normalised counts. The qCML method is only applicable on datasets with a single factor.
 
-\texttt{exactTest} produces pseudo-counts
-are computed for a specific purpose, and their computation depends on the experimental
-design as well as the library sizes, so users are advised not to interpret the psuedo-counts as general-purpose normalized counts
-Note that some other software packages use the term pseudo-count to
-mean something analogous to prior counts in edgeR
-
-
-\textit{estimateCommonDisp}
-calcNormFactors
-
-EdgeR has multiple methods to determine which genes are differentially expressed, but the classic \texttt{exactTest} was deemed as most appropriate. This is a pairwise test which compares the means between two groups of counts with a negative-binomial distribution. The calculation of the dispersion of our data is required prior to its use, however this is not mathematically possible due to our lack of replicates. In such cases the edgeR vignette suggests that estimating the dispersion based on the experimental conditions is more scientifically sound than assuming no variation. It should be emphasised that this technique is inaccurate, but was deemed as the best possible option for statistical analysis without replicates (further detail in Section \ref{Adapting Differential Gene Expression Analysis to a Lack of Replicates}).
-The \ac{BCV} is equal to the square root of the dispersion, and the vignette suggests a few estimates for the \ac{BCV}, such as '0.1 for data on genetically identical model organisms'. While this is human data, not a model organism, the data originate from the same genetically identical cell line, and this value was deemed appropriate. Thus the dispersion used for \texttt{exactTest} is equal to the BCV\textsuperscript{2}, or 0.01. 
-The test was performed a total of three times, where each treated sample was compared with the control. This returns a \texttt{DGEExact} object for each comparison, containing the $log_{2}$ fold change (logFC), $log_{2}$ Counts Per Million (logCPM), p-values and annotations for each gene. 
-
-
-
-EdgeR makes use of \ac{TMM} its own normalisation technique (see \autoref{TMM} for details) 
-
-
-
-
-Uses its own normalisation technique(TMM)
-
-Estimate dispersion by moderated towards the mean
-Assumes a Neg. binomial distribution
+GLMs are an adaptation of classical linear models to cater for non-normally distributed data \citep{dunn2018generalized}. The QLF dispersion estimate and test can be performed with the functions \textit{glmQLFit} and \textit{glmQLFTest}. This fits a negative binomial GLM to the \ac{TMM} normalised read counts. The LRT compares the goodness of fit of two competing models through the functions \textit{glmFit} and \textit{glmLRT}.
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=13cm]{edger_dge_options}
-    \caption[Summary of the options provided by edgeR for DGE identification]{Summary of the three options provided by edgeR for \ac{DGE} identification, based on its vignette. } 
+    \caption[Summary of the options provided by edgeR for DGE identification]{Summary of the three options provided by edgeR for \ac{DGE} identification, based on comments and recommendations by its vignette. } 
     \label{fig:edger_options}
 \end{figure}
 \clearpage
+
+EdgeR and DESeq2 are quite similar in that they both make use of a negative binomial distribution to model read counts, and estimate dispersion based on the approximate conditional inference, first proposed by \cite{cox1987parameter}.  EdgeR is recommended for experiments with fewer than 12 replicates \citep{schurch2015evaluation}, and unlike DESeq2, allows for the analysis of data with no replicates, although highly discouraged by the vignette. 
+% The negative binomial is a more general form of the Poisson distribution... maybe write some shit on this
+
+The biggest challenge to work with data without replicates is the estimation of dispersion, which is mathematically impossible given a single sample. In cases when there is no other alternative, the vignette suggests giving a nominal value to the \ac{BCV}, from which we may derive the dispersion. The vignette suggests a few estimates for the \ac{BCV} which are based on previous experiments as the dispersion, such as \textit{0.1 for data on genetically identical model organisms}. The dispersion is equal to this value squared, which is little more than an educated guess, but is a better alternative to assuming no variance.
+
+To account for multiple testing, the \texttt{topTags} function adjusts p-values using the Benjamini-Hochberg method \citep{benjamini1995controlling} to control the \ac{FDR}. This produced value is the proportion of false positives one might expect to get from a test. 
+
+The end result should be an edgeR object containing a matrix of each the $log_{2}$ fold change (logFC), adjusted p-values and (optionally) annotations for each differentially expressed gene. The final step is filtering by setting an logFC and/or \textit{p}-value cutoff, and sorting the data by one of these metrics for easier biological analysis. % Suggest values
 
 \subsection{Downstream Analysis}
 % Potential downstream analysis routes
@@ -588,18 +582,78 @@ Assumes a Neg. binomial distribution
 %Functional Class Scoring (FCS)?
 %functional analyses
 % alternative splicing, functional analysis, gene fusion detection and eQTL mapping
+The steps of the pipeline up until this point are quite standard, although there are various approaches one may take, the aim of each step is clear and consistent across all RNAseq studies. Further exploration of the data is highly specific to the experimental design and research question. The differentially expressed gene matrix may be annotated using the AnnotationDbi \citep{annotationdbi} R package which may access annotation libraries such as the human org.Hs.eg.db \citep{org.Hs.eg.db} which is based on Entrez gene identifiers \citep{maglott2005entrez}. The systems biology of the data is of particular interest to this project, which may be investigated with enrichment analyses. % or STRING \citep{szklarczyk2016string}
+\ac{GO} terms and \ac{KEGG} \citep{kanehisa2017kegg} pathway enrichment allow for comparisons between genes according to their functional role in a biological system. Further enrichment analyses may lead to three approaches, as described by \citep{khatri2012ten} and \cite{alhamdoosh2017combining}:
 
-luo2013pathview
+\begin{enumerate}
+\item[] \textbf{Over-Representation Analysis (ORA)} \hspace{0.15cm} The gene list emerging from differential expression is compared to a list of genes associated with a specific pathway. The genes which overlap between the input list and the pathway list are tested for over- or under-representation (usually based on hypergeometric, chi-square, or binomial distribution) \citep{khatri2012ten}. While this information is useful, ORA is limited in that it only tests for the presence of a gene, and ignores any additional information (logFCs, \textit{p}-values, the effect of its products on other genes, etc).
+
+\item[] \textbf{\ac{GSEA}} \hspace{0.15cm} The limitations to the ORA approach led to the development of an alternative method, GSEA. The philosophy behind GSEA is that although large fold-changes in individual genes can have a significant biological effect, so can weaker changes in genes with a disproportionate effect on the pathway. \cite{luo2009gage} describe the term \textit{gene set} as a pre-defined group of functionally related genes (e.g. which share \ac{GO} terms or form part of the same \ac{KEGG} pathway). \ac{GSEA} is generally performed in three steps: (i) generation of gene-level statistics (e.g. ANOVA) which may be transformed (e.g. absolute values), (ii) statistical results are combined into a single value per gene set (e.g. Wilcoxon rank sum \citep{barry2005significance}) and (iii) the statistical significance of the gene-set-level statistic are assessed. Although an improvement over the previous method, GSEA treats gene sets separately and does not consider that a gene may be involved in multiple sets.
+
+\item[] \textbf{Pathway Topology (PT)} \hspace{0.15cm} Building upon the previous two technologies, PT approaches take into account interactions between gene products, and the nature of their interaction (e.g. activation or inhibition). KEGG and STRING \citep{szklarczyk2016string} are examples of knowledge-bases which have sufficient information to perform PT. There are several potential approaches which are difficult to generalise but are reviewed extensively in \cite{ihnatova2018critical} and \cite{ma2019comparative}.
+
+\end{enumerate} 
+
+\subsubsection{GAGE}
+%Put header here like other tools?
+%Generally Applicable Gene-set Enrichment (GAGE).
+GAGE \citep{luo2009gage} performs \ac{GSEA}, where gene-set-level statistics are generated to check which gene sets are differentially expressed. %revsit 
+
+Pathview \citep{luo2013pathview}, like GAGE, is a Bioconductor \citep{gentleman2004bioconductor} R package which visualises GAGE results as an image of the chosen KEGG pathway highlighting the differentially expressed genes according to their logFCs. SBGNview \citep{dong2022sbgnview} offers a wider array of species and pathway knowledge-bases if such are desired. It supports two methods for pathway visualisation: the native KEGG view and the third party Graphviz \citep{ellson2001graphviz}. Graphiz provides better control over the graphical nodes and edges, at the cost of certain pathway metadata	 (e.g. cell types, temporal information).
+
+%Include pathview image?
+
+
+goana edgeR function for GO annotations
+
+Graphical representation: PCA, multidimensional scaling (MDS), Venn diagrams, volcano plots, sashimi plots, mean-difference (MD) plot
+Limited by lack of replicates
 
 \section{Evaluation Criteria}
-%House keeping genes
-%Compare DEGs with those found in literature
-%future work could perform sanger sequencing
+Every step in the pipeline is followed by some sort of QC and potentially filtering of bad data, from trimming adapter sequences to filtering multimapped reads to removing very lowly expressed genes. It is not unlikely that errors of any form slip through, and for these reason the final results will be evaluated.
+
+The list of \ac{DEG}s will be checked against a list of housekeeping genes which will act similar to negative controls. Housekeeping genes are required for basic cellular function and must be expressed in both normal and pathological cells. While they may be differentially expressed in some cases \citep{greer2010housekeeping}, they are generally uniformly expressed with low variance. Repositories such as the Housekeeping and Reference Transcript Atlas (HRT Atlas) \citep{hounkpe2021hrt} were used as sources for the gene lists. % REVISIT THIS!!
+The genes and pathways affected by cancer, even those specifically affected by \ac{AML} are well studied, annotated and aggregated in repositories such as GeneCards \citep{stelzer2016genecards} or OMIM \citep{hamosh2005online}. Thus the biological relevance of these genes in relation to these pathways will be checked.
+
+In future work, if more funds are acquired, similar work could be conducted with more technical replicates to confirm the findings of this project with greater statistical power. To decrease the number of sequencing errors, Sanger Sequencing could potentially be used, given its 99.999\% accuracy rate and long read lengths of up to ~1000bp \citep{shendure2008next}.
 
 \section{Related Work}
 \textbf{In this section you need to explain similar work in literature}.  Make sure to give a systematic overview of studies with related/similar work and highlight similarities/differences to your work (perhaps in the form of a table)
 
+
+%feng2012gfold, gim2016lpeseq
+
 % rlly good for DGE file:///C:/Users/matth/OneDrive/Desktop/Msc%20Bioinformatics/!MMB5010%20DISSERTATION-DESKTOP-A2009SI/Literature/Tutorials/Introduction%20to%20differential%20gene%20expression%20analysis%20using%20RNA-seq.pdf 
+
+
+\subsection{Adapting Differential Gene Expression Analysis to a Lack of Replicates}
+\label{Adapting Differential Gene Expression Analysis to a Lack of Replicates}
+The accuracy of any statistical analysis is highly dependent on the number of experimental (?) replicates. Large numbers of replicates
+
+This is a prevalent limitation in RNA-seq experiments due to their costly nature, where researchers are limited by their budget to a small number of replicates. To make the most of such datasets, several tools have been developed especially for this situation, or provide advice on how to adjust the analysis according to the data (REF!). Notably, the most cited tool for \ac{DGE} analysis, DESeq2 (REF!), had revoked its support for such datasets in version (VERSION?).
+
+...Many methods have been compared
+
+[Table with methods and pros and cons]
+
+% We have no replicates and thus no statistical power
+% the technical variance of RNA-seq is negligible (Bullard et al. 2010) (AND WE HAVE LITTLE TO NO BIOLOGICAL VARIANCE ACCORDING TO CELL LINE)
+
+LPEseq
+•	https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159182
+•	local-pooled-error (LPE)
+ outperformed the others for non-replicated datasets, and showed a similar performance with replicated samples
+able to accurately test differential expression with a limited number of samples, in particular non-replicated samples (own paper)
+
+
+GFold
+•	https://zhanglab.tongji.edu.cn/softwares/GFOLD/index.html
+•	https://pubmed.ncbi.nlm.nih.gov/22923299/
+•	especially useful when no replicate is available
+•	assigns reliable statistics for expression changes based on the posterior distribution of log fold change.
+
+edgeR had many ways to perform DGE:
+Likelihood Ratio Test which compared values against their mean. This was not applicable for our dataset because we needed to compare the treated values against the untreated values
 
 \begin{landscape}
 	\pagestyle{empty}

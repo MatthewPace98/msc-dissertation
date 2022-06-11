@@ -375,4 +375,25 @@
   publisher = {Nature Publishing Group},
 }
 
+@Misc{andrews2010fastqc,
+  author    = {Andrews, Simon and others},
+  title     = {FastQC: a quality control tool for high throughput sequence data},
+  year      = {2010},
+  publisher = {Babraham Bioinformatics, Babraham Institute, Cambridge, United Kingdom},
+}
+
+@Article{benjamini1995controlling,
+  author    = {Benjamini, Yoav and Hochberg, Yosef},
+  journal   = {Journal of the Royal statistical society: series B (Methodological)},
+  title     = {Controlling the false discovery rate: a practical and powerful approach to multiple testing},
+  year      = {1995},
+  number    = {1},
+  pages     = {289--300},
+  volume    = {57},
+  publisher = {Wiley Online Library},
+}
+
+@Article{,
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

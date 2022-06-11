@@ -57,6 +57,14 @@ Repeated entry---line 946 of file lit_review/background_and_lit_overview_biblio.
 I'm skipping whatever remains of this entry
 Warning--entry type for "rnadataanalysis2020" isn't style-file defined
 --line 1143 of file lit_review/background_and_lit_overview_biblio.bib
+Repeated entry---line 1321 of file lit_review/background_and_lit_overview_biblio.bib
+ : @article{dundar2015introduction
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1340 of file lit_review/background_and_lit_overview_biblio.bib
+ : @article{love2014moderated
+ :                           ,
+I'm skipping whatever remains of this entry
 Database file #3: method/materials_and_methods_biblio.bib
 Repeated entry---line 1 of file method/materials_and_methods_biblio.bib
  : @phdthesis{Gatt2016
@@ -77,6 +85,10 @@ I'm skipping whatever remains of this entry
 Repeated entry---line 69 of file method/materials_and_methods_biblio.bib
  : @manual{R
  :          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 84 of file method/materials_and_methods_biblio.bib
+ : @article{li2011rsem
+ :                    ,
 I'm skipping whatever remains of this entry
 Repeated entry---line 117 of file method/materials_and_methods_biblio.bib
  : @article{multiqc
@@ -138,6 +150,14 @@ Repeated entry---line 378 of file method/materials_and_methods_biblio.bib
  : @misc{andrews2010fastqc
  :                        ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 385 of file method/materials_and_methods_biblio.bib
+ : @article{benjamini1995controlling
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 396 of file method/materials_and_methods_biblio.bib
+ : @article{dunn1961multiple
+ :                          ,
+I'm skipping whatever remains of this entry
 Database file #4: results/results_and_discussion_biblio.bib
 Repeated entry---line 154 of file results/results_and_discussion_biblio.bib
  : @inproceedings{MacManes2014
@@ -152,9 +172,9 @@ Database file #6: conclusion/conclusions_biblio.bib
 Warning--I didn't find a database entry for "gallagher1979characterization"
 Warning--I didn't find a database entry for "dalton1988hl"
 Warning--I didn't find a database entry for "jacob"
+Warning--I didn't find a database entry for "liao2020read"
 Warning--I didn't find a database entry for "morgulis2006fast"
-Warning--I didn't find a database entry for "trapnell2010transcript"
-Warning--I didn't find a database entry for "mortazavi2008mapping"
+Warning--I didn't find a database entry for "szklarczyk2016string"
 Warning--to sort, need author or key in acsamlsubtypes
 Warning--empty year in acsamlsubtypes
 Warning--empty publisher in albert2020biostar
@@ -169,45 +189,45 @@ Warning--empty institution in illumina2010
 Warning--can't use both volume and number fields in liu2004new
 Warning--empty booktitle in MacManes2014
 Warning--empty year in rnadataanalysis2020
-You've used 125 entries,
+You've used 166 entries,
             2771 wiz_defined-function locations,
-            1290 strings with 30928 characters,
-and the built_in function-call counts, 67060 in all, are:
-= -- 5750
-> -- 5171
-< -- 57
-+ -- 1748
-- -- 1623
-* -- 6161
-:= -- 10717
-add.period$ -- 380
-call.type$ -- 125
-change.case$ -- 895
-chr.to.int$ -- 125
-cite$ -- 265
-duplicate$ -- 2410
-empty$ -- 4521
-format.name$ -- 1795
-if$ -- 13497
+            1485 strings with 39139 characters,
+and the built_in function-call counts, 90307 in all, are:
+= -- 7775
+> -- 6937
+< -- 72
++ -- 2341
+- -- 2175
+* -- 8342
+:= -- 14388
+add.period$ -- 505
+call.type$ -- 166
+change.case$ -- 1195
+chr.to.int$ -- 166
+cite$ -- 347
+duplicate$ -- 3252
+empty$ -- 6096
+format.name$ -- 2404
+if$ -- 18209
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 114
-newline$ -- 637
-num.names$ -- 497
-pop$ -- 1590
+missing$ -- 157
+newline$ -- 842
+num.names$ -- 661
+pop$ -- 2103
 preamble$ -- 1
-purify$ -- 776
+purify$ -- 1037
 quote$ -- 0
-skip$ -- 2108
+skip$ -- 2830
 stack$ -- 0
-substring$ -- 2429
-swap$ -- 149
-text.length$ -- 4
+substring$ -- 3398
+swap$ -- 216
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1350
+type$ -- 1791
 warning$ -- 14
-while$ -- 543
+while$ -- 740
 width$ -- 0
-write$ -- 1606
-(There were 30 error messages)
+write$ -- 2138
+(There were 35 error messages)

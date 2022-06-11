@@ -1,7 +1,9 @@
 \chapter{Materials \& Methods}
 \label{method}
 
-%This section should include a recipe of what you did (explain what you have done so if someone wants to reproduce the experiment, they can).  A flow chart is typically helpful.  Also, make sure to define all software that you used including version numbers and OS.  Should also include a description of statistical methods used (if any).
+%Should also include a description of statistical methods used (if any).
+
+% BiocManager
 
 %Introducing preamble including the schematic of the methodology
 
@@ -191,7 +193,7 @@ y <- y[keep,keep.lib.sizes=FALSE]
 
 \subsubsection{Gene Annotation}
 
-The remaining genes were annotated using the AnnotationDbi library v3.14 \citep{annotationdbi} which is dependent on the org.Hs.eg.db v3.10.0 \citep{org.Hs.eg.db} human annotation database. These were used to add the Entrez ID annotation to the \texttt{DGEList} object, which will be used for pathway analysis further downstream. AnnotationDbi provides other useful annotation options, but were excluded as  combination of annotations was causing a one to many mapping error. This step was later repeated (after pathway analysis) to add gene symbol annotations. This proved useful for later research into their biology, since most papers refer to the gene by its gene symbol.
+The remaining genes were annotated using the AnnotationDbi library v3.14 \citep{annotationdbi} which is dependent on the org.Hs.eg.db v3.10.0 \citep{org.Hs.eg.db} human annotation database. These were used to add the Entrez ID annotation to the \texttt{DGEList} object, which will be used for pathway analysis further downstream. AnnotationDbi provides other useful annotation options, but were excluded as combination of annotations was causing a one to many mapping error. This step was later repeated (after pathway analysis) to add gene symbol annotations. This proved useful for later research into their biology, since most papers refer to the gene by its gene symbol.
 
 \begin{lstlisting}[language=R, caption=Annotation step]
 library(org.Hs.eg.db)
@@ -218,7 +220,7 @@ design <- model.matrix(~group)
 
 EdgeR has multiple methods to determine which genes are differentially expressed, but the classic \texttt{exactTest} was deemed as most appropriate. This is a pairwise test which compares the means between two groups of counts with a negative-binomial distribution. The calculation of the dispersion of our data is required prior to its use, however this is not mathematically possible due to our lack of replicates. In such cases the edgeR vignette suggests that estimating the dispersion based on the experimental conditions is more scientifically sound than assuming no variation. It should be emphasised that this technique is inaccurate, but was deemed as the best possible option for statistical analysis without replicates (further detail in Section \ref{Adapting Differential Gene Expression Analysis to a Lack of Replicates}).
 
-The \ac{BCV} is equal to the square root of the dispersion, and the vignette suggests a few estimates for the \ac{BCV}, such as '0.1 for data on genetically identical model organisms'. While this is human data, not a model organism, the data originate from the same genetically identical cell line, and this value was deemed appropriate. Thus the dispersion used for \texttt{exactTest} is equal to the BCV\textsuperscript{2}, or 0.01. 
+The \ac{BCV} is equal to the square root of the dispersion, and the vignette suggests a few estimates for the \ac{BCV}, such as \textit{0.1 for data on genetically identical model organisms}. While this is human data, not a model organism, the data originate from the same genetically identical cell line, and this value was deemed appropriate. Thus the dispersion used for \texttt{exactTest} is equal to the BCV\textsuperscript{2}, or 0.01. 
 The test was performed a total of three times, where each treated sample was compared with the control. This returns a \texttt{DGEExact} object for each comparison, containing the $log_{2}$ fold change (logFC), $log_{2}$ Counts Per Million (logCPM), p-values and annotations for each gene. 
 
 \begin{lstlisting}[language=R, caption=Exact test function]
@@ -230,7 +232,7 @@ et_6 <- exactTest(y, pair=c(1, 4), dispersion=bcv^2)
 
 \subsubsection{Adjusting p-values and Cut-offs}
 
-Multiple testing is an inherent risk of RNA-seq due to its vast amounts of comparisons and adjusting p-values is a common technique implemented into the RNAseq pipeline to help compensate for this.  The \ac{FDR} with the Benjamini-Hochberg controlling procedure was the chosen p-value adjustment method. This produced value is the proportion of false positives one might expect to get from a test. Each of the \texttt{DGEExact} objects was transformed in this way using the \texttt{topTags} function. Differential expression was sorted by the \ac{FDR} and any genes with an \ac{FDR} < 0.05 were filtered out, which means that we are willing to accept that 5\% of all \ac{DEG} will be false positives. Filtering on the logFC was then performed manually, using a threshold of 1.5.  
+Multiple testing is an inherent risk of RNA-seq due to its vast amounts of comparisons and adjusting p-values is a common technique implemented into the RNAseq pipeline to help compensate for this.  The \ac{FDR} with the Benjamini-Hochberg controlling procedure \citep{benjamini1995controlling} was the chosen p-value adjustment method. This produced value is the proportion of false positives one might expect to get from a test. Each of the \texttt{DGEExact} objects was transformed in this way using the \texttt{topTags} function. Differential expression was sorted by the \ac{FDR} and any genes with an \ac{FDR} < 0.05 were filtered out, which means that we are willing to accept that 5\% of all \ac{DEG} will be false positives. Filtering on the logFC was then performed manually, using a threshold of 1.5.  
 
 %Summary of  https://www.science.smith.edu/cmbs/wp-content/uploads/sites/36/2015/09/P-and-q-values-in-RNA-Seq.pdf:
 %		FDR makes use of Q-values which usually result in a smaller number of false positives, although this is not always the case:
@@ -253,8 +255,9 @@ et_12_toptags <- et_12_toptags[abs(et_12_toptags$logFC) > FC_thresh, ]
 et_6_toptags <- et_6_toptags[abs(et_6_toptags$logFC) > FC_thresh, ]
 \end{lstlisting}
 
-\subsection{Functional analysis}
-?
+\subsection{Gene Set Enrichment Analysis}
+The GAGE/Pathview workflow
+Pathview has the option of up to two samples which is not applicable to this project
 
 % The main components of an DGEList object are a matrix counts containing the integer counts,
 % a data.frame samples containing information about the samples or libraries, and a optional
