@@ -6,70 +6,64 @@
 \contentsline {section}{\numberline {1.3}Approach}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Document Structure}{6}{section.1.4}%
 \contentsline {chapter}{\chapternumberline {2}Background \& Literature Overview}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Differentiation Pathways in the Haematopoietic System}{10}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Acute Myeloid Leukaemia}{10}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Classification and Subtypes}{11}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}The FAB classification system}{11}{subsubsection.2.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.2}The WHO classification system}{12}{subsubsection.2.2.1.2}%
-\contentsline {subsection}{\numberline {2.2.2}Pathogenesis}{12}{subsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.2.1}Cytogenic Abnormalities}{12}{subsubsection.2.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2.2}Genetic Abnormalities}{15}{subsubsection.2.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Transcriptomic abnormalities}{16}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4} Treatment Methods}{16}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}The Model Cell Line: HL-60 }{17}{subsection.2.2.5}%
-\contentsline {section}{\numberline {2.3}Experimental Design}{18}{section.2.3}%
-\contentsline {section}{\numberline {2.4}RNA-seq: \textit {in vitro}}{18}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}RNA extraction}{19}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Library Preparation}{20}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Clonal amplification}{22}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Sequencing and Nucleobase Detection}{23}{subsection.2.4.4}%
-\contentsline {section}{\numberline {2.5}RNA-seq: \textit {in silico}}{25}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Quality Control}{25}{subsection.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.5.1.1}FastQC}{26}{subsubsection.2.5.1.1}%
-\contentsline {subsubsection}{\numberline {2.5.1.2}FastQScreen}{27}{subsubsection.2.5.1.2}%
-\contentsline {subsubsection}{\numberline {2.5.1.3}MultiQC}{29}{subsubsection.2.5.1.3}%
-\contentsline {subsection}{\numberline {2.5.2}Preprocessing}{29}{subsection.2.5.2}%
-\contentsline {subsubsection}{\numberline {2.5.2.1}Cutadapt: Short reads and Adapter sequences}{29}{subsubsection.2.5.2.1}%
-\contentsline {subsubsection}{\numberline {2.5.2.2}Prinseq++: Low complexity and No Basecalls}{30}{subsubsection.2.5.2.2}%
-\contentsline {subsection}{\numberline {2.5.3}Alignment}{31}{subsection.2.5.3}%
-\contentsline {subsubsection}{\numberline {2.5.3.1}STAR}{33}{subsubsection.2.5.3.1}%
-\contentsline {subsection}{\numberline {2.5.4}Quantification}{34}{subsection.2.5.4}%
-\contentsline {subsubsection}{\numberline {2.5.4.1}RSEM}{35}{subsubsection.2.5.4.1}%
-\contentsline {subsection}{\numberline {2.5.5}Normalisation}{36}{subsection.2.5.5}%
-\contentsline {subsubsection}{\numberline {2.5.5.1}Trimmed Mean of \textit {M}-values (TMM)}{37}{subsubsection.2.5.5.1}%
-\contentsline {subsection}{\numberline {2.5.6}Differential Expression Analysis}{37}{subsection.2.5.6}%
-\contentsline {subsubsection}{\numberline {2.5.6.1}EdgeR}{38}{subsubsection.2.5.6.1}%
-\contentsline {subsection}{\numberline {2.5.7}Downstream Analysis}{40}{subsection.2.5.7}%
-\contentsline {subsubsection}{\numberline {2.5.7.1}GAGE}{41}{subsubsection.2.5.7.1}%
-\contentsline {section}{\numberline {2.6}Evaluation Criteria}{42}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Related Work}{42}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Adapting Differential Gene Expression Analysis to a Lack of Replicates}{43}{subsection.2.7.1}%
-\contentsline {section}{\numberline {2.8}Summary}{45}{section.2.8}%
-\contentsline {chapter}{\chapternumberline {3}Materials \& Methods}{47}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Preliminary Study}{47}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Phenolic extraction}{47}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Cell Culturing and RNA extraction}{48}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Determination of RNA Quality and Sequencing}{48}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}RNA-seq Pipeline}{49}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Quality Control}{51}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Preprocessing}{52}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Read alignment and Quantification}{53}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Reassessing the Quality}{54}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Normalisation and Differential Gene Expression}{54}{subsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.5.1}Filtering Low Count Genes}{55}{subsubsection.3.2.5.1}%
-\contentsline {subsubsection}{\numberline {3.2.5.2}Gene Annotation}{55}{subsubsection.3.2.5.2}%
-\contentsline {subsubsection}{\numberline {3.2.5.3}Normalisation}{56}{subsubsection.3.2.5.3}%
-\contentsline {subsubsection}{\numberline {3.2.5.4}Adjusting p-values and Cut-offs}{56}{subsubsection.3.2.5.4}%
-\contentsline {subsection}{\numberline {3.2.6}Gene Set Enrichment Analysis}{57}{subsection.3.2.6}%
-\contentsline {section}{\numberline {3.3}Summary}{57}{section.3.3}%
-\contentsline {chapter}{\chapternumberline {4}Results \& Discussion}{59}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Determining the Optimal Tools}{59}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Assessing and Improving the Quality of the Raw FASTQ files}{60}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Preprocessing}{60}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Determining the Normalisation method}{60}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Accounting for Multiple testing}{60}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Pathway analysis}{60}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Biological Interpretation of Pathways showing Differential Expression}{60}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}Interpretation of Results}{60}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Summary}{60}{section.4.5}%
-\contentsline {chapter}{References}{61}{chapter*.42}%
+\contentsline {section}{\numberline {2.1}Acute Myeloid Leukaemia}{10}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Classification and Subtypes}{11}{subsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.1}The FAB classification system}{11}{subsubsection.2.1.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.2}The WHO classification system}{11}{subsubsection.2.1.1.2}%
+\contentsline {subsection}{\numberline {2.1.2}Pathogenesis}{12}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}Cytogenic Abnormalities}{12}{subsubsection.2.1.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}Genetic Abnormalities}{14}{subsubsection.2.1.2.2}%
+\contentsline {subsection}{\numberline {2.1.3}Transcriptomic abnormalities}{15}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4} Treatment Methods}{15}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}The Model Cell Line: HL-60 }{16}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}RNA-seq: \textit {in vitro}}{17}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Experimental Design}{18}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}RNA extraction}{19}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Library Preparation}{20}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Clonal amplification}{21}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Sequencing and Nucleobase Detection}{22}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}RNA-seq: \textit {in silico}}{23}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Quality Control}{24}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}FastQC}{25}{subsubsection.2.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.2}FastQScreen}{26}{subsubsection.2.3.1.2}%
+\contentsline {subsubsection}{\numberline {2.3.1.3}MultiQC}{26}{subsubsection.2.3.1.3}%
+\contentsline {subsection}{\numberline {2.3.2}Preprocessing}{27}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}Cutadapt: Short reads and Adapter sequences}{27}{subsubsection.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.3.2.2}Prinseq++: Low complexity and No Basecalls}{28}{subsubsection.2.3.2.2}%
+\contentsline {subsection}{\numberline {2.3.3}Alignment}{29}{subsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.1}STAR}{31}{subsubsection.2.3.3.1}%
+\contentsline {subsection}{\numberline {2.3.4}Quantification}{32}{subsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.4.1}RSEM}{32}{subsubsection.2.3.4.1}%
+\contentsline {subsection}{\numberline {2.3.5}Normalisation}{33}{subsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.5.1}Trimmed Mean of \textit {M}-values (TMM)}{34}{subsubsection.2.3.5.1}%
+\contentsline {subsection}{\numberline {2.3.6}Differential Expression Analysis}{35}{subsection.2.3.6}%
+\contentsline {subsubsection}{\numberline {2.3.6.1}EdgeR}{36}{subsubsection.2.3.6.1}%
+\contentsline {subsection}{\numberline {2.3.7}Downstream Analysis}{38}{subsection.2.3.7}%
+\contentsline {subsubsection}{\numberline {2.3.7.1}Graphical Representation}{38}{subsubsection.2.3.7.1}%
+\contentsline {subsubsection}{\numberline {2.3.7.2}Annotation and Enrichment Analyses}{39}{subsubsection.2.3.7.2}%
+\contentsline {subsubsection}{\numberline {2.3.7.3}GAGE and Pathview}{40}{subsubsection.2.3.7.3}%
+\contentsline {section}{\numberline {2.4}Evaluation Criteria}{40}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Related Work}{41}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Clinical Application of Phenolic Compounds in Olive Oil}{41}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Differentiation of AML cells}{42}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Determining the Optimal Tools}{42}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Adapting DGE Analysis to a Lack of Replicates}{44}{subsection.2.5.4}%
+\contentsline {section}{\numberline {2.6}Summary}{44}{section.2.6}%
+\contentsline {chapter}{\chapternumberline {3}Materials \& Methods}{45}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Preliminary Study}{45}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Phenolic extraction}{45}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Cell Culturing and RNA extraction}{46}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Determination of RNA Quality and Sequencing}{46}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}RNA-seq Pipeline}{47}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Quality Control}{49}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Preprocessing}{50}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Read alignment and Quantification}{51}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Reassessing the Quality}{52}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Normalisation and Differential Gene Expression}{52}{subsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.5.1}Filtering Low Count Genes}{53}{subsubsection.3.2.5.1}%
+\contentsline {subsubsection}{\numberline {3.2.5.2}Gene Annotation}{53}{subsubsection.3.2.5.2}%
+\contentsline {subsubsection}{\numberline {3.2.5.3}Normalisation}{54}{subsubsection.3.2.5.3}%
+\contentsline {subsubsection}{\numberline {3.2.5.4}Adjusting p-values and Cut-offs}{54}{subsubsection.3.2.5.4}%
+\contentsline {subsection}{\numberline {3.2.6}Gene Set Enrichment Analysis}{55}{subsection.3.2.6}%
+\contentsline {section}{\numberline {3.3}Summary}{55}{section.3.3}%
+\contentsline {chapter}{References}{57}{chapter*.42}%

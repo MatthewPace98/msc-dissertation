@@ -9,6 +9,7 @@ Reallocating 'name_of_file' (item size: 1) to 36 items.
 Reallocating 'name_of_file' (item size: 1) to 38 items.
 Reallocating 'name_of_file' (item size: 1) to 29 items.
 Reallocating 'name_of_file' (item size: 1) to 30 items.
+Reallocating 'field_info' (item size: 4) to 10348 items.
 Database file #1: intro/introduction_biblio.bib
 Warning--entry type for "acsamlsubtypes" isn't style-file defined
 --line 158 of file intro/introduction_biblio.bib
@@ -39,29 +40,25 @@ Repeated entry---line 97 of file lit_review/background_and_lit_overview_biblio.b
  : @article{Khwaja2016
  :                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 267 of file lit_review/background_and_lit_overview_biblio.bib
+Repeated entry---line 263 of file lit_review/background_and_lit_overview_biblio.bib
  : @phdthesis{Gatt2016
  :                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 492 of file lit_review/background_and_lit_overview_biblio.bib
+Repeated entry---line 488 of file lit_review/background_and_lit_overview_biblio.bib
  : @article{cock2010sanger
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 913 of file lit_review/background_and_lit_overview_biblio.bib
+Repeated entry---line 898 of file lit_review/background_and_lit_overview_biblio.bib
  : @article{zhao2014comparison
  :                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 946 of file lit_review/background_and_lit_overview_biblio.bib
+Repeated entry---line 931 of file lit_review/background_and_lit_overview_biblio.bib
  : @article{zhong2011high
  :                       ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "rnadataanalysis2020" isn't style-file defined
---line 1143 of file lit_review/background_and_lit_overview_biblio.bib
-Repeated entry---line 1321 of file lit_review/background_and_lit_overview_biblio.bib
- : @article{dundar2015introduction
- :                                ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1340 of file lit_review/background_and_lit_overview_biblio.bib
+--line 1128 of file lit_review/background_and_lit_overview_biblio.bib
+Repeated entry---line 1317 of file lit_review/background_and_lit_overview_biblio.bib
  : @article{love2014moderated
  :                           ,
 I'm skipping whatever remains of this entry
@@ -174,7 +171,10 @@ Warning--I didn't find a database entry for "dalton1988hl"
 Warning--I didn't find a database entry for "jacob"
 Warning--I didn't find a database entry for "liao2020read"
 Warning--I didn't find a database entry for "morgulis2006fast"
+Warning--I didn't find a database entry for "mead1992review"
 Warning--I didn't find a database entry for "szklarczyk2016string"
+Warning--I didn't find a database entry for "iwen2000"
+Warning--I didn't find a database entry for "teng2016benchmark"
 Warning--to sort, need author or key in acsamlsubtypes
 Warning--empty year in acsamlsubtypes
 Warning--empty publisher in albert2020biostar
@@ -189,45 +189,46 @@ Warning--empty institution in illumina2010
 Warning--can't use both volume and number fields in liu2004new
 Warning--empty booktitle in MacManes2014
 Warning--empty year in rnadataanalysis2020
-You've used 166 entries,
+Warning--empty booktitle in owen2000
+You've used 182 entries,
             2771 wiz_defined-function locations,
-            1485 strings with 39139 characters,
-and the built_in function-call counts, 90307 in all, are:
-= -- 7775
-> -- 6937
-< -- 72
-+ -- 2341
-- -- 2175
-* -- 8342
-:= -- 14388
-add.period$ -- 505
-call.type$ -- 166
-change.case$ -- 1195
-chr.to.int$ -- 166
-cite$ -- 347
-duplicate$ -- 3252
-empty$ -- 6096
-format.name$ -- 2404
-if$ -- 18209
+            1574 strings with 43289 characters,
+and the built_in function-call counts, 100088 in all, are:
+= -- 8605
+> -- 7743
+< -- 76
++ -- 2612
+- -- 2430
+* -- 9277
+:= -- 15940
+add.period$ -- 554
+call.type$ -- 182
+change.case$ -- 1324
+chr.to.int$ -- 182
+cite$ -- 380
+duplicate$ -- 3590
+empty$ -- 6718
+format.name$ -- 2677
+if$ -- 20180
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 157
-newline$ -- 842
-num.names$ -- 661
-pop$ -- 2103
+missing$ -- 174
+newline$ -- 923
+num.names$ -- 725
+pop$ -- 2333
 preamble$ -- 1
-purify$ -- 1037
+purify$ -- 1151
 quote$ -- 0
-skip$ -- 2830
+skip$ -- 3130
 stack$ -- 0
-substring$ -- 3398
-swap$ -- 216
-text.length$ -- 7
+substring$ -- 3785
+swap$ -- 250
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1791
-warning$ -- 14
-while$ -- 740
+type$ -- 1962
+warning$ -- 15
+while$ -- 814
 width$ -- 0
-write$ -- 2138
-(There were 35 error messages)
+write$ -- 2345
+(There were 34 error messages)

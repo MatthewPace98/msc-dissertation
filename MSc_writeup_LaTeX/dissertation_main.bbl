@@ -1,4 +1,4 @@
-\begin{thebibliography}{166}
+\begin{thebibliography}{182}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -42,6 +42,15 @@ Andrews, S. et~al.
 \newblock Fastqc: a quality control tool for high throughput sequence data,
   2010.
 
+\bibitem[Angerosa et~al.(1995)Angerosa, d{\textquotesingle}Alessandro,
+  Konstantinou, and Giacinto]{Angerosa1995}
+Angerosa, F., d{\textquotesingle}Alessandro, N., Konstantinou, P., and
+  Giacinto, L.~D.
+\newblock {GC}-{MS} evaluation of phenolic compounds in virgin olive oil.
+\newblock \emph{Journal of Agricultural and Food Chemistry}, 43\penalty0
+  (7):\penalty0 1802--1807, jul 1995.
+\newblock \doi{10.1021/jf00055a010}.
+
 \bibitem[Barry et~al.(2005)Barry, Nobel, and Wright]{barry2005significance}
 Barry, W.~T., Nobel, A.~B., and Wright, F.~A.
 \newblock Significance analysis of functional categories in gene expression
@@ -53,6 +62,16 @@ Behjati, S. and Tarpey, P.~S.
 \newblock What is next generation sequencing?
 \newblock \emph{Archives of Disease in Childhood-Education and Practice},
   98\penalty0 (6):\penalty0 236--238, 2013.
+
+\bibitem[Bendini et~al.(2007)Bendini, Cerretani, Carrasco-Pancorbo,
+  G{\'o}mez-Caravaca, Segura-Carretero, Fern{\'a}ndez-Guti{\'e}rrez, and
+  Lercker]{bendini2007phenolic}
+Bendini, A., Cerretani, L., Carrasco-Pancorbo, A., G{\'o}mez-Caravaca, A.~M.,
+  Segura-Carretero, A., Fern{\'a}ndez-Guti{\'e}rrez, A., and Lercker, G.
+\newblock Phenolic molecules in virgin olive oils: a survey of their sensory
+  properties, health effects, antioxidant activity and analytical methods. an
+  overview of the last decade alessandra.
+\newblock \emph{Molecules}, 12\penalty0 (8):\penalty0 1679--1719, 2007.
 
 \bibitem[Benjamini and Hochberg(1995)]{benjamini1995controlling}
 Benjamini, Y. and Hochberg, Y.
@@ -175,6 +194,14 @@ Chung, M., Bruno, V.~M., Rasko, D.~A., Cuomo, C.~A., Mu{\~n}oz, J.~F., Livny,
   multi-species rna-seq.
 \newblock \emph{Genome biology}, 22\penalty0 (1):\penalty0 1--23, 2021.
 
+\bibitem[Cicerale et~al.(2012)Cicerale, Lucas, and
+  Keast]{cicerale2012antimicrobial}
+Cicerale, S., Lucas, L., and Keast, R.
+\newblock Antimicrobial, antioxidant and anti-inflammatory phenolic activities
+  in extra virgin olive oil.
+\newblock \emph{Current opinion in biotechnology}, 23\penalty0 (2):\penalty0
+  129--135, 2012.
+
 \bibitem[Cobb(2017)]{cobb201760}
 Cobb, M.
 \newblock 60 years ago, francis crick changed the logic of biology.
@@ -200,6 +227,14 @@ Cox, D.~R. and Reid, N.
 \newblock Parameter orthogonality and approximate conditional inference.
 \newblock \emph{Journal of the Royal Statistical Society: Series B
   (Methodological)}, 49\penalty0 (1):\penalty0 1--18, 1987.
+
+\bibitem[Croft et~al.(2010)Croft, O’kelly, Wu, Haw, Gillespie, Matthews,
+  Caudy, Garapati, Gopinath, Jassal, et~al.]{croft2010reactome}
+Croft, D., O’kelly, G., Wu, G., Haw, R., Gillespie, M., Matthews, L., Caudy,
+  M., Garapati, P., Gopinath, G., Jassal, B., et~al.
+\newblock Reactome: a database of reactions, pathways and biological processes.
+\newblock \emph{Nucleic acids research}, 39\penalty0 (suppl\_1):\penalty0
+  D691--D697, 2010.
 
 \bibitem[Davis(2019)]{davis2019}
 Davis, S.
@@ -304,6 +339,15 @@ Ewing, B., Hillier, L., Wendl, M.~C., and Green, P.
   assessment.
 \newblock \emph{Genome research}, 8\penalty0 (3):\penalty0 175--185, 1998.
 
+\bibitem[Fabiani et~al.(2002)Fabiani, De~Bartolomeo, Rosignoli, Servili,
+  Montedoro, and Morozzi]{fabiani2002cancer}
+Fabiani, R., De~Bartolomeo, A., Rosignoli, P., Servili, M., Montedoro, G., and
+  Morozzi, G.
+\newblock Cancer chemoprevention by hydroxytyrosol isolated from virgin olive
+  oil through g1 cell cycle arrest and apoptosis.
+\newblock \emph{European Journal of Cancer Prevention}, 11\penalty0
+  (4):\penalty0 351--358, 2002.
+
 \bibitem[Feise(2002)]{feise2002multiple}
 Feise, R.~J.
 \newblock Do multiple outcome measures require p-value adjustment?
@@ -319,6 +363,14 @@ Frenkel, E.~P., Ligler, F.~S., Graham, M.~S., Hernandez, J.~A., Kettman~Jr,
 \newblock \emph{American Journal of Hematology}, 10\penalty0 (4):\penalty0
   391--398, 1981.
 
+\bibitem[Frolkis et~al.(2010)Frolkis, Knox, Lim, Jewison, Law, Hau, Liu,
+  Gautam, Ly, Guo, et~al.]{frolkis2010smpdb}
+Frolkis, A., Knox, C., Lim, E., Jewison, T., Law, V., Hau, D.~D., Liu, P.,
+  Gautam, B., Ly, S., Guo, A.~C., et~al.
+\newblock Smpdb: the small molecule pathway database.
+\newblock \emph{Nucleic acids research}, 38\penalty0 (suppl\_1):\penalty0
+  D480--D487, 2010.
+
 \bibitem[Frugier et~al.(2010)Frugier, Bour, Ayach, Santos, Rudinger-Thirion,
   Th{\'e}obald-Dietrich, and Pizzi]{frugier2010low}
 Frugier, M., Bour, T., Ayach, M., Santos, M.~A., Rudinger-Thirion, J.,
@@ -327,6 +379,12 @@ Frugier, M., Bour, T., Ayach, M., Santos, M.~A., Rudinger-Thirion, J.,
   co-translational folding of plasmodial proteins.
 \newblock \emph{FEBS letters}, 584\penalty0 (2):\penalty0 448--454, 2010.
 
+\bibitem[Fry(2008)]{fry2008visualizing}
+Fry, B.
+\newblock \emph{Visualizing data: Exploring and explaining data with the
+  processing environment}.
+\newblock " O'Reilly Media, Inc.", 2008.
+
 \bibitem[Fu et~al.(2005)Fu, Liu, Zhou, Sun, Zheng, Huang, Li, Ran, and
   Luo]{fu2005effects}
 Fu, J., Liu, W., Zhou, J., Sun, H., Zheng, M., Huang, M., Li, C., Ran, D., and
@@ -334,6 +392,14 @@ Fu, J., Liu, W., Zhou, J., Sun, H., Zheng, M., Huang, M., Li, C., Ran, D., and
 \newblock The effects of mcl-1 gene on atra-resistant hl-60 cell.
 \newblock \emph{Zhonghua xue ye xue za zhi= Zhonghua Xueyexue Zazhi},
   26\penalty0 (6):\penalty0 352--354, 2005.
+
+\bibitem[Gatt et~al.(2021)Gatt, Lia, Zammit-Mangion, Thorpe, and
+  Schembri-Wismayer]{gatt2021first}
+Gatt, L., Lia, F., Zammit-Mangion, M., Thorpe, S.~J., and Schembri-Wismayer, P.
+\newblock First profile of phenolic compounds from maltese extra virgin olive
+  oils using liquid-liquid extraction and liquid chromatography-mass
+  spectrometry.
+\newblock \emph{Journal of Oleo Science}, page ess20130, 2021.
 
 \bibitem[Gatt(2016)]{Gatt2016}
 Gatt, L.~V.
@@ -433,6 +499,13 @@ Jacobs, A.~D., Schroff, R.~W., and Gale, R.~P.
 \newblock Acute transformation of chronic lymphocytic leukemia.
 \newblock \emph{Medical and pediatric oncology}, 12\penalty0 (5):\penalty0
   318--321, 1984.
+
+\bibitem[Jafari et~al.(2014)Jafari, Saeidnia, and Abdollahi]{jafari2014role}
+Jafari, S., Saeidnia, S., and Abdollahi, M.
+\newblock Role of natural phenolic compounds in cancer chemoprevention via
+  regulation of the cell cycle.
+\newblock \emph{Current pharmaceutical biotechnology}, 15\penalty0
+  (4):\penalty0 409--421, 2014.
 
 \bibitem[Jean McGowan-Jordan(2020)]{ISCN}
 Jean McGowan-Jordan, S.~M., Ros J.~Hastings, editor.
@@ -601,6 +674,12 @@ Liu, R., Hsieh, C.-Y., and Lam, K.~S.
 \newblock In \emph{Seminars in cancer biology}, volume~14, pages 13--21.
   Elsevier, 2004.
 
+\bibitem[Liu et~al.(2014)Liu, Zhou, and White]{liu2014rna}
+Liu, Y., Zhou, J., and White, K.~P.
+\newblock Rna-seq differential expression studies: more sequence or more
+  replication?
+\newblock \emph{Bioinformatics}, 30\penalty0 (3):\penalty0 301--304, 2014.
+
 \bibitem[Love et~al.(2014)Love, Huber, and Anders]{love2014moderated}
 Love, M.~I., Huber, W., and Anders, S.
 \newblock Moderated estimation of fold change and dispersion for rna-seq data
@@ -713,6 +792,15 @@ Meyer, S.~C. and Levine, R.~L.
 \newblock \emph{The Lancet Oncology}, 15\penalty0 (9):\penalty0 e382--e394,
   2014.
 
+\bibitem[Mi et~al.(2005)Mi, Lazareva-Ulitsky, Loo, Kejariwal, Vandergriff,
+  Rabkin, Guo, Muruganujan, Doremieux, Campbell, et~al.]{mi2005panther}
+Mi, H., Lazareva-Ulitsky, B., Loo, R., Kejariwal, A., Vandergriff, J., Rabkin,
+  S., Guo, N., Muruganujan, A., Doremieux, O., Campbell, M.~J., et~al.
+\newblock The panther database of protein families, subfamilies, functions and
+  pathways.
+\newblock \emph{Nucleic acids research}, 33\penalty0 (suppl\_1):\penalty0
+  D284--D288, 2005.
+
 \bibitem[Mortazavi et~al.(2008)Mortazavi, Williams, McCue, Schaeffer, and
   Wold]{mortazavi2008mapping}
 Mortazavi, A., Williams, B.~A., McCue, K., Schaeffer, L., and Wold, B.
@@ -778,10 +866,24 @@ Oshlack, A. and Wakefield, M.~J.
 \newblock Transcript length bias in rna-seq data confounds systems biology.
 \newblock \emph{Biology direct}, 4\penalty0 (1):\penalty0 1--10, 2009.
 
+\bibitem[Owen et~al.(2000)Owen, Giacosa, Hull, Haubner, Würtele,
+  Spiegelhalder, and Bartsch]{owen2000}
+Owen, R., Giacosa, A., Hull, W., Haubner, R., Würtele, G., Spiegelhalder, B.,
+  and Bartsch, H.
+\newblock Olive-oil consumption and health: the possible role of antioxidants.
+\newblock 2000.
+
 \bibitem[Pachter(2011)]{pachter2011models}
 Pachter, L.
 \newblock Models for transcript quantification from rna-seq.
 \newblock \emph{arXiv preprint arXiv:1104.3889}, 2011.
+
+\bibitem[Pan et~al.(2015)Pan, Chiou, Chen, and Ho]{pan2015breast}
+Pan, M.-H., Chiou, Y.-S., Chen, L.-H., and Ho, C.-T.
+\newblock Breast cancer chemoprevention by dietary natural phenolic compounds:
+  specific epigenetic related molecular targets.
+\newblock \emph{Molecular nutrition \& food research}, 59\penalty0
+  (1):\penalty0 21--35, 2015.
 
 \bibitem[Patro et~al.(2017)Patro, Duggal, Love, Irizarry, and
   Kingsford]{patro2017salmon}
@@ -933,11 +1035,26 @@ Schurch, N.~J., Schofield, P., Gierli{\'n}ski, M., Cole, C., Sherstnev, A.,
   rna-seq on a 48 biological replicate experiment.
 \newblock \emph{arXiv preprint arXiv:1505.02017}, 2015.
 
+\bibitem[Schurch et~al.(2016)Schurch, Schofield, Gierli{\'n}ski, Cole,
+  Sherstnev, Singh, Wrobel, Gharbi, Simpson, Owen-Hughes,
+  et~al.]{schurch2016many}
+Schurch, N.~J., Schofield, P., Gierli{\'n}ski, M., Cole, C., Sherstnev, A.,
+  Singh, V., Wrobel, N., Gharbi, K., Simpson, G.~G., Owen-Hughes, T., et~al.
+\newblock How many biological replicates are needed in an rna-seq experiment
+  and which differential expression tool should you use?
+\newblock \emph{Rna}, 22\penalty0 (6):\penalty0 839--851, 2016.
+
 \bibitem[Scientific(2013)]{scientific2013t042}
 Scientific, T.
 \newblock T042--technical bulletin nanodrop spectrophotometers assessment of
   nucleic acid purity.
 \newblock \emph{Wilmington, DE: Thermo Scientific Nanodrop Products}, 2013.
+
+\bibitem[Serreli and Deiana(2018)]{serreli2018biological}
+Serreli, G. and Deiana, M.
+\newblock Biological relevance of extra virgin olive oil polyphenols
+  metabolites.
+\newblock \emph{Antioxidants}, 7\penalty0 (12):\penalty0 170, 2018.
 
 \bibitem[Seward(1996)]{seward1996bzip2}
 Seward, J.
@@ -1026,13 +1143,6 @@ Tabin, C.~J., Bradley, S.~M., Bargmann, C.~I., Weinberg, R.~A., Papageorge,
 \newblock Mechanism of activation of a human oncogene.
 \newblock \emph{Nature}, 300\penalty0 (5888):\penalty0 143--149, 1982.
 
-\bibitem[Teng et~al.(2016)Teng, Love, Davis, Djebali, Dobin, Graveley, Li,
-  Mason, Olson, Pervouchine, et~al.]{teng2016benchmark}
-Teng, M., Love, M.~I., Davis, C.~A., Djebali, S., Dobin, A., Graveley, B.~R.,
-  Li, S., Mason, C.~E., Olson, S., Pervouchine, D., et~al.
-\newblock A benchmark for rna-seq quantification pipelines.
-\newblock \emph{Genome biology}, 17\penalty0 (1):\penalty0 1--12, 2016.
-
 \bibitem[{The American Cancer Society}(2018)]{ACS2018}
 {The American Cancer Society}.
 \newblock Acute myeloid leukemia (aml) subtypes and prognostic factors, 2018.
@@ -1053,6 +1163,15 @@ Trapnell, C., Williams, B.~A., Pertea, G., Mortazavi, A., Kwan, G., Van~Baren,
   transcripts and isoform switching during cell differentiation.
 \newblock \emph{Nature biotechnology}, 28\penalty0 (5):\penalty0 511--515,
   2010.
+
+\bibitem[Tripoli et~al.(2005)Tripoli, Giammanco, Tabacchi, Di~Majo, Giammanco,
+  and La~Guardia]{tripoli2005phenolic}
+Tripoli, E., Giammanco, M., Tabacchi, G., Di~Majo, D., Giammanco, S., and
+  La~Guardia, M.
+\newblock The phenolic compounds of olive oil: structure, biological activity
+  and beneficial effects on human health.
+\newblock \emph{Nutrition research reviews}, 18\penalty0 (1):\penalty0 98--112,
+  2005.
 
 \bibitem[Von~Hoff et~al.(1990)Von~Hoff, Forseth, Clare, Hansen, VanDevanter,
   et~al.]{von1990double}
@@ -1100,6 +1219,12 @@ Williams, R., Peisajovich, S.~G., Miller, O.~J., Magdassi, S., Tawfik, D.~S.,
 Wingett, S.~W. and Andrews, S.
 \newblock Fastq screen: A tool for multi-genome mapping and quality control.
 \newblock \emph{F1000Research}, 7, 2018.
+
+\bibitem[Yin(2007)]{yin2007nonlinear}
+Yin, H.
+\newblock Nonlinear dimensionality reduction and data visualization: a review.
+\newblock \emph{International Journal of Automation and Computing}, 4\penalty0
+  (3):\penalty0 294--303, 2007.
 
 \bibitem[Zhang et~al.(2017)Zhang, Zhang, Lin, and Zhao]{Zhang2017}
 Zhang, C., Zhang, B., Lin, L.-L., and Zhao, S.

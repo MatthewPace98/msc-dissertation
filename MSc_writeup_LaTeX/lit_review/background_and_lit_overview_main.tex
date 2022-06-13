@@ -5,26 +5,25 @@ The typical multicellular organism stores its genetic code as deoxyribonucleic a
 
 DNA is just the general starting point in a series of information transfers described by the \textit{Central Dogma of Molecular Biology}, which the cell uses to ultimately produce its molecular products \citep{cobb201760}. Through the process of \textit{transcription}, the code from one strand of DNA is transferred onto a primary ribonucleic acid (RNA) transcript. RNA is similar to DNA except that it is single-stranded, has ribose as its five-carbon sugar and uses the nucleobase \textit{uracil} instead of \textit{thymine}. This primary transcript is modified into ribosomal RNA (rRNA), transfer RNA (tRNA) or messenger RNA (mRNA). All three are involved in \textit{protein synthesis}, although mRNA is especially relevant to this project since the protein sequence can be deduced from the mRNA sequence. These molecular products shape the cell's appearance, define how it interacts with external or internal stimuli, and allows it to perform its intended functions. They give each cell type a characteristic RNA profile which can be measured through RNA-seq. Using this technology, we can detect the presence or absence of certain transcriptomic hallmarks of cancer.
 
-% the intro for this is pretty good: https://www.nature.com/articles/s41368-021-00146-0#:~:text=Bulk%20RNAseq%20studies%20average%20global,next%20generation%20of%20RNA%20sequencing.
+% the intro for this is pretty good: https://www.nature.com/articles/s41368-021-00146-0#:~:text=Bulk%20RNA-seq%20studies%20average%20global,next%20generation%20of%20RNA%20sequencing.
 
-\section{Differentiation Pathways in the Haematopoietic System}
-. Acute leukaemia occurs earlier in the differentiation pathway, allowing the blasts to divide more rapidly. \autoref{fig:cell_differentiation} shows the mature cell types that result from myeloid and lymphoid cell lineages, which both share \ac{HSC} as the common progenitor cell type.
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=1\textwidth]{cell_differentiation}
-    \caption[Stem cell differentiation]{An overview of the main branches of haematopoietic stem cell differentiation pathways showing the myeloid and lymphoid lineages. Created using \href{https://biorender.com/}{BioRender.com}. } 
-    \label{fig:cell_differentiation}
-\end{figure}
-
+%\section{Differentiation Pathways in the Haematopoietic System}
+%. Acute leukaemia occurs earlier in the differentiation pathway, allowing the blasts to divide more rapidly. \autoref{fig:cell_differentiation} shows the mature cell types that result from myeloid and lymphoid cell lineages, which both share \ac{HSC} as the common progenitor cell type.
 
 \section{Acute Myeloid Leukaemia}
 
 %good resource: https://btep.ccr.cancer.gov/wp-content/uploads/RNA-seq_BETP_2019rev.pdf
 
-\ac{AML} is an aggressive form of cancer which is characterised by its rapid proliferation of myeloblasts. This occurs when undifferentiated myeloid cells acquire mutations which hinder further differentiation but allows for their clonal proliferation \citep{Khwaja2016}. This comes at the expense of the production of their healthy, differentiated counterparts: erythrocytes, platelets and granulocytes \citep{Khwaja2016}. It is an exception to cancers in that it does not form a tumour, which is usually analysed to determine the severity. Instead \ac{AML} is staged according to its subtype and other variables \citep{ACS2018}. It is the most common form of acute leukaemia, with an incidence rate of 4.3 per 100,000 in the United States \citep{Kouchkovsky2016}. One of the main risk factors is age, with a median age of diagnosis of 70 years, and with a slight male predominance \citep{juliusson2009age, Khwaja2016}. Acute myeloid leukaemia is synonymous with acute myelogenous leukemia, acute myelocytic leukemia, or acute nonlymphocytic leukemia.
+\ac{AML} is an aggressive form of cancer of the haematopoietic system (\autoref{fig:cell_differentiation}) which is characterised by its rapid proliferation of myeloblasts. This occurs when undifferentiated myeloid cells acquire mutations which hinder further differentiation but allows for their clonal proliferation \citep{Khwaja2016}. This comes at the expense of the production of their healthy, differentiated counterparts: erythrocytes, platelets and granulocytes \citep{Khwaja2016}. It is an exception to cancers in that it does not form a tumour, which is usually analysed to determine the severity. Instead \ac{AML} is staged according to its subtype and other variables \citep{ACS2018}. It is the most common form of acute leukaemia, with an incidence rate of 4.3 per 100,000 in the United States \citep{Kouchkovsky2016}. One of the main risk factors is age, with a median age of diagnosis of 70 years, and with a slight male predominance \citep{juliusson2009age, Khwaja2016}. Acute myeloid leukaemia is synonymous with acute myelogenous leukemia, acute myelocytic leukemia, or acute nonlymphocytic leukemia.
 
 %Summary of leukaemia: https://www.cancer.net/cancer-types/leukemia-acute-myeloid-aml/introduction
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{cell_differentiation}
+    \caption[Stem cell differentiation]{An overview of the main branches of haematopoietic stem cell differentiation pathways showing the myeloid and lymphoid lineages. Created using \href{https://biorender.com/}{BioRender.com}. } 
+    \label{fig:cell_differentiation}
+\end{figure}
 
 \subsection{Classification and Subtypes}
 \label{Classification and Subtypes}
@@ -75,6 +74,7 @@ These may be further classified according to their specific genetic or karyotypi
 %https://www.ncbi.nlm.nih.gov/books/NBK560490/
 
 \subsection{Pathogenesis}
+\label{Pathogenesis}
 The genetic abnormalities leading to \ac{AML} are heterogeneous and complex, meaning that there are many different combinations of causative genetic or cytogenetic abnormalities which may lead to the \ac{AML} phenotype \citep{lindsley2015acute, whoclassification}. The genetic and karyotypic profile can have profound prognostic impact, affecting both therapeutic strategy and survival rate \citep{mrozek2000prognostic, whoclassification}. 
 
 \subsubsection{Cytogenic Abnormalities}
@@ -122,11 +122,11 @@ If we reduce our frame of reference to the genetic level, we find that the afore
 Cells have evolved mechanisms to prevent carcinogenesis, through \textit{tumour suppressor genes}. These genes are typically involved in the regulation of cell division, DNA repair or induction of apoptosis. While proto-oncogenes require their up-regulation to induce cancer, tumour suppressor genes require down-regulation or complete deactivation. \cite{knudson1971mutation} suggested a 'two-hit hypothesis', that most tumour suppressor genes require the deactivation of both alleles for carcinogenesis to occur. Knudson theorised that early onset retinoblastoma (cancer of the retina) was caused by an inherited mutation (the first 'hit') and a second acquired mutation (the second 'hit'). Knudson explained late-onset of the disease as being non-inherited, with both 'hits' being acquired. 
 
 %The TP53 gene is the most frequently mutated gene (>50%) in human cancer, indicating that the TP53 gene plays a crucial role in preventing cancer formation.[6] https://doi.org/10.2147%2FOTT.S53876
-\clearpage
+%\clearpage
 \begin{table}[H]
 \label{tab:genetic abnormalities}
     \centering
-    \caption{Recurring genetic abnormalities in \ac{AML}. Compiled and adapted from \cite{dinardo2016mutations} Table 1 and \cite{lindsley2015acute} Figure 2.}
+    \caption{Recurring genetic abnormalities in \ac{AML}. Compiled and adapted from \cite{dinardo2016mutations} and \cite{lindsley2015acute}.}
     \begin{tabular}{llllllllll}
     \toprule
 \textbf{Role} & \textbf{Role description} & \textbf{Mutated genes} &  &  \\ \midrule
@@ -149,9 +149,8 @@ Others & Other proto-oncogenes & WT1, PHF6, TP53, &  &  \\
     \end{tabular}
 \end{table}
 
-\subsection{Transcriptomic abnormalities}
-Pathways
-
+%\subsection{Transcriptomic abnormalities}
+%Pathways
 
 \subsection{ Treatment Methods}
 \label{Treatment Methods}
@@ -180,24 +179,36 @@ As mentioned in Section \ref{Treatment Methods}, \ac{ATRA} has been a success st
 %\section{Phenols in Maltese Extra Virgin Olive Oil}
 
 
-\section{Experimental Design}
-Single end vs paired end
-Replicates (biological vs technical)
-Read length (short-read vs long-read)
-Read depth
-https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0697-y
+
 \section{RNA-seq: \textit{in vitro}}
-RNA sequencing (RNA-seq) is the application of a \ac{NGS} technique to measure the quantity of RNA sequences in a biological sample, in a given moment \citep{zhong2009}. While this dissertation deals with the data analysis part of RNA-seq, some background on the origins of said data is essential. RNA-seq has gradually been replacing microarrays as the standard technology in molecular biology to analyse \ac{DGE}. Its main advantage is that it allows for the sequencing of the entire transcriptome, while microarrays only allow for predefined regions to be sequenced \citep{rao2019comparison}. 
+RNA sequencing (RNA-seq) is the application of a \ac{NGS} technique to measure the quantity of RNA sequences in a biological sample, in a given moment \citep{zhong2009}. Since its first publications in 2008 \citep{nagalakshmi2008transcriptional, lister2008highly, cloonan2008stem}, RNA-seq has gradually been replacing microarrays as the standard technology in molecular biology to analyse \ac{DGE}. Its main advantage is that it allows for the sequencing of the entire transcriptome, while microarrays only allow for predefined regions to be sequenced \citep{rao2019comparison}. 
 
 Sanger sequencing is considered as the first generation in a series of changes in sequencing technology, developed in 1977 and dominated the nucleic acid sequencing industry for over 30 years \citep{behjati2013next}. Next-generation sequencing (or second generation sequencing) revolutionised the industry, its massively parallel capabilities allowing for greatly increased throughput, sequencing millions of fragments at a time instead of Sanger sequencing's just one. At the time of writing, we are currently in the process of transitioning into the third generation of nucleic acid sequencing, which allows for longer reads (>1000 bp as opposed to 35-600 bp). Longer reads translate to greater overlap between the reads, and thus greater certainty during assembly or alignment, particularly when considering regions of low-complexity or structural variants \citep{rhoads2015pacbio}. 
 
 We should make a distinction between two popular types of RNA-seq: the classic bulk RNA-seq, and single-cell RNA-seq (scRNA-seq). Bulk RNA-seq, which this project has made use of, takes the average gene expression of a sample, which may be composed of many cell types, while scRNA-seq investigates the transcriptome of each individual cell. RNA-seq is traditionally used to profile transcriptomes, but it may be used in the identification of expressed SNPs, identification of novel transcripts, the detection of fused genes and alternative splicing \citep{han2015alternative, zhao2014comparison}. 
 
+The following section is an overview of the techniques used to transform the nucleotide sequences residing inside living cells into letters on a screen. While this project deals with the data analysis part of RNA-seq, some background on the origins of said data is essential. 
 
 % great summary of rna sequencing: https://www.sciencedirect.com/science/article/pii/S0090825818312836#bb0080
 % also really good https://www.thieme-connect.com/products/ejournals/html/10.1055/s-0039-1688446
 
-%non coding rna: https://www.mdpi.com/1422-0067/17/12/2080
+\subsection{Experimental Design}
+
+%https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0697-y: 
+%https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4878611/
+
+An RNA-seq experiment is customised according to research goals and often limited by the budget. Since many of the following options are an accuracy/expense trade-off, the researcher should be knowledgeable on the options to effectively allocate funds, particularly if the sequencing will be outsourced to another company. This section was placed here to retain the chronological order in which an RNA-seq experiment would take place, although some of the below descriptions include some technical detail which will be explained in future sections.
+
+\begin{itemize}
+
+\item[] \textbf{Read length} \hspace{0.15cm} Before sequencing, it is possible to specify the number of base-pairs of the DNA fragments each read would contain. A distinction is made between reads which emerge from second-generation sequencing machines (short-reads) and third-generation sequencing machines (long-reads). Smaller reads lead to greater ambiguity during alignment as they have a greater probability of being multi-mapped, and partly determine the optimal alignment algorithm \citep{albert2020biostar}. This is especially true in regions of low-complexity or in the presence of structural variants \citep{rhoads2015pacbio}. The exception to this rule is in the study of small RNAs, where read lengths drop to <30bp \citep{albert2020biostar}.
+
+\item[] \textbf{Depth of coverage} \hspace{0.15cm} Coverage is the average number of reads that will cover a given sequence, meaning that it is determined by the read length and number of reads. It is commonly denoted with an \textit{x}, e.g. 30x coverage means that a nucleotide is covered by an average of 30 reads. Low coverage is susceptible to ambiguity and sequencing errors.
+
+\item[] \textbf{Paired-end reads} \hspace{0.15cm} Fragments of cDNA are typically longer than the read length, so some sequencing information may be lost. Paired-end sequencing, as opposed to single-end sequencing, allows both ends of the cDNA fragment to be sequenced. The distance between each paired-end read is known, which is fed into alignment algorithms that use this information to improve alignment. This especially improves regions of low complexity \citep{albert2020biostar}.
+
+\item[] \textbf{Sample replicates} \hspace{0.15cm} Technical replicates originate from the same biological source to produce multiple samples which are all processed in the same manner. This gives isolates the non-biological variation, allowing for the evaluation of the instruments and methodology used. By contrast, biological replicates originate from different biological sources and are meant to test the biological variance of the samples. A mixture of the two types may be used, however given a limited budget, biological replicates are preferred in RNA-seq because technical variation is minimal \citep{bullard2010evaluation}, by far outweighed by biological variation \citep{liu2014rna}. \cite{schurch2016many} found that using three biological replicates gave 20\% to 40\% of the \ac{DEG}s (varies according to the tool) compared to a full set of 42 replicates (representing the 'true' population). This rises to >85\% when considering genes with a log$_2$ fold change of >2.
+\end{itemize}
 
 
 \subsection{RNA extraction}
@@ -224,39 +235,39 @@ The next two steps are fragmentation and conversion to complimentary DNA (cDNA),
 %per sample on a high-throughput platform (usually 
 %Illumina)
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=8cm]{ngs_lib_prep}
     \caption[Library preparation]{Illumina library preparation. Created using \href{https://biorender.com/}{BioRender.com}. } 
     \label{fig:ngs_lib_prep}
 \end{figure}
-\clearpage
+%\clearpage
 
 \subsection{Clonal amplification}
 The following step amplifies the fragments of the cDNA library to a level detectable by the sequencing machine, using a form of \ac{PCR}. The Illumina Sequencing by Synthesis technology makes use of the flow-cell-based method of \textit{bridge amplification} \citep{illumina2010}, as opposed to emulsion PCR, a similar technology used in Ion Torrent Semiconductor Sequencing which makes use of bead surfaces \citep{williams2006amplification}.
 
 In bridge amplification \citep{illumina2010}, the previously prepared adapter-ligated cDNA library is attached to a flow cell, which is a hollow glass slide with multiple channels, coated with a lawn of oligonucleotides (called oligos in short) complimentary to the sequences which form part of the adapters. Strands of cDNA bind to these oligos, and polymerase creates the complement of the hybridised strand. Each double-stranded cDNA molecule is then denatured and enters a number of bridge-amplification cycles. Each molecule is amplified, forming clusters of identical cDNA sequences adjacent to each other (\autoref{fig:ngs_clonal_amp}).
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=8cm]{ngs_clonal_amp}
     \caption[Illumina clonal amplification]{Illumina clonal amplification. Created using \href{https://biorender.com/}{BioRender.com}. } 
     \label{fig:ngs_clonal_amp}
 \end{figure}
-\clearpage
+%\clearpage
 
 \subsection{Sequencing and Nucleobase Detection}
 Sequencing by Synthesis \citep{illumina2010} makes use of fluorescently-labelled deoxynucleoside triphosphate (dNTP). Each sequencing cycle binds a dNTP molecule to the millions of clusters in parallel, with each of the four nucleotides emitting a different coloured light upon binding and laser excitation. The sequencing machine captures the light being emitted from the flow cell as an image and identifies the first base of each fragment. The cycle repeats itself for the second base, third base, and so on, until the end of the sequence (\autoref{fig:ngs_sequencing}). The raw sequencing data is stored as Binary Base Call (BCL) files.
 
 Multiple samples may be sequenced simultaneously during a single run, where they are multiplexed by the machine, meaning they are pooled into a single data stream. Unique identifiers called barcode sequences (added to the cDNA fragments during library preparation) allow for the recognition of the different samples, and demultiplexing of the BCL files into text-based FASTQ files \citep{cock2010sanger}. These are immediately compressed to reduce costs associated with data storage and data transfer. While the \textit{de facto} data compression format used is gzip \citep{deutsch1996gzip}, and bzip is used on occasion \citep{seward1996bzip2}, the underlying compression algorithms used are unspecialised and inefficient for genomic data.
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=8cm]{ngs_sequencing}
     \caption[Sequencing by synthesis]{Illumina sequencing by synthesis. Created using \href{https://biorender.com/}{BioRender.com}. } 
     \label{fig:ngs_sequencing}
 \end{figure}
-\clearpage
+%%\clearpage
 
 %illumina sequencing steps: https://www.illumina.com/documents/products/techspotlights/techspotlight_sequencing.pdf
 % Potential sequencing errors
@@ -273,15 +284,15 @@ Multiple samples may be sequenced simultaneously during a single run, where they
 \section{RNA-seq: \textit{in silico}}
 \label{RNA-seq: in silico}
 
-Once the FASTQ files emerge from the sequencing machines, we may move into the dry lab and feed the data into an RNA-seq data analysis pipeline. While the specific tools which make up the pipeline will vary according to the type of data and goals of the researcher, all RNA-seq pipelines share a common skeleton. The following subsections will first provide a general overview of the respective step in the pipeline, and then delve into the specific tools used in this project. They were inspired by a multitude of online tutorials and resources:
+Once the FASTQ files emerge from the sequencing machines, we may move into the dry lab and feed the data into an RNA-seq data analysis pipeline. While the specific tools which make up the pipeline will vary according to the type of data and goals of the researcher, all RNA-seq pipelines share a common skeleton. The following subsections will first provide a general overview of the respective step in the pipeline, and then delve into the specific tools used in this project. They were inspired by a multitude of online tutorials and resources, accessed between 29/05/2022 and 10/06/2022:
 
 \begin{itemize}\itemsep-0.5em
-\item \url{https://chagall.med.cornell.edu/RNASEQcourse/}
-\item \url{https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rb-rnaseq/tutorial.html}
+\item \url{https://chagall.med.cornell.edu/RNA-seqcourse/}
+\item \url{https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rb-RNA-seq/tutorial.html}
 \item \url{https://btep.ccr.cancer.gov/wp-content/uploads/RNA-seq_BETP_2019rev.pdf}
 \item \url{https://www.bioconductor.org/packages/devel/bioc/vignettes/DEGreport/inst/doc/DEGreport.html}
 \item \url{https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html}
-\item \url{https://chagall.med.cornell.edu/RNASEQcourse/Intro2RNAseq.pdf}
+\item \url{https://chagall.med.cornell.edu/RNA-seqcourse/Intro2RNA-seq.pdf}
 \end{itemize}
 
 %Introns are spliced out of the pre-mRNA to form a mature mRNA transcript
@@ -341,7 +352,7 @@ FastQScreen maps the sample reads against the genomes of common contaminants and
     \caption[FastQScreen plot example]{An example of a good FastQScreen output result, with human mapping close to 100\% and some multi-mapping to mouse and rat genomes. } 
     \label{fig:fastqscreen_example}
 \end{figure}
-\clearpage
+%%\clearpage
 
 \subsubsection{MultiQC}
 
@@ -421,9 +432,9 @@ In RNA-seq, the reference sequence one aligns against may be either a genome or 
     \caption[Alignment against a reference genome or a reference transcriptome]{Alignment against a reference genome or a reference transcriptome. Created using \href{https://biorender.com/}{BioRender.com}. } 
     \label{fig:alignment}
 \end{figure}
-\clearpage
+%%\clearpage
 
-Alignment algorithm efficiency is at least semi-dependent on read length, with each having ideal range of lengths, although this is rarely stated in the documentation \citep{albert2020biostar}. A distinction is often made between short-read and long-read mappers, although this distinction is arbitrary. Many conventional short-read mappers are not suitable for reads under 30bp, necessary for the study of microRNAs \citep{albert2020biostar, ziemann2016evaluation}.
+Alignment algorithm efficiency is at least semi-dependent on read length, with each having ideal range of lengths, although this is rarely stated in the documentation \citep{albert2020biostar}. A distinction is often made between short-read and long-read mappers, although this distinction is arbitrary. Many conventional short-read mappers are not suitable for reads under 30bp, necessary for the study of small RNAs \citep{albert2020biostar, ziemann2016evaluation}.
 
 Quasi-mappers and pseudo-aligners (most notably Salmon \citep{patro2017salmon} and Kallisto \citep{bray2016near} respectively) differ from classical alignment. They utilise \textit{k}-mer matching to match reads and corresponding transcripts \citep{rnadataanalysis2020}. They require less runtime than other existing alignment tools \citep{Zhang2017}, while their accuracy is disputed, with \cite{srivastava2020alignment} finding that they are less accurate and \cite{Zhang2017, Schaarschmidt2020} argue that their accuracy is comparable to conventional aligners.
 
@@ -439,7 +450,7 @@ Some implementation of the mapping quality (MAPQ) value is used by all conventio
 \item[] \textbf{Dependencies}: 64 bit Linux or Mac OS X
 \end{itemize}
 
-STAR is an open-source software package that performs local, splice-aware alignment in two major steps: (1) seed search and (2) clustering, stitching and scoring. It was coded in C++ for the specific purpose of mapping RNAseq reads to a genome.
+STAR is an open-source software package that performs local, splice-aware alignment in two major steps: (1) seed search and (2) clustering, stitching and scoring. It was coded in C++ for the specific purpose of mapping RNA-seq reads to a genome.
 %It requires a considerable amount of RAM to run efficiently \citep{•}, and requires more runtime than Quasi-mappers and pseudo-aligners
 % Suffix arrays
 
@@ -448,7 +459,7 @@ The algorithm first searches for the Maximum Mappable Prefix (MMP) which acts a 
 
 An index must be generated prior to alignment, which is generated from a reference genome and its respective annotation file in the GTF format. This hastens the algorithm in a way similar to how one might use the index in a book, which points to the specific locations of certain headers \citep{trapnell2009map}.
 
-STAR provides the user with great flexibility, with many parameters, such as  the scoring system weighting and the size of search windows, being user-defined. \cite{dobin2015mapping} provide excellent descriptions of nine different datatype- and output-dependent strategies that one may take when mapping RNAseq reads with STAR. 
+STAR provides the user with great flexibility, with many parameters, such as  the scoring system weighting and the size of search windows, being user-defined. \cite{dobin2015mapping} provide excellent descriptions of nine different datatype- and output-dependent strategies that one may take when mapping RNA-seq reads with STAR. 
 
 % perfect paper: https://currentprotocols.onlinelibrary.wiley.com/doi/abs/10.1002/0471250953.bi1114s51 
 % sci hub for it: https://sci-hub.hkvisa.net/10.1002/0471250953.bi1114s51
@@ -472,7 +483,7 @@ The following step associates the aligned reads with the respective genes or tra
 
 \begin{table}[h]
 \centering
-\caption{An example of a read count table. In bulk RNAseq, each sample represents the pooled RNA of a large number of cells, most likely of different cell types.}
+\caption{An example of a read count table, values representing the number of reads aligned to that gene. In bulk RNA-seq, each sample represents the pooled RNA of a large number of cells, most likely of different cell types.}
 \label{tab:read_count}
 \begin{tabular}{lllll}
 \textbf{Genes} & \textbf{Sample$_{1}$} & \textbf{Sample$_{2}$} & \textbf{Sample$_{3}$} & ...  \\
@@ -513,7 +524,7 @@ To adjust for confounding variables which are not biologically relevant, the rea
     \caption[Differences in library composition between samples]{Potential differences between samples in library composition. Condition A has more reads aligned to Gene 1 than Condition B, but it is considered more highly expressed in Condition B since the \textit{proportion} of the reads is higher. After accounting for library differences, Gene 2 is more highly expressed in Condition A, and Gene 3 is more highly expressed in Condition B. Created using \href{https://biorender.com/}{BioRender.com}. } 
     \label{fig:lib_diff}
 \end{figure}
-\clearpage
+%%\clearpage
 
 \subsubsection{Trimmed Mean of \textit{M}-values (TMM)}
 \label{TMM}
@@ -536,10 +547,11 @@ The final step is the calculation of the normalisation factor and weighted mean 
 
 
 \subsection{Differential Expression Analysis}
+% rlly good for DGE file:///C:/Users/matth/OneDrive/Desktop/Msc%20Bioinformatics/!MMB5010%20DISSERTATION-DESKTOP-A2009SI/Literature/Tutorials/Introduction%20to%20differential%20gene%20expression%20analysis%20using%20RNA-seq.pdf 
 The crux of the RNA-seq pipeline is to decide through statistical testing whether a given gene's expression varies significantly between samples, and if this variation can be explained by the difference in the cells' biology. Genes with very low read counts cannot be reliably represented across all samples, and are indistinguishable from background noise \citep{mcintyre2011rna}. These lowly expressed genes should be filtered before differential expression analysis as they are more likely to be incorrectly identified as \ac{DEG}s. All tools which measure gene expression aim to estimate two metrics  based on normalised read counts from replicated samples: 
 
 \begin{enumerate}\itemsep-0.5em
-\item The \textit{magnitude} of the differential expression, represented as the log$_2$ fold change (logFC).
+\item The \textit{magnitude} of the differential expression, represented as the \ac{logFC}.
 \item The \textit{significance} of the difference, represented as a \textit{p}-value adjusted for multiple testing.
 \end{enumerate} 
 
@@ -550,64 +562,82 @@ In differential expression analysis we are testing whether each gene in our list
 %Very low read counts cannot be reliably distinguished from background noise so these need to be filtered: https://pubmed.ncbi.nlm.nih.gov/21645359/
 \subsubsection{EdgeR}
 
-The Bioconductor package edgeR allows the implementation of a wide array of statistical methods applicable to \ac{DGE} analysis. EdgeR accepts a matrix of reads normalised by \ac{TMM} as input (see \autoref{TMM} for details). Prior to differential expression analysis, this matrix is filtered according to read counts using the function texttt{filterByExpr} which removes genes with <10 read counts. Two primary routes may be taken using \autoref{fig:edger_options}, the classic route which involves exact tests \citep{robinson2007moderated, robinson2008small}, or the Generalized Linear Model (GLM) route, although certain features of the two may be combined. The GLM tests for \ac{DGE} are likelihood ratio tests (LRTs) \citep{mccarthy2012differential} and quasi-likelihood F-tests (QLFs) \citep{lun2016s, lund2012detecting}.
+The Bioconductor package edgeR allows the implementation of a wide array of statistical methods applicable to \ac{DGE} analysis. EdgeR accepts a matrix of reads normalised by \ac{TMM} as input (see Section \ref{TMM} for details). Prior to differential expression analysis, this matrix is filtered according to read counts using the function \texttt{filterByExpr} which removes genes with <10 read counts. Two primary routes may be taken using \autoref{fig:edger_options}, the classic route which involves exact tests \citep{robinson2007moderated, robinson2008small}, or the Generalized Linear Model (GLM) route, although certain features of the two may be combined. The GLM tests for \ac{DGE} are likelihood ratio tests (LRTs) \citep{mccarthy2012differential} and quasi-likelihood F-tests (QLFs) \citep{lun2016s, lund2012detecting}.
 
 The \texttt{exactTest} function is based on quantile-adjusted conditional maximum likelihood (qCML) method. It produces a matrix of pseudo-counts\footnote{Note that the meaning of the term \textit{pseudo-counts} may change according to the context, and may be used by other studies to refer to something different.} which are designed to speed up computational analysis and not to be interpreted as regular normalised counts. The qCML method is only applicable on datasets with a single factor.
 
 GLMs are an adaptation of classical linear models to cater for non-normally distributed data \citep{dunn2018generalized}. The QLF dispersion estimate and test can be performed with the functions \textit{glmQLFit} and \textit{glmQLFTest}. This fits a negative binomial GLM to the \ac{TMM} normalised read counts. The LRT compares the goodness of fit of two competing models through the functions \textit{glmFit} and \textit{glmLRT}.
 
-\begin{figure}[!ht]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=13cm]{edger_dge_options}
     \caption[Summary of the options provided by edgeR for DGE identification]{Summary of the three options provided by edgeR for \ac{DGE} identification, based on comments and recommendations by its vignette. } 
     \label{fig:edger_options}
 \end{figure}
-\clearpage
+%\clearpage
 
 EdgeR and DESeq2 are quite similar in that they both make use of a negative binomial distribution to model read counts, and estimate dispersion based on the approximate conditional inference, first proposed by \cite{cox1987parameter}.  EdgeR is recommended for experiments with fewer than 12 replicates \citep{schurch2015evaluation}, and unlike DESeq2, allows for the analysis of data with no replicates, although highly discouraged by the vignette. 
 % The negative binomial is a more general form of the Poisson distribution... maybe write some shit on this
 
-The biggest challenge to work with data without replicates is the estimation of dispersion, which is mathematically impossible given a single sample. In cases when there is no other alternative, the vignette suggests giving a nominal value to the \ac{BCV}, from which we may derive the dispersion. The vignette suggests a few estimates for the \ac{BCV} which are based on previous experiments as the dispersion, such as \textit{0.1 for data on genetically identical model organisms}. The dispersion is equal to this value squared, which is little more than an educated guess, but is a better alternative to assuming no variance.
+The biggest challenge when working with data without replicates is the estimation of dispersion, which is mathematically impossible given a single sample. In cases when there is no other alternative, the vignette suggests giving a nominal value to the \ac{BCV}, from which we may derive the dispersion. The vignette suggests a few estimates for the \ac{BCV} which are based on previous experiments as the dispersion, such as \textit{0.1 for data on genetically identical model organisms}. The dispersion is equal to this value squared, which is little more than an educated guess, but is a better alternative to assuming no variance.
 
-To account for multiple testing, the \texttt{topTags} function adjusts p-values using the Benjamini-Hochberg method \citep{benjamini1995controlling} to control the \ac{FDR}. This produced value is the proportion of false positives one might expect to get from a test. 
+To account for the previously described multiple testing problem, the \texttt{topTags} function adjusts p-values using the Benjamini-Hochberg method \citep{benjamini1995controlling} to control the \ac{FDR}. This produced value is the proportion of false positives one might expect to get from a test. 
 
-The end result should be an edgeR object containing a matrix of each the $log_{2}$ fold change (logFC), adjusted p-values and (optionally) annotations for each differentially expressed gene. The final step is filtering by setting an logFC and/or \textit{p}-value cutoff, and sorting the data by one of these metrics for easier biological analysis. % Suggest values
+To gain further biological insight, the \texttt{goana} and \texttt{kegga} functions may be used to annotate genes according to their associated \ac{GO} terms and \ac{KEGG} pathways respectively. This may be particularly useful in downstream tests for gene set analyses.
+
+The end result should be an edgeR object containing a matrix of each the \ac{logFC}, adjusted p-values and (optionally) annotations for each differentially expressed gene. The final step is filtering on the matrix by setting a (largely arbitrary) \ac{logFC} and/or \textit{p}-value cutoff, and sorting the data by one of these metrics for easier biological analysis.
+% Visit later and suggest values
 
 \subsection{Downstream Analysis}
-% Potential downstream analysis routes
-%Functional Annotation
-%KEGG kanehisa2000kegg and GO 
-%GSEA
-%Over-Representation Analysis (ORA)
-%Functional Class Scoring (FCS)?
-%functional analyses
 % alternative splicing, functional analysis, gene fusion detection and eQTL mapping
-The steps of the pipeline up until this point are quite standard, although there are various approaches one may take, the aim of each step is clear and consistent across all RNAseq studies. Further exploration of the data is highly specific to the experimental design and research question. The differentially expressed gene matrix may be annotated using the AnnotationDbi \citep{annotationdbi} R package which may access annotation libraries such as the human org.Hs.eg.db \citep{org.Hs.eg.db} which is based on Entrez gene identifiers \citep{maglott2005entrez}. The systems biology of the data is of particular interest to this project, which may be investigated with enrichment analyses. % or STRING \citep{szklarczyk2016string}
-\ac{GO} terms and \ac{KEGG} \citep{kanehisa2017kegg} pathway enrichment allow for comparisons between genes according to their functional role in a biological system. Further enrichment analyses may lead to three approaches, as described by \citep{khatri2012ten} and \cite{alhamdoosh2017combining}:
+The steps of the pipeline up until this point are quite standard, although there are various approaches one may take, the aim of each step is clear and consistent across all RNA-seq studies. Further exploration of the data is highly specific to the experimental design and research question. Putting the data into its biological context is a type of sanity check. Deviation from biological expectations is often an indication of issues in the upstream analysis.
+
+\subsubsection{Graphical Representation}
+
+Graphical representation of the gathered information about the samples thus far conveys the information in a more human-readable format and allows for easier pinpointing of differences and potential batch effects. In plots which cluster data according to similarity, replicates should form distinct clusters. Two replicates which apparently switched clusters is a good indication of a potential sample swap. 
+
+%Sashimi plot
+\begin{enumerate}
+\item[] \textbf{Multidimensional Scaling (MDS)} \hspace{0.15cm} RNA-seq data deals with thousands of dimensions, making it difficult to interpret and impossible to use conventional plotting methods. MDS is type of non-linear dimensionality reduction used to mitigate this issue \citep{yin2007nonlinear}. It is a between-sample measure of similarity which plots pairwise distances using Cartesian coordinates \citep{mead1992review}. 
+
+\item[] \textbf{Principal Component Analysis (PCA)} \hspace{0.15cm} Similar to MDS in scope except that it is a \textit{linear} dimensionality reduction technique. PCA transforms the data to find the combination of variables which explains the maximum variation in the data. 
+
+\item[] \textbf{Heatmaps and Clustering} \hspace{0.15cm} Often used in combination with each other, with a colour gradient in the heatmap signifying the  logFC for each \ac{DEG} in the list, which are clustered according to similar expression patterns.
+
+\item[] \textbf{Mean-Difference (MD)} \hspace{0.15cm} In other fields, it is used to determine if two methods of measurement are in agreement \citep{fry2008visualizing}. In RNA-seq it is used to compare the \ac{logFC} of each gene of a given sample against the mean \ac{logFC} of that respective gene.
+
+\item[] \textbf{Volcano Plot} \hspace{0.15cm} Plots the results of differential expression that plots the significance (adjusted \textit{p}-values) against the \ac{logFC}. Thresholds of each are often indicated by a change in colour of the points.
+\end{enumerate} 
+
+%Include some examples?
+
+\subsubsection{Annotation and Enrichment Analyses}
+
+The differentially expressed gene matrix may be annotated using the AnnotationDbi \citep{annotationdbi} R package which may access annotation libraries such as the human org.Hs.eg.db \citep{org.Hs.eg.db} which is based on Entrez gene identifiers \citep{maglott2005entrez}. The systems biology of the data is of particular interest to this project, which may be investigated with enrichment analyses. % or STRING \citep{szklarczyk2016string}
+\ac{GO} terms and \ac{KEGG} \citep{kanehisa2017kegg} pathway enrichment allow for comparisons between genes according to their functional role in a biological system. Further enrichment analyses may fork into three approaches, as described by \citep{khatri2012ten} and \cite{alhamdoosh2017combining}:
 
 \begin{enumerate}
-\item[] \textbf{Over-Representation Analysis (ORA)} \hspace{0.15cm} The gene list emerging from differential expression is compared to a list of genes associated with a specific pathway. The genes which overlap between the input list and the pathway list are tested for over- or under-representation (usually based on hypergeometric, chi-square, or binomial distribution) \citep{khatri2012ten}. While this information is useful, ORA is limited in that it only tests for the presence of a gene, and ignores any additional information (logFCs, \textit{p}-values, the effect of its products on other genes, etc).
+\item[] \textbf{Over-Representation Analysis (ORA)} \hspace{0.15cm} The gene list emerging from differential expression is compared to a list of genes associated with a specific pathway. The genes which overlap between the input list and the pathway list are tested for over- or under-representation (usually based on hypergeometric, chi-square, or binomial distribution) \citep{khatri2012ten}. While this information is useful, ORA is limited in that it only tests for the presence of a gene, and ignores any additional information (\ac{logFC}s, \textit{p}-values, the effect of its products on other genes, etc).
 
-\item[] \textbf{\ac{GSEA}} \hspace{0.15cm} The limitations to the ORA approach led to the development of an alternative method, GSEA. The philosophy behind GSEA is that although large fold-changes in individual genes can have a significant biological effect, so can weaker changes in genes with a disproportionate effect on the pathway. \cite{luo2009gage} describe the term \textit{gene set} as a pre-defined group of functionally related genes (e.g. which share \ac{GO} terms or form part of the same \ac{KEGG} pathway). \ac{GSEA} is generally performed in three steps: (i) generation of gene-level statistics (e.g. ANOVA) which may be transformed (e.g. absolute values), (ii) statistical results are combined into a single value per gene set (e.g. Wilcoxon rank sum \citep{barry2005significance}) and (iii) the statistical significance of the gene-set-level statistic are assessed. Although an improvement over the previous method, GSEA treats gene sets separately and does not consider that a gene may be involved in multiple sets.
+\item[] \textbf{\ac{GSEA}} \hspace{0.15cm} The limitations to the ORA approach led to the development of an alternative method, GSEA. The philosophy behind GSEA is that although large fold-changes in individual genes can have a significant biological effect, so can weaker changes in genes with a disproportionate effect on the pathway. \cite{luo2009gage} describe the term \textit{gene set} as a pre-defined group of functionally related genes, which may share a common biological pathway or ontology term. \ac{GSEA} is generally performed in three steps: (i) generation of gene-level statistics (e.g. ANOVA) which may be transformed (e.g. absolute values), (ii) statistical results are combined into a single value per gene set (e.g. Wilcoxon rank sum \citep{barry2005significance}) and (iii) the statistical significance of the gene-set-level statistic are assessed. Although an improvement over the previous method, GSEA treats gene sets separately and does not consider that a gene may be involved in multiple sets.
 
 \item[] \textbf{Pathway Topology (PT)} \hspace{0.15cm} Building upon the previous two technologies, PT approaches take into account interactions between gene products, and the nature of their interaction (e.g. activation or inhibition). KEGG and STRING \citep{szklarczyk2016string} are examples of knowledge-bases which have sufficient information to perform PT. There are several potential approaches which are difficult to generalise but are reviewed extensively in \cite{ihnatova2018critical} and \cite{ma2019comparative}.
 
 \end{enumerate} 
 
-\subsubsection{GAGE}
+\subsubsection{GAGE and Pathview}
 %Put header here like other tools?
 %Generally Applicable Gene-set Enrichment (GAGE).
+% https://bioconductor.org/packages/release/bioc/vignettes/gage/inst/doc/RNA-seqWorkflow.pdf
 GAGE \citep{luo2009gage} performs \ac{GSEA}, where gene-set-level statistics are generated to check which gene sets are differentially expressed. %revsit 
+GAGE performs pair-wise comparison between samples by default to test for significantly differentiated KEGG pathways. 
 
-Pathview \citep{luo2013pathview}, like GAGE, is a Bioconductor \citep{gentleman2004bioconductor} R package which visualises GAGE results as an image of the chosen KEGG pathway highlighting the differentially expressed genes according to their logFCs. SBGNview \citep{dong2022sbgnview} offers a wider array of species and pathway knowledge-bases if such are desired. It supports two methods for pathway visualisation: the native KEGG view and the third party Graphviz \citep{ellson2001graphviz}. Graphiz provides better control over the graphical nodes and edges, at the cost of certain pathway metadata	 (e.g. cell types, temporal information).
+Pathview \citep{luo2013pathview}, like GAGE, is a Bioconductor \citep{gentleman2004bioconductor} R package which visualises GAGE results as an image of the chosen KEGG pathway highlighting the differentially expressed genes according to their \ac{logFC}s. Its sister library SBGNview \citep{dong2022sbgnview} offers a wider array of gene set knowledge-bases such as PANTHER \citep{mi2005panther}, Reactome \citep{croft2010reactome} and SMPDB \citep{frolkis2010smpdb}. Pathview supports two methods for pathway visualisation: the native KEGG view and the third party Graphviz \citep{ellson2001graphviz}. \cite{luo2013pathview} states that Graphiz provides better control over the graphical nodes and edges, at the expense of certain pathway metadata, namely cell types and temporal information.
+
+\ac{GO} term analysis is supported by GAGE, although frequently neglected due to the popularity of \textit{pathway} analysis as opposed to the more generalised \textit{gene set} analysis \citep{luo2009gage}. Since \ac{GO} terms do not contain information on molecular interactions, pathways similar to those constructed by Pathview are not an option. The data may be represented by heatmaps or scatterplots as arguments in the \texttt{geneData} function.
 
 %Include pathview image?
 
-
-goana edgeR function for GO annotations
-
-Graphical representation: PCA, multidimensional scaling (MDS), Venn diagrams, volcano plots, sashimi plots, mean-difference (MD) plot
-Limited by lack of replicates
 
 \section{Evaluation Criteria}
 Every step in the pipeline is followed by some sort of QC and potentially filtering of bad data, from trimming adapter sequences to filtering multimapped reads to removing very lowly expressed genes. It is not unlikely that errors of any form slip through, and for these reason the final results will be evaluated.
@@ -615,45 +645,61 @@ Every step in the pipeline is followed by some sort of QC and potentially filter
 The list of \ac{DEG}s will be checked against a list of housekeeping genes which will act similar to negative controls. Housekeeping genes are required for basic cellular function and must be expressed in both normal and pathological cells. While they may be differentially expressed in some cases \citep{greer2010housekeeping}, they are generally uniformly expressed with low variance. Repositories such as the Housekeeping and Reference Transcript Atlas (HRT Atlas) \citep{hounkpe2021hrt} were used as sources for the gene lists. % REVISIT THIS!!
 The genes and pathways affected by cancer, even those specifically affected by \ac{AML} are well studied, annotated and aggregated in repositories such as GeneCards \citep{stelzer2016genecards} or OMIM \citep{hamosh2005online}. Thus the biological relevance of these genes in relation to these pathways will be checked.
 
-In future work, if more funds are acquired, similar work could be conducted with more technical replicates to confirm the findings of this project with greater statistical power. To decrease the number of sequencing errors, Sanger Sequencing could potentially be used, given its 99.999\% accuracy rate and long read lengths of up to ~1000bp \citep{shendure2008next}.
+In future work, if more funds are acquired, similar work could be conducted with more technical replicates to confirm the findings of this project with greater statistical power. To decrease the number of sequencing errors, Sanger Sequencing could potentially be used, given its 99.999\% accuracy rate and long read lengths of up to \textasciitilde 1000bp \citep{shendure2008next}.
 
 \section{Related Work}
-\textbf{In this section you need to explain similar work in literature}.  Make sure to give a systematic overview of studies with related/similar work and highlight similarities/differences to your work (perhaps in the form of a table)
+This multidisciplinary project is based on multiple rapidly developing fields, thus it is important for the researcher to keep updated with the latest literature. This section will describe the methods and findings of literature which this project will build upon, namely those which cover: (i) the biochemical components of extra virgin olive oil and their potential application to clinical practice, (ii) compounds with chemotherapeutic potential in \ac{AML} and the resultant \ac{DEG}s and (iii) tools to construct an effective RNA-seq pipeline given our specific data.
 
 
-%feng2012gfold, gim2016lpeseq
+\subsection{Phenolic Compounds in Extra Virgin Olive Oil}
+The Mediterranean diet is rich in fruits, vegetables, fish, and olive oil, and is linked to lower rates of atherosclerosis, cancer and cardiovascular disease \citep{owen2000, tripoli2005phenolic, cicerale2012antimicrobial, fabiani2002cancer}. This is attributed in part to the higher intake of extra virgin olive oil, and more specifically, its phenolic compounds. These have been the subject of extensive investigation as a result of their antimicrobial, antioxidant and anti-inflammatory properties \citep{cicerale2012antimicrobial, tripoli2005phenolic, bendini2007phenolic, serreli2018biological, iwen2000}. \cite{tripoli2005phenolic} attributes olive oil's slightly bitter and pungent taste to hydroxytyrosol and oleuropein, which both exhibited antioxidant activity.
 
-% rlly good for DGE file:///C:/Users/matth/OneDrive/Desktop/Msc%20Bioinformatics/!MMB5010%20DISSERTATION-DESKTOP-A2009SI/Literature/Tutorials/Introduction%20to%20differential%20gene%20expression%20analysis%20using%20RNA-seq.pdf 
+\cite{owen2000} split the biochemical profile of olive oils into three classes: (i) simple phenols (e.g. hydroxytyrosol, tyrosol), (ii) secoiridoids (e.g. oleuropein) and (iii) the lignans (e.g. pinoresinol). All three classes have shown antioxidant properties.
 
+\cite{gatt2021first} was the first to characterise the phenolic profiles of Maltese extra virgin olive oils. Through liquid-liquid extraction and liquid chromatography mass-spectrometry, they found that the major constituents are tyrosol, hydroxytyrosol (\autoref{fig:tyrosol_hydroxytyrosol}) and their derivatives. This is in accordance to olive oils from other sources (\citep{Angerosa1995}), although the compound concentrations may vary. These two classes of simple phenols have been the main focus of clinical research related to olive oil extracts.
 
-\subsection{Adapting Differential Gene Expression Analysis to a Lack of Replicates}
-\label{Adapting Differential Gene Expression Analysis to a Lack of Replicates}
-The accuracy of any statistical analysis is highly dependent on the number of experimental (?) replicates. Large numbers of replicates
-
-This is a prevalent limitation in RNA-seq experiments due to their costly nature, where researchers are limited by their budget to a small number of replicates. To make the most of such datasets, several tools have been developed especially for this situation, or provide advice on how to adjust the analysis according to the data (REF!). Notably, the most cited tool for \ac{DGE} analysis, DESeq2 (REF!), had revoked its support for such datasets in version (VERSION?).
-
-...Many methods have been compared
-
-[Table with methods and pros and cons]
-
-% We have no replicates and thus no statistical power
-% the technical variance of RNA-seq is negligible (Bullard et al. 2010) (AND WE HAVE LITTLE TO NO BIOLOGICAL VARIANCE ACCORDING TO CELL LINE)
-
-LPEseq
-•	https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159182
-•	local-pooled-error (LPE)
- outperformed the others for non-replicated datasets, and showed a similar performance with replicated samples
-able to accurately test differential expression with a limited number of samples, in particular non-replicated samples (own paper)
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=8cm]{tyrosol_hydroxytyrosol}
+    \caption[Chemical structures of tyrosol and hydroxytyrosol]{Chemical structures of tyrosol and hydroxytyrosol. The rest of the phenolic profile of extra virgin olive oils consists of derivatives of these two compounds.} 
+    \label{fig:tyrosol_hydroxytyrosol}
+\end{figure}
 
 
-GFold
-•	https://zhanglab.tongji.edu.cn/softwares/GFOLD/index.html
-•	https://pubmed.ncbi.nlm.nih.gov/22923299/
-•	especially useful when no replicate is available
-•	assigns reliable statistics for expression changes based on the posterior distribution of log fold change.
+There is abundant literature on the role of natural phenolic compounds in general in the prevention and treatment of cancer. This is achieved by regulating the cell cycle \citep{jafari2014role} and the epigenome \citep{pan2015breast}. These compounds may complement traditional chemotherapeutic treatments, potentially lessening the use of chemicals with severe side-effects on the patients. \cite{gatt2021phenolic} provide a comprehensive review on phenolic effects on leukaemia \textit{in vitro}, \textit{in vivo} and in clinical practice. Literature on the effects of specifically olive oil-derived phenolic compounds on cancer shall be covered in Section \ref{Differentiation_AML}.
 
-edgeR had many ways to perform DGE:
-Likelihood Ratio Test which compared values against their mean. This was not applicable for our dataset because we needed to compare the treated values against the untreated values
+\subsection{Differentiation of HL60 cells by Phenolic Compounds Derived from Olive Oil}
+\label{Differentiation_AML}
+There is a great scientific initiative to identify compounds which induce apoptosis, necrosis or differentiation in cancerous cells, and to analyse the effects these compounds have on the biochemistry of the cell. Even the seemingly specific topic of the differentiation of HL60 cells by phenolic compounds derived from olive oil, yields myriad peer-reviewed studies, earning it a distinct section in this literature review.
+
+Differentiation therapy has changed the prognosis of \ac{AML}, and has shown a surge in academic interest after the success of \ac{ATRA} (see Section \ref{Treatment Methods}). In successful differentiation therapy, the undifferentiated myeloid cells will be induced to take an epigenetic path, culminating in apoptosis \citep{santos2000expression, mark2017transcriptomes}. 
+
+The similarity in experimental design and goals makes \cite{gatt2021tyrosol} a particularly important study to build upon. The study was successful in inducing differentiation and significant apoptosis in an HL60 cell line using tyrosol derived from Maltese extra virgin olive oil as a differentiation agent. The differentiated cells exhibited visual characteristics of neutrophils and monocytes, which were subjected to a bulk RNA-seq analysis. They defined a total of 199 \ac{DEG}s. The \textit{Myeloid differentiation} \ac{GO} term (\ac{GO}:0030099) genes were significantly upregulated (OSCAR, RELB, VEGFA, GAB2, JUNB, DNASE2, ICAM, CCL3), particularly monocyte genes. Transcription factors IRF1, IRF7, STAT2, RelB, NFKB2, ATF3, and BCL3 and chemokines CCL3 and CCL4 were all found to be upregulated. At a pathway-level, Neutrophil Degranulation (CEACAM6, CLEC5A, FPR1, SERPINA1, ELANE, AZU1, PRG2) and Cholesterol biosynthesis (LSS, SQLE, ACAT2, DHCR7 HMGCS1, FDFT1) were found to be downregulated.
+
+\cite{fabiani2008inhibition} found hydroxytyrosol treatment over a period of 25 hours to bring about an upregulation in cyclin-dependent protein kinase inhibitors CDKN1A and CDKN1B, which induced apoptosis. Cell proliferation inhibition was directly proportional to the increase in time and phenoli extract concentration.
+
+In multidrug resistant HL60 cells, \cite{crescimanno2009effects} nduced the expression of the granulocytic CD11 or monocytic CD14 cell surface antigens using a crude phenolic extract.
+
+% The importance of VEGFA in myeloid cell differentiation has also been reported by Huang et al., 2017 while Czepluch et al., 2011 discussed its expression in two monocyte subsets [40,41], showing its role in monocyte chemotaxis.
+% JUNB has been found to regulate the responses of monocytes to different immunostimulatory ligands, and its levels have also been reported to increase during monocyte maturation [42]
+
+% Matikainen et al., 1997 have also reported the activation of STAT2 in myeloid cell differentiation
+
+% papers that used RNA-seq for the treatment of cancers
+
+\subsection{Determining the Optimal Tools}
+As a result of the decentralised and rapidly changing nature of the field of bioinformatics, there is a lack of standardisation. There is currently no one-size-fits-all tool or library, so the bioinformatician must evaluate the numerous trade-offs of the available tools, for every step of their sequencing pipeline, in accordance to their individual dataset and their desired result. This was our first objective, listed in Section \ref{Aim and Objectives}. To find the most appropriate tools for our data, an extensive literature search was conducted. The studies were split into three categories, each harbouring its own tabular summary which includes the tools used at each step:
+
+\begin{enumerate}
+\item Review papers, meta-analyses, studies which benchmark tools (\autoref{})
+\item RNA-seq experiments with somewhat similar conditions and goals (\autoref{})
+\item Ready-made, packaged pipelines (\autoref{})
+\item[NOTE] Studies which presented a new tool were excluded due to their inherent bias.
+\end{enumerate}
+
+The first category will summarise the findings of studies which compare similar tools. The second and third sections aim to garner information on which tools are being used in practice and integrated into pipelines.
+% Review papers: \citep{Soneson2013}, \citep{Li1371}, \citep{Luecken2019}, \citep{Zhang2017}, \citep{Conesa2016}, \citep{Cirillo0017}, \citep{Teng2016}
+
 
 \begin{landscape}
 	\pagestyle{empty}
@@ -662,11 +708,11 @@ Likelihood Ratio Test which compared values against their mean. This was not app
 	\tiny
     \centering
     \captionsetup{font=scriptsize}
-    \caption{Studies which compare RNA-seq tools or work-flows, including the tools used at each step and their conclusion summarised to one or two sentences. Those which propose a novel tool were not considered due to their inherit bias.}
+    \caption{Studies which compare RNA-seq tools or work-flows, including their conclusion summarised to one or two sentences.}
     \begin{adjustwidth}{-1cm}{}
     \begin{tabular}{llllllllllllllllll}
 		\toprule
-        \textbf{Reference} & \textbf{Preprocessing} & \textbf{Mapping} & \textbf{Quantification} & \textbf{Normalisation} & \textbf{Differential expression} & \textbf{Summarised conclusion}  \\ \midrule
+        \textbf{Reference} & \textbf{Preprocessing} & \textbf{Alignment} & \textbf{Quantification} & \textbf{Normalisation} & \textbf{Differential expression} & \textbf{Summarised conclusion}  \\ \midrule
         \cite{williams2017empirical} & / &  Bowtie2, HISAT2, Kallisto, & Sailfish, Kallisto,  & / & Ballgown, baySeq, BitSeq,  & Different workflows exhibit a precision/recall   \\ 
         ~ & ~ &  Salmon, Sailfish, SeqMap,  & Salmon & ~ & cuffdiff, DESeq2, EBseq,  & tradeoff,  the method of differential gene  \\ 
         ~ & ~ & STAR, TopHat2 & ~ & ~ & NOISeqBIO, SAMseq, Sleuth,  &  expression exhibited the strongest impact  \\ 
@@ -708,18 +754,45 @@ Likelihood Ratio Test which compared values against their mean. This was not app
 \end{table}
 \end{landscape}
 
-Note that this section may be sectioned based on the different aspects of your dissertation.
 
-Talk about papers that used RNA-seq for the treatment of cancers
+\subsubsection{Adapting DGE Analysis to a Lack of Replicates}
+
+%feng2012gfold, gim2016lpeseq
+
+The accuracy of any statistical analysis is dependent on the number of replicates. Technical replicates allow the isolation of the non-biological variation to evaluate the quality of the instruments and methodology used. Biological replicates originate from different biological sources and are meant to test the biological variance of the samples. \cite{liu2014rna} find that in RNAseq biological variation is by far more important, and given a choice between the two, the researcher should invest in biological replicates. \cite{bullard2010evaluation} confirm this claim, finding that technical variation in RNAseq experiments is minimal. \cite{schurch2016many} found that using three biological replicates gave 20\% to 40\% of the \ac{DEG}s (varies according to the tool) compared to a full set of 42 replicates (representing the 'true' population). This rises to >85\% when considering genes with a log$_2$ fold change of >2. \cite{schurch2016many} state that ideally an RNAseq experiment for \ac{DGE} should have a minimum of six replicates per condition for all experiments and 12 replicates for experiments where the identification of \textit{all} the \ac{DEG}s, even the lowly expressed ones, is important. \cite{schurch2016many} recommends edgeR (\texttt{exactTest)) or DESeq2 for experiments with <12 replicates per condition.
+
+% really perfect paper https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4878611/#:~:text=Recommendations%20for%20RNA%2Dseq%20experiment%20design&text=At%20least%20six%20replicates%20per,all%20DE%20genes%20is%20important.
+
+This is a prevalent limitation in RNA-seq experiments due to their costly nature, where researchers are limited by their budget to a small number of replicates. To make the most of such datasets, several tools have been developed especially for this situation, or provide advice on how to adjust the analysis according to the data (REF!). Notably, the most cited tool for \ac{DGE} analysis, DESeq2 (REF!), had revoked its support for such datasets in version (VERSION?).
+
+...Many methods have been compared
+
+[Table with methods and pros and cons]
+
+
+
+LPEseq
+•	https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159182
+•	local-pooled-error (LPE)
+ outperformed the others for non-replicated datasets, and showed a similar performance with replicated samples
+able to accurately test differential expression with a limited number of samples, in particular non-replicated samples (own paper)
+
+
+GFold
+•	https://zhanglab.tongji.edu.cn/softwares/GFOLD/index.html
+•	https://pubmed.ncbi.nlm.nih.gov/22923299/
+•	especially useful when no replicate is available
+•	assigns reliable statistics for expression changes based on the posterior distribution of log fold change.
+
+
+
+
+\subsubsection{Conclusion on Tool Choice}
+
+
 Despite STAR needing a lot of RAM, this was not a limiting factor due to our access to a High Performance Computer (HPC) and small number of samples
-
-%file:///C:/Users/matth/OneDrive/Desktop/Msc%20Bioinformatics/!MMB5010%20DISSERTATION-DESKTOP-A2009SI/Literature/Oncology%20of%20AML/LUCIENNE%20Phenolic%20compounds.pdf
-
-%Maybe alter template to include more cells like the template in wikipedia :https://en.wikipedia.org/wiki/Myeloid_tissue#/media/File:Hematopoiesis_(human)_diagram_en.svg
-
-
-
-
-
+% We have no replicates and thus no statistical power
+% the technical variance of RNA-seq is minimal (Bullard et al. 2010) (AND WE HAVE LITTLE TO NO BIOLOGICAL VARIANCE ACCORDING TO CELL LINE)
+ \cite{schurch2016many} recommends edgeR (\texttt{exactTest)) or DESeq2 for experiments with <12 replicates per condition.
 
 \section{Summary}
