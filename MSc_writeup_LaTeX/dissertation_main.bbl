@@ -1,4 +1,4 @@
-\begin{thebibliography}{182}
+\begin{thebibliography}{205}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -9,6 +9,13 @@
 Acute myeloid leukemia (aml) subtypes and prognostic factors.
 \newblock URL
   \url{https://www.cancer.org/cancer/acute-myeloid-leukemia/detection-diagnosis-staging/how-classified.html}.
+
+\bibitem[Al~Seesi et~al.(2014)Al~Seesi, Tiagueu, Zelikovsky, and
+  M{\u{a}}ndoiu]{al2014bootstrap}
+Al~Seesi, S., Tiagueu, Y.~T., Zelikovsky, A., and M{\u{a}}ndoiu, I.~I.
+\newblock Bootstrap-based differential gene expression analysis for rna-seq
+  data with and without replicates.
+\newblock In \emph{BMC genomics}, volume~15, pages 1--10. BioMed Central, 2014.
 
 \bibitem[Albert(2020)]{albert2020biostar}
 Albert, I.
@@ -31,6 +38,11 @@ Altschul, S.~F., Madden, T.~L., Sch{\"a}ffer, A.~A., Zhang, J., Zhang, Z.,
   search programs.
 \newblock \emph{Nucleic acids research}, 25\penalty0 (17):\penalty0 3389--3402,
   1997.
+
+\bibitem[Anders and Huber(2010)]{anders2010differential}
+Anders, S. and Huber, W.
+\newblock Differential expression analysis for sequence count data.
+\newblock \emph{Nature Precedings}, pages 1--1, 2010.
 
 \bibitem[Andrews(2016)]{andrews2016mapq}
 Andrews, S.
@@ -133,6 +145,14 @@ Cantu, V.~A., Sadural, J., and Edwards, R.
   control and preprocessing of sequencing datasets.
 \newblock 2019.
 
+\bibitem[Cardoso-Moreira et~al.(2019)Cardoso-Moreira, Halbert, Valloton,
+  Velten, Chen, Shao, Liechti, Ascen{\c{c}}{\~a}o, Rummel, Ovchinnikova,
+  et~al.]{cardoso2019gene}
+Cardoso-Moreira, M., Halbert, J., Valloton, D., Velten, B., Chen, C., Shao, Y.,
+  Liechti, A., Ascen{\c{c}}{\~a}o, K., Rummel, C., Ovchinnikova, S., et~al.
+\newblock Gene expression across mammalian organ development.
+\newblock \emph{Nature}, 571\penalty0 (7766):\penalty0 505--509, 2019.
+
 \bibitem[Carlson(2015)]{annotationdbi}
 Carlson, M.
 \newblock Annotationdbi: Introduction to bioconductor annotation packages,
@@ -186,14 +206,6 @@ Chomienne, C., Ballerini, P., Balitrand, N., Daniel, M.~T., Fenaux, P.,
   vitro studies: structure-function relationship.
 \newblock 1990.
 
-\bibitem[Chung et~al.(2021)Chung, Bruno, Rasko, Cuomo, Mu{\~n}oz, Livny,
-  Shetty, Mahurkar, and Hotopp]{chung2021best}
-Chung, M., Bruno, V.~M., Rasko, D.~A., Cuomo, C.~A., Mu{\~n}oz, J.~F., Livny,
-  J., Shetty, A.~C., Mahurkar, A., and Hotopp, J. C.~D.
-\newblock Best practices on the differential expression analysis of
-  multi-species rna-seq.
-\newblock \emph{Genome biology}, 22\penalty0 (1):\penalty0 1--23, 2021.
-
 \bibitem[Cicerale et~al.(2012)Cicerale, Lucas, and
   Keast]{cicerale2012antimicrobial}
 Cicerale, S., Lucas, L., and Keast, R.
@@ -201,6 +213,13 @@ Cicerale, S., Lucas, L., and Keast, R.
   in extra virgin olive oil.
 \newblock \emph{Current opinion in biotechnology}, 23\penalty0 (2):\penalty0
   129--135, 2012.
+
+\bibitem[Cloonan et~al.(2008)Cloonan, Forrest, Kolle, Gardiner, Faulkner,
+  Brown, Taylor, Steptoe, Wani, Bethel, et~al.]{cloonan2008stem}
+Cloonan, N., Forrest, A.~R., Kolle, G., Gardiner, B., Faulkner, G.~J., Brown,
+  M.~K., Taylor, D.~F., Steptoe, A.~L., Wani, S., Bethel, G., et~al.
+\newblock Stem cell transcriptome profiling via massive-scale mrna sequencing.
+\newblock \emph{Nature methods}, 5\penalty0 (7):\penalty0 613--619, 2008.
 
 \bibitem[Cobb(2017)]{cobb201760}
 Cobb, M.
@@ -214,19 +233,29 @@ Cock, P.~J., Fields, C.~J., Goto, N., Heuer, M.~L., and Rice, P.~M.
 \newblock \emph{Nucleic acids research}, 38\penalty0 (6):\penalty0 1767--1771,
   2010.
 
-\bibitem[Conesa et~al.(2016)Conesa, Madrigal, Tarazona, Gomez-Cabrero, Cervera,
-  McPherson, Szcze{\'s}niak, Gaffney, Elo, Zhang, et~al.]{conesa2016survey}
-Conesa, A., Madrigal, P., Tarazona, S., Gomez-Cabrero, D., Cervera, A.,
-  McPherson, A., Szcze{\'s}niak, M.~W., Gaffney, D.~J., Elo, L.~L., Zhang, X.,
-  et~al.
-\newblock A survey of best practices for rna-seq data analysis.
-\newblock \emph{Genome biology}, 17\penalty0 (1):\penalty0 1--19, 2016.
+\bibitem[Cornwell et~al.(2018)Cornwell, Vangala, Taing, Herbert, K{\"o}ster,
+  Li, Sun, Li, Zhang, Qiu, et~al.]{cornwell2018viper}
+Cornwell, M., Vangala, M., Taing, L., Herbert, Z., K{\"o}ster, J., Li, B., Sun,
+  H., Li, T., Zhang, J., Qiu, X., et~al.
+\newblock Viper: Visualization pipeline for rna-seq, a snakemake workflow for
+  efficient and complete rna-seq analysis.
+\newblock \emph{BMC bioinformatics}, 19\penalty0 (1):\penalty0 1--14, 2018.
 
 \bibitem[Cox and Reid(1987)]{cox1987parameter}
 Cox, D.~R. and Reid, N.
 \newblock Parameter orthogonality and approximate conditional inference.
 \newblock \emph{Journal of the Royal Statistical Society: Series B
   (Methodological)}, 49\penalty0 (1):\penalty0 1--18, 1987.
+
+\bibitem[Crescimanno et~al.(2009)Crescimanno, Sepporta, Tripoli, Flandina,
+  Giammanco, Tumminello, Di~Majo, Tolomeo, La~Guardia, and
+  Leto]{crescimanno2009effects}
+Crescimanno, M., Sepporta, M., Tripoli, E., Flandina, C., Giammanco, M.,
+  Tumminello, F., Di~Majo, D., Tolomeo, M., La~Guardia, M., and Leto, G.
+\newblock Effects of extra virgin olive oil phenols on hl60 cell lines
+  sensitive and resistant to anthracyclines.
+\newblock \emph{Journal of Biological Research-Bollettino della Societ{\`a}
+  Italiana di Biologia Sperimentale}, 82\penalty0 (1), 2009.
 
 \bibitem[Croft et~al.(2010)Croft, O’kelly, Wu, Haw, Gillespie, Matthews,
   Caudy, Garapati, Gopinath, Jassal, et~al.]{croft2010reactome}
@@ -235,6 +264,14 @@ Croft, D., O’kelly, G., Wu, G., Haw, R., Gillespie, M., Matthews, L., Caudy,
 \newblock Reactome: a database of reactions, pathways and biological processes.
 \newblock \emph{Nucleic acids research}, 39\penalty0 (suppl\_1):\penalty0
   D691--D697, 2010.
+
+\bibitem[Dalton~Jr et~al.(1988)Dalton~Jr, Ahearn, McCredie, Freireich, Stass,
+  and Trujillo]{dalton1988hl}
+Dalton~Jr, W.~T., Ahearn, M.~J., McCredie, K.~B., Freireich, E.~J., Stass,
+  S.~A., and Trujillo, J.~M.
+\newblock Hl-60 cell line was derived from a patient with fab-m2 and not
+  fab-m3.
+\newblock \emph{Blood}, 71\penalty0 (1):\penalty0 242--247, 1988.
 
 \bibitem[Davis(2019)]{davis2019}
 Davis, S.
@@ -333,6 +370,14 @@ Ewels, P., Magnusson, M., Lundin, S., and K{\"a}ller, M.
   a single report.
 \newblock \emph{Bioinformatics}, 32\penalty0 (19):\penalty0 3047--3048, 2016.
 
+\bibitem[Ewels et~al.(2020)Ewels, Peltzer, Fillinger, Patel, Alneberg, Wilm,
+  Garcia, Di~Tommaso, and Nahnsen]{ewels2020nf}
+Ewels, P.~A., Peltzer, A., Fillinger, S., Patel, H., Alneberg, J., Wilm, A.,
+  Garcia, M.~U., Di~Tommaso, P., and Nahnsen, S.
+\newblock The nf-core framework for community-curated bioinformatics pipelines.
+\newblock \emph{Nature biotechnology}, 38\penalty0 (3):\penalty0 276--278,
+  2020.
+
 \bibitem[Ewing et~al.(1998)Ewing, Hillier, Wendl, and Green]{ewing1998base}
 Ewing, B., Hillier, L., Wendl, M.~C., and Green, P.
 \newblock Base-calling of automated sequencer traces usingphred. i. accuracy
@@ -348,11 +393,27 @@ Fabiani, R., De~Bartolomeo, A., Rosignoli, P., Servili, M., Montedoro, G., and
 \newblock \emph{European Journal of Cancer Prevention}, 11\penalty0
   (4):\penalty0 351--358, 2002.
 
+\bibitem[Fabiani et~al.(2008)Fabiani, Rosignoli, De~Bartolomeo, Fuccelli, and
+  Morozzi]{fabiani2008inhibition}
+Fabiani, R., Rosignoli, P., De~Bartolomeo, A., Fuccelli, R., and Morozzi, G.
+\newblock Inhibition of cell cycle progression by hydroxytyrosol is associated
+  with upregulation of cyclin-dependent protein kinase inhibitors p21waf1/cip1
+  and p27kip1 and with induction of differentiation in hl60 cells.
+\newblock \emph{The Journal of nutrition}, 138\penalty0 (1):\penalty0 42--48,
+  2008.
+
 \bibitem[Feise(2002)]{feise2002multiple}
 Feise, R.~J.
 \newblock Do multiple outcome measures require p-value adjustment?
 \newblock \emph{BMC medical research methodology}, 2\penalty0 (1):\penalty0
   1--4, 2002.
+
+\bibitem[Feng et~al.(2012)Feng, Meyer, Wang, Liu, Shirley~Liu, and
+  Zhang]{feng2012gfold}
+Feng, J., Meyer, C.~A., Wang, Q., Liu, J.~S., Shirley~Liu, X., and Zhang, Y.
+\newblock Gfold: a generalized fold change for ranking differentially expressed
+  genes from rna-seq data.
+\newblock \emph{Bioinformatics}, 28\penalty0 (21):\penalty0 2782--2788, 2012.
 
 \bibitem[Frenkel et~al.(1981)Frenkel, Ligler, Graham, Hernandez, Kettman~Jr,
   and Smith]{frenkel1981acute}
@@ -393,13 +454,35 @@ Fu, J., Liu, W., Zhou, J., Sun, H., Zheng, M., Huang, M., Li, C., Ran, D., and
 \newblock \emph{Zhonghua xue ye xue za zhi= Zhonghua Xueyexue Zazhi},
   26\penalty0 (6):\penalty0 352--354, 2005.
 
-\bibitem[Gatt et~al.(2021)Gatt, Lia, Zammit-Mangion, Thorpe, and
+\bibitem[Gallagher et~al.(1979)Gallagher, Collins, Trujillo, McCredie, Ahearn,
+  Tsai, Metzgar, Aulakh, Ting, Ruscetti, et~al.]{gallagher1979characterization}
+Gallagher, R., Collins, S., Trujillo, J., McCredie, K., Ahearn, M., Tsai, S.,
+  Metzgar, R., Aulakh, G., Ting, R., Ruscetti, F., et~al.
+\newblock Characterization of the continuous, differentiating myeloid cell line
+  (hl-60) from a patient with acute promyelocytic leukemia.
+\newblock 1979.
+
+\bibitem[Gatt and Schembri~Wismayer(2021)]{gatt2021phenolic}
+Gatt, L. and Schembri~Wismayer, P.
+\newblock Phenolic compounds -an emerging group of natural compounds against
+  leukaemia: in vitro, in vivo and clinical applications.
+\newblock 2021.
+
+\bibitem[Gatt et~al.(2021{\natexlab{a}})Gatt, Lia, Zammit-Mangion, Thorpe, and
   Schembri-Wismayer]{gatt2021first}
 Gatt, L., Lia, F., Zammit-Mangion, M., Thorpe, S.~J., and Schembri-Wismayer, P.
 \newblock First profile of phenolic compounds from maltese extra virgin olive
   oils using liquid-liquid extraction and liquid chromatography-mass
   spectrometry.
-\newblock \emph{Journal of Oleo Science}, page ess20130, 2021.
+\newblock \emph{Journal of Oleo Science}, page ess20130, 2021{\natexlab{a}}.
+
+\bibitem[Gatt et~al.(2021{\natexlab{b}})Gatt, Saliba, Schembri-Wismayer, and
+  Zammit-Mangion]{gatt2021tyrosol}
+Gatt, L., Saliba, D.~G., Schembri-Wismayer, P., and Zammit-Mangion, M.
+\newblock Tyrosol, at the concentration found in maltese extra virgin olive
+  oil, induces {HL}-60 differentiation towards the monocyte lineage.
+\newblock \emph{Applied Sciences}, 11\penalty0 (21):\penalty0 10199, oct
+  2021{\natexlab{b}}.
 
 \bibitem[Gatt(2016)]{Gatt2016}
 Gatt, L.~V.
@@ -415,6 +498,12 @@ Gentleman, R.~C., Carey, V.~J., Bates, D.~M., Bolstad, B., Dettling, M.,
 \newblock Bioconductor: open software development for computational biology and
   bioinformatics.
 \newblock \emph{Genome biology}, 5\penalty0 (10):\penalty0 1--16, 2004.
+
+\bibitem[Gim et~al.(2016)Gim, Won, and Park]{gim2016lpeseq}
+Gim, J., Won, S., and Park, T.
+\newblock Lpeseq: local-pooled-error test for rna sequencing experiments with a
+  small number of replicates.
+\newblock \emph{PloS one}, 11\penalty0 (8):\penalty0 e0159182, 2016.
 
 \bibitem[Green and Sambrook(2019)]{green2019win}
 Green, M.~R. and Sambrook, J.
@@ -485,10 +574,6 @@ Ihnatova, I., Popovici, V., and Budinska, E.
 \newblock A critical comparison of topology-based pathway analysis methods.
 \newblock \emph{PloS one}, 13\penalty0 (1):\penalty0 e0191154, 2018.
 
-\bibitem[Illumina(2010)]{HiSeq2000}
-Illumina.
-\newblock \emph{HiSeq 2000 Sequencing System Specification Sheet}, 2010.
-
 \bibitem[{Illumina}(2010)]{illumina2010}
 {Illumina}.
 \newblock Illumina sequencing technology.
@@ -499,6 +584,14 @@ Jacobs, A.~D., Schroff, R.~W., and Gale, R.~P.
 \newblock Acute transformation of chronic lymphocytic leukemia.
 \newblock \emph{Medical and pediatric oncology}, 12\penalty0 (5):\penalty0
   318--321, 1984.
+
+\bibitem[Jacobson et~al.(2020)Jacobson, Grand, Perry, Vickers, Olins, Olins,
+  and O'Sullivan]{jacobson2020hi}
+Jacobson, E.~C., Grand, R.~S., Perry, J.~K., Vickers, M.~H., Olins, A.~L.,
+  Olins, D.~E., and O'Sullivan, J.~M.
+\newblock Hi-c detects novel structural variants in hl-60 and hl-60/s4 cell
+  lines.
+\newblock \emph{Genomics}, 112\penalty0 (1):\penalty0 151--162, 2020.
 
 \bibitem[Jafari et~al.(2014)Jafari, Saeidnia, and Abdollahi]{jafari2014role}
 Jafari, S., Saeidnia, S., and Abdollahi, M.
@@ -523,6 +616,13 @@ Juliusson, G., Antunovic, P., Derolf, {\AA}., Lehmann, S., M{\"o}llg{\aa}rd,
   and outcomes from the swedish acute leukemia registry.
 \newblock \emph{Blood, The Journal of the American Society of Hematology},
   113\penalty0 (18):\penalty0 4179--4187, 2009.
+
+\bibitem[Kalari et~al.(2014)Kalari, Nair, Bhavsar, O’Brien, Davila, Bockol,
+  Nie, Tang, Baheti, Doughty, et~al.]{kalari2014map}
+Kalari, K.~R., Nair, A.~A., Bhavsar, J.~D., O’Brien, D.~R., Davila, J.~I.,
+  Bockol, M.~A., Nie, J., Tang, X., Baheti, S., Doughty, J.~B., et~al.
+\newblock Map-rseq: Mayo analysis pipeline for rna sequencing.
+\newblock \emph{BMC bioinformatics}, 15\penalty0 (1):\penalty0 1--11, 2014.
 
 \bibitem[Kanehisa et~al.(2017)Kanehisa, Furumichi, Tanabe, Sato, and
   Morishima]{kanehisa2017kegg}
@@ -588,12 +688,6 @@ Kukurba, K.~R. and Montgomery, S.~B.
 \newblock \emph{Cold Spring Harbor Protocols}, 2015\penalty0 (11):\penalty0
   pdb--top084970, 2015.
 
-\bibitem[Lancet(2018)]{lancet2018overall}
-Lancet, J.~E.
-\newblock Is the overall survival for older adults with aml finally improving?
-\newblock \emph{Best Practice \& Research Clinical Haematology}, 31\penalty0
-  (4):\penalty0 387--390, 2018.
-
 \bibitem[Langmead and Salzberg(2012)]{bowtie2}
 Langmead, B. and Salzberg, S.~L.
 \newblock Fast gapped-read alignment with bowtie 2.
@@ -605,12 +699,13 @@ Langmead, B., Trapnell, C., Pop, M., and Salzberg, S.~L.
   the human genome.
 \newblock \emph{Genome biology}, 10\penalty0 (3):\penalty0 1--10, 2009.
 
-\bibitem[Law et~al.(2016)Law, Alhamdoosh, Su, Dong, Tian, Smyth, and
-  Ritchie]{law2016rna}
-Law, C.~W., Alhamdoosh, M., Su, S., Dong, X., Tian, L., Smyth, G.~K., and
-  Ritchie, M.~E.
-\newblock Rna-seq analysis is easy as 1-2-3 with limma, glimma and edger.
-\newblock \emph{F1000Research}, 5, 2016.
+\bibitem[Lee et~al.(2020)Lee, Hong, Etlioglu, Cho, Pomella, Van~den Bosch,
+  Vanhecke, Verbandt, Hong, Min, et~al.]{lee2020lineage}
+Lee, H.-O., Hong, Y., Etlioglu, H.~E., Cho, Y.~B., Pomella, V., Van~den Bosch,
+  B., Vanhecke, J., Verbandt, S., Hong, H., Min, J.-W., et~al.
+\newblock Lineage-dependent gene expression programs influence the immune
+  landscape of colorectal cancer.
+\newblock \emph{Nature Genetics}, 52\penalty0 (6):\penalty0 594--603, 2020.
 
 \bibitem[Li and Dewey(2011)]{li2011rsem}
 Li, B. and Dewey, C.~N.
@@ -651,6 +746,13 @@ Liang, J.~C., Ning, Y., Wang, R.-y., Padilla-Nash, H.~M., Schr{\"o}ck, E.,
 \newblock \emph{Cancer genetics and cytogenetics}, 113\penalty0 (2):\penalty0
   105--109, 1999.
 
+\bibitem[Liao and Shi(2020)]{liao2020read}
+Liao, Y. and Shi, W.
+\newblock Read trimming is not required for mapping and quantification of
+  rna-seq reads at the gene level.
+\newblock \emph{NAR genomics and bioinformatics}, 2\penalty0 (3):\penalty0
+  lqaa068, 2020.
+
 \bibitem[Lin et~al.(2016)Lin, Golovnina, Chen, Lee, Negron, Sultana, Oliver,
   and Harbison]{lin2016comparison}
 Lin, Y., Golovnina, K., Chen, Z.-X., Lee, H.~N., Negron, Y. L.~S., Sultana, H.,
@@ -667,6 +769,14 @@ Lindsley, R.~C., Mar, B.~G., Mazzola, E., Grauman, P.~V., Shareef, S., Allen,
   mutations.
 \newblock \emph{Blood, The Journal of the American Society of Hematology},
   125\penalty0 (9):\penalty0 1367--1376, 2015.
+
+\bibitem[Lister et~al.(2008)Lister, O'Malley, Tonti-Filippini, Gregory, Berry,
+  Millar, and Ecker]{lister2008highly}
+Lister, R., O'Malley, R.~C., Tonti-Filippini, J., Gregory, B.~D., Berry, C.~C.,
+  Millar, A.~H., and Ecker, J.~R.
+\newblock Highly integrated single-base resolution maps of the epigenome in
+  arabidopsis.
+\newblock \emph{Cell}, 133\penalty0 (3):\penalty0 523--536, 2008.
 
 \bibitem[Liu et~al.(2004)Liu, Hsieh, and Lam]{liu2004new}
 Liu, R., Hsieh, C.-Y., and Lam, K.~S.
@@ -740,6 +850,13 @@ Malard, F. and Mohty, M.
 \newblock Acute lymphoblastic leukaemia.
 \newblock \emph{The Lancet}, 395\penalty0 (10230):\penalty0 1146--1162, 2020.
 
+\bibitem[Mark~Welch et~al.(2017)Mark~Welch, Jauch, Langowski, Olins, and
+  Olins]{mark2017transcriptomes}
+Mark~Welch, D.~B., Jauch, A., Langowski, J., Olins, A.~L., and Olins, D.~E.
+\newblock Transcriptomes reflect the phenotypes of undifferentiated,
+  granulocyte and macrophage forms of hl-60/s4 cells.
+\newblock \emph{Nucleus}, 8\penalty0 (2):\penalty0 222--237, 2017.
+
 \bibitem[Martin(2011)]{martin2011cutadapt}
 Martin, M.
 \newblock Cutadapt removes adapter sequences from high-throughput sequencing
@@ -776,6 +893,12 @@ McIntyre, L.~M., Lopiano, K.~K., Morse, A.~M., Amin, V., Oberg, A.~L., Young,
 \newblock Rna-seq: technical variability and sampling.
 \newblock \emph{BMC genomics}, 12\penalty0 (1):\penalty0 1--13, 2011.
 
+\bibitem[Mead(1992)]{mead1992review}
+Mead, A.
+\newblock Review of the development of multidimensional scaling methods.
+\newblock \emph{Journal of the Royal Statistical Society: Series D (The
+  Statistician)}, 41\penalty0 (1):\penalty0 27--39, 1992.
+
 \bibitem[Metzler et~al.(2004)Metzler, Strissel, Strick, Niemeyer, Roettgers,
   Borkhardt, Harbott, Ludwig, Stanulla, Schrappe, et~al.]{metzler2004emergence}
 Metzler, M., Strissel, P.~L., Strick, R., Niemeyer, C., Roettgers, S.,
@@ -801,11 +924,28 @@ Mi, H., Lazareva-Ulitsky, B., Loo, R., Kejariwal, A., Vandergriff, J., Rabkin,
 \newblock \emph{Nucleic acids research}, 33\penalty0 (suppl\_1):\penalty0
   D284--D288, 2005.
 
+\bibitem[Morgulis et~al.(2006)Morgulis, Gertz, Sch{\"a}ffer, and
+  Agarwala]{morgulis2006fast}
+Morgulis, A., Gertz, E.~M., Sch{\"a}ffer, A.~A., and Agarwala, R.
+\newblock A fast and symmetric dust implementation to mask low-complexity dna
+  sequences.
+\newblock \emph{Journal of Computational Biology}, 13\penalty0 (5):\penalty0
+  1028--1040, 2006.
+
 \bibitem[Mortazavi et~al.(2008)Mortazavi, Williams, McCue, Schaeffer, and
   Wold]{mortazavi2008mapping}
 Mortazavi, A., Williams, B.~A., McCue, K., Schaeffer, L., and Wold, B.
 \newblock Mapping and quantifying mammalian transcriptomes by rna-seq.
 \newblock \emph{Nature methods}, 5\penalty0 (7):\penalty0 621--628, 2008.
+
+\bibitem[Mostafavi et~al.(2014)Mostafavi, Battle, Zhu, Potash, Weissman, Shi,
+  Beckman, Haudenschild, McCormick, Mei, et~al.]{mostafavi2014type}
+Mostafavi, S., Battle, A., Zhu, X., Potash, J.~B., Weissman, M.~M., Shi, J.,
+  Beckman, K., Haudenschild, C., McCormick, C., Mei, R., et~al.
+\newblock Type i interferon signaling genes in recurrent major depression:
+  increased expression detected by whole-blood rna sequencing.
+\newblock \emph{Molecular psychiatry}, 19\penalty0 (12):\penalty0 1267--1274,
+  2014.
 
 \bibitem[Mr{\'o}zek et~al.(2000)Mr{\'o}zek, Heinonen, and
   Bloomfield]{mrozek2000prognostic}
@@ -815,10 +955,13 @@ Mr{\'o}zek, K., Heinonen, K., and Bloomfield, C.~D.
 \newblock \emph{International journal of hematology}, 72\penalty0 (3):\penalty0
   261--271, 2000.
 
-\bibitem[NCBI(2019)]{ref}
-NCBI.
-\newblock Grch38.p13, February 2019.
-\newblock URL \url{https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.39/}.
+\bibitem[Nagalakshmi et~al.(2008)Nagalakshmi, Wang, Waern, Shou, Raha,
+  Gerstein, and Snyder]{nagalakshmi2008transcriptional}
+Nagalakshmi, U., Wang, Z., Waern, K., Shou, C., Raha, D., Gerstein, M., and
+  Snyder, M.
+\newblock The transcriptional landscape of the yeast genome defined by rna
+  sequencing.
+\newblock \emph{Science}, 320\penalty0 (5881):\penalty0 1344--1349, 2008.
 
 \bibitem[Needleman and Wunsch(1970)]{needleman1970general}
 Needleman, S.~B. and Wunsch, C.~D.
@@ -855,11 +998,6 @@ O'Neil, D., Glowatz, H., and Schlumpberger, M.
 \newblock Ribosomal rna depletion for efficient use of rna-seq capacity.
 \newblock \emph{Current protocols in molecular biology}, 103\penalty0
   (1):\penalty0 4--19, 2013.
-
-\bibitem[Oracle(2010)]{virtualbox}
-Oracle.
-\newblock Virtualbox, 2010.
-\newblock URL \url{https://www.virtualbox.org/}.
 
 \bibitem[Oshlack and Wakefield(2009)]{oshlack2009transcript}
 Oshlack, A. and Wakefield, M.~J.
@@ -923,12 +1061,6 @@ Plantier, I., Lai, J., Wattel, E., Bauters, F., and Fenaux, P.
 QIAGEN.
 \newblock \emph{RNeasy Plus Mini Handbook}.
 \newblock QIAGEN, 2014.
-
-\bibitem[{R Core Team}(2020)]{R}
-{R Core Team}.
-\newblock \emph{R: A Language and Environment for Statistical Computing}.
-\newblock R Foundation for Statistical Computing, Vienna, Austria, 2020.
-\newblock URL \url{https://www.R-project.org/}.
 
 \bibitem[Rao et~al.(2019)Rao, Van~Vleet, Ciurlionis, Buck, Mittelstadt, Blomme,
   and Liguori]{rao2019comparison}
@@ -995,14 +1127,18 @@ Robinson, M.~D., McCarthy, D.~J., and Smyth, G.~K.
   digital gene expression data.
 \newblock \emph{Bioinformatics}, 26\penalty0 (1):\penalty0 139--140, 2010.
 
-\bibitem[Sasaki et~al.(2021)Sasaki, Ravandi, Kadia, DiNardo, Short, Borthakur,
-  Jabbour, and Kantarjian]{sasaki2021novo}
-Sasaki, K., Ravandi, F., Kadia, T.~M., DiNardo, C.~D., Short, N.~J., Borthakur,
-  G., Jabbour, E., and Kantarjian, H.~M.
-\newblock De novo acute myeloid leukemia: A population-based study of outcome
-  in the united states based on the surveillance, epidemiology, and end results
-  (seer) database, 1980 to 2017.
-\newblock \emph{Cancer}, 127\penalty0 (12):\penalty0 2049--2061, 2021.
+\bibitem[Salazar(2021)]{koster2021snakemake}
+Salazar, J. K. J. F. S. S.~V.
+\newblock snakemake-workflows/rna-seq-star-deseq2, August 2021.
+\newblock URL \url{https://zenodo.org/record/5245549#.Yqil52DMI2w}.
+
+\bibitem[Santos-Beneit and Mollinedo(2000)]{santos2000expression}
+Santos-Beneit, A.~M. and Mollinedo, F.
+\newblock Expression of genes involved in initiation, regulation, and execution
+  of apoptosis in human neutrophils and during neutrophil differentiation of
+  hl-60 cells.
+\newblock \emph{Journal of leukocyte biology}, 67\penalty0 (5):\penalty0
+  712--724, 2000.
 
 \bibitem[Schaarschmidt et~al.(2020)Schaarschmidt, Fischer, Zuther, and
   Hincha]{Schaarschmidt2020}
@@ -1012,6 +1148,15 @@ Schaarschmidt, S., Fischer, A., Zuther, E., and Hincha, D.~K.
 \newblock \emph{International Journal of Molecular Sciences}, 21\penalty0
   (5):\penalty0 1720, mar 2020.
 \newblock \doi{10.3390/ijms21051720}.
+
+\bibitem[Schmiedel et~al.(2018)Schmiedel, Singh, Madrigal, Valdovino-Gonzalez,
+  White, Zapardiel-Gonzalo, Ha, Altay, Greenbaum, McVicker,
+  et~al.]{schmiedel2018impact}
+Schmiedel, B.~J., Singh, D., Madrigal, A., Valdovino-Gonzalez, A.~G., White,
+  B.~M., Zapardiel-Gonzalo, J., Ha, B., Altay, G., Greenbaum, J.~A., McVicker,
+  G., et~al.
+\newblock Impact of genetic polymorphisms on human immune cell gene expression.
+\newblock \emph{Cell}, 175\penalty0 (6):\penalty0 1701--1715, 2018.
 
 \bibitem[Schmieder and Edwards(2011)]{schmieder2011quality}
 Schmieder, R. and Edwards, R.
@@ -1025,6 +1170,14 @@ Schroeder, A., Mueller, O., Stocker, S., Salowsky, R., Leiber, M., Gassmann,
 \newblock The rin: an rna integrity number for assigning integrity values to
   rna measurements.
 \newblock \emph{BMC molecular biology}, 7\penalty0 (1):\penalty0 1--14, 2006.
+
+\bibitem[Schubert et~al.(2018)Schubert, Klinger, Kl{\"u}nemann, Sieber, Uhlitz,
+  Sauer, Garnett, Bl{\"u}thgen, and Saez-Rodriguez]{schubert2018perturbation}
+Schubert, M., Klinger, B., Kl{\"u}nemann, M., Sieber, A., Uhlitz, F., Sauer,
+  S., Garnett, M.~J., Bl{\"u}thgen, N., and Saez-Rodriguez, J.
+\newblock Perturbation-response genes reveal signaling footprints in cancer
+  gene expression.
+\newblock \emph{Nature communications}, 9\penalty0 (1):\penalty0 1--11, 2018.
 
 \bibitem[Schurch et~al.(2015)Schurch, Schofield, Gierli{\'n}ski, Cole,
   Sherstnev, Singh, Wrobel, Gharbi, Simpson, Owen-Hughes,
@@ -1079,6 +1232,16 @@ Shimanovsky, A. C. V. L.~A.
 \newblock \emph{Leukemia}.
 \newblock StatPearls Publishing, 2021.
 
+\bibitem[Shiozawa et~al.(2017)Shiozawa, Malcovati, Gall{\`\i}, Pellagatti,
+  Karimi, Sato-Otsubo, Sato, Suzuki, Yoshizato, Yoshida,
+  et~al.]{shiozawa2017gene}
+Shiozawa, Y., Malcovati, L., Gall{\`\i}, A., Pellagatti, A., Karimi, M.,
+  Sato-Otsubo, A., Sato, Y., Suzuki, H., Yoshizato, T., Yoshida, K., et~al.
+\newblock Gene expression and risk of leukemic transformation in
+  myelodysplasia.
+\newblock \emph{Blood, The Journal of the American Society of Hematology},
+  130\penalty0 (24):\penalty0 2642--2653, 2017.
+
 \bibitem[Sitges et~al.(2020)Sitges, Boluda, Garrido, Morgades, Granada,
   Barragan, Arnan, Serrano, Tormo, Miguel~Bergua, et~al.]{sitges2020acute}
 Sitges, M., Boluda, B., Garrido, A., Morgades, M., Granada, I., Barragan, E.,
@@ -1111,12 +1274,6 @@ Stelzer, G., Rosen, N., Plaschkes, I., Zimmerman, S., Twik, M., Fishilevich,
 \newblock \emph{Current protocols in bioinformatics}, 54\penalty0 (1):\penalty0
   1--30, 2016.
 
-\bibitem[Stoler and Nekrutenko(2021)]{stoler2021sequencing}
-Stoler, N. and Nekrutenko, A.
-\newblock Sequencing error profiles of illumina sequencing instruments.
-\newblock \emph{NAR genomics and bioinformatics}, 3\penalty0 (1):\penalty0
-  lqab019, 2021.
-
 \bibitem[St{\"o}lzel et~al.(2016)St{\"o}lzel, Mohr, Kramer, Oelschl{\"a}gel,
   Bochtler, Berdel, Kaufmann, Baldus, Sch{\"a}fer-Eckart, Stuhlmann,
   et~al.]{stolzel2016karyotype}
@@ -1136,6 +1293,17 @@ Swerdlow, S.~H., Campo, E., Harris, N.~L., Jaffe, E.~S., Pileri, S.~A., Stein,
 \newblock International agency for research on cancer Lyon, 4th edition, 2017.
 \newblock ISBN 978-92-832-4494-3.
 
+\bibitem[Szklarczyk et~al.(2019)Szklarczyk, Gable, Lyon, Junge, Wyder,
+  Huerta-Cepas, Simonovic, Doncheva, Morris, Bork,
+  et~al.]{szklarczyk2019string}
+Szklarczyk, D., Gable, A.~L., Lyon, D., Junge, A., Wyder, S., Huerta-Cepas, J.,
+  Simonovic, M., Doncheva, N.~T., Morris, J.~H., Bork, P., et~al.
+\newblock String v11: protein--protein association networks with increased
+  coverage, supporting functional discovery in genome-wide experimental
+  datasets.
+\newblock \emph{Nucleic acids research}, 47\penalty0 (D1):\penalty0 D607--D613,
+  2019.
+
 \bibitem[Tabin et~al.(1982)Tabin, Bradley, Bargmann, Weinberg, Papageorge,
   Scolnick, Dhar, Lowy, and Chang]{tabin1982mechanism}
 Tabin, C.~J., Bradley, S.~M., Bargmann, C.~I., Weinberg, R.~A., Papageorge,
@@ -1143,11 +1311,27 @@ Tabin, C.~J., Bradley, S.~M., Bargmann, C.~I., Weinberg, R.~A., Papageorge,
 \newblock Mechanism of activation of a human oncogene.
 \newblock \emph{Nature}, 300\penalty0 (5888):\penalty0 143--149, 1982.
 
+\bibitem[Teng et~al.(2016)Teng, Love, Davis, Djebali, Dobin, Graveley, Li,
+  Mason, Olson, Pervouchine, Sloan, Wei, Zhan, and Irizarry]{teng2016benchmark}
+Teng, M., Love, M.~I., Davis, C.~A., Djebali, S., Dobin, A., Graveley, B.~R.,
+  Li, S., Mason, C.~E., Olson, S., Pervouchine, D., Sloan, C.~A., Wei, X.,
+  Zhan, L., and Irizarry, R.~A.
+\newblock A benchmark for {RNA}-seq quantification pipelines.
+\newblock \emph{Genome Biology}, 17\penalty0 (1), apr 2016.
+\newblock \doi{10.1186/s13059-016-0940-1}.
+
 \bibitem[{The American Cancer Society}(2018)]{ACS2018}
 {The American Cancer Society}.
 \newblock Acute myeloid leukemia (aml) subtypes and prognostic factors, 2018.
 \newblock URL
   \url{https://www.cancer.org/cancer/acute-myeloid-leukemia/detection-diagnosis-staging/how-classified.html}.
+
+\bibitem[Torres-Garc{\'\i}a et~al.(2014)Torres-Garc{\'\i}a, Zheng, Sivachenko,
+  Vegesna, Wang, Yao, Berger, Weinstein, Getz, and Verhaak]{torres2014prada}
+Torres-Garc{\'\i}a, W., Zheng, S., Sivachenko, A., Vegesna, R., Wang, Q., Yao,
+  R., Berger, M.~F., Weinstein, J.~N., Getz, G., and Verhaak, R.~G.
+\newblock Prada: pipeline for rna sequencing data analysis.
+\newblock \emph{Bioinformatics}, 30\penalty0 (15):\penalty0 2224--2226, 2014.
 
 \bibitem[Trapnell and Salzberg(2009)]{trapnell2009map}
 Trapnell, C. and Salzberg, S.~L.
@@ -1188,12 +1372,18 @@ Wang, C.-S. and Vodkin, L.~O.
 \newblock \emph{Plant Molecular Biology Reporter}, 12\penalty0 (2):\penalty0
   132--145, 1994.
 
-\bibitem[Wang et~al.(2011)Wang, Si, Dedow, Shao, Liu, and
-  Brutnell]{wang2011low}
-Wang, L., Si, Y., Dedow, L.~K., Shao, Y., Liu, P., and Brutnell, T.~P.
-\newblock A low-cost library construction protocol and data analysis pipeline
-  for illumina-based strand-specific multiplex rna-seq.
-\newblock \emph{PloS one}, 6\penalty0 (10):\penalty0 e26426, 2011.
+\bibitem[Wang et~al.(2013)Wang, Hu, Zhang, Yang, Li, Hu, Ruan, Yang, Zhang,
+  Shu, et~al.]{wang2013dynamic}
+Wang, H., Hu, H., Zhang, Q., Yang, Y., Li, Y., Hu, Y., Ruan, X., Yang, Y.,
+  Zhang, Z., Shu, C., et~al.
+\newblock Dynamic transcriptomes of human myeloid leukemia cells.
+\newblock \emph{Genomics}, 102\penalty0 (4):\penalty0 250--256, 2013.
+
+\bibitem[Wang et~al.(2010)Wang, Feng, Wang, Wang, and Zhang]{wang2010degseq}
+Wang, L., Feng, Z., Wang, X., Wang, X., and Zhang, X.
+\newblock Degseq: an r package for identifying differentially expressed genes
+  from rna-seq data.
+\newblock \emph{Bioinformatics}, 26\penalty0 (1):\penalty0 136--138, 2010.
 
 \bibitem[Wang~Zhong(2009)]{zhong2009}
 Wang~Zhong, M.~S., Mark~Gerstein.
@@ -1233,6 +1423,11 @@ Zhang, C., Zhang, B., Lin, L.-L., and Zhao, S.
 \newblock \emph{{BMC} Genomics}, 18\penalty0 (1), aug 2017.
 \newblock \doi{10.1186/s12864-017-4002-1}.
 
+\bibitem[Zhang and Jonassen(2020)]{zhang2020rasflow}
+Zhang, X. and Jonassen, I.
+\newblock Rasflow: an rna-seq analysis workflow with snakemake.
+\newblock \emph{BMC bioinformatics}, 21\penalty0 (1):\penalty0 1--9, 2020.
+
 \bibitem[Zhao et~al.(2014)Zhao, Fung-Leung, Bittner, Ngo, and
   Liu]{zhao2014comparison}
 Zhao, S., Fung-Leung, W.-P., Bittner, A., Ngo, K., and Liu, X.
@@ -1245,15 +1440,6 @@ Zhao, S., Ye, Z., and Stanton, R.
 \newblock Misuse of rpkm or tpm normalization when comparing across samples and
   sequencing protocols.
 \newblock \emph{Rna}, 26\penalty0 (8):\penalty0 903--909, 2020.
-
-\bibitem[Zhong et~al.(2011)Zhong, Joung, Zheng, Chen, Liu, Shao, Xiang, Fei,
-  and Giovannoni]{zhong2011high}
-Zhong, S., Joung, J.-G., Zheng, Y., Chen, Y.-r., Liu, B., Shao, Y., Xiang,
-  J.~Z., Fei, Z., and Giovannoni, J.~J.
-\newblock High-throughput illumina strand-specific rna sequencing library
-  preparation.
-\newblock \emph{Cold spring harbor protocols}, 2011\penalty0 (8):\penalty0
-  pdb--prot5652, 2011.
 
 \bibitem[Ziemann et~al.(2016)Ziemann, Kaspi, and
   El-Osta]{ziemann2016evaluation}

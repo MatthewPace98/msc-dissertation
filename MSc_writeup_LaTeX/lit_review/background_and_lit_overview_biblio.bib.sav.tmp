@@ -85,13 +85,10 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   number    = {7},
   pages     = {e441--e441},
   volume    = {6},
-  abstract  = {Acute myeloid leukemia (AML) is the most common acute leukemia in adults, with an incidence of over 20 000 cases per year in the United States alone. Large chromosomal translocations as well as mutations in the genes involved in hematopoietic proliferation and differentiation result in the accumulation of poorly differentiated myeloid cells. AML is a highly heterogeneous disease; although cases can be stratified into favorable, intermediate and adverse-risk groups based on their cytogenetic profile, prognosis within these categories varies widely. The identification of recurrent genetic mutations, such as FLT3-ITD, NMP1 and CEBPA, has helped refine individual prognosis and guide management. Despite advances in supportive care, the backbone of therapy remains a combination of cytarabine-and anthracycline-based regimens with allogeneic stem cell transplantation for eligible candidates. Elderly patients are often unable to tolerate such regimens, and carry a particularly poor prognosis. Here, we review the major recent advances in the treatment of AML.},
   date      = {2016-07-01},
   day       = {1},
   doi       = {10.1038/bcj.2016.50},
-  file      = {:Kouchkovsky2016 - Acute Myeloid Leukemia_ a Comprehensive Review and 2016 Update.pdf:PDF;:Synthesis of minoxidil conjugates and their evaluation.pdf:PDF;:Tyrosol_at the concentration found in Maltese extra virgin olive oil.pdf:PDF;:First_Profile_of_Phenolic_Compounds_from_Maltese_E.pdf:PDF;:Phenolic Compounds leukaemia.pdf:PDF},
   publisher = {Springer Science and Business Media {LLC}},
-  rights    = {Â© 2016 The Author(s)},
 }
 
 @Article{Khwaja2016,
@@ -166,24 +163,6 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   editor    = {Cristina Angeloni},
   file      = {:C\:/Users/matth/OneDrive/Desktop/Msc Bioinformatics/!MMB5010 DISSERTATION-DESKTOP-A2009SI/Literature/Dietary Phenolic Acids apoptotic effects in leukaemia.pdf:PDF},
   publisher = {Hindawi Limited},
-}
-
-@Article{Gatt2021tyrosol,
-  author    = {Lucienne Gatt and David G. Saliba and Pierre Schembri-Wismayer and Marion Zammit-Mangion},
-  journal   = {Applied Sciences},
-  title     = {Tyrosol, at the Concentration Found in Maltese Extra Virgin Olive Oil, Induces {HL}-60 Differentiation towards the Monocyte lineage},
-  year      = {2021},
-  month     = {oct},
-  number    = {21},
-  pages     = {10199},
-  volume    = {11},
-  abstract  = {This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY},
-  date      = {2021-10-30},
-  day       = {30},
-  doi       = {10.3390/app112110199},
-  file      = {:C\:/Users/matth/OneDrive/Desktop/Msc Bioinformatics/!MMB5010 DISSERTATION-DESKTOP-A2009SI/Literature/Luciennes other papers/Tyrosol_at the concentration found in Maltese extra virgin olive oil.pdf:PDF},
-  keywords  = {Gatt, L., Saliba, D.G., Schembri-Wismayer, P., Zammit-Mangion, M. Tyrosol, at the Concentration Found in Maltese HL-60, phenols, differentiation, apoptosis, transcriptome},
-  publisher = {{MDPI} {AG}},
 }
 
 @InProceedings{gatt2021phenolic,
@@ -535,7 +514,7 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   publisher = {Springer Science and Business Media {LLC}},
 }
 
-@Article{Teng2016,
+@Article{teng2016benchmark,
   author    = {Mingxiang Teng and Michael I. Love and Carrie A. Davis and Sarah Djebali and Alexander Dobin and Brenton R. Graveley and Sheng Li and Christopher E. Mason and Sara Olson and Dmitri Pervouchine and Cricket A. Sloan and Xintao Wei and Lijun Zhan and Rafael A. Irizarry},
   journal   = {Genome Biology},
   title     = {A benchmark for {RNA}-seq quantification pipelines},
@@ -1886,4 +1865,263 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   author    = {Cloonan, Nicole and Forrest, Alistair RR and Kolle, Gabriel and Gardiner, Brooke and Faulkner, Geoffrey J and Brown, Mellissa K and Taylor, Darrin F and Steptoe, Anita L and Wani, Shivangi and Bethel, Graeme and others},
   journal   = {Nature methods},
   title     = {Stem cell transcriptome profiling via massive-scale mRNA sequencing},
-  year      = {
+  year      = {2008},
+  number    = {7},
+  pages     = {613--619},
+  volume    = {5},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{lister2008highly,
+  author    = {Lister, Ryan and O'Malley, Ronan C and Tonti-Filippini, Julian and Gregory, Brian D and Berry, Charles C and Millar, A Harvey and Ecker, Joseph R},
+  journal   = {Cell},
+  title     = {Highly integrated single-base resolution maps of the epigenome in Arabidopsis},
+  year      = {2008},
+  number    = {3},
+  pages     = {523--536},
+  volume    = {133},
+  publisher = {Elsevier},
+}
+
+@Article{mark2017transcriptomes,
+  author    = {Mark Welch, David B and Jauch, Anna and Langowski, J{\"o}rg and Olins, Ada L and Olins, Donald E},
+  journal   = {Nucleus},
+  title     = {Transcriptomes reflect the phenotypes of undifferentiated, granulocyte and macrophage forms of HL-60/S4 cells},
+  year      = {2017},
+  number    = {2},
+  pages     = {222--237},
+  volume    = {8},
+  publisher = {Taylor \& Francis},
+}
+
+@Article{,
+}
+
+@Article{santos2000expression,
+  author    = {Santos-Beneit, Antonio M and Mollinedo, Faustino},
+  journal   = {Journal of leukocyte biology},
+  title     = {Expression of genes involved in initiation, regulation, and execution of apoptosis in human neutrophils and during neutrophil differentiation of HL-60 cells},
+  year      = {2000},
+  number    = {5},
+  pages     = {712--724},
+  volume    = {67},
+  publisher = {Wiley Online Library},
+}
+
+@Article{naegelen2015essential,
+  author    = {Naegelen, Isabelle and Plancon, Se{\'{}} bastien and Nicot, Nathalie and Kaoma, Tony and Muller, Arnaud and Vallar, Laurent and Tschirhart, Eric J and Bre{\'{}} chard, Sabrina},
+  journal   = {Journal of leukocyte biology},
+  title     = {An essential role of syntaxin 3 protein for granule exocytosis and secretion of IL-1$\alpha$, IL-1$\beta$, IL-12b, and CCL4 from differentiated HL-60 cells},
+  year      = {2015},
+  number    = {3},
+  pages     = {557--571},
+  volume    = {97},
+  publisher = {Wiley Online Library},
+}
+
+@Article{sepporta2013pinoresinol,
+  author    = {Sepporta, Maria Vittoria and Mazza, Teresa and Morozzi, Guido and Fabiani, Roberto},
+  journal   = {Nutrition and cancer},
+  title     = {Pinoresinol inhibits proliferation and induces differentiation on human HL60 leukemia cells},
+  year      = {2013},
+  number    = {8},
+  pages     = {1208--1218},
+  volume    = {65},
+  publisher = {Taylor \& Francis},
+}
+
+@InProceedings{al2014bootstrap,
+  author       = {Al Seesi, Sahar and Tiagueu, Yvette Temate and Zelikovsky, Alexander and M{\u{a}}ndoiu, Ion I},
+  booktitle    = {BMC genomics},
+  title        = {Bootstrap-based differential gene expression analysis for RNA-Seq data with and without replicates},
+  year         = {2014},
+  number       = {8},
+  organization = {BioMed Central},
+  pages        = {1--10},
+  volume       = {15},
+}
+
+@Article{abaza2007induction,
+  author    = {Abaza, Leila and Talorete, Terence PN and Yamada, Parida and Kurita, Yui and Zarrouk, Mokhtar and Isoda, Hiroko},
+  journal   = {Bioscience, biotechnology, and biochemistry},
+  title     = {Induction of growth inhibition and differentiation of human leukemia HL-60 cells by a Tunisian gerboui olive leaf extract},
+  year      = {2007},
+  number    = {5},
+  pages     = {1306--1312},
+  volume    = {71},
+  publisher = {Oxford University Press},
+}
+
+@Article{fabiani2006virgin,
+  author    = {Fabiani, Roberto and De Bartolomeo, Angelo and Rosignoli, Patrizia and Servili, Maurizio and Selvaggini, Roberto and Montedoro, Gian Francesco and Di Saverio, Cristina and Morozzi, Guido},
+  journal   = {The Journal of nutrition},
+  title     = {Virgin olive oil phenols inhibit proliferation of human promyelocytic leukemia cells (HL60) by inducing apoptosis and differentiation},
+  year      = {2006},
+  number    = {3},
+  pages     = {614--619},
+  volume    = {136},
+  publisher = {Oxford University Press},
+}
+
+@Article{fabiani2008inhibition,
+  author    = {Fabiani, Roberto and Rosignoli, Patrizia and De Bartolomeo, Angelo and Fuccelli, Raffaela and Morozzi, Guido},
+  journal   = {The Journal of nutrition},
+  title     = {Inhibition of cell cycle progression by hydroxytyrosol is associated with upregulation of cyclin-dependent protein kinase inhibitors p21WAF1/Cip1 and p27Kip1 and with induction of differentiation in HL60 cells},
+  year      = {2008},
+  number    = {1},
+  pages     = {42--48},
+  volume    = {138},
+  publisher = {Oxford University Press},
+}
+
+@Article{edger,
+  author    = {Robinson, Mark D and McCarthy, Davis J and Smyth, Gordon K},
+  journal   = {Bioinformatics},
+  title     = {edgeR: a Bioconductor package for differential expression analysis of digital gene expression data},
+  year      = {2010},
+  number    = {1},
+  pages     = {139--140},
+  volume    = {26},
+  publisher = {Oxford University Press},
+}
+
+@Article{anders2010differential,
+  author    = {Anders, Simon and Huber, Wolfgang},
+  journal   = {Nature Precedings},
+  title     = {Differential expression analysis for sequence count data},
+  year      = {2010},
+  pages     = {1--1},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{wang2010degseq,
+  author    = {Wang, Likun and Feng, Zhixing and Wang, Xi and Wang, Xiaowo and Zhang, Xuegong},
+  journal   = {Bioinformatics},
+  title     = {DEGseq: an R package for identifying differentially expressed genes from RNA-seq data},
+  year      = {2010},
+  number    = {1},
+  pages     = {136--138},
+  volume    = {26},
+  publisher = {Oxford University Press},
+}
+
+@Article{kalari2014map,
+  author    = {Kalari, Krishna R and Nair, Asha A and Bhavsar, Jaysheel D and O’Brien, Daniel R and Davila, Jaime I and Bockol, Matthew A and Nie, Jinfu and Tang, Xiaojia and Baheti, Saurabh and Doughty, Jay B and others},
+  journal   = {BMC bioinformatics},
+  title     = {MAP-RSeq: Mayo analysis pipeline for RNA sequencing},
+  year      = {2014},
+  number    = {1},
+  pages     = {1--11},
+  volume    = {15},
+  publisher = {Springer},
+}
+
+@Electronic{koster2021snakemake,
+  author    = {Johannes Köster; Jan Forster; Sebastian Schmeier; Vini Salazar},
+  month     = aug,
+  title     = {snakemake-workflows/rna-seq-star-deseq2},
+  url       = {https://zenodo.org/record/5245549#.Yqil52DMI2w},
+  year      = {2021},
+  timestamp = {2022-06-01},
+}
+
+@Article{Dobin2013,
+  author  = {Alexander Dobin and Carrie A. Davis and Felix Schlesinger and Jorg Drenkow and Chris Zaleski and Sonali Jha and Philippe Batut and Mark Chaisson and Thomas R. Gingeras},
+  journal = {Bioinform.},
+  title   = {{STAR:} ultrafast universal RNA-seq aligner},
+  year    = {2013},
+  number  = {1},
+  pages   = {15--21},
+  volume  = {29},
+}
+
+@Article{gallagher1979characterization,
+  author = {Gallagher, R and Collins, S and Trujillo, J and McCredie, K and Ahearn, M and Tsai, S and Metzgar, R and Aulakh, G and Ting, Ruscetti and Ruscetti, F and others},
+  title  = {Characterization of the continuous, differentiating myeloid cell line (HL-60) from a patient with acute promyelocytic leukemia},
+  year   = {1979},
+}
+
+@Article{jacobson2020hi,
+  author    = {Jacobson, Elsie C and Grand, Ralph S and Perry, Jo K and Vickers, Mark H and Olins, Ada L and Olins, Donald E and O'Sullivan, Justin M},
+  journal   = {Genomics},
+  title     = {Hi-C detects novel structural variants in HL-60 and HL-60/S4 cell lines},
+  year      = {2020},
+  number    = {1},
+  pages     = {151--162},
+  volume    = {112},
+  publisher = {Elsevier},
+}
+
+@Article{dalton1988hl,
+  author    = {Dalton Jr, Willard T and Ahearn, Michael J and McCredie, Kenneth B and Freireich, Emil J and Stass, Sanford A and Trujillo, Jose M},
+  journal   = {Blood},
+  title     = {HL-60 cell line was derived from a patient with FAB-M2 and not FAB-M3},
+  year      = {1988},
+  number    = {1},
+  pages     = {242--247},
+  volume    = {71},
+  publisher = {Elsevier},
+}
+
+@Article{liao2020read,
+  author    = {Liao, Yang and Shi, Wei},
+  journal   = {NAR genomics and bioinformatics},
+  title     = {Read trimming is not required for mapping and quantification of RNA-seq reads at the gene level},
+  year      = {2020},
+  number    = {3},
+  pages     = {lqaa068},
+  volume    = {2},
+  publisher = {Oxford University Press},
+}
+
+@Article{morgulis2006fast,
+  author    = {Morgulis, Aleksandr and Gertz, E Michael and Sch{\"a}ffer, Alejandro A and Agarwala, Richa},
+  journal   = {Journal of Computational Biology},
+  title     = {A fast and symmetric DUST implementation to mask low-complexity DNA sequences},
+  year      = {2006},
+  number    = {5},
+  pages     = {1028--1040},
+  volume    = {13},
+  publisher = {Mary Ann Liebert, Inc. 2 Madison Avenue Larchmont, NY 10538 USA},
+}
+
+@Article{mead1992review,
+  author    = {Mead, Al},
+  journal   = {Journal of the Royal Statistical Society: Series D (The Statistician)},
+  title     = {Review of the development of multidimensional scaling methods},
+  year      = {1992},
+  number    = {1},
+  pages     = {27--39},
+  volume    = {41},
+  publisher = {Wiley Online Library},
+}
+
+@Article{szklarczyk2019string,
+  author    = {Szklarczyk, Damian and Gable, Annika L and Lyon, David and Junge, Alexander and Wyder, Stefan and Huerta-Cepas, Jaime and Simonovic, Milan and Doncheva, Nadezhda T and Morris, John H and Bork, Peer and others},
+  journal   = {Nucleic acids research},
+  title     = {STRING v11: protein--protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets},
+  year      = {2019},
+  number    = {D1},
+  pages     = {D607--D613},
+  volume    = {47},
+  publisher = {Oxford University Press},
+}
+
+@Article{crescimanno2009effects,
+  author  = {Crescimanno, M and Sepporta, MV and Tripoli, E and Flandina, C and Giammanco, M and Tumminello, FT and Di Majo, D and Tolomeo, M and La Guardia, M and Leto, G},
+  journal = {Journal of Biological Research-Bollettino della Societ{\`a} Italiana di Biologia Sperimentale},
+  title   = {Effects of extra virgin olive oil phenols on HL60 cell lines sensitive and resistant to anthracyclines},
+  year    = {2009},
+  number  = {1},
+  volume  = {82},
+}
+
+@Article{torres2014prada,
+  author    = {Torres-Garc{\'\i}a, Wandaliz and Zheng, Siyuan and Sivachenko, Andrey and Vegesna, Rahulsimham and Wang, Qianghu and Yao, Rong and Berger, Michael F and Weinstein, John N and Getz, Gad and Verhaak, Roel GW},
+  journal   = {Bioinformatics},
+  title     = {PRADA: pipeline for RNA sequencing data analysis},
+  year      = {2014},
+  number    = {15},
+  pages     = {2224--2226},
+  volume    = {30},
+  publisher = {Oxford Univers
