@@ -8,7 +8,7 @@
 }
 
 @InProceedings{Dobin2019,
-  author = {Alexander Dobin and dobin@cshl.edu},
+  author = {Alexander Dobin},
   title  = {STAR manual 2.7.0a},
   year   = {2019},
   file   = {:C\:/Users/matth/OneDrive/Desktop/Msc Bioinformatics/!MMB5010 DISSERTATION-DESKTOP-A2009SI/Literature/Tools/STARmanual.pdf:PDF},
@@ -257,6 +257,14 @@
   volume    = {8},
   groups    = {RNAseq reviews},
   publisher = {Wiley Online Library},
+}
+
+@Electronic{illumina2022reads,
+  author    = {{Illumina}},
+  title     = {Read length recommendations},
+  url       = {https://emea.illumina.com/science/technology/next-generation-sequencing/plan-experiments/read-length.html},
+  year      = {2022},
+  timestamp = {2022-06-02},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

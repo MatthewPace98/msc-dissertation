@@ -1162,6 +1162,7 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   year      = {2016},
   timestamp = {2022-06-06},
   url       = {https://sequencing.qcfail.com/articles/mapq-values-are-really-useful-but-their-implementation-is-a-mess/},
+  urldate   = {2022-06-06},
 }
 
 @Article{li2010rna,
@@ -1894,9 +1895,6 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   publisher = {Taylor \& Francis},
 }
 
-@Article{,
-}
-
 @Article{santos2000expression,
   author    = {Santos-Beneit, Antonio M and Mollinedo, Faustino},
   journal   = {Journal of leukocyte biology},
@@ -2127,17 +2125,101 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   publisher = {Oxford University Press},
 }
 
-@Article{Gatt2021tyrosol,
-  author  = {Lucienne Gatt and David G. Saliba and Pierre Schembri-Wismayer and Marion Zammit-Mangion},
-  journal = {Applied Sciences},
-  title   = {Tyrosol, at the Concentration Found in Maltese Extra Virgin Olive Oil, Induces {HL}-60 Differentiation towards the Monocyte lineage},
-  year    = {2021},
-  month   = {oct},
-  number  = {21},
-  pages   = {10199},
-  volume  = {11},
-  date    = {2021-10-30},
-  day     = {30},
+@Article{gatt2021tyrosol,
+  author    = {Gatt, Lucienne and Saliba, David G and Schembri-Wismayer, Pierre and Zammit-Mangion, Marion},
+  journal   = {Applied Sciences},
+  title     = {Tyrosol, at the Concentration Found in Maltese Extra Virgin Olive Oil, Induces HL-60 Differentiation towards the Monocyte lineage},
+  year      = {2021},
+  number    = {21},
+  pages     = {10199},
+  volume    = {11},
+  publisher = {Multidisciplinary Digital Publishing Institute},
+}
+
+@Article{upton1992fisher,
+  author    = {Upton, Graham JG},
+  journal   = {Journal of the Royal Statistical Society: Series A (Statistics in Society)},
+  title     = {Fisher's exact test},
+  year      = {1992},
+  number    = {3},
+  pages     = {395--402},
+  volume    = {155},
+  publisher = {Wiley Online Library},
+}
+
+@Electronic{fastqctutorial2021,
+  author    = {{MSU}},
+  title     = {FastQC Tutorial and FAQ},
+  url       = {https://rtsf.natsci.msu.edu/genomics/tech-notes/fastqc-tutorial-and-faq/},
+  year      = {2021},
+  timestamp = {2022-06-01},
+  urldate   = {2022-06-06},
+}
+
+@Article{fabiani2011production,
+  author    = {Fabiani, Roberto and Rosignoli, Patrizia and De Bartolomeo, Angelo and Fuccelli, Raffaela and Servili, Maurizio and Morozzi, Guido},
+  journal   = {Food chemistry},
+  title     = {The production of hydrogen peroxide is not a common mechanism by which olive oil phenols induce apoptosis on HL60 cells},
+  year      = {2011},
+  number    = {4},
+  pages     = {1249--1255},
+  volume    = {125},
+  publisher = {Elsevier},
+}
+
+@Article{matikainen1997retinoic,
+  author    = {Matikainen, Sampsa and Ronni, Tapani and Lehtonen, Anne and Sareneva, Timo and Melen, Krister and Nordling, Stig and Levy, David E and Julkunen, Ilkka and others},
+  journal   = {Cell Growth and Differentiation-Publication American Association for Cancer Research},
+  title     = {Retinoic acid induces signal transducer and activator of transcription (STAT) 1, STAT2, and p48 expression in myeloid leukemia cells and enhances their responsiveness to interferons},
+  year      = {1997},
+  number    = {6},
+  pages     = {687--698},
+  volume    = {8},
+  publisher = {AACR},
+}
+
+@Article{cohen2005jak,
+  author    = {Cohen, Shenhav and Dovrat, Sara and Sarid, Ronit and Huberman, Eliezer and Salzberg, Samuel},
+  journal   = {Leukemia research},
+  title     = {JAK--STAT signaling involved in phorbol 12-myristate 13-acetate-and dimethyl sulfoxide-induced 2′-5′ oligoadenylate synthetase expression in human HL-60 leukemia cells},
+  year      = {2005},
+  number    = {8},
+  pages     = {923--931},
+  volume    = {29},
+  publisher = {Elsevier},
+}
+
+@Article{iwata2016parp9,
+  author    = {Iwata, Hiroshi and Goettsch, Claudia and Sharma, Amitabh and Ricchiuto, Piero and Goh, Wilson Wen Bin and Halu, Arda and Yamada, Iwao and Yoshida, Hideo and Hara, Takuya and Wei, Mei and others},
+  journal   = {Nature communications},
+  title     = {PARP9 and PARP14 cross-regulate macrophage activation via STAT1 ADP-ribosylation},
+  year      = {2016},
+  number    = {1},
+  pages     = {1--19},
+  volume    = {7},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{gianni1997stat1,
+  author    = {Gianni, Maurizio and Terao, Mineko and Fortino, Ida and LiCalzi, Marco and Viggiano, Vincenzo and Barbui, Tiziano and Rambaldi, Alessandro and Garattini, Enrico},
+  journal   = {Blood, The Journal of the American Society of Hematology},
+  title     = {Stat1 is induced and activated by all-trans retinoic acid in acute promyelocytic leukemia cells},
+  year      = {1997},
+  number    = {3},
+  pages     = {1001--1012},
+  volume    = {89},
+  publisher = {American Society of Hematology Washington, DC},
+}
+
+@Article{ren2013resveratrol,
+  author    = {Ren, Zhenghua and Wang, Lei and Cui, Jianhua and Huoc, Zeren and Xue, Jinru and Cui, Hao and Mao, Qiqi and Yang, Rirong},
+  journal   = {Die Pharmazie-An International Journal of Pharmaceutical Sciences},
+  title     = {Resveratrol inhibits NF-$\kappa$B signaling through suppression of p65 and IB kinase activities},
+  year      = {2013},
+  number    = {8},
+  pages     = {689--694},
+  volume    = {68},
+  publisher = {Avoxa-Mediengruppe Deutscher Apotheker GmbH},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

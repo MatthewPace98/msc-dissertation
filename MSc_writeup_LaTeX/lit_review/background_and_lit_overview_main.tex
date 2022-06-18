@@ -7,9 +7,11 @@ DNA is just the general starting point in a series of information transfers desc
 
 % the intro for this is pretty good: https://www.nature.com/articles/s41368-021-00146-0#:~:text=Bulk%20RNA-seq%20studies%20average%20global,next%20generation%20of%20RNA%20sequencing.
 
+%\clearpage
 %\section{Differentiation Pathways in the Haematopoietic System}
 %. Acute leukaemia occurs earlier in the differentiation pathway, allowing the blasts to divide more rapidly. \autoref{fig:cell_differentiation} shows the mature cell types that result from myeloid and lymphoid cell lineages, which both share \ac{HSC} as the common progenitor cell type.
 
+\clearpage
 \section{Acute Myeloid Leukaemia}
 
 %good resource: https://btep.ccr.cancer.gov/wp-content/uploads/RNA-seq_BETP_2019rev.pdf
@@ -32,7 +34,7 @@ DNA is just the general starting point in a series of information transfers desc
 Each of these four leukaemia subtypes is subdivided into more specific classifications. \ac{AML} in particular is genetically and morphologically heterogeneous and can involve any single or a combination of myeloid lineages \citep{whoclassification, Kouchkovsky2016}. 
 
 \subsubsection{The FAB classification system}
-The \ac{FAB} classification, first produced in 1976, was an early attempt to distinguish subtypes of \ac{AML} \citep{bennett1976proposals}. The divisions were based on cell morphology and the relative quantities of myeloblasts and erythroblasts \citep{acsamlsubtypes}.
+The \ac{FAB} classification, first produced in 1976, was an early attempt to distinguish subtypes of \ac{AML} \citep{bennett1976proposals}. The divisions were based on cell morphology and the relative quantities of myeloblasts and erythroblasts \citep{ACS2018}.
 
 %Maybe lookup cool table latex tutorials to make it nicer (colours maybe?)
 \begin{table}[h]
@@ -176,6 +178,7 @@ As mentioned in Section \ref{Treatment Methods}, \ac{ATRA} has been a success st
 %Pathway analysis
 %Read Lucienne's papers and their references
 
+\clearpage
 \section{RNA-seq: \textit{in vitro}}
 RNA sequencing (RNA-seq) is the application of a \ac{NGS} technique to measure the quantity of RNA sequences in a biological sample, in a given moment \citep{zhong2009}. Since its first publications in 2008 \citep{nagalakshmi2008transcriptional, lister2008highly, cloonan2008stem}, RNA-seq has gradually been replacing microarrays as the standard technology in molecular biology to analyse \ac{DGE}. Its main advantage is that it allows for the sequencing of the entire transcriptome, while microarrays only allow for predefined regions to be sequenced \citep{rao2019comparison}. 
 
@@ -277,10 +280,11 @@ Multiple samples may be sequenced simultaneously during a single run, where they
 % coverage
 
 
+\clearpage
 \section{RNA-seq: \textit{in silico}}
 \label{RNA-seq: in silico}
 
-Once the FASTQ files emerge from the sequencing machines, we may move into the dry lab and feed the data into an RNA-seq data analysis pipeline. While the specific tools which make up the pipeline will vary according to the type of data and goals of the researcher, all RNA-seq pipelines share a common skeleton. The following subsections will first provide a general overview of the respective step in the pipeline, and then delve into the specific tools used in this project. They were inspired by a multitude of online tutorials and resources, accessed between 29/05/2022 and 10/06/2022:
+Once the FASTQ files emerge from the sequencing machines, we may move into the dry lab and feed the data into an RNA-seq data analysis pipeline. While the specific tools which make up the pipeline will vary according to the type of data and goals of the researcher, RNA-seq pipelines share a common skeleton. The following subsections will first provide a general overview of the respective step in the pipeline, and then delve into the specific tools used in this project. They were inspired by a multitude of online tutorials and resources, accessed between 29/05/2022 and 10/06/2022:
 
 \begin{itemize}\itemsep-0.5em
 \item \url{https://chagall.med.cornell.edu/RNA-seqcourse/}
@@ -314,14 +318,14 @@ A common convention is to write the value of the Phred score after the letter \t
 \item[] \textbf{Dependencies}: Java, Picard BAM/SAM Libraries (included in download)
 \end{itemize}
 % Useful: https://rtsf.natsci.msu.edu/genomics/tech-notes/fastqc-tutorial-and-faq/#:~:text=FastQC%2C%20written%20by%20Simon%20Andrews,on%20a%20sequence%20data%20set.
-In the rapidly changing field of nucleotide sequencing, FastQC has been one of the few constants. It has become a staple quality control tool for high throughput sequencing data, accepting BAM \citep{BAM}, SAM \citep{li2009sequence} or FASTQ files as input, from which it produces an HTML-based report using a number of modules measuring various quality metrics. The software rates each of these modules using a green check-mark signifying that it 'passed' QC, a yellow exclamation mark 'warning', or a red cross 'failed'. However these flags are set to DNA sequencing standards, and have limited applicability with other types of sequencing, such as RNA-seq, where a number are expected to fail. These modules are thoroughly described in its documentation and summarised below. Care should be taken as the X-axis is non-uniform for a number of the produced graphs.
+In the rapidly changing field of nucleotide sequencing, FastQC has been one of the few constants. It has become a staple quality control tool for high throughput sequencing data, accepting BAM \citep{BAM}, SAM \citep{li2009sequence} or FASTQ files as input, from which it produces an HTML-based report using a number of modules measuring various quality metrics. The software rates each of these modules using a green check-mark signifying that it 'passed' QC, a yellow exclamation mark 'warning', or a red cross 'failed'. However these flags are set to DNA sequencing standards, and have limited applicability with other types of sequencing, such as RNA-seq, where a number are expected to fail \citep{fastqctutorial2021}. These modules are thoroughly described in its documentation and summarised below. Care should be taken as the X-axis is non-uniform for a number of the produced graphs.
 
 %Maybe add expected moduels to fail
 \begin{itemize} \itemsep0em
 \item[] \textbf{Modules used in FastQC:}
 \item \textbf{Basic Statistics} \hspace{0.2cm} Some basic information on the file: its name, type of quality score, total read count, read length and GC content.
 \item \textbf{Per Base Sequence Quality} \hspace{0.2cm} The aggregated Q-scores at each position of the reads, represented by a box-plot.
-\item \textbf{Per Sequence Quality Scores} \hspace{0.2cm} The number of reads on the y-axis and the average Q-score on the x-axis.
+\item \textbf{Per Sequence Quality Scores} \hspace{0.2cm} The number of reads on the Y-axis and the average Q-score on the X-axis.
 \item \textbf{Per Base Sequence Content} \hspace{0.2cm} A relative abundance line graph showing the percentage abundance of each of the four nucleotides across all the reads. 
 \item \textbf{Per sequence GC content} \hspace{0.2cm} The percentage abundance of each of the four nucleotides across all the reads, overlaid on the expected distribution. 
 \item \textbf{Per base \textit{N} content} \hspace{0.2cm} Percentage of bases at each position of the sequence with no base call, represented as an \textit{N}.
@@ -341,14 +345,13 @@ In the rapidly changing field of nucleotide sequencing, FastQC has been one of t
 While FastQC is certainly a useful and well-maintained tool, it is not exhaustive of the possible QC metrics for FASTQ files. For this reason, other tools such as FastQScreen may be used to supplement the results.
 
 FastQScreen maps the sample reads against the genomes of common contaminants and against that of a human for comparison using a third party alignment tool such as Bowtie \citep{bowtie}, Bowtie2 \citep{bowtie2} or BWA \citep{bwa}. A bar chart (\autoref{fig:fastqscreen_example}) and its respective data table are produced which show the percentage reads mapped for each genome, and what percentage did not map at all. With human samples, one should expect some multi-mapping to the mouse and rat genomes, given their genetic similarities.
-
-\begin{figure}[!ht]
+\clearpage
+\begin{figure}[!h]
     \centering
     \includegraphics[width=1\textwidth]{fastqscreen_example}
     \caption[FastQScreen plot example]{An example of a good FastQScreen output result, with human mapping close to 100\% and some multi-mapping to mouse and rat genomes. } 
     \label{fig:fastqscreen_example}
 \end{figure}
-%%\clearpage
 
 \subsubsection{MultiQC}
 
@@ -418,11 +421,11 @@ Quick and computationally efficient pairwise comparison and alignment of two seq
 
 Aligners may take one of two approaches: global alignment or local alignment. Global alignment algorithms, such as \cite{needleman1970general}, aligns both sequences from their first amino acid residue through to their last and is more suitable for sequences of approximately equal lengths. By contrast, local alignment algorithms, such as \cite{smith1981identification} and BLAST, are more suited for sequences that are suspected to overlap only partially. 
 
-There are some semantics associated with this particular step which should be clarified before proceeding further. \textit{Alignment} and \textit{mapping} are often used interchangeably, but there are subtle differences. According to the BioStar Handbook \citep{albert2020biostar} and a presentation by Heng Li, \textit{alignment} is the optimal placement of a read against a genome, while \textit{mapping} suggests less certainty, and that the optimal placement is not always possible. Which term to use is dependent on the data and goals of the study, although modern tools often combine the two approaches, which continues to blur the line separating the terms.
+There are some semantics associated with this particular step which should be clarified before proceeding further. \textit{Alignment} and \textit{mapping} are often used interchangeably, but there are subtle differences. According to the BioStar Handbook \citep{albert2020biostar}, which cites a presentation by Heng Li, \textit{alignment} is the optimal placement of a read against a genome, while \textit{mapping} suggests less certainty, and that the optimal placement is not always possible. Which term to use is dependent on the algorithm, although modern tools often combine the two approaches, which continues to blur the line separating the terms \citep{albert2020biostar}.
 
 In RNA-seq, the reference sequence one aligns against may be either a genome or a transcriptome. Since reads from our FASTQ file originate from processed mRNA, the reads may span across multiple exons. This cannot be simply mapped onto a reference genome because of the presence of intronic and non-coding regions \citep{rnadataanalysis2020}. To map transcript-derived reads which against a genome, a splice-aware aligner must be used (\autoref{fig:alignment}).
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=13cm]{transcriptome_vs_genome_alignment}
     \caption[Alignment against a reference genome or a reference transcriptome]{Alignment against a reference genome or a reference transcriptome. Created using \href{https://biorender.com/}{BioRender.com}. } 
@@ -514,7 +517,7 @@ An aligner (STAR, Bowtie2 or HISAT2) may be called directly through RSEM, to com
 
 To adjust for confounding variables which are not biologically relevant, the read counts must first be normalised. The main factors to account for are sequencing depth \citep{robinson2010scaling}, gene length \citep{oshlack2009transcript} and GC content \citep{risso2011gc}. Effective gene expression analysis should calculate the abundance of the transcripts as a fraction of the entire RNA repertoire for that particular sample. A number of methods have evolved over the years to tackle these issues. \cite{dillies2013comprehensive} and \cite{bullard2010evaluation} extensively explore the different approaches one may take. Despite their frequent misuse in published studies, within-sample comparison methods (FPKM \citep{trapnell2010transcript}, RPKM \citep{mortazavi2008mapping}, TPM \citep{li2011rsem}, Total Counts \citep{dillies2013comprehensive}) should be avoided in \ac{DGE} analysis as they only account for differences within the same sample, and not between samples \citep{dundar2015introduction, zhao2020misuse}.
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=9cm]{library_differences}
     \caption[Differences in library composition between samples]{Potential differences between samples in library composition. Condition A has more reads aligned to Gene 1 than Condition B, but it is considered more highly expressed in Condition B since the \textit{proportion} of the reads is higher. After accounting for library differences, Gene 2 is more highly expressed in Condition A, and Gene 3 is more highly expressed in Condition B. Created using \href{https://biorender.com/}{BioRender.com}. } 
@@ -561,7 +564,7 @@ In differential expression analysis we are testing whether each gene in our list
 
 The Bioconductor package edgeR allows the implementation of a wide array of statistical methods applicable to \ac{DGE} analysis. EdgeR accepts a matrix of reads normalised by \ac{TMM} as input (see Section \ref{TMM} for details). Prior to differential expression analysis, this matrix is filtered according to read counts using the function \texttt{filterByExpr} which removes genes with <10 read counts. Two primary routes may be taken using \autoref{fig:edger_options}, the classic route which involves exact tests \citep{robinson2007moderated, robinson2008small}, or the Generalized Linear Model (GLM) route, although certain features of the two may be combined. The GLM tests for \ac{DGE} are likelihood ratio tests (LRTs) \citep{mccarthy2012differential} and quasi-likelihood F-tests (QLFs) \citep{lun2016s, lund2012detecting}.
 
-The \texttt{exactTest} function is based on quantile-adjusted conditional maximum likelihood (qCML) method. It produces a matrix of pseudo-counts\footnote{Note that the meaning of the term \textit{pseudo-counts} may change according to the context, and may be used by other studies to refer to something different.} which are designed to speed up computational analysis and not to be interpreted as regular normalised counts. The qCML method is only applicable on datasets with a single factor.
+The \texttt{exactTest} function is based on quantile-adjusted conditional maximum likelihood (qCML) method. It produces a matrix of pseudo-counts\footnote{Note that the meaning of the term \textit{pseudo-counts} may change according to the context, and may be used by other studies to refer to something different.} which are designed to speed up computational analysis and not to be interpreted as regular normalised counts. The qCML method is only applicable on datasets with a single factor. The exact test for a negative binomial distribution should not be confused with Fisher’s exact test \citep{upton1992fisher}, although the two share many similarities.
 
 GLMs are an adaptation of classical linear models to cater for non-normally distributed data \citep{dunn2018generalized}. The QLF dispersion estimate and test can be performed with the functions \textit{glmQLFit} and \textit{glmQLFTest}. This fits a negative binomial GLM to the \ac{TMM} normalised read counts. The LRT compares the goodness of fit of two competing models through the functions \textit{glmFit} and \textit{glmLRT}.
 
@@ -576,13 +579,13 @@ GLMs are an adaptation of classical linear models to cater for non-normally dist
 EdgeR and DESeq2 are quite similar in that they both make use of a negative binomial distribution to model read counts, and estimate dispersion based on the approximate conditional inference, first proposed by \cite{cox1987parameter}.  EdgeR is recommended for experiments with fewer than 12 replicates \citep{schurch2015evaluation}, and unlike DESeq2, allows for the analysis of data with no replicates, although highly discouraged by the vignette. 
 % The negative binomial is a more general form of the Poisson distribution... maybe write some shit on this
 
-The biggest challenge when working with data without replicates is the estimation of dispersion, which is mathematically impossible given a single sample. In cases when there is no other alternative, the vignette suggests giving a nominal value to the \ac{BCV}, from which we may derive the dispersion. The vignette suggests a few estimates for the \ac{BCV} which are based on previous experiments as the dispersion, such as \textit{0.1 for data on genetically identical model organisms}. The dispersion is equal to this value squared, which is little more than an educated guess, but is a better alternative to assuming no variance.
+The biggest challenge when working with data without replicates is the estimation of dispersion, which is mathematically impossible given a single sample. In cases when there is no other alternative, the vignette suggests giving a nominal value to the \ac{BCV}, from which we may derive the dispersion. The vignette suggests a few estimates for the \ac{BCV} which are based on previous experiments as the dispersion, such as \textit{0.1 for data on genetically identical model organisms}. The dispersion is equal to this value squared, which although inaccurate, is a better alternative to assuming no variance.
 
-To account for the previously described multiple testing problem, the \texttt{topTags} function adjusts p-values using the Benjamini-Hochberg method \citep{benjamini1995controlling} to control the \ac{FDR}. This produced value is the proportion of false positives one might expect to get from a test. 
+To account for the previously described multiple testing problem, the \texttt{topTags} function adjusts \textit{p}-values using the Benjamini-Hochberg method \citep{benjamini1995controlling} to control the \ac{FDR}. This produced value is the proportion of false positives one might expect to get from a test. 
 
 To gain further biological insight, the \texttt{goana} and \texttt{kegga} functions may be used to annotate genes according to their associated \ac{GO} terms and \ac{KEGG} pathways respectively. This may be particularly useful in downstream tests for gene set analyses.
 
-The end result should be an edgeR object containing a matrix of each the \ac{logFC}, adjusted p-values and (optionally) annotations for each differentially expressed gene. The final step is filtering on the matrix by setting a (largely arbitrary) \ac{logFC} and/or \textit{p}-value cutoff, and sorting the data by one of these metrics for easier biological analysis.
+The end result should be an edgeR object containing a matrix of each the \ac{logFC}, adjusted \textit{p}-values and (optionally) annotations for each differentially expressed gene. The final step is filtering on the matrix by setting a (largely arbitrary) \ac{logFC} and/or \textit{p}-value cutoff, and sorting the data by one of these metrics for easier biological analysis.
 % Visit later and suggest values
 
 \subsection{Downstream Analysis}
@@ -636,14 +639,16 @@ Pathview \citep{luo2013pathview}, like GAGE, is a Bioconductor \citep{gentleman2
 %Include pathview image?
 
 
+\clearpage
 \section{Evaluation Criteria}
-Every step in the pipeline is followed by some sort of QC and potentially filtering of bad data, from trimming adapter sequences to filtering multimapped reads to removing very lowly expressed genes. It is not unlikely that errors of any form slip through, and for these reason the final results will be evaluated.
+Every step in the pipeline is followed by some form of QC and potentially filtering of bad data, from trimming adapter sequences to filtering multimapped reads to removing very lowly expressed genes. It is not unlikely that errors of any form slip through, and for these reason the final results will be evaluated.
 
 The list of \ac{DEG}s will be checked against a list of housekeeping genes which will act similar to negative controls. Housekeeping genes are required for basic cellular function and must be expressed in both normal and pathological cells. While they may be differentially expressed in some cases \citep{greer2010housekeeping}, they are generally uniformly expressed with low variance. Repositories such as the Housekeeping and Reference Transcript Atlas (HRT Atlas) \citep{hounkpe2021hrt} were used as sources for the gene lists. % REVISIT THIS!!
 The genes and pathways affected by cancer, even those specifically affected by \ac{AML} are well studied, annotated and aggregated in repositories such as GeneCards \citep{stelzer2016genecards} or OMIM \citep{hamosh2005online}. Thus the biological relevance of these genes in relation to these pathways will be checked.
 
 In future work, if more funds are acquired, similar work could be conducted with more technical replicates to confirm the findings of this project with greater statistical power. To decrease the number of sequencing errors, Sanger Sequencing could potentially be used, given its 99.999\% accuracy rate and long read lengths of up to \textasciitilde 1000bp \citep{shendure2008next}.
 
+\clearpage
 \section{Related Work}
 This multidisciplinary project is based on multiple rapidly developing fields, thus it is important for the researcher to keep updated with the latest literature. This section will describe the methods and findings of literature which this project will build upon, namely those which cover: (i) the biochemical components of extra virgin olive oil and their potential application to clinical practice, (ii) compounds with chemotherapeutic potential in \ac{AML} and the resultant \ac{DEG}s and (iii) tools to construct an effective RNA-seq pipeline given our specific data.
 
@@ -664,17 +669,18 @@ The Mediterranean diet is rich in fruits, vegetables, fish, and olive oil, and i
 
 There is abundant literature on the role of natural phenolic compounds in general in the prevention and treatment of cancer. This is achieved by regulating the cell cycle \citep{jafari2014role} and the epigenome \citep{pan2015breast}. These compounds may complement traditional chemotherapeutic treatments, potentially lessening the use of chemicals with severe side-effects on the patients. \cite{gatt2021phenolic} provide a comprehensive review on phenolic effects on leukaemia \textit{in vitro}, \textit{in vivo} and in clinical practice. Literature on the effects of specifically olive oil-derived phenolic compounds on cancer shall be covered in Section \ref{Differentiation_AML}.
 
-\subsection{Differentiation of HL60 cells by Phenolic Compounds Derived from Olive Oil}
+\subsection{Differentiation of HL-60 cells by Phenolic Compounds Derived from Olive Oil}
 \label{Differentiation_AML}
-There is a great scientific initiative to identify compounds which induce apoptosis, necrosis or differentiation in cancerous cells, and to analyse the effects these compounds have on the biochemistry of the cell. Even the seemingly specific topic of the differentiation of HL60 cells by phenolic compounds derived from olive oil, yields myriad peer-reviewed studies, earning it a distinct section in this literature review.
+There is a great medical initiative to identify compounds which induce differentiation and subsequently apoptosis in cancerous cells, and to analyse the effects these compounds have on the biochemistry of the cell. Even the seemingly specific topic of the differentiation of HL-60 cells by phenolic compounds derived from olive oil, yields myriad peer-reviewed studies, earning it a distinct section in this literature review. 
 
-Differentiation therapy has changed the prognosis of \ac{AML}, and has shown a surge in academic interest after the success of \ac{ATRA} (see Section \ref{Treatment Methods}). In successful differentiation therapy, the undifferentiated myeloid cells will be induced to take an epigenetic path, culminating in apoptosis \citep{santos2000expression, mark2017transcriptomes}. 
+Differentiation therapy has changed the prognosis of \ac{AML}, and has shown a surge in academic interest after the success of \ac{ATRA} (see Section \ref{Treatment Methods}). In successful differentiation therapy, the undifferentiated myeloid cells will be induced to take an epigenetic path, culminating in apoptosis \citep{santos2000expression, mark2017transcriptomes}. Genes forming part of the JAK-STAT signaling pathway and the nuclear factor $\kappa\beta$ (NF-$\kappa\beta$) pathway have been repeatedly proven to play an essential role in this process, and are activated by differentiation agents \citep{matikainen1997retinoic, gianni1997stat1, cohen2005jak, ren2013resveratrol, iwata2016parp9}. Differential expression of the genes constituting  these two pathways seem to be hallmarks of successful differentiation therapy.
 
-The similarity in experimental design and goals makes \cite{gatt2021tyrosol} a particularly important study to build upon. The study was successful in inducing differentiation and significant apoptosis in an HL60 cell line using tyrosol derived from Maltese extra virgin olive oil as a differentiation agent. The differentiated cells exhibited visual characteristics of neutrophils and monocytes, which were subjected to a bulk RNA-seq analysis. They defined a total of 199 \ac{DEG}s. The \textit{Myeloid differentiation} \ac{GO} term (\ac{GO}:0030099) genes were significantly upregulated (OSCAR, RELB, VEGFA, GAB2, JUNB, DNASE2, ICAM, CCL3), particularly monocyte genes. Transcription factors IRF1, IRF7, STAT2, RelB, NFKB2, ATF3, and BCL3 and chemokines CCL3 and CCL4 were all found to be upregulated. At a pathway-level, Neutrophil Degranulation (CEACAM6, CLEC5A, FPR1, SERPINA1, ELANE, AZU1, PRG2) and Cholesterol biosynthesis (LSS, SQLE, ACAT2, DHCR7 HMGCS1, FDFT1) were found to be downregulated.
+The similarity in experimental design and goals makes \cite{gatt2021tyrosol} a particularly relevant study to build upon and use for comparison. The study was successful in inducing differentiation and significant apoptosis in an HL-60 cell line using tyrosol derived from Maltese extra virgin olive oil as a differentiation agent. The differentiated cells exhibited morphological characteristics of neutrophils and monocytes. Three samples of cells were exposed to the phenol for three varying lengths of time (1hr, 6hr, 12hr) which were subjected to a bulk RNA-seq analysis, together with a positive monocyte differentiation control. They defined a total of 199 \ac{DEG}s. The \textit{Myeloid differentiation} \ac{GO} term (\ac{GO}:0030099) genes were significantly upregulated (OSCAR, RELB, VEGFA, GAB2, JUNB, DNASE2, ICAM, CCL3), particularly monocyte genes. Transcription factors IRF1, IRF7, STAT2, RelB, NFKB2, ATF3, and BCL3 and chemokines CCL3 and CCL4 were all found to be upregulated. At a pathway-level, Neutrophil Degranulation (CEACAM6, CLEC5A, FPR1, SERPINA1, ELANE, AZU1, PRG2) and Cholesterol biosynthesis (LSS, SQLE, ACAT2, DHCR7, HMGCS1, FDFT1) were found to be down-regulated. A complete table of \ac{DEG}s were available for download in the \textit{Supplementary Material}, which will be a useful resource for comparison.
 
-\cite{fabiani2008inhibition} found hydroxytyrosol treatment over a period of 25 hours to bring about an upregulation in cyclin-dependent protein kinase inhibitors CDKN1A and CDKN1B, which induced apoptosis. Cell proliferation inhibition was directly proportional to the increase in time and phenoli extract concentration.
+\cite{fabiani2008inhibition} found hydroxytyrosol treatment over a period of 25 hours to bring about an upregulation in cyclin-dependent protein kinase inhibitors CDKN1A and CDKN1B, which induced apoptosis. Cell proliferation inhibition was directly proportional to the increase in time and phenolic extract concentration. The differential expression of CDKN1A coincides with the findings of \cite{gatt2021tyrosol}. \cite{fabiani2011production} confirms these findings, demonstrating that hydroxytyrosol induces apoptosis in HL-60 cells through the production of extracellular hydrogen peroxide (H$_2$O$_2$). This was not a universal property of differentiation-inducing olive oil phenolics, with some inducing apoptosis without the production of  H$_2$O$_2$ and others simply failed to induce apoptosis.
 
-In multidrug resistant HL60 cells, \cite{crescimanno2009effects} induced the expression of the granulocytic CD11 or monocytic CD14 cell surface antigens using a crude phenolic extract.
+In multidrug resistant HL-60 cells, \cite{crescimanno2009effects} were able to induce apoptosis using a crude phenolic extract extracted from extra virgin olive oil of the Moraiolo cultivar. This induced the expression of monocytic CD14 cell surface antigens but not of the granulocytic CD11. The concentration of the extract was directly proportional to the percentage of apoptotic HL-60 cells. 
+
 
 % The importance of VEGFA in myeloid cell differentiation has also been reported by Huang et al., 2017 while Czepluch et al., 2011 discussed its expression in two monocyte subsets [40,41], showing its role in monocyte chemotaxis.
 % JUNB has been found to regulate the responses of monocytes to different immunostimulatory ligands, and its levels have also been reported to increase during monocyte maturation [42]
@@ -683,8 +689,8 @@ In multidrug resistant HL60 cells, \cite{crescimanno2009effects} induced the exp
 
 % papers that used RNA-seq for the treatment of cancers
 
-\subsection{Determining the Optimal Tools}
-As a result of the decentralised and rapidly changing nature of the field of bioinformatics, there is a lack of standardisation. There is currently no one-size-fits-all tool or library, so the bioinformatician must evaluate the numerous trade-offs of the available tools, for every step of their sequencing pipeline, in accordance to their individual dataset and their desired result. To find the most appropriate tools for our data, an extensive literature search was conducted. The studies were split into three categories, each harbouring its own tabular summary which includes the tools used at each step:
+\subsection{A Review of the Computational Tools}
+As a result of the decentralised and rapidly changing nature of the field of bioinformatics, there is a lack of standardisation. There is currently no one-size-fits-all tool or library for RNA-seq. The bioinformatician must evaluate the numerous trade-offs of the available tools, for every step of their sequencing pipeline, in accordance to their individual dataset and their desired result. Pursuant to the first objective of the project, an extensive literature search was conducted to identify the optimal tools for each step of our pipeline. The studies were split into three categories, each harbouring its own tabular summary which includes the tools used at each step:
 
 \begin{enumerate}
 \item Review papers, meta-analyses, studies which benchmark tools (\autoref{tab:rnaseq_review})
@@ -693,8 +699,9 @@ As a result of the decentralised and rapidly changing nature of the field of bio
 \item[NOTE] Studies which presented a new tool were excluded due to their inherent bias.
 \end{enumerate}
 
-The first category will summarise the findings of studies which compare similar tools. The second and third sections aim to garner information on which tools are being used in practice and integrated into pipelines.
-% Review papers: \citep{Soneson2013}, \citep{Li1371}, \citep{Luecken2019}, \citep{Zhang2017}, \citep{Conesa2016}, \citep{Cirillo0017}, \citep{Teng2016}
+The studies in the first category will be discussed in greater detail as they directly review and compare studies. The second and third tables aim to garner information on which tools are being used in practice and integrated into pipelines. Unfortunately the literature in the second and third categories often fail to explain their reasoning behind the choice of tools, simply stating the choice and focusing on the final product. However we have seen evidence \citep{lin2016comparison, everaert2017benchmarking, williams2017empirical, srivastava2020alignment} that the constituent tools may have a significant effect on the final list of \ac{DEG}s, in particular the more lowly expressed ones.
+
+%Regular updates are a hallmark of a well-maintained tool, but changes to its functionality or underlying algorithms adds a temporal layer of complexity. It is inevitable that over time different studies will use different versions of the same tool, and caution should be taken while evaluating studies using older versions of tools.
 
 % tab:rnaseq_review
 \begin{landscape}
@@ -757,7 +764,7 @@ The first category will summarise the findings of studies which compare similar 
 	\footnotesize
     \centering
     \captionsetup{font=footnotesize}
-    \caption{Studies which compare RNA-seq tools or work-flows, including their conclusion summarised to one or two sentences.}
+    \caption{Studies which perform RNA-seq with similar experimental conditions and goals.}
 	\label{tab:rnaseq_experiments}
     \begin{tabular}{llllllllllllll}
 		\toprule
@@ -766,17 +773,17 @@ The first category will summarise the findings of studies which compare similar 
         ~ & ~ & ~ & ~ & ~ &   \\ \hline
         \cite{mostafavi2014type} & Ridge regression of  & Tophat & HTSeq & / & LRT  \\
         ~ & log-transformed read counts & ~ & ~ & ~ &   \\ \hline
-        \cite{shiozawa2017gene} & / & RUM version 2.0.4 & Genomon-fucion  & TMM & edgeR, limma,   \\
+        \cite{shiozawa2017gene} & / & RUM & Genomon-fucion  & TMM & edgeR, limma,   \\
         ~ & ~ & ~ & (fusion trancripts only) & ~ & ConsensusClusterPlus  \\ \hline
-        \cite{schubert2018perturbation} & FastQC, cutadapt & STAR  v2.5.0c,  & subread feature-Counts & Deseq & /  \\
-        ~ & ~ & GENCODE v19 for annotation & ~ & ~ &   \\ \hline
+        \cite{schubert2018perturbation} & FastQC, cutadapt & STAR,  & subread feature-Counts & Deseq & /  \\
+        ~ & ~ & GENCODE for annotation & ~ & ~ &   \\ \hline
         \cite{schmiedel2018impact} & / & TopHat & HTSeq & Deseq & DESeq2  \\
         ~ & ~ & ~ & ~ & ~ &   \\ \hline
-        \cite{lee2020lineage} &  Trimmomatic,  & STAR & RSEM v.1.3.0  & CCA, TPM & /  \\
+        \cite{lee2020lineage} &  Trimmomatic,  & STAR & RSEM  & CCA, TPM & /  \\
         ~ & Htseq & ~ & ~ & ~ &   \\ \hline
         \cite{wang2013dynamic} & / & / & / & / & IDEG6  \\
         ~ & ~ & ~ & ~ & ~ &   \\ \hline
-        \cite{gatt2021tyrosol} & / & TopHat & SeqMonk  v1.39.0 & DEseq2 & DEseq2  \\ 
+        \cite{gatt2021tyrosol} & / & TopHat & SeqMonk & DEseq2 & DEseq2  \\ 
         ~ & ~ & ~ & ~ & ~ &   \\ \bottomrule
     \end{tabular}
 \end{table}
@@ -811,46 +818,13 @@ The first category will summarise the findings of studies which compare similar 
 \end{landscape}
 
 
-\subsubsection{Adapting DGE Analysis to a Lack of Replicates}
-\label{DGE no replicates}
-
-The accuracy of any statistical analysis is dependent on the number of replicates. Technical replicates allow the isolation of the non-biological variation to evaluate the quality of the instruments and methodology used. Biological replicates originate from different biological sources and are meant to test the biological variance of the samples. \cite{liu2014rna} find that in RNAseq biological variation is by far more important, and given a choice between the two, the researcher should invest in biological replicates. \cite{bullard2010evaluation} confirm this claim, finding that technical variation in RNAseq experiments is minimal. \cite{schurch2016many} found that using three biological replicates gave 20\% to 40\% of the \ac{DEG}s (varies according to the tool) compared to a full set of 42 replicates (representing the 'true' population). This rises to >85\% when considering genes with a log$_2$ fold change of >2. \cite{schurch2016many} state that ideally an RNAseq experiment for \ac{DGE} should have a minimum of six replicates per condition for all experiments and 12 replicates for experiments where the identification of \textit{all} the \ac{DEG}s, even the lowly expressed ones, is important. 
-
-However, in practice, performing an experiment with large numbers of replicates is not always possible. Budget constraints and the still-high cost of sequencing are a common issue in RNAseq experiments. To make the most of such datasets, several \ac{DGE} tools advertise their ability to work with just a single reading per experimental condition \citep{feng2012gfold, gim2016lpeseq, anders2010differential, wang2010degseq, al2014bootstrap}. Notably, DESeq2 does not support datasets without replicates. There is an unfortunate lack of review papers and independent studies which benchmark these tools, except for brief comments in \cite{schurch2016many} who recommend edgeR (\texttt{exactTest}) or DESeq2 for experiments with <12 replicates per condition. For this reason this section will be reviewing the available tools adapted to performing \ac{DGE} without replicates.
-
-The first tool in this review will be \textbf{GFOLD} \citep{feng2012gfold}, developed specifically for datasets lacking in replicates. The developers acknowledge the dependence of p-values on variance estimation, which is impossible without replicates. A unique GFOLD value replaces the standard metrics of significance (\textit{p}-values) and expression change (log$_2$ fold changes). \cite{feng2012gfold} describe the value as a relative change of the expression level. GFOLD is unique in that it is the only tool in this comparison that is called through the Linux command line, instead of being an R library.
-
-\textbf{LPESeq} \citep{gim2016lpeseq} introduces the Local-Pooled-Error (LPE) method for few or single-replicate \ac{DGE} analysis. This method attempts to estimate transcript-specific variance using the raw values of each transcript per condition. Hypothesis testing for significant difference is then performed to identify the differentially expressed genes.
-
-\textbf{IsoDE} \citep{al2014bootstrap} is a non-parametric method (i.e. it assumes no statistical distribution) and is based on bootstrapping. The algorithm generates FPKM estimates from read counts of each condition which undergo pairwise comparison.
-
-An MA-plot-based method, the R library \textbf{DEGseq} \citep{wang2010degseq} (not to be confused with DESeq) accepts input .bed or .eland input files and outputs an XHTML page with p-values, gene expression values and expression differences in the form of Q-values.
-
-The final tool in this review is the Bioconductor R library \textbf{edgeR} \citep{edger}. It may be more accurately described as a collection of methods, neither of which are specifically adapted to data without replicates, but the documentation provides recommendations to adapt the analysis to with the lack of replicates. EdgeR and its normalisation technique TMM have already been covered extensively in Section \ref{EdgeR} and Section \ref{TMM} respectively. 
-% Describe edger no replicates here
-
-% really perfect paper https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4878611/#:~:text=Recommendations%20for%20RNA%2Dseq%20experiment%20design&text=At%20least%20six%20replicates%20per,all%20DE%20genes%20is%20important.
-
-\subsubsection{Conclusion on Tool Choice}
-The following is the reasoning behind the final decisions made on the tool choices of each step of the pipeline, based on the literature reviewed. Extensive descriptions of the final tools implemented in the pipeline can be found throughout Section \ref{RNA-seq: in silico}.
-% NOTE SEE IF U NEED TO CHANGE THIS. Maybe group all the tools in a single place
-
-Tools which measure quality metrics without altering the data require little justification for their use, their mention occasionally being omitted from RNA-seq studies \autoref{tab:rnaseq_experiments}. \textbf{FastQC} is a staple of sequencing quality control, providing a detailed analysis of the contents of FASTQ files and drawing attention to signs of low quality reads. While FastQC results are detailed, they lack the detection of external nucleotide contaminants in the data. This information was supplemented with the results from \textbf{FastQScreen} which aligns the experimental sequences to common contaminant sequences (e.g. mouse, \textit{Drosophila}, rRNA) and provides a graph marking any successful alignments.
-
-To trim the data, we have chosen \textbf{Cutadapt}, which pipes its output back to FastQC through the wrapper script \textbf{Trim Galore!}. Additional filtering was performed by \textbf{Prinseq++} which may detect and remove regions of low-complexity. The functionality of these tools were found to complement each other. Filtering and trimming the data at this stage was relatively unimportant, as suggested by the findings of \cite{he2020assessing} and because the raw data of this project was of good quality to begin with. \cite{liao2020read} doubt the necessity of trimming at all.
-
-Despite \textbf{STAR} needing a lot of RAM \citep{Dobin2013} and being slower than more light-weight aligners \citep{srivastava2020alignment}, these were not limiting factors due to our access to a High Performance Computer (HPC) and small number of samples. \cite{srivastava2020alignment} found that the choice between quasi-mappers (e.g. Salmon) and traditional aligners (e.g. STAR) is a trade-off between speed and accuracy. Similarly \cite{Zhang2017} found that pseudo-aligners Salmon and Kallisto require less runtime while maintaining similar accuracy to STAR. \cite{Schaarschmidt2020} find that the effect aligners have on the final list of \ac{DEG}s is negligible, and that all tested aligners can be used equally for RNA-seq. Even if STAR provides a marginal increase in accuracy over quasi-aligners, this is preferred over the improvements in speed or computational resources provided by other aligners.
-
-The most difficult and time-consuming choice to make was the tool to perform differential gene expression. The invested effort was justified by the findings of \cite{williams2017empirical}, which state that the method of \ac{DGE} exhibits the strongest impact on the results. Our data consists of three time points (1hr, 6hr, 12hr) and a control, each lacking replicates. Since we cannot accurately estimate the variance or dispersion with a single reading, many \ac{DGE} tools simply fail to function. Although one may argue that low replicates is not a major issue due to the negligible technical variance of RNAseq \citep{bullard2010evaluation} and the minimal biological variance in our data which is derived from the same \ac{ATRA}-resistant HL-60 cell line.
-
-Due to the lack of review papers and benchmarks comparing the tools which claim to function well without replicates, they were manually tested and investigated (see Section \ref{DGE no replicates}). The lesser-known tools (GFOLD, LPESeq, DEGseq, IsoDE), while developed specifically to function without replicates, were found to be limited in functionality when compared to \textbf{edgeR}. Additionally, due to their rather unconventional approach to \ac{DGE}, their output was found to be incompatible with other downstream libraries, limiting the potential for data exploration.
-
-
+\clearpage
 \section{Summary}
 This project goes into technical detail of \ac{AML}, sequencing technologies, statistical analyses and the computational tools required to transform RNA-seq data into biologically meaningful results. In this section we provided adequate background to understand these aspects of the dissertation, assuming some basic prior knowledge of bioinformatics. The section \textit{RNA-seq: in silico} covers the crux of this project, first describing each step of a generic RNA-seq pipeline, the potential approaches for that step, and a description of the specific tools used in this project.
 %Does this need to change in the future?
 
-In the \textit{Related Work} section, we gave an overview of the work done to date related to the biochemistry of olive oil, in particular the phenolic candidates for differentiation therapy, and the effect these compounds had on the transcriptome of HL-60 cells. We concluded with a literature overview of available tools for RNA-seq analysis, how they compare with one another and which are the ones being used in practice. This was used to justify the tool choices made for our pipeline given our goals and set of data, achieving the first objective of this project. In particular, we discussed the best approach to tackle performing \ac{DGE} analysis without replicate samples.
+% CHANGE THIS
+In the \textit{Related Work} section, we gave an overview of the work done to date related to the biochemistry of olive oil, in particular the phenolic candidates for differentiation therapy, and the effect these compounds had on the transcriptome of HL-60 cells. We concluded with a literature overview of available tools for RNA-seq analysis, how they compare with one another and which are the ones being used in practice. This will be used to justify the tool choices made for our pipeline given our goals and set of data, achieving the first objective of this project.
 
 
 

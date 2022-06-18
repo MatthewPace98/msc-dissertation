@@ -1162,6 +1162,7 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   year      = {2016},
   timestamp = {2022-06-06},
   url       = {https://sequencing.qcfail.com/articles/mapq-values-are-really-useful-but-their-implementation-is-a-mess/},
+  urldate   = {2022-06-06},
 }
 
 @Article{li2010rna,
@@ -1894,9 +1895,6 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   publisher = {Taylor \& Francis},
 }
 
-@Article{,
-}
-
 @Article{santos2000expression,
   author    = {Santos-Beneit, Antonio M and Mollinedo, Faustino},
   journal   = {Journal of leukocyte biology},
@@ -2124,4 +2122,4 @@ Background: Acute myeloid leukemia (AML) is a strategy at the time of relapse, o
   number    = {15},
   pages     = {2224--2226},
   volume    = {30},
-  publisher = {Oxford Univers
+  publisher = {Ox
