@@ -42,12 +42,10 @@ Data was stored and processed until the Quantification stage on a high performan
 \end{figure}
 \clearpage
 
-\subsection{Quality Control}
+\subsection{Assessing the Quality of the Raw Data}
 % Maybe list used arguments and their use like evas documentation??
 
 The first step of any sequencing pipeline should be the assessment of the quality of the raw data files. Sequencing information of poor quality is identified if present, and if necessary, truncated to mitigate inaccuracies in the downstream pipeline. To assess the quality of the FASTQ files, they were ported to FastQC v0.11.9 \citep{andrews2010fastqc} using eight threads (\autoref{lst:FastQC}). This extracted information on the sequences, including Phred scores, GC content, N content, sequence length distribution, sequence duplication levels, overrepresented sequences and adapter sequences. FastQC rates each of these modules using a green check-mark signifying that it 'passed' QC, a yellow exclamation mark 'warning', or a red cross 'failed'. 
-
-Two modules failed consistently throughout the four samples received: 'Sequence Duplication Levels' and 'Per base sequence content'. This is normal and expected for RNA data, and is explained in further detail in \autoref{Assessing the Quality of the Raw FASTQ files}. Traces (<0.5\%) of TruSeq adapters were detected in the FASTQ files, which is corroborated by the sequencer's manual \citep{HiSeq2000} stating that it makes use of the 'TruSeq family of reagents'. 
 
 \begin{lstlisting}[language=bash, caption=FastQC command, label={lst:FastQC}]
 # FastQC accepts multiple input files, so we can use wildcards
@@ -68,7 +66,8 @@ fastq_screen \
 \end{lstlisting}
 
 \subsection{Preprocessing}
-Poor quality reads lead to poor downstream sequence analysis. Thus, it is common practice in RNA-seq to trim the undesired regions. Cutadapt \citep{martin2011cutadapt} was used to trim the previously detected TruSeq adapter sequences and short reads, using a threshold of <45 bp. Cutadapt was accessed through the wrapper script Trim Galore! v0.6.7 \citep{trimgalore} which instantly redirects the trimmed data back to FastQC to assess the improvement in quality, if any.
+Poor quality reads lead to poor downstream sequence analysis. Thus, it is common practice in RNA-seq to trim the undesired regions. Cutadapt \citep{martin2011cutadapt} was used to trim the previously detected TruSeq adapter sequences and short reads, using a threshold of <45 bp. Cutadapt was accessed through the wrapper script Trim Galore! v0.6.7 \citep{trimgalore} which instantly redirects the trimmed data back to FastQC to assess the improvement in quality, if any. Cutadapt should be able to detect adapter sequences automatically, although it was unsuccessful in doing so with this particular TruSeq adapter, passed using the \texttt{-a} parameter which trims the 3' end. % BUT WHY 3'? IS THIS ADAPTER FOUND ONLY THERE
+Providing the sequence explicitly has the added benefit of hastening the process since there is no need for the algorithm to search for matching adapter sequences.
 
 \begin{lstlisting}[caption=Trim Galore! trimming]
 trim_galore \
@@ -102,7 +101,7 @@ done
 \subsection{Read alignment and Quantification}
 The trimmed and filtered FASTQ files were aligned to the GRCh38.p13 reference genome \citep{ref} using the \ac{STAR} 2.7.9a aligner \citep{Dobin2013}. \ac{STAR} was called through RSEM v1.3.3 \citep{li2011rsem}, which after alignment estimates gene and isoform expression levels. RSEM must be accessed through a 64 bit Linux or Mac OS command-line, and must have C++, Perl and R installed as dependencies.
 
-Reference transcripts from the reference genome were first generated through the \texttt{rsem-prepare-reference} program, with the help of its respective GTF file (\autoref{lst:RSEM_ref}). 
+Reference transcripts from the reference genome were first generated through the \texttt{rsem-prepare-reference} command (\autoref{lst:RSEM_ref}), using its respective GTF file which holds information on genomic features. 
 
 % .genes.results (one row per gene) which has the headers: gene_id transcript_id(s)        length  effective_length        expected_count  TPM     FPKM
 % .isoforms.results (one row per transcript) which has the headers: transcript_id   gene_id length  effective_length        expected_count  TPM     FPKM    IsoPct
@@ -121,7 +120,11 @@ rsem-prepare-reference --gtf mm9.gtf \
 
 The \texttt{--star-sjdboverhang} is an argument passed to \ac{STAR} which sets the maximum possible overhang for the reads. It should be equal to the read length minus one. In our case, the read length is 51, thus a value of 50 is used. The final variable is a prefix to the output files. This may be used as the output path for the generated reference files.
 
-To calculate expression values, the \texttt{rsem-calculate-expression} command is used. As before, the final argument is a prefix to the output files, and the argument before that is the path to the reference files created in the previous command. RSEM first uses \ac{STAR} to align the filtered sample reads to the generated reference reads, creating a BAM file sorted by its coordinates. It outputs two quantification files per sample, with differing suffices: one ending in '.genes.results' and another '.isoform.results'. These are both tab-delimited text files with similar headers, with the former dedicating a row for each gene and the latter dedicating a row for each transcript. The isoform-centric file thus contains more data, which are unnecessary for our objectives. Of the columns in the gene-centric file, two will be used in the subsequent step: 'gene\textunderscore id' which holds the Ensembl gene ID, and 'expected\textunderscore count' which holds the read count for the respective gene. % CHECK WHAT EXPECTED_COUNT IS EXACTLY
+To calculate expression values, the \texttt{rsem-calculate-expression} command is used. As before, the final argument is a prefix to the output files, and the argument before that is the path to the reference files created in the previous command. RSEM first uses \ac{STAR} to align the filtered sample reads to the generated reference reads, creating a BAM file sorted by its coordinates. The STAR alignment algorithm does not make use of strandedness information, but the RSEM vignette\footnote{Accessed 16/06/22: url{https://deweylab.github.io/RSEM/rsem-calculate-expression.html}} specifically suggests passing \texttt{--strandedness reverse} for Illumina TruSeq Stranded protocols.
+
+It outputs two quantification files per sample, with differing suffices: one ending in \textit{.genes.results} and another \textit{.isoform.results}. These are both tab-delimited text files with similar headers, with the former dedicating a row for each gene and the latter dedicating a row for each transcript. The isoform-centric file thus contains more data, which are unnecessary for our objectives. Of the columns in the gene-centric file, two will be used in the subsequent step: 'gene\textunderscore id' which holds the Ensembl gene ID, and 'expected\textunderscore count' which holds the read count for the respective gene. % CHECK WHAT EXPECTED_COUNT IS EXACTLY
+
+
 
 \begin{lstlisting}[caption=RSEM expression command, label={lst:RSEM_exp}]
 mkdir RSEM/expression
@@ -133,15 +136,16 @@ do
         --num-threads 16 \
         --star \
         --sort-bam-by-coordinate \
+        --strandedness reverse \
         ./prinseq_out/${sample}*good_out.fq \
         ./RSEM/reference/GRCh38 \
         ./RSEM/expression/${sample}
 done
 \end{lstlisting}
 
-\subsection{Reassessing the Quality}
+\subsection{Reassessing Data Quality}
 
-The produced files from FastQC, FastQScreen, Trim Galore! and RSEM, were funnelled into MultiQC v1.11 \citep{multiqc} which summarises their output in the form of an HTML report. At the time of writing, the latest version of MultiQC did not support Prinseq++ and its log files were inspected manually instead.
+The produced files from FastQC, FastQScreen, Trim Galore! and RSEM, were funnelled into MultiQC v1.11 \citep{multiqc} which summarises their output in the form of an HTML report. At the time of writing (12/04/22), the latest version of MultiQC did not support Prinseq++ and its log files were inspected manually instead.
 
 \begin{lstlisting}[language=bash, caption=MultiQC command]
 multiqc \
@@ -152,10 +156,10 @@ multiqc \
 ./RSEM/expression/.
 \end{lstlisting}
 
-\subsection{Normalisation and Differential Gene Expression}
+\subsection{Differential Gene Expression Analysis}
 % Find another name for this?
 
-We have chosen edgeR v3.14 \citep{edger} as the package to help identify differentially expressed genes, which supports datasets that lack replicates such as our own. The instructions on the vignette\footnote{\url{https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf}} were followed, and are summarised as follows. 
+We have chosen edgeR v3.14 \citep{edger} as the package to help identify differentially expressed genes, which supports datasets that lack replicates such as our own. The instructions on the vignette\footnote{Accessed 02/04/22: \url{https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf}} were followed, and are summarised as follows. 
 
 The four gene read count files generated through RSEM were imported into the R script v3.6.3 \citep{R} and had their gene IDs (1st column) and expected read counts (5th column) compiled into a single \texttt{DGEList} object which consists of multiple data-frames. 
 
@@ -206,9 +210,7 @@ y <- calcNormFactors(y)
 design <- model.matrix(~group)
 \end{lstlisting}
 
-
-%Likelihood Ratio Test which compared values against their mean. This was not applicable for our dataset because we needed to compare the treated values against the untreated values
-
+\subsubsection{Identifying the Differentially Expressed Genes}
 EdgeR has multiple methods to determine which genes are differentially expressed (\autoref{edger_dge_options}), but the classic \texttt{exactTest} was deemed as most appropriate. This is a pairwise test based on quantile-adjusted conditional maximum likelihood (qCML) method, which compares the means between two groups of counts assuming a negative-binomial distribution. The calculation of the dispersion of our data is required prior to its use, however this is not mathematically possible due to our lack of replicates. In such cases the edgeR vignette suggests that estimating the dispersion based on the experimental conditions is more scientifically sound than assuming no variation. It should be emphasised that this technique is inaccurate, but was deemed as the best possible option for statistical analysis without replicates.
 
 The \ac{BCV} is equal to the square root of the dispersion, and the vignette suggests a few estimates for the \ac{BCV}, such as \textit{0.1 for data on genetically identical model organisms}. While this is human data, not a model organism, the data originate from the same genetically identical cell line, and this value was deemed appropriate. Thus the dispersion used for \texttt{exactTest} is equal to the BCV\textsuperscript{2}, or 0.01. 

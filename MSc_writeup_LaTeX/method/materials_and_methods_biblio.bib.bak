@@ -393,6 +393,28 @@
   publisher = {Wiley Online Library},
 }
 
+@Article{dunn1961multiple,
+  author    = {Dunn, Olive Jean},
+  journal   = {Journal of the American statistical association},
+  title     = {Multiple comparisons among means},
+  year      = {1961},
+  number    = {293},
+  pages     = {52--64},
+  volume    = {56},
+  publisher = {Taylor \& Francis},
+}
+
+@Article{srinivasan2020strandedness,
+  author    = {Srinivasan, Krishna A and Virdee, Suman K and McArthur, Andrew G},
+  journal   = {Briefings in Functional Genomics},
+  title     = {Strandedness during cDNA synthesis, the stranded parameter in htseq-count and analysis of RNA-Seq data},
+  year      = {2020},
+  number    = {5-6},
+  pages     = {339--342},
+  volume    = {19},
+  publisher = {Oxford University Press},
+}
+
 @Article{,
 }
 

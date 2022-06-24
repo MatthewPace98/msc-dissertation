@@ -196,17 +196,19 @@ The following section is an overview of the techniques used to transform the nuc
 %https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0697-y: 
 %https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4878611/
 
-An RNA-seq experiment is customised according to research goals and often limited by the budget. Since many of the following options are an accuracy/expense trade-off, the researcher should be knowledgeable on the options to effectively allocate funds, particularly if the sequencing will be outsourced to another company. This section was placed here to retain the chronological order in which an RNA-seq experiment would take place, although some of the below descriptions include some technical detail which will be explained in future sections.
+An RNA-seq experiment is customised according to research goals and often limited by the budget. Since the following options are an accuracy/expense trade-off, the researcher should be knowledgeable on the options to effectively allocate funds. This section was placed here to retain the chronological order in which an RNA-seq experiment would take place, although some of the below descriptions include some technical detail which will be explained in future sections.
 
 \begin{itemize}
 
 \item[] \textbf{Read length} \hspace{0.15cm} Before sequencing, it is possible to specify the number of base-pairs of the DNA fragments each read would contain. A distinction is made between reads which emerge from second-generation sequencing machines (short-reads) and third-generation sequencing machines (long-reads). Smaller reads lead to greater ambiguity during alignment as they have a greater probability of being multi-mapped, and partly determine the optimal alignment algorithm \citep{albert2020biostar}. This is especially true in regions of low-complexity or in the presence of structural variants \citep{rhoads2015pacbio}. The exception to this rule is in the study of small RNAs, where read lengths drop to <30bp \citep{albert2020biostar}.
 
+\item[] \textbf{Strandedness} \hspace{0.15cm} In generic RNA-seq, information on the strand of origin is lost when the transcript is reverse transcribed into cDNA. Reports demonstrate that the strand-specific protocol produces more reliable results \citep{zhao2015comparison} and is recommended for novel transcript discovery \citep{kukurba2015rna}. Sequences from stranded libraries may originate from either the sense or antisense DNA strands \citep{lu2012strand}.
+
 \item[] \textbf{Depth of coverage} \hspace{0.15cm} Coverage is the average number of reads that will cover a given sequence, meaning that it is determined by the read length and number of reads. It is commonly denoted with an \textit{x}, e.g. 30x coverage means that a nucleotide is covered by an average of 30 reads. Low coverage is susceptible to ambiguity and sequencing errors.
 
 \item[] \textbf{Paired-end reads} \hspace{0.15cm} Fragments of cDNA are typically longer than the read length, so some sequencing information may be lost. Paired-end sequencing, as opposed to single-end sequencing, allows both ends of the cDNA fragment to be sequenced. The distance between each paired-end read is known, which is fed into alignment algorithms that use this information to improve alignment. This especially improves regions of low complexity \citep{albert2020biostar}.
 
-\item[] \textbf{Sample replicates} \hspace{0.15cm} Technical replicates originate from the same biological source to produce multiple samples which are all processed in the same manner. This gives isolates the non-biological variation, allowing for the evaluation of the instruments and methodology used. By contrast, biological replicates originate from different biological sources and are meant to test the biological variance of the samples. A mixture of the two types may be used, however given a limited budget, biological replicates are preferred in RNA-seq because technical variation is minimal \citep{bullard2010evaluation}, by far outweighed by biological variation \citep{liu2014rna}. \cite{schurch2016many} found that using three biological replicates gave 20\% to 40\% of the \ac{DEG}s (varies according to the tool) compared to a full set of 42 replicates (representing the 'true' population). This rises to >85\% when considering genes with a log$_2$ fold change of >2.
+\item[] \textbf{Sample replicates} \hspace{0.15cm} Technical replicates originate from the same biological source to produce multiple samples which are all processed in the same manner. This gives isolates the non-biological variation, allowing for the evaluation of the instruments and methodology used. Biological replicates originate from different biological sources and are meant to test the biological variance of the samples. A mixture of the two types may be used, however given a limited budget, biological replicates are preferred in RNA-seq because technical variation is minimal \citep{bullard2010evaluation}, by far outweighed by biological variation \citep{liu2014rna}. \cite{schurch2016many} found that using three biological replicates gave 20\% to 40\% of the \ac{DEG}s (varies according to the tool) compared to a full set of 42 replicates (representing the 'true' population). This rises to >85\% when considering genes with a log$_2$ fold change of >2.
 \end{itemize}
 
 
@@ -224,7 +226,7 @@ An additional quality metric commonly checked before sequencing, is the integrit
 
 There are two main competing methods available, each with their unique advantages and restraints: poly-A enrichment and rRNA depletion. The 3' end of messenger RNA (mRNA) undergoes polyadenylation prior to transcription, meaning that a long chain of adenine nucleotides called the \textit{poly-A tail} is added. With poly-A enrichment, RNA fragments with a poly-A tail are enriched with oligo (dT) primers, thus selecting for the mRNA \citep{zhao2014comparison}. The alternative approach is an active removal of the rRNA using commercially available kits, such as the Illumina \textit{Ribo-Zero Plus rRNA Depletion Kit}. These kits use oligonucleotides complementary to the rRNA sequences to reduce their abundance \citep{griffith2015informatics, peano2013efficient}. 
 
-The next two steps are fragmentation and conversion to complimentary DNA (cDNA), the order of which may vary. In the Illumina workflow used to generate the data for this dissertation, the RNA strands were first fragmented, and reverse transcribed to their cDNA counterparts \citep{pease2012rapid}. A short, artificially synthesised oligonucleotide called an \textit{adapter} sequence is ligated to each of the cDNA fragments, using the ligase enzyme, together with sequence motifs such as barcode sequences \citep{pease2012rapid} (\autoref{fig:ngs_clonal_amp}).
+The next two steps are conversion to complimentary DNA (cDNA) and fragmentation, potentially introducing fragmentation bias \citep{poptsova2014non}. The order of these steps may vary, but in the Truseq Illumina workflow, the RNA strands were first fragmented, and reverse transcribed to their cDNA counterparts \citep{pease2012rapid}. A short, artificially synthesised oligonucleotide called an \textit{adapter} sequence is ligated to each of the cDNA fragments, using the ligase enzyme, together with sequence motifs such as barcode sequences \citep{pease2012rapid} (\autoref{fig:ngs_clonal_amp}).
 
 %This adapter-ligated cDNA library is typically attached to a flow-cell, amplified and sequenced in a high-throughput sequencing platform which typically results in a FASTQ \citep{cock2010sanger} file. % Include more detail here?
 
@@ -299,17 +301,13 @@ Once the FASTQ files emerge from the sequencing machines, we may move into the d
 
 \subsection{Quality Control}
 
-The first part of any sequencing pipeline should be to analyse the quality of the data received from the sequencing machine. If poor quality sequencing information is identified, it is truncated to mitigate inaccuracies in the downstream pipeline. Some imperfections and uncertainties in sequencing are unavoidable, thus the reading of each base call by the sequencer is assigned a Phred quality score. These are numerical scores generally ranging from 10 to 60, logarithmically related to the probability of an erroneous base-call, represented as a single ASCII character \citep{ewing1998base}. They are calculated as follows:
+The first part of any sequencing pipeline should be to analyse the quality of the data received from the sequencing machine. If poor quality sequencing information is identified, it is truncated to mitigate inaccuracies in the downstream pipeline. 
+
+Some imperfections and uncertainties in sequencing are unavoidable, thus the reading of each base call by the sequencer is assigned a Phred quality score. The Phred score, \textit{Q}, generally ranges from 10 to 60, and is logarithmically related to the probability of an erroneous base-call, \textit{P}\citep{ewing1998base}. They are calculated as follows:
 $$ Q = -10 log_{10}P $$
  $$P = 10^{\frac{-Q}{10}}$$
- 
-where:
-\begin{conditionsenv*}
-	Q 		& Phred-scale quality score \\
-	P 		& Probability of an erroneous base call \\
-\end{conditionsenv*}
 
-A common convention is to write the value of the Phred score after the letter \textit{Q}, so we may say that a base call with quality of Q30 has a 0.1\% chance of being erroneous. The FASTQ files used for this project are Sanger/Illumina 1.9 encoded, meaning that the assigned character to the score is equal to its value as an ASCII code + 33. So Q30 would correspond to the ASCII character with an ASCII code\footnote{The complete Q-score encoding table: \url{https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/QualityScoreEncoding_swBS.htm}} of 53, which is the question mark character \textit{?} \citep{ewing1998base}. The lack of a base call is represented as an \textit{N} in place of the nucleotide.
+A common convention is to write the value of the Phred score after the letter \textit{Q}, so we may say that a base call with quality of Q30 has a 0.1\% chance of being erroneous. The FASTQ files used for this project are Sanger/Illumina 1.9 encoded, meaning that the assigned character to the score is equal to its value as an ASCII code + 33. So Q30 would correspond to the ASCII character with an ASCII code\footnote{The complete Q-score encoding table, accessed 25/05/22: \url{https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/QualityScoreEncoding_swBS.htm}} of 53, which is the question mark character \textit{?} \citep{ewing1998base}. The lack of a base call is represented as an \textit{N} in place of the nucleotide.
 
 \subsubsection{FastQC}
 \begin{itemize}\itemsep-0.5em
@@ -320,20 +318,21 @@ A common convention is to write the value of the Phred score after the letter \t
 % Useful: https://rtsf.natsci.msu.edu/genomics/tech-notes/fastqc-tutorial-and-faq/#:~:text=FastQC%2C%20written%20by%20Simon%20Andrews,on%20a%20sequence%20data%20set.
 In the rapidly changing field of nucleotide sequencing, FastQC has been one of the few constants. It has become a staple quality control tool for high throughput sequencing data, accepting BAM \citep{BAM}, SAM \citep{li2009sequence} or FASTQ files as input, from which it produces an HTML-based report using a number of modules measuring various quality metrics. The software rates each of these modules using a green check-mark signifying that it 'passed' QC, a yellow exclamation mark 'warning', or a red cross 'failed'. However these flags are set to DNA sequencing standards, and have limited applicability with other types of sequencing, such as RNA-seq, where a number are expected to fail \citep{fastqctutorial2021}. These modules are thoroughly described in its documentation and summarised below. Care should be taken as the X-axis is non-uniform for a number of the produced graphs.
 
-%Maybe add expected moduels to fail
+%Maybe add expected moduels to fail%copy paste the definitions for the modules from lit review lol
 \begin{itemize} \itemsep0em
 \item[] \textbf{Modules used in FastQC:}
 \item \textbf{Basic Statistics} \hspace{0.2cm} Some basic information on the file: its name, type of quality score, total read count, read length and GC content.
 \item \textbf{Per Base Sequence Quality} \hspace{0.2cm} The aggregated Q-scores at each position of the reads, represented by a box-plot.
-\item \textbf{Per Sequence Quality Scores} \hspace{0.2cm} The number of reads on the Y-axis and the average Q-score on the X-axis.
+\item \textbf{Per Sequence Quality Scores} \hspace{0.2cm} The distribution of mean Phred scores across the reads.
 \item \textbf{Per Base Sequence Content} \hspace{0.2cm} A relative abundance line graph showing the percentage abundance of each of the four nucleotides across all the reads. 
 \item \textbf{Per sequence GC content} \hspace{0.2cm} The percentage abundance of each of the four nucleotides across all the reads, overlaid on the expected distribution. 
 \item \textbf{Per base \textit{N} content} \hspace{0.2cm} Percentage of bases at each position of the sequence with no base call, represented as an \textit{N}.
 \item \textbf{Sequence Length Distribution}\hspace{0.2cm} Shows the distribution of sequence lengths, measured in number of base-pairs (bp). The module will raise a warning if all sequences are not the same length and an error if any of the sequences have zero length.
-\item \textbf{Sequence Duplication Levels} \hspace{0.2cm} Percentage of reads in the library which come from sequences with duplication. Two lines indicate the percentages of the raw and the deduplicated libraries.
+\item \textbf{Sequence Duplication Levels} \hspace{0.2cm} Percentage of reads in the library which come from sequences with duplication. Two overlaid lines indicate the percentages of the raw and the deduplicated libraries in a line graph.
 \item \textbf{Overrepresented Sequences} \hspace{0.2cm} A list of sequences which account for $\geq$0.1\% of the total reads. These are compared to common contaminants to try identify them.
 \item \textbf{Adapter Content} \hspace{0.2cm} A cumulative line graph where a sequence library adapter sequence is identified at that base position.
 \end{itemize}
+
 
 \subsubsection{FastQScreen}
 \begin{itemize}\itemsep-0.5em
@@ -344,7 +343,7 @@ In the rapidly changing field of nucleotide sequencing, FastQC has been one of t
 
 While FastQC is certainly a useful and well-maintained tool, it is not exhaustive of the possible QC metrics for FASTQ files. For this reason, other tools such as FastQScreen may be used to supplement the results.
 
-FastQScreen maps the sample reads against the genomes of common contaminants and against that of a human for comparison using a third party alignment tool such as Bowtie \citep{bowtie}, Bowtie2 \citep{bowtie2} or BWA \citep{bwa}. A bar chart (\autoref{fig:fastqscreen_example}) and its respective data table are produced which show the percentage reads mapped for each genome, and what percentage did not map at all. With human samples, one should expect some multi-mapping to the mouse and rat genomes, given their genetic similarities.
+FastQScreen maps the sample reads against the genomes of common contaminants and against that of a human for comparison using a third party alignment tool such as Bowtie \citep{bowtie}, Bowtie2 \citep{bowtie2} or BWA \citep{bwa}. A bar chart (\autoref{fig:fastqscreen_example}) and its respective data table are produced which show the percentage reads mapped for each genome, and what percentage did not map at all. With human samples, one should expect some mapping to the mouse and rat genomes, given their genetic similarities.
 \clearpage
 \begin{figure}[!h]
     \centering
@@ -468,7 +467,8 @@ STAR provides the user with great flexibility, with many parameters, such as  th
 \item Generates a genome index using a reference file and its respective annotation (GTF) file.
 \item Aligns an experimental transcriptome using the genome index and outputs an alignment file (SAM, unsorted BAM or BAM sorted by coordinates) and various log files.
 \item Uses a mapping quality metric MAPQ, calculated as $10*log_{10}(1-\frac{1}{N_{map}})$, where ${N_{map}}$ is the number of places the read maps to. A value of 255 is given to uniquely mapped reads.
-\item Passes on \texttt{NH HI AS nM} as SAM attributes as defined in the SAM format specifications \footnote{\url{https://samtools.github.io/hts-specs/SAMv1.pdf}}.
+\item Removes reads which map to >10 loci.
+\item Passes on \texttt{NH HI AS nM} as SAM attributes as defined in the SAM format specifications \footnote{Accessed 01/06/22: \url{https://samtools.github.io/hts-specs/SAMv1.pdf}}.
 \end{itemize}
 
 %Multimapping:https://www.sciencedirect.com/science/article/pii/S2001037020303032
@@ -502,9 +502,9 @@ ARST5 & 5300    & 1900    & 3250    & ...  \\
 \item[] \textbf{Dependencies}: 64 bit Linux/Mac OS, C++, Perl, R, STAR/HISAT2/Bowtie2
 \end{itemize}
 
-RSEM uses a statistical model based on \cite{li2010rna}, an implementation of the EM algorithm to address the issue of ambiguous read mapping, and assign reads to their appropriate gene or transcript. RSEM gives the user the option to produce both, and normalises the counts in the process. For each sample, RSEM produces two tab-delimited text files: one quantified at the gene-level and another at the transcript-level. Each row of these file represents the respective gene or transcript (the transcript file is larger due to alternative splicing), with the columns including the IDs, expected counts and normalised counts (TPM and FPKM)
+RSEM uses a statistical model based on \cite{li2010rna}, an implementation of the EM algorithm to address the issue of ambiguous read mapping, and assign reads to their appropriate gene or transcript. RSEM gives the user the option to produce both, and normalises the counts in the process. For each sample, RSEM produces two tab-delimited text files: one quantified at the gene-level and another at the transcript-level. Each row of these file represents the respective gene or transcript (the transcript file is larger due to alternative splicing), with the columns including the IDs, expected counts and normalised counts (TPM and FPKM).
 
-An aligner (STAR, Bowtie2 or HISAT2) may be called directly through RSEM, to combine alignment and quantification (and potentially normalisation) into a single step. The genome index to be used by the aligner may be generated through \texttt{rsem-prepare-reference} and alignment + quantification may be performed with \texttt{rsem-calculate-expression}.
+An aligner (STAR, Bowtie2 or HISAT2) may be called directly through RSEM, to combine alignment and quantification (and potentially normalisation) into a single step. The genome index to be used by the aligner may be generated through \texttt{rsem-prepare-reference} and the combined alignment/quantification may be performed with \texttt{rsem-calculate-expression}.
 
 \begin{itemize}\itemsep0em
 \item[] \textbf{RSEM's default options:}
@@ -528,7 +528,7 @@ To adjust for confounding variables which are not biologically relevant, the rea
 \subsubsection{Trimmed Mean of \textit{M}-values (TMM)}
 \label{TMM}
 
-The \ac{TMM} is implemented in edgeR \citep{edger} through the \texttt{calcNormFactors} function. It is recommend by the edgeR vignette\footnote{\url{https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf}} if one wishes to continue performing \ac{DGE} analysis using that library. It was first introduced in \cite{robinson2010scaling}, who explain the underlying mathematics in detail. \ac{TMM} assumes that the majority of genes, in both samples, are not differentially expressed, although the model is robust against deviations to this assumption \citep{robinson2010scaling}. 
+The \ac{TMM} is implemented in edgeR \citep{edger} through the \texttt{calcNormFactors} function. It is recommend by the edgeR vignette\footnote{Accessed 20/05/22: \url{https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf}} if one wishes to continue performing \ac{DGE} analysis using that library. It was first introduced in \cite{robinson2010scaling}, who explain the underlying mathematics in detail. \ac{TMM} assumes that the majority of genes, in both samples, are not differentially expressed, although the model is robust against deviations to this assumption \citep{robinson2010scaling}. 
 
 \ac{TMM} performs better for between-samples comparisons, as opposed to within-sample comparisons \citep{dundar2015introduction}. \cite{robinson2010scaling} recognise that it makes intuitive sense that differences in library size should be normalised (i.e. depth or coverage, as seen in \autoref{fig:lib_diff}), but they consider this scaling too simplistic for many biological applications. 
 
@@ -690,6 +690,7 @@ In multidrug resistant HL-60 cells, \cite{crescimanno2009effects} were able to i
 % papers that used RNA-seq for the treatment of cancers
 
 \subsection{A Review of the Computational Tools}
+\label{Computational Tools}
 As a result of the decentralised and rapidly changing nature of the field of bioinformatics, there is a lack of standardisation. There is currently no one-size-fits-all tool or library for RNA-seq. The bioinformatician must evaluate the numerous trade-offs of the available tools, for every step of their sequencing pipeline, in accordance to their individual dataset and their desired result. Pursuant to the first objective of the project, an extensive literature search was conducted to identify the optimal tools for each step of our pipeline. The studies were split into three categories, each harbouring its own tabular summary which includes the tools used at each step:
 
 \begin{enumerate}
@@ -715,7 +716,7 @@ The studies in the first category will be discussed in greater detail as they di
     \begin{adjustwidth}{-1cm}{}
     \begin{tabular}{llllllllllllllllll}
 		\toprule
-        \textbf{Reference} & \textbf{Preprocessing} & \textbf{Alignment} & \textbf{Quantification} & \textbf{Normalisation} & \textbf{Differential expression} & \textbf{Summarised conclusion}  \\ \midrule
+        \textbf{Reference} & \textbf{QC \& Preprocessing} & \textbf{Alignment} & \textbf{Quantification} & \textbf{Normalisation} & \textbf{Differential expression} & \textbf{Summarised conclusion}  \\ \midrule
         \cite{williams2017empirical} & / &  Bowtie2, HISAT2, Kallisto, & Sailfish, Kallisto,  & / & Ballgown, baySeq, BitSeq,  & Different workflows exhibit a precision/recall   \\ 
         ~ & ~ &  Salmon, Sailfish, SeqMap,  & Salmon & ~ & cuffdiff, DESeq2, EBseq,  & tradeoff,  the method of differential gene  \\ 
         ~ & ~ & STAR, TopHat2 & ~ & ~ & NOISeqBIO, SAMseq, Sleuth,  &  expression exhibited the strongest impact  \\ 
@@ -747,10 +748,10 @@ The studies in the first category will be discussed in greater detail as they di
         \cite{srivastava2020alignment} & Trim galore!  & Salmon, STAR, Bowtie2 & tximport, RSEM & DEseq, TMM,  & DESeq2, edgeR, limma & Quasi-mappers are faster but aligners more   \\ 
         ~ & ~ & ~ & ~ & limma & ~ & accurate  \\ 
         ~ & ~ & ~ & ~ & ~ & ~ &   \\ 
-        ~ & ~ & ~ & ~ & ~ & ~ &   \\ \hline
-        \cite{teng2016benchmark} & / & Flux Capacitor, Cufflinks, & HTSeq, Cufflinks, & / & / & RSEM slightly outperforming the rest with two     \\ 
-        ~ & ~ &  eXpress, RSEM, Sailfish, &  Kallisto, Salmon & ~ & ~ & methods clearly under-performing  \\ 
-        ~ & ~ &  kallisto, Salmon  & ~ & ~ & ~ &   \\ 
+        ~ & ~ & ~ & ~ & ~ & ~ &   \\ \hline																																						'
+        \cite{teng2016benchmark} & / & Flux Capacitor, Cufflinks, & HTSeq, Cufflinks, & / & / & Quantification methods performed similarly     \\ 
+        ~ & ~ &  eXpress, Sailfish, &  Kallisto, Salmon, & ~ & ~ & except the under-performing eXpress and  \\ 
+        ~ & ~ &  Kallisto, Salmon  & RSEM & ~ & ~ & Flux Capacitor  \\ 
         ~ & ~ & ~ & ~ & ~ & ~ &   \\ \bottomrule
     \end{tabular}
     \end{adjustwidth}
@@ -768,7 +769,7 @@ The studies in the first category will be discussed in greater detail as they di
 	\label{tab:rnaseq_experiments}
     \begin{tabular}{llllllllllllll}
 		\toprule
-		\textbf{Reference} & \textbf{Preprocessing} & \textbf{Mapping} & \textbf{Quantification} & \textbf{Normalisation} & \textbf{Differential expression}  \\ \midrule
+		\textbf{Reference} & \textbf{QC \& Preprocessing} & \textbf{Mapping} & \textbf{Quantification} & \textbf{Normalisation} & \textbf{Differential expression}  \\ \midrule
         \cite{cardoso2019gene} & FactoMineR & GSNAP & HTSeq & TMM &  EdgeR  \\
         ~ & ~ & ~ & ~ & ~ &   \\ \hline
         \cite{mostafavi2014type} & Ridge regression of  & Tophat & HTSeq & / & LRT  \\
@@ -800,7 +801,7 @@ The studies in the first category will be discussed in greater detail as they di
 	\label{tab:packaged_pipelines}
     \begin{tabular}{llllllllllllllllll}
 		\toprule
-        \textbf{Reference} & \textbf{Preprocessing} & \textbf{Mapping} & \textbf{Quantification} & \textbf{Normalisation} &\textbf{ Differential expression} \\ \midrule
+        \textbf{Reference} & \textbf{QC \& Preprocessing} & \textbf{Mapping} & \textbf{Quantification} & \textbf{Normalisation} &\textbf{ Differential expression} \\ \midrule
         \cite{cornwell2018viper} & RseQC & STAR & Cufflinks &  DEseq & DEseq2  \\ 
         ~ & ~ & ~ & ~ & ~ &   \\ \hline
         \cite{ewels2020nf} & FastqQC, Trim Galore!, SortMeRNA, RSeQC,  & STAR, HiSAT2 & Salmon, RSEM & RSEM (TPM) & /  \\ 

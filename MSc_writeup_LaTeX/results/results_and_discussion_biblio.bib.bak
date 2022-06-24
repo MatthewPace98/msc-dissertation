@@ -267,6 +267,83 @@
   timestamp = {2022-06-02},
 }
 
+@Article{hansen2010biases,
+  author    = {Hansen, Kasper D and Brenner, Steven E and Dudoit, Sandrine},
+  journal   = {Nucleic acids research},
+  title     = {Biases in Illumina transcriptome sequencing caused by random hexamer priming},
+  year      = {2010},
+  number    = {12},
+  pages     = {e131--e131},
+  volume    = {38},
+  publisher = {Oxford University Press},
+}
+
+@Article{parekh2016impact,
+  author    = {Parekh, Swati and Ziegenhain, Christoph and Vieth, Beate and Enard, Wolfgang and Hellmann, Ines},
+  journal   = {Scientific reports},
+  title     = {The impact of amplification on differential expression analyses by RNA-seq},
+  year      = {2016},
+  number    = {1},
+  pages     = {1--11},
+  volume    = {6},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{kozarewa2009amplification,
+  author    = {Kozarewa, Iwanka and Ning, Zemin and Quail, Michael A and Sanders, Mandy J and Berriman, Matthew and Turner, Daniel J},
+  journal   = {Nature methods},
+  title     = {Amplification-free Illumina sequencing-library preparation facilitates improved mapping and assembly of (G+ C)-biased genomes},
+  year      = {2009},
+  number    = {4},
+  pages     = {291--295},
+  volume    = {6},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{pfeiffer2018systematic,
+  author    = {Pfeiffer, Franziska and Gr{\"o}ber, Carsten and Blank, Michael and H{\"a}ndler, Kristian and Beyer, Marc and Schultze, Joachim L and Mayer, G{\"u}nter},
+  journal   = {Scientific reports},
+  title     = {Systematic evaluation of error rates and causes in short samples in next-generation sequencing},
+  year      = {2018},
+  number    = {1},
+  pages     = {1--14},
+  volume    = {8},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{benjamini2012summarizing,
+  author    = {Benjamini, Yuval and Speed, Terence P},
+  journal   = {Nucleic acids research},
+  title     = {Summarizing and correcting the GC content bias in high-throughput sequencing},
+  year      = {2012},
+  number    = {10},
+  pages     = {e72--e72},
+  volume    = {40},
+  publisher = {Oxford University Press},
+}
+
+@Article{meunier2004recombination,
+  author    = {Meunier, Julien and Duret, Laurent},
+  journal   = {Molecular biology and evolution},
+  title     = {Recombination drives the evolution of GC-content in the human genome},
+  year      = {2004},
+  number    = {6},
+  pages     = {984--990},
+  volume    = {21},
+  publisher = {Oxford University Press},
+}
+
+@Article{yakovchuk2006base,
+  author    = {Yakovchuk, Peter and Protozanova, Ekaterina and Frank-Kamenetskii, Maxim D},
+  journal   = {Nucleic acids research},
+  title     = {Base-stacking and base-pairing contributions into thermal stability of the DNA double helix},
+  year      = {2006},
+  number    = {2},
+  pages     = {564--574},
+  volume    = {34},
+  publisher = {Oxford University Press},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: grouping:
