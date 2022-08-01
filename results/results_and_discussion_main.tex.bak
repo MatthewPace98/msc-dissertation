@@ -1,0 +1,153 @@
+\chapter{Results \& Discussion}
+
+\textbf{Should include a reiteration of the experiments, and their outcome.  Together with a description (discussion).  Preamble should include a reminder of the aims and objectives together with a list of experiments to achieve these.  Should include many charts and other visualization with appropriate descriptions}.  
+
+
+Why it is bad to have no replicates (had to work with what you were given; was due to budget contraints)
+No indication of the variance
+edgeR manual suggests giving a nominal value for the bcv is more realistic than ignoring variance all together
+Reads were only 50bp long (51bp but the last base has a high error rate so it is removed). Higher chance for multimapping because its so short
+Single-ended not ideal
+
+
+
+\section{Determining the Optimal Tools}
+As a result of the decentralised and rapidly changing nature of the field of bioinformatics, there is a lack of standardisation. There is currently no one-size-fits-all tool or library, so the bioinformatician must evaluate the numerous trade-offs of the available tools, for every step of their sequencing pipeline, in accordance to their individual dataset and their desired result. To find the most appropriate tools for our data, an extensive literature search was conducted. The papers are summarised in [TABLE REF], where red rows denote papers which compare tools against each-other, yellow rows are for RNA-seq experiments and blue denotes ready-made, packaged pipelines. Papers which introduce a new tool were excluded due to their inherent bias.
+
+
+% Review papers: \citep{Soneson2013}, \citep{Li1371}, \citep{Luecken2019}, \citep{Zhang2017}, \citep{Conesa2016}, \citep{Cirillo0017}, \citep{Teng2016}
+
+
+
+\section{Assessing and Improving the Quality of the Raw FASTQ files}
+\label{Assessing the Quality of the Raw FASTQ files}
+Traces (<0.5\%) of TruSeq adapters were detected in the FASTQ files, which is corroborated by the sequencer's manual \citep{HiSeq2000} stating that it makes use of the 'TruSeq family of reagents'. 
+Two modules failed consistently throughout the four samples received: 'Sequence Duplication Levels' and 'Per base sequence content'. This is normal and expected for RNA data.
+
+% https://hbctraining.github.io/Intro-to-rnaseq-hpc-salmon/lessons/qc_fastqc_assessment.html
+% Really good resource on RNAseq QC
+% The next plot gives the “Per base sequence content”, which always gives a FAIL for RNA-seq data. This is because the first 10-12 bases result from the ‘random’ hexamer priming that occurs during RNA-seq library preparation. This priming is not as random as we might hope giving an enrichment in particular bases for these intial nucleotides.
+% The “Per sequence GC content” plot gives the GC distribution over all sequences. Generally is a good idea to note whether the GC content of the central peak corresponds to the expected % GC for the organism. Also, the distribution should be normal unless over-represented sequences (sharp peaks on a normal distribution) or contamination with another organism (broad peak). This plot would indicate some type of over-represented sequence with the sharp peaks, indicating either contamination or a highly over-expressed gene.
+% The next module explores numbers of duplicated sequences in the library. This plot can help identify a low complexity library, which could result from too many cycles of PCR amplification or too little starting material. For RNA-seq we don’t normally do anything to address this in the analysis, but if this were a pilot experiment, we might adjust the number of PCR cycles, amount of input, or amount of sequencing for future libraries. In this analysis we seem to have a large number of duplicated sequences, but this is expected due to the subset of data we are working with containing the over-expression of MOV10.
+%
+
+
+
+% INTERNPRETING FASTQC REPORT NOTES:
+% Real good resource of possible explanations:
+% We have positional sequence bias: https://sequencing.qcfail.com/articles/positional-sequence-bias-in-random-primed-libraries/
+% High Sequence Duplication levels are expected: https://www.biostars.org/p/307361/
+%From Molecular Biology assignment:
+%  One cycle per base pair would have been needed, so 50 cycles should have been performed.
+%
+% The sample has a 48 %GC, which is within the expected range for a human genome. 
+% As a result of an additional hydrogen bond and especially because of increased base 
+% stacking effects, GC base pairs experience stronger bonding. Consequently, during PCR, 
+% endonucleases are less likely to cleave these bonding pairs, hindering the quality if the 
+%GC is high. GC bias occurs in both GC-rich and GC-poor fragments as the effect of 
+% GC content is unimodal.
+%
+%The quality of the base calls peaks around the 14th and 15th base pair, then gradually 
+%declines. This is a result of phasing, a type of sequencing error which causes reads to 
+%become out-of-sync. This can occur by two similar phenomena: pre-phasing and postphasing. Pre-phasing occurs when two or more nucleotides bind to the read in a single 
+%cycle, causing the sequence to ‘skip’ a nucleotide. This often occurs when the flow-cell is 
+%not flushed properly or in the case of a defect terminator cap. Post-phasing is caused by 
+%the incomplete removal of the terminator cap, leading to the sequence lagging behind 
+%the rest of the cluster. As more cycles go by, the higher the probability of an error to 
+%occur which causes the read to become out of phase, and when this occurs, it will pollute 
+%the light signals of all subsequent cycles.
+
+
+\begin{table}[]
+\centering
+\caption{How read counts change through the pipeline filtering steps}
+\label{tab:read_counts}
+\begin{tabular}{cclll}
+\hline
+                                                                   & \textbf{Control} & \textbf{1 hour} & \textbf{6 hour} & \textbf{12 hour} \\ \hline
+Unfiltered                                                         & 32.62M           & 41.30M          & 34.08M          & 28.77M           \\ \hline
+\begin{tabular}[c]{@{}c@{}}Trimming \\ (Trim Galore!)\end{tabular} & 32.23M           & 40.81M          & 33.71M          & 28.54M           \\ \hline
+\begin{tabular}[c]{@{}c@{}}Filtering\\ (Prinseq++)\end{tabular}    & 32.22M           & 40.75M          & 33.66M          & 28.50M           \\ \hline
+\begin{tabular}[c]{@{}c@{}}Alignment \\ (STAR)\end{tabular}        & 26.80M           & 33.54M          & 27.78M          & 23.89M           \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+\subsection{Preprocessing}
+Some \citep{liao2020read} doubt the necessity of trimming in the first place.
+
+%Explain that RSEM had the option to perform the alignment via another aligner (eg STAR), but sacrificed flexibility so it was decided that keeping the alignment and quantification as seperate steps was better
+
+[[Table containing which papers use what]]
+[[Note that I had excluded papers which propose a new tool themselves due to their inherent bias]]
+
+\subsection{Alignment}
+
+% Alignment vs pseudoalignment vs mapping
+
+
+\subsection{Adapting Differential Gene Expression Analysis to a Lack of Replicates}
+\label{Adapting Differential Gene Expression Analysis to a Lack of Replicates}
+The accuracy of any statistical analysis is highly dependent on the number of experimental (?) replicates. Large numbers of replicates
+
+This is a prevalent limitation in RNA-seq experiments due to their costly nature, where researchers are limited by their budget to a small number of replicates. To make the most of such datasets, several tools have been developed especially for this situation, or provide advice on how to adjust the analysis according to the data (REF!). Notably, the most cited tool for \ac{DGE} analysis, DESeq2 (REF!), had revoked its support for such datasets in version (VERSION?).
+
+...Many methods have been compared
+
+[Table with methods and pros and cons]
+
+% We have no replicates and thus no statistical power
+% the technical variance of RNA-seq is negligible (Bullard et al. 2010) (AND WE HAVE LITTLE TO NO BIOLOGICAL VARIANCE ACCORDING TO CELL LINE)
+
+LPEseq
+•	https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159182
+•	local-pooled-error (LPE)
+ outperformed the others for non-replicated datasets, and showed a similar performance with replicated samples
+able to accurately test differential expression with a limited number of samples, in particular non-replicated samples (own paper)
+
+
+GFold
+•	https://zhanglab.tongji.edu.cn/softwares/GFOLD/index.html
+•	https://pubmed.ncbi.nlm.nih.gov/22923299/
+•	especially useful when no replicate is available
+•	assigns reliable statistics for expression changes based on the posterior distribution of log fold change.
+
+edgeR had many ways to perform DGE:
+Likelihood Ratio Test which compared values against their mean. This was not applicable for our dataset because we needed to compare the treated values against the untreated values
+
+
+% Sorting BAM by read name vs by coordinate (I chose coordinate)
+% 
+
+\subsection{Determining the Normalisation method}
+%TMM vs TPM vs both
+% Both were attempted: TMM resulted in a total of x DEG while TPM resulted in 100 DEG.
+% The edgeR vignette suggests to use the raw counts (?) of RSEM for normalisation, as opposed to using the already normalised TPM so we went with this.
+ % FPKM/RPKM are not good measures of relative abundance because the FPKM/RPKM of a transcript can change between two samples even if its relative abundance stays the same.
+% https://groups.google.com/g/rsem-users/c/GRyJfEOK1BQ <- very good explanation 
+
+\subsection{Accounting for Multiple testing}
+%FDR
+%Benjamini Hochback 
+
+\section{Pathway analysis}
+
+\subsection{Biological Interpretation of Pathways showing Differential Expression}
+
+% https://www.biostars.org/p/9510180/ reply says that even though a gene is downregulated, it might be suppressing other genes in the pathway which makes the other genes indirectly upregulated. Keep stuff like this in mind when interpreting gene expression.
+
+
+\section{Interpretation of Results}
+
+
+% 1 hour was an outlier. Hypothesis: Cells which were differentiated died off (degrading their RNA) while others proliferated
+
+% Problems with the reference genome: https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1774-4
+
+\section{Summary}
+\enlargethispage{\baselineskip} % so you do not get a single line in another page
