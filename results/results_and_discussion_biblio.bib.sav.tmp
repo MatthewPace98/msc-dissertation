@@ -9,7 +9,7 @@
 
 @InProceedings{Dobin2019,
   author = {Alexander Dobin},
-  title  = {STAR manual 2.7.0a},
+  title  = {{STAR} manual 2.7.0a},
   year   = {2019},
   file   = {:C\:/Users/matth/OneDrive/Desktop/Msc Bioinformatics/!MMB5010 DISSERTATION-DESKTOP-A2009SI/Literature/Tools/STARmanual.pdf:PDF},
   groups = {Tools},
@@ -31,15 +31,6 @@
   rights    = {ï¿½ 2013 Soneson and Delorenzi; licensee BioMed Central Ltd.},
 }
 
-@InProceedings{Li1371,
-  author = {Xiaohong Li, Guy N. Brock, Eric C. Rouchka, Nigel G. F. Cooper, Dongfeng Wu, Timothy E. O’Toole, Ryan S. Gill, Abdallah M. Eteleeb, Liz O’Brien, Shesh N. Rai},
-  title  = {A comparison of per sample global scaling and per gene normalization methods for differential expression analysis of RNA-seq data},
-  year   = {1371},
-  doi    = {.org/10.1371/journal.pone.0176185},
-  file   = {:C\:/Users/matth/OneDrive/Desktop/Msc Bioinformatics/!MMB5010 DISSERTATION-DESKTOP-A2009SI/Literature/RNA seq practices/Differenial expression/A comparison of per sample global scaling normalisation and DE analysis 2017.pdf:PDF},
-  groups = {RNAseq reviews},
-}
-
 @Article{Lin2016,
   author    = {Yanzhu Lin and Kseniya Golovnina and Zhen-Xia Chen and Hang Noh Lee and Yazmin L. Serrano Negron and Hina Sultana and Brian Oliver and Susan T. Harbison},
   journal   = {{BMC} Genomics},
@@ -56,19 +47,12 @@
   publisher = {Springer Science and Business Media {LLC}},
 }
 
-@Article{Teng2016,
-  author    = {Mingxiang Teng and Michael I. Love and Carrie A. Davis and Sarah Djebali and Alexander Dobin and Brenton R. Graveley and Sheng Li and Christopher E. Mason and Sara Olson and Dmitri Pervouchine and Cricket A. Sloan and Xintao Wei and Lijun Zhan and Rafael A. Irizarry},
-  journal   = {Genome Biology},
-  title     = {A benchmark for {RNA}-seq quantification pipelines},
-  year      = {2016},
-  month     = {apr},
-  number    = {1},
-  volume    = {17},
-  abstract  = {Genome Biology, 2016, doi:10.1186/s13059-016-0940-1},
-  doi       = {10.1186/s13059-016-0940-1},
-  file      = {:C\:/Users/matth/OneDrive/Desktop/Msc Bioinformatics/!MMB5010 DISSERTATION-DESKTOP-A2009SI/Literature/RNA seq practices/A benchmark for RNA-seq quantification 2016.pdf:PDF},
-  groups    = {RNAseq reviews},
-  publisher = {Springer Science and Business Media {LLC}},
+@Article{Teng2016second,
+  author  = {Matthew Pace},
+  journal = {Genome Biology},
+  title   = {A benchmark for quantification pipelines},
+  year    = {2017},
+  volume  = {17},
 }
 
 @Article{Conesa2016,
@@ -284,4 +268,241 @@
   title     = {The impact of amplification on differential expression analyses by RNA-seq},
   year      = {2016},
   number    = {1},
-  pages     = {
+  pages     = {1--11},
+  volume    = {6},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{kozarewa2009amplification,
+  author    = {Kozarewa, Iwanka and Ning, Zemin and Quail, Michael A and Sanders, Mandy J and Berriman, Matthew and Turner, Daniel J},
+  journal   = {Nature methods},
+  title     = {Amplification-free Illumina sequencing-library preparation facilitates improved mapping and assembly of (G+ C)-biased genomes},
+  year      = {2009},
+  number    = {4},
+  pages     = {291--295},
+  volume    = {6},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{pfeiffer2018systematic,
+  author    = {Pfeiffer, Franziska; Gr{\"o}ber, Carsten; Blank, Michael; H{\"a}ndler, Kristian; Beyer, Marc; Schultze, Joachim L; Mayer, G{\"u}nter},
+  journal   = {Scientific reports},
+  title     = {Systematic evaluation of error rates and causes in short samples in next-generation sequencing},
+  year      = {2018},
+  number    = {1},
+  pages     = {1--14},
+  volume    = {8},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{benjamini2012summarizing,
+  author    = {Benjamini, Yuval and Speed, Terence P},
+  journal   = {Nucleic acids research},
+  title     = {Summarizing and correcting the GC content bias in high-throughput sequencing},
+  year      = {2012},
+  number    = {10},
+  pages     = {e72--e72},
+  volume    = {40},
+  publisher = {Oxford University Press},
+}
+
+@Article{meunier2004recombination,
+  author    = {Meunier, Julien and Duret, Laurent},
+  journal   = {Molecular biology and evolution},
+  title     = {Recombination drives the evolution of GC-content in the human genome},
+  year      = {2004},
+  number    = {6},
+  pages     = {984--990},
+  volume    = {21},
+  publisher = {Oxford University Press},
+}
+
+@Article{yakovchuk2006base,
+  author    = {Yakovchuk, Peter and Protozanova, Ekaterina and Frank-Kamenetskii, Maxim D},
+  journal   = {Nucleic acids research},
+  title     = {Base-stacking and base-pairing contributions into thermal stability of the DNA double helix},
+  year      = {2006},
+  number    = {2},
+  pages     = {564--574},
+  volume    = {34},
+  publisher = {Oxford University Press},
+}
+
+@Article{chen2022edger,
+  author  = {Chen, Yunshun and McCarthy, Davis and Robinson, Mark and Smyth, Gordon K},
+  journal = {Bioconductor User’s Guide},
+  title   = {edgeR: differential expression analysis of digital gene expression data},
+  year    = {2022},
+}
+
+@Article{khimani2005housekeeping,
+  author    = {Khimani, Anis H and Mhashilkar, Abner M and Mikulskis, Alvydas and O'Malley, Michael and Liao, Jennifer and Golenko, Eva E and Mayer, Pat and Chada, Sunil and Killian, Jeffrey B and Lott, Steven T},
+  journal   = {Biotechniques},
+  title     = {Housekeeping genes in cancer: normalization of array data},
+  year      = {2005},
+  number    = {5},
+  pages     = {739--745},
+  volume    = {38},
+  publisher = {Future Science},
+}
+
+@InCollection{fisher1925statistical,
+  author    = {Fisher, Ronald Aylmer},
+  publisher = {Edinburgh: Oliver and Boyd},
+  title     = {Statistical methods for research workers},
+  year      = {1925},
+}
+
+@Article{zhao2018many,
+  author    = {Zhao, Bi and Erwin, Aqeela and Xue, Bin},
+  journal   = {Genomics},
+  title     = {How many differentially expressed genes: a perspective from the comparison of genotypic and phenotypic distances},
+  year      = {2018},
+  number    = {1},
+  pages     = {67--73},
+  volume    = {110},
+  publisher = {Elsevier},
+}
+
+@Article{cardoso2019gene,
+  author    = {Cardoso-Moreira, Margarida and Halbert, Jean and Valloton, Delphine and Velten, Britta and Chen, Chunyan and Shao, Yi and Liechti, Ang{\'e}lica and Ascen{\c{c}}{\~a}o, Kelly and Rummel, Coralie and Ovchinnikova, Svetlana and others},
+  journal   = {Nature},
+  title     = {Gene expression across mammalian organ development},
+  year      = {2019},
+  number    = {7766},
+  pages     = {505--509},
+  volume    = {571},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{handschuh2018gene,
+  author    = {Handschuh, Luiza and Ka{\'z}mierczak, Maciej and Milewski, Marek C and G{\'o}ralski, Micha{\l} and {\L}uczak, Magdalena and Wojtaszewska, Marzena and Uszczy{\'n}ska-Ratajczak, Barbara and Lewandowski, Krzysztof and Komarnicki, Mieczys{\l}aw and Figlerowicz, Marek},
+  journal   = {International Journal of Oncology},
+  title     = {Gene expression profiling of acute myeloid leukemia samples from adult patients with AML-M1 and-M2 through boutique microarrays, real-time PCR and droplet digital PCR},
+  year      = {2018},
+  number    = {3},
+  pages     = {656--678},
+  volume    = {52},
+  publisher = {Spandidos Publications},
+}
+
+@Article{ma2019comparative,
+  author    = {Ma, Jing and Shojaie, Ali and Michailidis, George},
+  journal   = {BMC bioinformatics},
+  title     = {A comparative study of topology-based pathway enrichment analysis methods},
+  year      = {2019},
+  number    = {1},
+  pages     = {1--14},
+  volume    = {20},
+  publisher = {Springer},
+}
+
+@Article{nguyen2019identifying,
+  author    = {Nguyen, Tuan-Minh and Shafi, Adib and Nguyen, Tin and Draghici, Sorin},
+  journal   = {Genome biology},
+  title     = {Identifying significantly impacted pathways: a comprehensive review and assessment},
+  year      = {2019},
+  number    = {1},
+  pages     = {1--15},
+  volume    = {20},
+  publisher = {BioMed Central},
+}
+
+@Article{ihnatova2018critical,
+  author    = {Ihnatova, Ivana and Popovici, Vlad and Budinska, Eva},
+  journal   = {PloS one},
+  title     = {A critical comparison of topology-based pathway analysis methods},
+  year      = {2018},
+  number    = {1},
+  pages     = {e0191154},
+  volume    = {13},
+  publisher = {Public Library of Science San Francisco, CA USA},
+}
+
+@Book{albert2020biostar,
+  author  = {Albert, Istvan},
+  title   = {The Biostar Handbook},
+  year    = {2020},
+  edition = {2},
+}
+
+@Article{yasuda1998structure,
+  author    = {Yasuda, T and Takeshita, H and Iida, R and Tsutsumi, S and Nakajima, T and Hosomi, O and Nakashima, Y and Mori, S and Kishi, K},
+  journal   = {Annals of human genetics},
+  title     = {Structure and organization of the human deoxyribonuclease II (DNase II) gene},
+  year      = {1998},
+  number    = {4},
+  pages     = {299--305},
+  volume    = {62},
+  publisher = {Cambridge University Press},
+}
+
+@Article{blumenthal2005inhibition,
+  author    = {Blumenthal, Rosalyn D and Hansen, Hans J and Goldenberg, David M},
+  journal   = {Cancer research},
+  title     = {Inhibition of adhesion, invasion, and metastasis by antibodies targeting CEACAM6 (NCA-90) and CEACAM5 (Carcinoembryonic Antigen)},
+  year      = {2005},
+  number    = {19},
+  pages     = {8809--8817},
+  volume    = {65},
+  publisher = {AACR},
+}
+
+@Article{orre2013s100a4,
+  author    = {Orre, LM and Panizza, E and Kaminskyy, VO and Vernet, Erik and Gr{\"a}slund, Torbj{\"o}rn and Zhivotovsky, B and Lehti{\"o}, J},
+  journal   = {Oncogene},
+  title     = {S100A4 interacts with p53 in the nucleus and promotes p53 degradation},
+  year      = {2013},
+  number    = {49},
+  pages     = {5531--5540},
+  volume    = {32},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{ryckman2003proinflammatory,
+  author    = {Ryckman, Carle and Vandal, Karen and Rouleau, Pascal and Talbot, Mari{\`e}ve and Tessier, Philippe A},
+  journal   = {The Journal of Immunology},
+  title     = {Proinflammatory activities of S100: proteins S100A8, S100A9, and S100A8/A9 induce neutrophil chemotaxis and adhesion},
+  year      = {2003},
+  number    = {6},
+  pages     = {3233--3242},
+  volume    = {170},
+  publisher = {Am Assoc Immnol},
+}
+
+@Article{liao2020microrna,
+  author    = {Liao, Yu and Wang, Ziyan and Wang, Lixin and Lin, Yanzhao and Ye, Ziyi and Zeng, Xufang and Wei, Fangning},
+  journal   = {Biochemical and biophysical research communications},
+  title     = {MicroRNA-27a-3p directly targets FosB to regulate cell proliferation, apoptosis, and inflammation responses in immunoglobulin a nephropathy},
+  year      = {2020},
+  number    = {4},
+  pages     = {1124--1130},
+  volume    = {529},
+  publisher = {Elsevier},
+}
+
+@Article{al2015restoration,
+  author  = {Al-jamal, H and Jusoh, S and Sidek, M and Hassan, R and Johan, M},
+  journal = {J Hematol Thrombo Dis},
+  title   = {Restoration of PRG2 Expression by 5-Azacytidine Involves in Sensitivity of PKC-412 (Midostaurin) Resistant FLT3-ITD Positive Acute Myeloid Leukaemia Cells},
+  year    = {2015},
+  number  = {1},
+  pages   = {1--7},
+  volume  = {3},
+}
+
+@Article{hagihara2004identification,
+  author    = {Hagihara, Atsushi and Miyamoto, Kazuaki and Furuta, Junichi and Hiraoka, Nobuyoshi and Wakazono, Kuniko and Seki, Shuichi and Fukushima, Shoji and Tsao, Ming-Sound and Sugimura, Takashi and Ushijima, Toshikazu},
+  journal   = {Oncogene},
+  title     = {Identification of 27 5′ CpG islands aberrantly methylated and 13 genes silenced in human pancreatic cancers},
+  year      = {2004},
+  number    = {53},
+  pages     = {8705--8710},
+  volume    = {23},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{moog2003jaml,
+  author    = {Moog-Lutz, Christel and Cav{\'e}-Riant, Florence and Guibal, Florence C and Breau, Marie A and Di Gioia, Yolande and Couraud, Pierre Olivier and Cayre, Yvon E and Bourdoulous, Sandrine and Lutz, Pierre G},
+  journal   = {Blood},
+  title     = {JAML, a novel protein with characteristics of a junctional adhesion molecule, is induced during differentiation of myel
