@@ -1,3 +1,7 @@
+#!/bin/bash
+
+# Prepares a reference genome index for use with rsem-calculate-expression 
+
 h=/home/mpace21/data
 h2=$h/miscfiles
 
