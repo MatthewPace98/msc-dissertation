@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+
+# fastq_screen aligns reads against a set of reference genomes to check data quality. 
+# Input files are filtered reads from 'prinseq++' output.
+
 a=/home/mpace21/data/FastQ_Screen_out
 
 fastq_screen \
