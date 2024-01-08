@@ -5,14 +5,14 @@
 
 library(org.Hs.eg.db)
 library(AnnotationDbi) 
-
+library(gplots)
 
 # Takes the top 10 expressed genes of each time point (sorted by p value)
 et_1_topten <- et_1_toptags
 et_6_topten <- et_6_toptags
 et_12_topten <- et_12_toptags
 
-#Annotates genes with gene symbol
+# Annotates genes with gene symbol
 annotation_fun <- function(et){
   Symbol <- mapIds(org.Hs.eg.db, keys=rownames(et), keytype="ENSEMBL",
                    column="SYMBOL")
@@ -57,27 +57,15 @@ head(Housekeeping_Genes$Ensembl.gene)
 head(DE_combined)
 intersect(rownames(DE_combined), Housekeeping_Genes$Ensembl.gene)
 
-#write.csv(DE_combined,"/home/bioinf/Desktop/RNAseq/Top DE genes/logFCs_all.csv", row.names = TRUE)
-
-###############
 ### Heatmap ### 
-###############
-library(gplots)
-# Load the data 
 vals = as.matrix(DE_combined)
 
 # Adds a little noise to each element to avoid the
 # clustering function fail on zero variance datalines.
 vals = jitter(vals, factor = 1, amount = 0.00001)
 
-# Set the color scheme.
 colour = colorRampPalette(c("#0073C2FF", "black", "#EFC000FF"), space = "rgb")(256)
-
-# Open the drawing device.
 png(file="/home/bioinf/Desktop/RNAseq/edgeR/heatmap_some.png")
-
-# Draw the heatmap.
-# heatmap with the defaults parameters
 heatmap.2(x=vals, 
           Colv=FALSE, 
           dendrogram="row",
@@ -86,7 +74,5 @@ heatmap.2(x=vals,
           labRow=rownames(vals),
           main="Log2 Fold Changes of Top DEGs",
           ylab="")
-
-# Turn off the device.
 dev.off()
 
